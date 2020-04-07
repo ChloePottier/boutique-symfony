@@ -23,7 +23,7 @@ class AdminController extends AbstractController
     }
 
     /**
-     * @Route("/admin", name="admin")
+     * @Route("/admin/category", name="add_category")
      */
     public function createCategory(EntityManagerInterface $manager, HttpFoundationRequest $request)
     {
@@ -40,7 +40,7 @@ class AdminController extends AbstractController
             return $this->redirectToRoute('admin');
         }
 
-        return $this->render('admin/category.html.twig', [
+        return $this->render('admin/category/category.html.twig', [
             "category" => $category,
             "formCat" => $form->createView()
         ]);

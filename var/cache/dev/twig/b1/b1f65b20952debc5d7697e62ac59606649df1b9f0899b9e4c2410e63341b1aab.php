@@ -86,7 +86,53 @@ class __TwigTemplate_5c3854fc4bcc5f3fd2330747e511600539022855857d58b103aa10b2994
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "content"));
 
         // line 5
-        echo "
+        echo "\t<div class=\"container-fluid \">
+        <div class=\"container\">
+            <div class=\"row\">
+                <div class=\"col-12 text-center my-5\">
+                    <h1>Bienvenue sur #MyBlog</h1>
+                </div>
+            </div>
+            <div class=\"row\">
+            ";
+        // line 14
+        echo "                ";
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["products"]) || array_key_exists("products", $context) ? $context["products"] : (function () { throw new RuntimeError('Variable "products" does not exist.', 14, $this->source); })()));
+        foreach ($context['_seq'] as $context["_key"] => $context["product"]) {
+            // line 15
+            echo "                    <div class=\"col-12 col-sm-6 col-lg-3  text-center my-5\">
+                        <div class=\"card\">
+                        ";
+            // line 18
+            echo "                            ";
+            // line 21
+            echo "                            <div class=\"card-body\">
+                                <h5 class=\"card-title\">";
+            // line 22
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["product"], "nom", [], "any", false, false, false, 22), "html", null, true);
+            echo "</h5>
+                                ";
+            // line 25
+            echo "                                ";
+            // line 26
+            echo "                                 ";
+            // line 28
+            echo " #}
+
+                            </div>
+                        </div>
+                </div>
+                ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['product'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 34
+        echo "            </div>
+
+        </div>
+    </div>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -108,7 +154,7 @@ class __TwigTemplate_5c3854fc4bcc5f3fd2330747e511600539022855857d58b103aa10b2994
 
     public function getDebugInfo()
     {
-        return array (  89 => 5,  79 => 4,  59 => 3,  36 => 1,);
+        return array (  132 => 34,  121 => 28,  119 => 26,  117 => 25,  113 => 22,  110 => 21,  108 => 18,  104 => 15,  99 => 14,  89 => 5,  79 => 4,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -117,7 +163,39 @@ class __TwigTemplate_5c3854fc4bcc5f3fd2330747e511600539022855857d58b103aa10b2994
 
 {% block title %}Accueil | {{ parent() }}{% endblock %}
 {% block content %}
+\t<div class=\"container-fluid \">
+        <div class=\"container\">
+            <div class=\"row\">
+                <div class=\"col-12 text-center my-5\">
+                    <h1>Bienvenue sur #MyBlog</h1>
+                </div>
+            </div>
+            <div class=\"row\">
+            {# boucle for afin d'afficher les articles #}
+                {% for product in products %}
+                    <div class=\"col-12 col-sm-6 col-lg-3  text-center my-5\">
+                        <div class=\"card\">
+                        {# gestion de l'url : dossier uploads/table article col picture #}
+                            {# <div class=\"image-carte\">
+                                <img src=\"{{ asset('uploads/' ~ article.picture) }}\" class=\"card-img-top\" width=\"256\" height=\"208\" title=\"{{ article.title }}\" alt=\"image {{ article.title }}\">
+                            </div> #}
+                            <div class=\"card-body\">
+                                <h5 class=\"card-title\">{{ product.nom }}</h5>
+                                {# date de publication que l'on met au format jj/mm/aa
+                                {# <p class=\"card-text card-decription text-muted mb-0\">{{article.content}}</p>                                #}
+                                {# on retourne le chemin canonique absolu avec path de l'article et on ajoute l'id de l'article #}
+                                 {# <div  class=\"mb-2 text-muted text-bold\">...</div>
 
+                                <a href=\"{{ path('article_show', {'id': article.id}) }}\" class=\"btn btn-outline-dark p-2\">Lire la suite...</a> #} #}
+
+                            </div>
+                        </div>
+                </div>
+                {% endfor %}
+            </div>
+
+        </div>
+    </div>
 {% endblock %}
 ", "index/index.html.twig", "C:\\xampp\\htdocs\\boutique_symphony\\boutique-symphony\\templates\\index\\index.html.twig");
     }

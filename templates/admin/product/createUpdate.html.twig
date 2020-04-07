@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ajouter un produit | Admin | {{ parent() }}{% endblock %}
+
+{% block content %}
+
+ {{form_start(formP)}}
+ {{form_widget(formP)}}
+
+ <input type="submit" value="Valider" class="btn btn-primary">
+ {{form_end(formP)}}
+
+
+{% endblock %}
+
