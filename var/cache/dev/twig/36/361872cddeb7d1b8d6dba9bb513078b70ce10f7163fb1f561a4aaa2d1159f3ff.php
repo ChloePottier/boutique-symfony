@@ -139,7 +139,7 @@ class __TwigTemplate_cd7715d02fe11c9bf330b021c3670eed5a05cd7d0b022ba3353b55b4c07
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "header"));
 
         // line 14
-        echo "                <nav class=\"navbar navbar-expand-lg navbar-dark bg-dark text-right\">
+        echo "                <nav class=\"navbar navbar-expand-lg navbar-light bg-light text-right\">
                     <a class=\"navbar-brand\" href=\"";
         // line 15
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("index");
@@ -248,7 +248,7 @@ class __TwigTemplate_cd7715d02fe11c9bf330b021c3670eed5a05cd7d0b022ba3353b55b4c07
     <body>
         <header>
         {% block header %}
-                <nav class=\"navbar navbar-expand-lg navbar-dark bg-dark text-right\">
+                <nav class=\"navbar navbar-expand-lg navbar-light bg-light text-right\">
                     <a class=\"navbar-brand\" href=\"{{ path('index') }}\">My Tshirt</a>
                     <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNavDropdown\" aria-controls=\"navbarNavDropdown\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
                         <span class=\"navbar-toggler-icon\"></span>
