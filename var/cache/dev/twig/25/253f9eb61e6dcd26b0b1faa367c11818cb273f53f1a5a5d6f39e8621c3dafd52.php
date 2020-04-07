@@ -95,6 +95,6 @@ class __TwigTemplate_8c253e8cfe3a72245e68ab20775d0adc928136794b71980ff05a2ee1b47
         ], \$date_pattern) ?>
     </div>
 <?php endif ?>
-", "@Framework/Form/date_widget.html.php", "C:\\xampp\\htdocs\\boutique_symphony\\my_project\\vendor\\symfony\\framework-bundle\\Resources\\views\\Form\\date_widget.html.php");
+", "@Framework/Form/date_widget.html.php", "C:\\xampp\\htdocs\\boutique_symphony\\boutique-symphony\\vendor\\symfony\\framework-bundle\\Resources\\views\\Form\\date_widget.html.php");
     }
 }

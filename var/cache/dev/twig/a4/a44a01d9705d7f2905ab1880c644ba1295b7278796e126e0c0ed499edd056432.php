@@ -71,6 +71,6 @@ class __TwigTemplate_c19316ab462cda275e59c25dedd6bb86cb8c3f337dbb9251063397ae14c
         <?php echo \$view['form']->row(\$child) ?>
     <?php endif; ?>
 <?php endforeach; ?>
-", "@Framework/Form/form_rest.html.php", "C:\\xampp\\htdocs\\boutique_symphony\\my_project\\vendor\\symfony\\framework-bundle\\Resources\\views\\Form\\form_rest.html.php");
+", "@Framework/Form/form_rest.html.php", "C:\\xampp\\htdocs\\boutique_symphony\\boutique-symphony\\vendor\\symfony\\framework-bundle\\Resources\\views\\Form\\form_rest.html.php");
     }
 }

@@ -67,6 +67,6 @@ class __TwigTemplate_020b93bfae4d5275992c298e4c2ee341ed73d610e0eacab6c7ad36a9e53
         return new Source("<?php echo \$view['form']->start(\$form) ?>
     <?php echo \$view['form']->widget(\$form) ?>
 <?php echo \$view['form']->end(\$form) ?>
-", "@Framework/Form/form.html.php", "C:\\xampp\\htdocs\\boutique_symphony\\my_project\\vendor\\symfony\\framework-bundle\\Resources\\views\\Form\\form.html.php");
+", "@Framework/Form/form.html.php", "C:\\xampp\\htdocs\\boutique_symphony\\boutique-symphony\\vendor\\symfony\\framework-bundle\\Resources\\views\\Form\\form.html.php");
     }
 }

@@ -63,6 +63,6 @@ class __TwigTemplate_8fbdb108953d02f27689783de804da35d8a07f1650eca7d7728b7073a22
     public function getSourceContext()
     {
         return new Source("<?php echo \$view['form']->block(\$form, 'form_widget_simple', ['type' => isset(\$type) ? \$type : 'tel']);
-", "@Framework/Form/tel_widget.html.php", "C:\\xampp\\htdocs\\boutique_symphony\\my_project\\vendor\\symfony\\framework-bundle\\Resources\\views\\Form\\tel_widget.html.php");
+", "@Framework/Form/tel_widget.html.php", "C:\\xampp\\htdocs\\boutique_symphony\\boutique-symphony\\vendor\\symfony\\framework-bundle\\Resources\\views\\Form\\tel_widget.html.php");
     }
 }

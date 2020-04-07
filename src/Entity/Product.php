@@ -44,6 +44,11 @@ class Product
      */
     private $lignePaniers;
 
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $isPublished;
+
     public function __construct()
     {
         $this->lignePaniers = new ArrayCollection();
@@ -129,6 +134,18 @@ class Product
                 $lignePanier->setProduct(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getIsPublished(): ?bool
+    {
+        return $this->isPublished;
+    }
+
+    public function setIsPublished(bool $isPublished): self
+    {
+        $this->isPublished = $isPublished;
 
         return $this;
     }

@@ -105,6 +105,6 @@ class __TwigTemplate_7d30e6d5f82f3fbecd4434f8b3881e5045a1b8bdaada82be4d4f3b312fb
         ?>
     </div>
 <?php endif ?>
-", "@Framework/Form/time_widget.html.php", "C:\\xampp\\htdocs\\boutique_symphony\\my_project\\vendor\\symfony\\framework-bundle\\Resources\\views\\Form\\time_widget.html.php");
+", "@Framework/Form/time_widget.html.php", "C:\\xampp\\htdocs\\boutique_symphony\\boutique-symphony\\vendor\\symfony\\framework-bundle\\Resources\\views\\Form\\time_widget.html.php");
     }
 }

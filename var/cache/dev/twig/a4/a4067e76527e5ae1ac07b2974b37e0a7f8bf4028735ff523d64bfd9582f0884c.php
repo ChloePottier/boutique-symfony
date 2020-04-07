@@ -79,6 +79,6 @@ class __TwigTemplate_957412bda07e3b2af86ca3b318329fbdf6491821dce02d73ebd48451657
 <?php printf('%s=\"%s\" ', \$view->escape(\$k), \$view->escape(\$v)) ?>
 <?php endif ?>
 <?php endforeach ?>
-", "@Framework/Form/attributes.html.php", "C:\\xampp\\htdocs\\boutique_symphony\\my_project\\vendor\\symfony\\framework-bundle\\Resources\\views\\Form\\attributes.html.php");
+", "@Framework/Form/attributes.html.php", "C:\\xampp\\htdocs\\boutique_symphony\\boutique-symphony\\vendor\\symfony\\framework-bundle\\Resources\\views\\Form\\attributes.html.php");
     }
 }
