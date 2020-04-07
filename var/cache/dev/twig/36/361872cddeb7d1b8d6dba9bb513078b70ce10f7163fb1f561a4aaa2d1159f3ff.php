@@ -71,7 +71,7 @@ class __TwigTemplate_cd7715d02fe11c9bf330b021c3670eed5a05cd7d0b022ba3353b55b4c07
         // line 38
         echo "        ";
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 39
+        // line 42
         echo "    </body>
 </html>
 ";
@@ -211,6 +211,10 @@ class __TwigTemplate_cd7715d02fe11c9bf330b021c3670eed5a05cd7d0b022ba3353b55b4c07
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
+        // line 39
+        echo "            <script src=\"https://code.jquery.com/jquery-3.4.1.slim.min.js\" integrity=\"sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n\" crossorigin=\"anonymous\"></script>
+<script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js\" integrity=\"sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo\" crossorigin=\"anonymous\"></script>
+        ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -226,7 +230,7 @@ class __TwigTemplate_cd7715d02fe11c9bf330b021c3670eed5a05cd7d0b022ba3353b55b4c07
 
     public function getDebugInfo()
     {
-        return array (  205 => 38,  195 => 37,  185 => 36,  171 => 30,  167 => 28,  163 => 26,  161 => 25,  155 => 22,  145 => 15,  142 => 14,  132 => 13,  120 => 9,  116 => 7,  106 => 6,  87 => 5,  75 => 39,  72 => 38,  70 => 36,  67 => 35,  65 => 13,  60 => 10,  58 => 6,  54 => 5,  48 => 1,);
+        return array (  215 => 39,  205 => 38,  195 => 37,  185 => 36,  171 => 30,  167 => 28,  163 => 26,  161 => 25,  155 => 22,  145 => 15,  142 => 14,  132 => 13,  120 => 9,  116 => 7,  106 => 6,  87 => 5,  75 => 42,  72 => 38,  70 => 36,  67 => 35,  65 => 13,  60 => 10,  58 => 6,  54 => 5,  48 => 1,);
     }
 
     public function getSourceContext()
@@ -268,7 +272,10 @@ class __TwigTemplate_cd7715d02fe11c9bf330b021c3670eed5a05cd7d0b022ba3353b55b4c07
         </header>
         {% block content %}
         {% endblock %}
-        {% block javascripts %}{% endblock %}
+        {% block javascripts %}
+            <script src=\"https://code.jquery.com/jquery-3.4.1.slim.min.js\" integrity=\"sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n\" crossorigin=\"anonymous\"></script>
+<script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js\" integrity=\"sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo\" crossorigin=\"anonymous\"></script>
+        {% endblock %}
     </body>
 </html>
 ", "base.html.twig", "C:\\xampp\\htdocs\\boutique_symphony\\boutique-symphony\\templates\\base.html.twig");

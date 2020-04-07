@@ -46,7 +46,7 @@ class AdminController extends AbstractController
         ]);
     }
 
-         /**
+    /**
      * @Route("/admin/product", name="add_product")
      * @Route("/admin/product/{id}", name="product_update", methods="GET|POST")
      */
