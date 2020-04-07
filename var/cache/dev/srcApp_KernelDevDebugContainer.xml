@@ -20,6 +20,7 @@
       <parameter key="MonologBundle">Symfony\Bundle\MonologBundle\MonologBundle</parameter>
       <parameter key="DebugBundle">Symfony\Bundle\DebugBundle\DebugBundle</parameter>
       <parameter key="MakerBundle">Symfony\Bundle\MakerBundle\MakerBundle</parameter>
+      <parameter key="WebServerBundle">Symfony\Bundle\WebServerBundle\WebServerBundle</parameter>
     </parameter>
     <parameter key="kernel.bundles_metadata" type="collection">
       <parameter key="FrameworkBundle" type="collection">
@@ -65,6 +66,10 @@
       <parameter key="MakerBundle" type="collection">
         <parameter key="path">C:\xampp\htdocs\boutique_symphony\boutique-symphony\vendor\symfony\maker-bundle\src</parameter>
         <parameter key="namespace">Symfony\Bundle\MakerBundle</parameter>
+      </parameter>
+      <parameter key="WebServerBundle" type="collection">
+        <parameter key="path">C:\xampp\htdocs\boutique_symphony\boutique-symphony\vendor\symfony\web-server-bundle</parameter>
+        <parameter key="namespace">Symfony\Bundle\WebServerBundle</parameter>
       </parameter>
     </parameter>
     <parameter key="kernel.charset">UTF-8</parameter>
@@ -311,6 +316,26 @@
     </service>
     <service id="EasyCorp\EasyLog\EasyLogHandler" class="EasyCorp\EasyLog\EasyLogHandler" public="false">
       <argument>C:\xampp\htdocs\boutique_symphony\boutique-symphony\var\log/dev.log</argument>
+    </service>
+    <service id="App\Repository\LignePanierRepository" class="App\Repository\LignePanierRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
+    <service id="App\Repository\OrderRepository" class="App\Repository\OrderRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
+    <service id="App\Repository\PanierRepository" class="App\Repository\PanierRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
+    <service id="App\Repository\ProductRepository" class="App\Repository\ProductRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
+    <service id="App\Repository\UserRepository" class="App\Repository\UserRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
     </service>
     <service id=".legacy_controller_name_converter" class="Symfony\Bundle\FrameworkBundle\Controller\ControllerNameParser" public="false">
       <tag name="monolog.logger" channel="request"/>
@@ -1627,6 +1652,8 @@
           <argument>C:\xampp\htdocs\boutique_symphony\boutique-symphony\src/Resources/DebugBundle/translations</argument>
           <argument>C:\xampp\htdocs\boutique_symphony\boutique-symphony\vendor\symfony\maker-bundle\src/translations</argument>
           <argument>C:\xampp\htdocs\boutique_symphony\boutique-symphony\src/Resources/MakerBundle/translations</argument>
+          <argument>C:\xampp\htdocs\boutique_symphony\boutique-symphony\vendor\symfony\web-server-bundle/translations</argument>
+          <argument>C:\xampp\htdocs\boutique_symphony\boutique-symphony\src/Resources/WebServerBundle/translations</argument>
           <argument>C:\xampp\htdocs\boutique_symphony\boutique-symphony\src/Resources/translations</argument>
         </argument>
         <argument key="cache_vary" type="collection">
@@ -1657,6 +1684,8 @@
             <argument>C:\xampp\htdocs\boutique_symphony\boutique-symphony\src/Resources/DebugBundle/translations</argument>
             <argument>C:\xampp\htdocs\boutique_symphony\boutique-symphony\vendor\symfony\maker-bundle\src/translations</argument>
             <argument>C:\xampp\htdocs\boutique_symphony\boutique-symphony\src/Resources/MakerBundle/translations</argument>
+            <argument>C:\xampp\htdocs\boutique_symphony\boutique-symphony\vendor\symfony\web-server-bundle/translations</argument>
+            <argument>C:\xampp\htdocs\boutique_symphony\boutique-symphony\src/Resources/WebServerBundle/translations</argument>
             <argument>C:\xampp\htdocs\boutique_symphony\boutique-symphony\src/Resources/translations</argument>
           </argument>
         </argument>
@@ -3397,7 +3426,7 @@
       <factory class="Doctrine\ORM\EntityManager" method="create"/>
     </service>
     <service id="doctrine.orm.container_repository_factory" class="Doctrine\Bundle\DoctrineBundle\Repository\ContainerRepositoryFactory" public="false">
-      <argument type="service" id=".service_locator.I3K77mT"/>
+      <argument type="service" id=".service_locator.nTgnQyg"/>
     </service>
     <service id="doctrine.orm.manager_configurator.abstract" class="Doctrine\Bundle\DoctrineBundle\ManagerConfigurator" abstract="true">
       <argument type="collection"/>
@@ -4595,6 +4624,48 @@
       <tag name="maker.command"/>
       <argument>C:\xampp\htdocs\boutique_symphony\boutique-symphony</argument>
     </service>
+    <service id="web_server.command.server_run" class="Symfony\Bundle\WebServerBundle\Command\ServerRunCommand" public="false">
+      <tag name="console.command" command="server:run"/>
+      <argument>C:\xampp\htdocs\boutique_symphony\boutique-symphony/public</argument>
+      <argument>dev</argument>
+      <argument>C:\xampp\htdocs\boutique_symphony\boutique-symphony\var\cache</argument>
+      <call method="setName">
+        <argument>server:run</argument>
+      </call>
+    </service>
+    <service id="web_server.command.server_start" class="Symfony\Bundle\WebServerBundle\Command\ServerStartCommand" public="false">
+      <tag name="console.command" command="server:start"/>
+      <argument>C:\xampp\htdocs\boutique_symphony\boutique-symphony/public</argument>
+      <argument>dev</argument>
+      <argument>C:\xampp\htdocs\boutique_symphony\boutique-symphony\var\cache</argument>
+      <call method="setName">
+        <argument>server:start</argument>
+      </call>
+    </service>
+    <service id="web_server.command.server_stop" class="Symfony\Bundle\WebServerBundle\Command\ServerStopCommand" public="false">
+      <tag name="console.command" command="server:stop"/>
+      <argument>C:\xampp\htdocs\boutique_symphony\boutique-symphony\var\cache</argument>
+      <call method="setName">
+        <argument>server:stop</argument>
+      </call>
+    </service>
+    <service id="web_server.command.server_status" class="Symfony\Bundle\WebServerBundle\Command\ServerStatusCommand" public="false">
+      <tag name="console.command" command="server:status"/>
+      <argument>C:\xampp\htdocs\boutique_symphony\boutique-symphony\var\cache</argument>
+      <call method="setName">
+        <argument>server:status</argument>
+      </call>
+    </service>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\LignePanierRepository" class="App\Repository\LignePanierRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\LignePanierRepository" class="App\Repository\LignePanierRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\OrderRepository" class="App\Repository\OrderRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\OrderRepository" class="App\Repository\OrderRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\PanierRepository" class="App\Repository\PanierRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\PanierRepository" class="App\Repository\PanierRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\ProductRepository" class="App\Repository\ProductRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\ProductRepository" class="App\Repository\ProductRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\UserRepository" class="App\Repository\UserRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\UserRepository" class="App\Repository\UserRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".service_locator.CmORmuK" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -4886,6 +4957,16 @@
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="doctrine.orm.default_listeners.attach_entity_listeners" type="service" id="doctrine.orm.default_listeners.attach_entity_listeners"/>
+      </argument>
+    </service>
+    <service id=".service_locator.nTgnQyg" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="App\Repository\LignePanierRepository" type="service" id="App\Repository\LignePanierRepository"/>
+        <argument key="App\Repository\OrderRepository" type="service" id="App\Repository\OrderRepository"/>
+        <argument key="App\Repository\PanierRepository" type="service" id="App\Repository\PanierRepository"/>
+        <argument key="App\Repository\ProductRepository" type="service" id="App\Repository\ProductRepository"/>
+        <argument key="App\Repository\UserRepository" type="service" id="App\Repository\UserRepository"/>
       </argument>
     </service>
     <service id="debug.security.voter.security.access.authenticated_voter" class="Symfony\Component\Security\Core\Authorization\Voter\TraceableVoter">
@@ -5214,7 +5295,7 @@
       <factory class="Symfony\Component\HttpClient\HttpClient" method="create"/>
     </service>
     <service id="console.command_loader" class="Symfony\Component\Console\CommandLoader\ContainerCommandLoader" public="true">
-      <argument type="service" id=".service_locator.qXXHFBJ"/>
+      <argument type="service" id=".service_locator.2rVv97q"/>
       <argument type="collection">
         <argument key="about">console.command.about</argument>
         <argument key="assets:install">console.command.assets_install</argument>
@@ -5277,6 +5358,10 @@
         <argument key="security:encode-password">security.command.user_password_encoder</argument>
         <argument key="server:dump">var_dumper.command.server_dump</argument>
         <argument key="server:log">monolog.command.server_log</argument>
+        <argument key="server:run">web_server.command.server_run</argument>
+        <argument key="server:start">web_server.command.server_start</argument>
+        <argument key="server:stop">web_server.command.server_stop</argument>
+        <argument key="server:status">web_server.command.server_status</argument>
         <argument key="make:auth">maker.auto_command.make_auth</argument>
         <argument key="make:command">maker.auto_command.make_command</argument>
         <argument key="make:controller">maker.auto_command.make_controller</argument>
@@ -5300,7 +5385,7 @@
         <argument key="make:migration">maker.auto_command.make_migration</argument>
       </argument>
     </service>
-    <service id=".service_locator.qXXHFBJ" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.2rVv97q" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="console.command.about" type="service" id="console.command.about"/>
@@ -5385,6 +5470,10 @@
         <argument key="twig.command.debug" type="service" id="twig.command.debug"/>
         <argument key="twig.command.lint" type="service" id="twig.command.lint"/>
         <argument key="var_dumper.command.server_dump" type="service" id="var_dumper.command.server_dump"/>
+        <argument key="web_server.command.server_run" type="service" id="web_server.command.server_run"/>
+        <argument key="web_server.command.server_start" type="service" id="web_server.command.server_start"/>
+        <argument key="web_server.command.server_status" type="service" id="web_server.command.server_status"/>
+        <argument key="web_server.command.server_stop" type="service" id="web_server.command.server_stop"/>
       </argument>
     </service>
     <service id="cache.app.recorder_inner" class="Symfony\Component\Cache\Adapter\FilesystemAdapter" public="false">

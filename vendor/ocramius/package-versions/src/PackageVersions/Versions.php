@@ -12,7 +12,7 @@ namespace PackageVersions;
  */
 final class Versions
 {
-    public const ROOT_PACKAGE_NAME = 'symfony/website-skeleton';
+    public const ROOT_PACKAGE_NAME = '__root__';
     /**
      * Array of all available composer packages.
      * Dont read this array from your calling code, but use the \PackageVersions\Versions::getVersion() method instead.
@@ -106,6 +106,7 @@ final class Versions
   'symfony/var-dumper' => 'v4.4.7@5a0c2d93006131a36cf6f767d10e2ca8333b0d4a',
   'symfony/var-exporter' => 'v4.4.7@6e4939b084defee0ab60a21e6a02e3a198afd91f',
   'symfony/web-link' => 'v4.4.7@9ec692b342855335f3f4e77753ad71f85c6038f8',
+  'symfony/web-server-bundle' => 'v4.4.7@41cefc83e42a1600c9230b1c28b0e162c2a560ed',
   'symfony/yaml' => 'v4.4.7@ef166890d821518106da3560086bfcbeb4fadfec',
   'twig/extra-bundle' => 'v3.0.3@6eaf1637abe6b68518e7e0949ebb84e55770d5c6',
   'twig/twig' => 'v3.0.3@3b88ccd180a6b61ebb517aea3b1a8906762a1dc2',
@@ -124,13 +125,13 @@ final class Versions
   'symfony/profiler-pack' => 'v1.0.4@99c4370632c2a59bb0444852f92140074ef02209',
   'symfony/test-pack' => 'v1.0.6@ff87e800a67d06c423389f77b8209bc9dc469def',
   'symfony/web-profiler-bundle' => 'v4.4.7@4c432f5c21c700270819daacf95323302fa8f004',
-  'paragonie/random_compat' => '2.*@',
-  'symfony/polyfill-ctype' => '*@',
-  'symfony/polyfill-iconv' => '*@',
-  'symfony/polyfill-php71' => '*@',
-  'symfony/polyfill-php70' => '*@',
-  'symfony/polyfill-php56' => '*@',
-  'symfony/website-skeleton' => 'v4.4.99@',
+  'paragonie/random_compat' => '2.*@6cc69881be1121587c50373ae22cb0a067488ebc',
+  'symfony/polyfill-ctype' => '*@6cc69881be1121587c50373ae22cb0a067488ebc',
+  'symfony/polyfill-iconv' => '*@6cc69881be1121587c50373ae22cb0a067488ebc',
+  'symfony/polyfill-php71' => '*@6cc69881be1121587c50373ae22cb0a067488ebc',
+  'symfony/polyfill-php70' => '*@6cc69881be1121587c50373ae22cb0a067488ebc',
+  'symfony/polyfill-php56' => '*@6cc69881be1121587c50373ae22cb0a067488ebc',
+  '__root__' => 'dev-chloe@6cc69881be1121587c50373ae22cb0a067488ebc',
 );
 
     private function __construct()

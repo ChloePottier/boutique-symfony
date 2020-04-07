@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -36,6 +38,16 @@ class Product
      * @ORM\JoinColumn(nullable=false)
      */
     private $category;
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\LignePanier", mappedBy="product")
+     */
+    private $lignePaniers;
+
+    public function __construct()
+    {
+        $this->lignePaniers = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -86,6 +98,37 @@ class Product
     public function setCategory(?Category $category): self
     {
         $this->category = $category;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|LignePanier[]
+     */
+    public function getLignePaniers(): Collection
+    {
+        return $this->lignePaniers;
+    }
+
+    public function addLignePanier(LignePanier $lignePanier): self
+    {
+        if (!$this->lignePaniers->contains($lignePanier)) {
+            $this->lignePaniers[] = $lignePanier;
+            $lignePanier->setProduct($this);
+        }
+
+        return $this;
+    }
+
+    public function removeLignePanier(LignePanier $lignePanier): self
+    {
+        if ($this->lignePaniers->contains($lignePanier)) {
+            $this->lignePaniers->removeElement($lignePanier);
+            // set the owning side to null (unless already changed)
+            if ($lignePanier->getProduct() === $this) {
+                $lignePanier->setProduct(null);
+            }
+        }
 
         return $this;
     }
