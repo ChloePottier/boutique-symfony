@@ -1,0 +1,11 @@
+
+ {% extends 'base.html.twig' %}
+
+{% block title %}Ajouter une catégorie | {{ parent() }}{% endblock %}
+{% block content %}
+{{form_start(formCat)}}
+ {{form_widget(formCat.nom)}}
+
+ <input type="submit" value="Valider" class="btn btn-primary">
+ {{form_end(formCat)}} 
+{% endblock %}
