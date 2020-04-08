@@ -128,7 +128,7 @@ class __TwigTemplate_5c3854fc4bcc5f3fd2330747e511600539022855857d58b103aa10b2994
             echo "                        <div class=\"image-carte\">
                             <img src=\"";
             // line 39
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["product"], "image", [], "any", false, false, false, 39), "html", null, true);
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("uploads/" . twig_get_attribute($this->env, $this->source, $context["product"], "image", [], "any", false, false, false, 39))), "html", null, true);
             echo "\" class=\"card-img-top\" width=\"256\" height=\"208\" title=\"";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["product"], "nom", [], "any", false, false, false, 39), "html", null, true);
             echo "\" alt=\"image ";
@@ -231,10 +231,10 @@ class __TwigTemplate_5c3854fc4bcc5f3fd2330747e511600539022855857d58b103aa10b2994
                     <div class=\"card\">
                     {# gestion de l'url : dossier uploads/table article col picture #}
                         <div class=\"image-carte\">
-                            <img src=\"{{product.image}}\" class=\"card-img-top\" width=\"256\" height=\"208\" title=\"{{ product.nom }}\" alt=\"image {{ product.nom  }}\">
+                            <img src=\"{{ asset('uploads/' ~ product.image) }}\" class=\"card-img-top\" width=\"256\" height=\"208\" title=\"{{ product.nom }}\" alt=\"image {{ product.nom  }}\">
                         </div>
                         <div class=\"card-body\">
-                            <h5 class=\"card-title\">{{ product.nom  }}</h5>
+                            <h5 class=\"card-title\">{{ product.nom}}</h5>
                             {# date de publication que l'on met au format jj/mm/aa #}
                             <p class=\"card-text card-decription text-muted mb-0\">{{product.description }}</p>                               
                             {# <h6 class=\"card-subtitle mb-2 text-muted text-right\"></h6> #}

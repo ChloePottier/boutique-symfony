@@ -36,10 +36,10 @@
                     <div class="card">
                     {# gestion de l'url : dossier uploads/table article col picture #}
                         <div class="image-carte">
-                            <img src="{{product.image}}" class="card-img-top" width="256" height="208" title="{{ product.nom }}" alt="image {{ product.nom  }}">
+                            <img src="{{ asset('uploads/' ~ product.image) }}" class="card-img-top" width="256" height="208" title="{{ product.nom }}" alt="image {{ product.nom  }}">
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title">{{ product.nom  }}</h5>
+                            <h5 class="card-title">{{ product.nom}}</h5>
                             {# date de publication que l'on met au format jj/mm/aa #}
                             <p class="card-text card-decription text-muted mb-0">{{product.description }}</p>                               
                             {# <h6 class="card-subtitle mb-2 text-muted text-right"></h6> #}

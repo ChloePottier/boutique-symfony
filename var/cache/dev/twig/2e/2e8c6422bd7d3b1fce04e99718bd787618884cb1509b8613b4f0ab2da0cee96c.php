@@ -92,8 +92,8 @@ class __TwigTemplate_5630054849b235ec4a287e0af5b096fc5534b072a4b144db6969bb440a8
 \t<div class=\"container-fluid \">
         <div class=\"container\">
             <div class=\"row\">
-                <div class=\"col-12\">
-                    <h1> Ajouter un produit</h1>
+                <div class=\"col-12 mt-5 mb-3\">
+                    <h1> Ajouter ou modifier un produit</h1>
                 </div>
             </div>
                     ";
@@ -231,8 +231,8 @@ class __TwigTemplate_5630054849b235ec4a287e0af5b096fc5534b072a4b144db6969bb440a8
 \t<div class=\"container-fluid \">
         <div class=\"container\">
             <div class=\"row\">
-                <div class=\"col-12\">
-                    <h1> Ajouter un produit</h1>
+                <div class=\"col-12 mt-5 mb-3\">
+                    <h1> Ajouter ou modifier un produit</h1>
                 </div>
             </div>
                     {{form_start(formP, {'attr': {'class':'row'}})}}

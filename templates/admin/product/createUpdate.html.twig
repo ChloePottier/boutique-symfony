@@ -9,8 +9,8 @@
 	<div class="container-fluid ">
         <div class="container">
             <div class="row">
-                <div class="col-12">
-                    <h1> Ajouter un produit</h1>
+                <div class="col-12 mt-5 mb-3">
+                    <h1> Ajouter ou modifier un produit</h1>
                 </div>
             </div>
                     {{form_start(formP, {'attr': {'class':'row'}})}}
@@ -53,8 +53,8 @@
                         <span id="msg-errors" class="error text-danger">{{ form_errors(formP.isPublished) }}</span>
                     </div>
 
-                        <div class="input-article submit-article col-12 mb-2 d-flex justify-content-end">
-                            <input type="submit" name="" value="Enregistrer" class="btn btn-dark btn-submit-article">
+                        <div class="input-formP submit-formP col-12 mb-2 d-flex justify-content-end">
+                            <input type="submit" name="" value="Enregistrer" class="btn btn-dark btn-submit-form">
                         </div>
                                            
                     {{form_end(formP)}}
