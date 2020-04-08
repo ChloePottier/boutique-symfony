@@ -116,7 +116,7 @@ class __TwigTemplate_5c3854fc4bcc5f3fd2330747e511600539022855857d58b103aa10b2994
             <div class=\"row\">
             ";
         // line 34
-        echo "            ";
+        echo "             ";
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["products"]) || array_key_exists("products", $context) ? $context["products"] : (function () { throw new RuntimeError('Variable "products" does not exist.', 34, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["product"]) {
@@ -226,7 +226,7 @@ class __TwigTemplate_5c3854fc4bcc5f3fd2330747e511600539022855857d58b103aa10b2994
             </div>
             <div class=\"row\">
             {# boucle for afin d'afficher les articles #}
-            {% for product in products %}
+             {% for product in products %}
                 <div class=\"col-12 col-sm-6 col-lg-3  text-center my-5\">
                     <div class=\"card\">
                     {# gestion de l'url : dossier uploads/table article col picture #}

@@ -14,9 +14,13 @@ return [
         '/_profiler/phpinfo' => [[['_route' => '_profiler_phpinfo', '_controller' => 'web_profiler.controller.profiler::phpinfoAction'], null, null, null, false, false, null]],
         '/_profiler/open' => [[['_route' => '_profiler_open_file', '_controller' => 'web_profiler.controller.profiler::openAction'], null, null, null, false, false, null]],
         '/admin' => [[['_route' => 'admin', '_controller' => 'App\\Controller\\AdminController::index'], null, null, null, false, false, null]],
-        '/admin/category' => [[['_route' => 'add_category', '_controller' => 'App\\Controller\\AdminController::createCategory'], null, null, null, false, false, null]],
-        '/admin/product' => [[['_route' => 'add_product', '_controller' => 'App\\Controller\\AdminController::createUpdate'], null, null, null, false, false, null]],
-        '/' => [[['_route' => 'index', '_controller' => 'App\\Controller\\IndexController::index'], null, null, null, false, false, null]],
+        '/admin/category' => [[['_route' => 'liste_cat', '_controller' => 'App\\Controller\\AdminController::listCategory'], null, null, null, false, false, null]],
+        '/admin/category/add' => [[['_route' => 'add_category', '_controller' => 'App\\Controller\\AdminController::createUpdateCategory'], null, null, null, false, false, null]],
+        '/admin/product' => [[['_route' => 'liste_product', '_controller' => 'App\\Controller\\AdminController::listProduct'], null, null, null, false, false, null]],
+        '/admin/product/add' => [[['_route' => 'add_product', '_controller' => 'App\\Controller\\AdminController::createUpdateProduct'], null, null, null, false, false, null]],
+        '/' => [[['_route' => 'index', '_controller' => 'App\\Controller\\IndexController::listProduct'], null, null, null, false, false, null]],
+        '/index/login' => [[['_route' => 'inscription', '_controller' => 'App\\Controller\\IndexController::inscription'], null, null, null, false, false, null]],
+        '/index/login/1' => [[['_route' => 'login', '_controller' => 'App\\Controller\\IndexController::login'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'
@@ -35,7 +39,16 @@ return [
                         .'|(*:159)'
                     .')'
                 .')'
-                .'|/admin/product/([^/]++)(*:192)'
+                .'|/admin/(?'
+                    .'|category/(?'
+                        .'|add/([^/]++)(*:203)'
+                        .'|([^/]++)(*:219)'
+                    .')'
+                    .'|product/(?'
+                        .'|add/([^/]++)(*:251)'
+                        .'|([^/]++)(*:267)'
+                    .')'
+                .')'
             .')/?$}sD',
     ],
     [ // $dynamicRoutes
@@ -46,8 +59,11 @@ return [
         136 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception_panel::body'], ['token'], null, null, false, false, null]],
         149 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
         159 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
-        192 => [
-            [['_route' => 'product_update', '_controller' => 'App\\Controller\\AdminController::createUpdate'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null],
+        203 => [[['_route' => 'update_category', '_controller' => 'App\\Controller\\AdminController::createUpdateCategory'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
+        219 => [[['_route' => 'delete_cat', '_controller' => 'App\\Controller\\AdminController::deleteCategory'], ['id'], ['SUP' => 0], null, false, true, null]],
+        251 => [[['_route' => 'product_update', '_controller' => 'App\\Controller\\AdminController::createUpdateProduct'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
+        267 => [
+            [['_route' => 'delete_product', '_controller' => 'App\\Controller\\AdminController::deleteProduct'], ['id'], ['SUP' => 0], null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
     ],

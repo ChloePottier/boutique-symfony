@@ -1,76 +1,155 @@
 <?php
 
 namespace App\Controller;
+
 use App\Entity\Category;
 use App\Entity\Product;
 use App\Form\CategoryType;
 use App\Form\ProductType;
+use App\Repository\CategoryRepository;
+use App\Repository\ProductRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 use Doctrine\ORM\EntityManagerInterface;
+use Symfony\Component\HttpFoundation\File\Exception\FileException;
 use Symfony\Component\HttpFoundation\Request as HttpFoundationRequest;
+use Symfony\Component\HttpFoundation\Response;
 
 class AdminController extends AbstractController
 {
-    /**
-     * @Route("/admin", name="admin")
-     */
-    public function index()
-    {
-        return $this->render('admin/index.html.twig', [
-            'controller_name' => 'AdminController',
-        ]);
-    }
+/**
+* @Route("/admin", name="admin")
+*/
+public function index()
+{
+return $this->render('admin/index.html.twig');
+}
 
-    /**
-     * @Route("/admin/category", name="add_category")
-     */
-    public function createCategory(EntityManagerInterface $manager, HttpFoundationRequest $request)
-    {
-        $category = new Category();
+/**
+* @Route("/admin/category", name="liste_cat")
+*/
+public function listCategory(CategoryRepository $categoryRepository)
+{
 
-        $form = $this->createForm(CategoryType::class, $category);
-        $form->handleRequest($request);
+$categories = $categoryRepository->findAll();
 
-        if($form->isSubmitted() && $form->isValid()) {
+return $this->render('admin/category/category.html.twig', [
+"categories" => $categories
+]);
+}
 
-            $manager->persist($category);
-            $manager->flush();
+/**
+* @Route("/admin/category/add", name="add_category")
+* @Route("/admin/category/add/{id}", name="update_category", methods="GET|POST")
+*/
+public function createUpdateCategory(Category $category = null, EntityManagerInterface $manager, HttpFoundationRequest $request)
+{
+if(!$category) {
 
-            return $this->redirectToRoute('admin');
-        }
+$category = new Category();
+}
 
-        return $this->render('admin/category/category.html.twig', [
-            "category" => $category,
-            "formCat" => $form->createView()
-        ]);
-    }
+$form = $this->createForm(CategoryType::class, $category);
+$form->handleRequest($request);
 
-    /**
-     * @Route("/admin/product", name="add_product")
-     * @Route("/admin/product/{id}", name="product_update", methods="GET|POST")
-     */
-    public function createUpdate(EntityManagerInterface $manager, HttpFoundationRequest $request)
-    {
-        // if(!$product) {
+if($form->isSubmitted() && $form->isValid()) {
 
-        // }
-        $product = new Product();
-        $form = $this->createForm(ProductType::class, $product);
-        $form->handleRequest($request);
-        
-        if($form->isSubmitted() && $form->isValid()) {
-            // $product->setIsPublished(true);
+$manager->persist($category);
+$manager->flush();
 
-            $manager->persist($product);
-            $manager->flush();
+return $this->redirectToRoute('liste_cat');
+}
 
-            return $this->redirectToRoute("admin");
-        }
+return $this->render('admin/category/add/newCategory.html.twig', [
+"category" => $category,
+"formCat" => $form->createView()
+]);
+}
 
-        return $this->render('admin/product/createUpdate.html.twig', [
-            "product" => $product,
-            "formP" => $form->createView()
-        ]);
-    }
+/**
+* @Route("/admin/category/{id}", name="delete_cat", methods="SUP")
+*/
+public function deleteCategory(Category $category, HttpFoundationRequest $request, EntityManagerInterface $objectManager) {
+
+if($this->isCsrfTokenValid("SUP".$category->getId(), $request->get('_token'))) {
+$objectManager->remove($category);
+$objectManager->flush();
+$this->addFlash('success', "L'action a été effectué");
+return $this->redirectToRoute("liste_cat");
+}
+}
+
+
+
+// METHODS PRODUITS
+
+/**
+* @Route("/admin/product", name="liste_product")
+*/
+public function listProduct(ProductRepository $productRepository)
+{
+
+$products = $productRepository->findAll();
+
+return $this->render('admin/product/product.html.twig', [
+"products" => $products
+]);
+}
+
+/**
+* @Route("/admin/product/add", name="add_product")
+* @Route("/admin/product/add/{id}", name="product_update", methods="GET|POST")
+*/
+public function createUpdateProduct(Product $product = null, EntityManagerInterface $manager, HttpFoundationRequest $request)
+{
+if(!$product) {
+$product = new Product();
+}
+
+$form = $this->createForm(ProductType::class, $product);
+$form->handleRequest($request);
+
+if($form->isSubmitted() && $form->isValid()) {
+// $product->setIsPublished(true);
+
+// traitement de l'image
+if($product->getImage() !==null) {
+
+$file = $form->get('image')->getData();
+
+$filename = uniqid(). '.' . $file->guessExtension();
+try {
+$file->move($this->getParameter('images_directory'), $filename);
+} catch (FileException $e) {
+return new Response($e->getMessage());
+}
+
+$product->setImage($filename);
+
+}
+
+$manager->persist($product);
+$manager->flush();
+
+return $this->redirectToRoute("liste_product");
+}
+
+return $this->render('admin/product/add/newProduct.html.twig', [
+"product" => $product,
+"formP" => $form->createView()
+]);
+}
+
+/**
+* @Route("/admin/product/{id}", name="delete_product", methods="SUP")
+*/
+public function deleteProduct(Product $product, HttpFoundationRequest $request, EntityManagerInterface $objectManager) {
+
+if($this->isCsrfTokenValid("SUP".$product->getId(), $request->get('_token'))) {
+$objectManager->remove($product);
+$objectManager->flush();
+$this->addFlash('success', "L'action a été effectué");
+return $this->redirectToRoute("liste_product");
+}
+}
 }

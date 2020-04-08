@@ -23,7 +23,7 @@ class LignePanier
     private $panier;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\product", inversedBy="lignePaniers")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Product", inversedBy="lignePaniers")
      * @ORM\JoinColumn(nullable=false)
      */
     private $product;
@@ -45,12 +45,12 @@ class LignePanier
         return $this;
     }
 
-    public function getProduct(): ?product
+    public function getProduct(): ?Product
     {
         return $this->product;
     }
 
-    public function setProduct(?product $product): self
+    public function setProduct(?Product $product): self
     {
         $this->product = $product;
 

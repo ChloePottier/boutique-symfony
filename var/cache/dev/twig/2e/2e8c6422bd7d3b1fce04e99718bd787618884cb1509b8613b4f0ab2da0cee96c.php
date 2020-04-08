@@ -183,8 +183,8 @@ class __TwigTemplate_5630054849b235ec4a287e0af5b096fc5534b072a4b144db6969bb440a8
         echo "</span>
                     </div>
 
-                        <div class=\"input-article submit-article col-12 mb-2 d-flex justify-content-end\">
-                            <input type=\"submit\" name=\"\" value=\"Enregistrer\" class=\"btn btn-dark btn-submit-article\">
+                        <div class=\"input-formP submit-formP col-12 mb-2 d-flex justify-content-end\">
+                            <input type=\"submit\" name=\"\" value=\"Enregistrer\" class=\"btn btn-dark btn-submit-form\">
                         </div>
                                            
                     ";
@@ -275,8 +275,8 @@ class __TwigTemplate_5630054849b235ec4a287e0af5b096fc5534b072a4b144db6969bb440a8
                         <span id=\"msg-errors\" class=\"error text-danger\">{{ form_errors(formP.isPublished) }}</span>
                     </div>
 
-                        <div class=\"input-article submit-article col-12 mb-2 d-flex justify-content-end\">
-                            <input type=\"submit\" name=\"\" value=\"Enregistrer\" class=\"btn btn-dark btn-submit-article\">
+                        <div class=\"input-formP submit-formP col-12 mb-2 d-flex justify-content-end\">
+                            <input type=\"submit\" name=\"\" value=\"Enregistrer\" class=\"btn btn-dark btn-submit-form\">
                         </div>
                                            
                     {{form_end(formP)}}

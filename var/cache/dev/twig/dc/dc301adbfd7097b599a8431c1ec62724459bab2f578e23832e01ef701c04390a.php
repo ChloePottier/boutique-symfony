@@ -86,7 +86,20 @@ class __TwigTemplate_94c02bdf8f57bb270a51d219d1d792c0267a6e68eaf090429e3f94f72fe
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "content"));
 
         // line 5
-        echo "
+        echo "\t<div class=\"container-fluid \">
+        <div class=\"container\">
+            <div class=\"row\">
+                <div class=\"col-12 text-center mt-0\">
+                    <h1>Administration</h1>
+                </div>
+                <div class=\"col-4\">
+                    ";
+        // line 13
+        echo "                </div>
+
+            </div>
+        </div>
+    </div>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -108,7 +121,7 @@ class __TwigTemplate_94c02bdf8f57bb270a51d219d1d792c0267a6e68eaf090429e3f94f72fe
 
     public function getDebugInfo()
     {
-        return array (  89 => 5,  79 => 4,  59 => 3,  36 => 1,);
+        return array (  98 => 13,  89 => 5,  79 => 4,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -117,7 +130,19 @@ class __TwigTemplate_94c02bdf8f57bb270a51d219d1d792c0267a6e68eaf090429e3f94f72fe
 
 {% block title %}Admin | {{ parent() }}{% endblock %}
 {% block content %}
+\t<div class=\"container-fluid \">
+        <div class=\"container\">
+            <div class=\"row\">
+                <div class=\"col-12 text-center mt-0\">
+                    <h1>Administration</h1>
+                </div>
+                <div class=\"col-4\">
+                    {# <img src=\"\" alt=\"\" title=\"{{category.nom}}\"/> #}
+                </div>
 
+            </div>
+        </div>
+    </div>
 {% endblock %}
 ", "admin/index.html.twig", "C:\\xampp\\htdocs\\boutique_symphony\\boutique-symphony\\templates\\admin\\index.html.twig");
     }

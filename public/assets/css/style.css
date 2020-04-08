@@ -4,7 +4,11 @@
     height: 300px;
     overflow: hidden;
 }
-
+/* connexion */
+.img-signup {
+    width: 420px !important;
+    max-width: unset;
+}
 @media screen  and (max-width:991px){
 
 }

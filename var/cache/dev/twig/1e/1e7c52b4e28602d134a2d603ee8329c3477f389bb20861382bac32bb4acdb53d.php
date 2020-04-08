@@ -94,37 +94,62 @@ class __TwigTemplate_c6ff0b28cff0943daddb10235f8386978ba6d9022098e5127685625d6d9
                     <h1> Ajouter une catégorie</h1>
                 </div>
             </div>
-                ";
-        // line 14
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formCat"]) || array_key_exists("formCat", $context) ? $context["formCat"] : (function () { throw new RuntimeError('Variable "formCat" does not exist.', 14, $this->source); })()), 'form_start', ["attr" => ["class" => "row"]]);
-        echo "
-                    ";
+          
+            <div class=\"input-formCat col-12 mb-2\">
+                <a class=\"text-decoration-none\" href=\"";
         // line 16
-        echo "                <div class=\"input-formCat col-12 mb-2\">
-                    ";
-        // line 18
-        echo "                    ";
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formCat"]) || array_key_exists("formCat", $context) ? $context["formCat"] : (function () { throw new RuntimeError('Variable "formCat" does not exist.', 18, $this->source); })()), "nom", [], "any", false, false, false, 18), 'label', ["label" => "Nom de la catégorie"]);
-        echo "
-                    ";
-        // line 20
-        echo "                    ";
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formCat"]) || array_key_exists("formCat", $context) ? $context["formCat"] : (function () { throw new RuntimeError('Variable "formCat" does not exist.', 20, $this->source); })()), "nom", [], "any", false, false, false, 20), 'widget', ["attr" => ["class" => "form-control"]]);
-        echo "
-                        <span id=\"msg-errors\" class=\"error text-danger\">";
-        // line 21
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formCat"]) || array_key_exists("formCat", $context) ? $context["formCat"] : (function () { throw new RuntimeError('Variable "formCat" does not exist.', 21, $this->source); })()), "nom", [], "any", false, false, false, 21), 'errors');
-        echo "</span>
-                        <div class=\"input-formP submit-formP col-12 mb-2 d-flex justify-content-end\">
-                            <input type=\"submit\" name=\"\" value=\"Enregistrer\" class=\"btn btn-dark btn-submit-form mt-4\">
-                        </div>
-                    ";
-        // line 25
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formCat"]) || array_key_exists("formCat", $context) ? $context["formCat"] : (function () { throw new RuntimeError('Variable "formCat" does not exist.', 25, $this->source); })()), 'form_end');
-        echo " 
-                </div>
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("add_category");
+        echo "\"><i class=\"fas fa-plus mr-2\"></i>Nouvelle catégorie</a>
+                <table class=\"table table-hover mt-5 text\">
+                        <thead class=\"thead-dark text-uppercase\">
+                            <tr>
+                                <th class=\"text-center\">Nom</th>
+                                <th class=\"text-center\">Modifier</th>
+                                <th class=\"text-center\">Supprimer</th>
+                            </tr>
+                        </thead>
+                            
+                        ";
+        // line 26
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["categories"]) || array_key_exists("categories", $context) ? $context["categories"] : (function () { throw new RuntimeError('Variable "categories" does not exist.', 26, $this->source); })()));
+        foreach ($context['_seq'] as $context["_key"] => $context["cat"]) {
+            // line 27
+            echo "                        
+                        <tr>
+                            
+                            <td class=\"text-center font-weight-bold\">";
+            // line 30
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["cat"], "nom", [], "any", false, false, false, 30), "html", null, true);
+            echo "</td>
+                            <td class=\"text-center\"><a class=\"both input-style color-blue\" href=\"";
+            // line 31
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("update_category", ["id" => twig_get_attribute($this->env, $this->source, $context["cat"], "id", [], "any", false, false, false, 31)]), "html", null, true);
+            echo "\">Update</a></td>
+                            <td class=\"text-center\"><form action=\"";
+            // line 32
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("delete_cat", ["id" => twig_get_attribute($this->env, $this->source, $context["cat"], "id", [], "any", false, false, false, 32)]), "html", null, true);
+            echo "\" method=\"post\" class=\"col\" onsubmit=\"return confirm('Voulez-vous vraiment supprimer ?');\">
+                                <input type=\"hidden\" name=\"_method\" value=\"SUP\">
+                                <input type=\"hidden\" name=\"_token\" value=\"";
+            // line 34
+            echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken(("SUP" . twig_get_attribute($this->env, $this->source, $context["cat"], "id", [], "any", false, false, false, 34))), "html", null, true);
+            echo "\">
+                                <input type=\"submit\" value=\"Supprimer\" class=\"input-style both input-style-color\">
+                            </form></td>
+
+                        </tr>
+                        ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['cat'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 40
+        echo "                    </table>
+            </div>
+        </div>
     </div>
-    </div>
+
 
 ";
         
@@ -147,7 +172,7 @@ class __TwigTemplate_c6ff0b28cff0943daddb10235f8386978ba6d9022098e5127685625d6d9
 
     public function getDebugInfo()
     {
-        return array (  123 => 25,  116 => 21,  111 => 20,  106 => 18,  103 => 16,  99 => 14,  89 => 6,  79 => 5,  59 => 4,  36 => 2,);
+        return array (  148 => 40,  136 => 34,  131 => 32,  127 => 31,  123 => 30,  118 => 27,  114 => 26,  101 => 16,  89 => 6,  79 => 5,  59 => 4,  36 => 2,);
     }
 
     public function getSourceContext()
@@ -165,21 +190,37 @@ class __TwigTemplate_c6ff0b28cff0943daddb10235f8386978ba6d9022098e5127685625d6d9
                     <h1> Ajouter une catégorie</h1>
                 </div>
             </div>
-                {{form_start(formCat, {'attr': {'class':'row'}})}}
-                    {# {{form_widget(formP)}} #}
-                <div class=\"input-formCat col-12 mb-2\">
-                    {# Label #}
-                    {{ form_label(formCat.nom, 'Nom de la catégorie') }}
-                    {# Input title class input-title #}
-                    {{form_widget(formCat.nom, {'attr': {'class':'form-control'}})}}
-                        <span id=\"msg-errors\" class=\"error text-danger\">{{ form_errors(formCat.nom) }}</span>
-                        <div class=\"input-formP submit-formP col-12 mb-2 d-flex justify-content-end\">
-                            <input type=\"submit\" name=\"\" value=\"Enregistrer\" class=\"btn btn-dark btn-submit-form mt-4\">
-                        </div>
-                    {{form_end(formCat)}} 
-                </div>
+          
+            <div class=\"input-formCat col-12 mb-2\">
+                <a class=\"text-decoration-none\" href=\"{{path('add_category')}}\"><i class=\"fas fa-plus mr-2\"></i>Nouvelle catégorie</a>
+                <table class=\"table table-hover mt-5 text\">
+                        <thead class=\"thead-dark text-uppercase\">
+                            <tr>
+                                <th class=\"text-center\">Nom</th>
+                                <th class=\"text-center\">Modifier</th>
+                                <th class=\"text-center\">Supprimer</th>
+                            </tr>
+                        </thead>
+                            
+                        {% for cat in categories %}
+                        
+                        <tr>
+                            
+                            <td class=\"text-center font-weight-bold\">{{ cat.nom }}</td>
+                            <td class=\"text-center\"><a class=\"both input-style color-blue\" href=\"{{ path('update_category', {'id' : cat.id}) }}\">Update</a></td>
+                            <td class=\"text-center\"><form action=\"{{path('delete_cat', {'id' : cat.id})}}\" method=\"post\" class=\"col\" onsubmit=\"return confirm('Voulez-vous vraiment supprimer ?');\">
+                                <input type=\"hidden\" name=\"_method\" value=\"SUP\">
+                                <input type=\"hidden\" name=\"_token\" value=\"{{csrf_token('SUP' ~ cat.id)}}\">
+                                <input type=\"submit\" value=\"Supprimer\" class=\"input-style both input-style-color\">
+                            </form></td>
+
+                        </tr>
+                        {% endfor %}
+                    </table>
+            </div>
+        </div>
     </div>
-    </div>
+
 
 {% endblock %}
 ", "admin/category/category.html.twig", "C:\\xampp\\htdocs\\boutique_symphony\\boutique-symphony\\templates\\admin\\category\\category.html.twig");
