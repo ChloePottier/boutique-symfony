@@ -151,21 +151,25 @@ class __TwigTemplate_5f04653d8501690110386e68583ae5f6d8317412e88cb457567a62e0be7
             }
             // line 43
             echo "                            </td>
-                            <td class=\"text-center\"><a class=\"both input-style btn btn-outline-info btn-submit-form\" href=\"";
+                            <td class=\"text-center\"><a class=\"\" href=\"";
             // line 44
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("product_update", ["id" => twig_get_attribute($this->env, $this->source, $context["product"], "id", [], "any", false, false, false, 44)]), "html", null, true);
-            echo "\">Modifier</a></td>
-                            <td class=\"text-center\"><form action=\"";
-            // line 45
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("delete_product", ["id" => twig_get_attribute($this->env, $this->source, $context["product"], "id", [], "any", false, false, false, 45)]), "html", null, true);
+            echo "\"><img src=\"";
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("images/" . "edit.svg")), "html", null, true);
+            echo "\" width=\"30\" height=\"30\" alt=\"Modifier\"/></a></td>
+                            <td class=\"text-center\">
+                                <form action=\"";
+            // line 46
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("delete_product", ["id" => twig_get_attribute($this->env, $this->source, $context["product"], "id", [], "any", false, false, false, 46)]), "html", null, true);
             echo "\" method=\"post\" class=\"col\" onsubmit=\"return confirm('Voulez-vous vraiment supprimer ?');\">
-                                <input type=\"hidden\" name=\"_method\" value=\"SUP\">
-                                <input type=\"hidden\" name=\"_token\" value=\"";
-            // line 47
-            echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken(("SUP" . twig_get_attribute($this->env, $this->source, $context["product"], "id", [], "any", false, false, false, 47))), "html", null, true);
+                                    <input type=\"hidden\" name=\"_method\" value=\"SUP\">
+                                    <input type=\"hidden\" name=\"_token\" value=\"";
+            // line 48
+            echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken(("SUP" . twig_get_attribute($this->env, $this->source, $context["product"], "id", [], "any", false, false, false, 48))), "html", null, true);
             echo "\">
-                                <input type=\"submit\" value=\"Supprimer\" class=\"input-style btn btn-outline-danger btn-submit-form\">
-                            </form></td>
+                                    <input type=\"submit\" value=\"Supprimer\" class=\"btn btn-outline-danger btn-submit-form\">
+                                </form>
+                            </td>
 
                         </tr>
                         ";
@@ -173,7 +177,7 @@ class __TwigTemplate_5f04653d8501690110386e68583ae5f6d8317412e88cb457567a62e0be7
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['product'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 53
+        // line 55
         echo "                    </table>
             </div>
 
@@ -200,7 +204,7 @@ class __TwigTemplate_5f04653d8501690110386e68583ae5f6d8317412e88cb457567a62e0be7
 
     public function getDebugInfo()
     {
-        return array (  177 => 53,  165 => 47,  160 => 45,  156 => 44,  153 => 43,  149 => 41,  145 => 39,  143 => 38,  138 => 36,  134 => 35,  130 => 34,  126 => 33,  122 => 31,  118 => 30,  100 => 15,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
+        return array (  181 => 55,  168 => 48,  163 => 46,  156 => 44,  153 => 43,  149 => 41,  145 => 39,  143 => 38,  138 => 36,  134 => 35,  130 => 34,  126 => 33,  122 => 31,  118 => 30,  100 => 15,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -248,12 +252,14 @@ class __TwigTemplate_5f04653d8501690110386e68583ae5f6d8317412e88cb457567a62e0be7
                                     Non
                                     {% endif %}
                             </td>
-                            <td class=\"text-center\"><a class=\"both input-style btn btn-outline-info btn-submit-form\" href=\"{{ path('product_update', {'id' : product.id}) }}\">Modifier</a></td>
-                            <td class=\"text-center\"><form action=\"{{path('delete_product', {'id' : product.id})}}\" method=\"post\" class=\"col\" onsubmit=\"return confirm('Voulez-vous vraiment supprimer ?');\">
-                                <input type=\"hidden\" name=\"_method\" value=\"SUP\">
-                                <input type=\"hidden\" name=\"_token\" value=\"{{csrf_token('SUP' ~ product.id)}}\">
-                                <input type=\"submit\" value=\"Supprimer\" class=\"input-style btn btn-outline-danger btn-submit-form\">
-                            </form></td>
+                            <td class=\"text-center\"><a class=\"\" href=\"{{ path('product_update', {'id' : product.id}) }}\"><img src=\"{{asset('images/' ~ 'edit.svg')}}\" width=\"30\" height=\"30\" alt=\"Modifier\"/></a></td>
+                            <td class=\"text-center\">
+                                <form action=\"{{path('delete_product', {'id' : product.id})}}\" method=\"post\" class=\"col\" onsubmit=\"return confirm('Voulez-vous vraiment supprimer ?');\">
+                                    <input type=\"hidden\" name=\"_method\" value=\"SUP\">
+                                    <input type=\"hidden\" name=\"_token\" value=\"{{csrf_token('SUP' ~ product.id)}}\">
+                                    <input type=\"submit\" value=\"Supprimer\" class=\"btn btn-outline-danger btn-submit-form\">
+                                </form>
+                            </td>
 
                         </tr>
                         {% endfor %}

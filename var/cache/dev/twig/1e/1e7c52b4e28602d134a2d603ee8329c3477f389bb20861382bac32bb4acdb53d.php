@@ -123,10 +123,12 @@ class __TwigTemplate_c6ff0b28cff0943daddb10235f8386978ba6d9022098e5127685625d6d9
             // line 31
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["cat"], "nom", [], "any", false, false, false, 31), "html", null, true);
             echo "</td>
-                            <td class=\"text-center\"><a class=\"both input-style btn btn-outline-info\" href=\"";
+                            <td class=\"text-center\"><a class=\"\" href=\"";
             // line 32
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("update_category", ["id" => twig_get_attribute($this->env, $this->source, $context["cat"], "id", [], "any", false, false, false, 32)]), "html", null, true);
-            echo "\">Update</a></td>
+            echo "\"><img src=\"";
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("images/" . "edit.svg")), "html", null, true);
+            echo "\" width=\"30\" height=\"30\" alt=\"Modifier\"/></a></td>
                             <td class=\"text-center\"><form action=\"";
             // line 33
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("delete_cat", ["id" => twig_get_attribute($this->env, $this->source, $context["cat"], "id", [], "any", false, false, false, 33)]), "html", null, true);
@@ -136,7 +138,7 @@ class __TwigTemplate_c6ff0b28cff0943daddb10235f8386978ba6d9022098e5127685625d6d9
             // line 35
             echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken(("SUP" . twig_get_attribute($this->env, $this->source, $context["cat"], "id", [], "any", false, false, false, 35))), "html", null, true);
             echo "\">
-                                <input type=\"submit\" value=\"Supprimer\" class=\"input-style both btn btn-outline-danger\">
+                                <input type=\"submit\" value=\"Supprimer\"  class=\"btn btn-outline-danger btn-submit-form\">
                             </form></td>
 
                         </tr>
@@ -174,7 +176,7 @@ class __TwigTemplate_c6ff0b28cff0943daddb10235f8386978ba6d9022098e5127685625d6d9
 
     public function getDebugInfo()
     {
-        return array (  149 => 41,  137 => 35,  132 => 33,  128 => 32,  124 => 31,  119 => 28,  115 => 27,  101 => 16,  89 => 6,  79 => 5,  59 => 4,  36 => 2,);
+        return array (  151 => 41,  139 => 35,  134 => 33,  128 => 32,  124 => 31,  119 => 28,  115 => 27,  101 => 16,  89 => 6,  79 => 5,  59 => 4,  36 => 2,);
     }
 
     public function getSourceContext()
@@ -210,11 +212,11 @@ class __TwigTemplate_c6ff0b28cff0943daddb10235f8386978ba6d9022098e5127685625d6d9
                         <tr>
                             
                             <td class=\"text-center font-weight-bold\">{{ cat.nom }}</td>
-                            <td class=\"text-center\"><a class=\"both input-style btn btn-outline-info\" href=\"{{ path('update_category', {'id' : cat.id}) }}\">Update</a></td>
+                            <td class=\"text-center\"><a class=\"\" href=\"{{ path('update_category', {'id' : cat.id}) }}\"><img src=\"{{asset('images/' ~ 'edit.svg')}}\" width=\"30\" height=\"30\" alt=\"Modifier\"/></a></td>
                             <td class=\"text-center\"><form action=\"{{path('delete_cat', {'id' : cat.id})}}\" method=\"post\" class=\"col\" onsubmit=\"return confirm('Voulez-vous vraiment supprimer ?');\">
                                 <input type=\"hidden\" name=\"_method\" value=\"SUP\">
                                 <input type=\"hidden\" name=\"_token\" value=\"{{csrf_token('SUP' ~ cat.id)}}\">
-                                <input type=\"submit\" value=\"Supprimer\" class=\"input-style both btn btn-outline-danger\">
+                                <input type=\"submit\" value=\"Supprimer\"  class=\"btn btn-outline-danger btn-submit-form\">
                             </form></td>
 
                         </tr>

@@ -4,26 +4,33 @@ namespace App\Controller;
 
 use App\Entity\User;
 use App\Form\InscriptionType;
+use App\Repository\ProductRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request as HttpFoundationRequest;
 use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
+use Symfony\Component\Security\Core\User\UserInterface;
 
 class IndexController extends AbstractController
 {
-    /**
+      /**
      * @Route("/", name="index")
      */
-    public function index()
+    public function listProduct(ProductRepository $productRepository)
     {
-        return $this->render('index/index.html.twig');
+
+        $products = $productRepository->findAll();
+
+        return $this->render('index/index.html.twig', [
+            "products" => $products
+        ]);
     }
 
     /**
      * @Route("/index/login", name="inscription")
-     */
+     */ 
     public function inscription(EntityManagerInterface $manager, HttpFoundationRequest $request, UserPasswordEncoderInterface $encoder)
     {
 
@@ -47,7 +54,7 @@ class IndexController extends AbstractController
     }
 
      /**
-     * @Route("/index/login/1", name="login")
+     * @Route("/index/login1", name="login")
      */
 
     public function login(AuthenticationUtils $util) {
@@ -58,4 +65,7 @@ class IndexController extends AbstractController
         ]);
 
      }
+
+
+
 }

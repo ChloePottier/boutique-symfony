@@ -90,7 +90,7 @@ class __TwigTemplate_5c8d0f6377b9fcb191f20a6910e1697bbfef7be81b54404779c02f8effd
         <div class=\"container\">
             <div class=\"row\">
                 <div class=\"col-12 mt-5 mb-3\">
-                    <h1> Ajouter une catégorie</h1>
+                    <h1> Ajouter ou modifier une catégorie</h1>
                 </div>
             </div>
             ";
@@ -160,7 +160,7 @@ class __TwigTemplate_5c8d0f6377b9fcb191f20a6910e1697bbfef7be81b54404779c02f8effd
         <div class=\"container\">
             <div class=\"row\">
                 <div class=\"col-12 mt-5 mb-3\">
-                    <h1> Ajouter une catégorie</h1>
+                    <h1> Ajouter ou modifier une catégorie</h1>
                 </div>
             </div>
             {{form_start(formCat, {'attr': {'class':'row'}})}}

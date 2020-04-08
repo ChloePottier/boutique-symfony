@@ -90,9 +90,9 @@ class __TwigTemplate_64291756e7c1c6cca465a78005d93e7e90974ebb4192596ccc1bb47023f
         <div class=\"container\">
             <div class=\"row\">
                 <div class=\"col-12 mt-5 mb-3\">
-                    <h1>Ajouter un produit</h1>
+                    <h1>Ajouter ou modifier un produit</h1>
                 </div>
-";
+                ";
         // line 12
         echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formP"]) || array_key_exists("formP", $context) ? $context["formP"] : (function () { throw new RuntimeError('Variable "formP" does not exist.', 12, $this->source); })()), 'form_start', ["attr" => ["class" => "row"]]);
         echo "
@@ -224,9 +224,9 @@ class __TwigTemplate_64291756e7c1c6cca465a78005d93e7e90974ebb4192596ccc1bb47023f
         <div class=\"container\">
             <div class=\"row\">
                 <div class=\"col-12 mt-5 mb-3\">
-                    <h1>Ajouter un produit</h1>
+                    <h1>Ajouter ou modifier un produit</h1>
                 </div>
-{{form_start(formP, {'attr': {'class':'row'}})}}
+                {{form_start(formP, {'attr': {'class':'row'}})}}
                         {# {{form_widget(formP)}} #}
                     <div class=\"input-formP col-12 mb-2\">
                         {# Label #}
