@@ -17,8 +17,8 @@
                     <thead class="thead-dark text-uppercase">
                         <tr>
                             <th class="text-center">Image</th>
-                            <th class="text-center">Catégorie</th>
                             <th class="text-center">Nom</th>
+                            <th class="text-center">Catégorie</th>
                             <th class="text-center">Description</th>
                             <th class="text-center">En ligne</th>
                             <th class="text-center">Modifier</th>
@@ -30,8 +30,8 @@
                     
                     <tr>
                         <td class="text-center font-weight-bold"> <img src="{{asset('uploads/' ~ product.image)}}" alt="" width="50" height="50"> </td>
-                        <td class="text-center font-weight-bold">{{ product.category.nom }}</td>
                         <td class="text-center font-weight-bold">{{ product.nom }}</td>
+                        <td class="text-center font-weight-bold">{{ product.category.nom }}</td>
                         <td class="text-center font-weight-bold">{{ product.description }}</td>
                         <td class="text-center font-weight-bold">
                             {% if product.isPublished %}

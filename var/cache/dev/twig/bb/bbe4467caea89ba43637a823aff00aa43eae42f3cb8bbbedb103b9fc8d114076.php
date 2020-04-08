@@ -103,8 +103,8 @@ class __TwigTemplate_5f04653d8501690110386e68583ae5f6d8317412e88cb457567a62e0be7
                     <thead class=\"thead-dark text-uppercase\">
                         <tr>
                             <th class=\"text-center\">Image</th>
-                            <th class=\"text-center\">Catégorie</th>
                             <th class=\"text-center\">Nom</th>
+                            <th class=\"text-center\">Catégorie</th>
                             <th class=\"text-center\">Description</th>
                             <th class=\"text-center\">En ligne</th>
                             <th class=\"text-center\">Modifier</th>
@@ -126,11 +126,11 @@ class __TwigTemplate_5f04653d8501690110386e68583ae5f6d8317412e88cb457567a62e0be7
             echo "\" alt=\"\" width=\"50\" height=\"50\"> </td>
                         <td class=\"text-center font-weight-bold\">";
             // line 33
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["product"], "category", [], "any", false, false, false, 33), "nom", [], "any", false, false, false, 33), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["product"], "nom", [], "any", false, false, false, 33), "html", null, true);
             echo "</td>
                         <td class=\"text-center font-weight-bold\">";
             // line 34
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["product"], "nom", [], "any", false, false, false, 34), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["product"], "category", [], "any", false, false, false, 34), "nom", [], "any", false, false, false, 34), "html", null, true);
             echo "</td>
                         <td class=\"text-center font-weight-bold\">";
             // line 35
@@ -222,8 +222,8 @@ class __TwigTemplate_5f04653d8501690110386e68583ae5f6d8317412e88cb457567a62e0be7
                     <thead class=\"thead-dark text-uppercase\">
                         <tr>
                             <th class=\"text-center\">Image</th>
-                            <th class=\"text-center\">Catégorie</th>
                             <th class=\"text-center\">Nom</th>
+                            <th class=\"text-center\">Catégorie</th>
                             <th class=\"text-center\">Description</th>
                             <th class=\"text-center\">En ligne</th>
                             <th class=\"text-center\">Modifier</th>
@@ -235,8 +235,8 @@ class __TwigTemplate_5f04653d8501690110386e68583ae5f6d8317412e88cb457567a62e0be7
                     
                     <tr>
                         <td class=\"text-center font-weight-bold\"> <img src=\"{{asset('uploads/' ~ product.image)}}\" alt=\"\" width=\"50\" height=\"50\"> </td>
-                        <td class=\"text-center font-weight-bold\">{{ product.category.nom }}</td>
                         <td class=\"text-center font-weight-bold\">{{ product.nom }}</td>
+                        <td class=\"text-center font-weight-bold\">{{ product.category.nom }}</td>
                         <td class=\"text-center font-weight-bold\">{{ product.description }}</td>
                         <td class=\"text-center font-weight-bold\">
                             {% if product.isPublished %}

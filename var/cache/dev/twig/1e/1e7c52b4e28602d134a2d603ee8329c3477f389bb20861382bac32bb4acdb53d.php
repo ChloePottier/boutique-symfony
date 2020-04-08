@@ -65,7 +65,7 @@ class __TwigTemplate_c6ff0b28cff0943daddb10235f8386978ba6d9022098e5127685625d6d9
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Ajouter une catégorie | ";
+        echo "Admin | Listing des catégories | ";
         $this->displayParentBlock("title", $context, $blocks);
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -91,7 +91,7 @@ class __TwigTemplate_c6ff0b28cff0943daddb10235f8386978ba6d9022098e5127685625d6d9
         <div class=\"container\">
             <div class=\"row\">
                 <div class=\"col-12 mt-5 mb-3\">
-                    <h1> Ajouter une catégorie</h1>
+                    <h1>Listing des catégories</h1>
                 </div>
             </div>
           
@@ -180,14 +180,14 @@ class __TwigTemplate_c6ff0b28cff0943daddb10235f8386978ba6d9022098e5127685625d6d9
         return new Source("
  {% extends 'base.html.twig' %}
 
-{% block title %}Ajouter une catégorie | {{ parent() }}{% endblock %}
+{% block title %}Admin | Listing des catégories | {{ parent() }}{% endblock %}
 {% block content %}
 
 \t<div class=\"container-fluid \">
         <div class=\"container\">
             <div class=\"row\">
                 <div class=\"col-12 mt-5 mb-3\">
-                    <h1> Ajouter une catégorie</h1>
+                    <h1>Listing des catégories</h1>
                 </div>
             </div>
           
