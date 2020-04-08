@@ -4,7 +4,6 @@ namespace App\Controller;
 
 use App\Entity\User;
 use App\Form\InscriptionType;
-use App\Repository\ProductRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -14,17 +13,12 @@ use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
 class IndexController extends AbstractController
 {
-      /**
+    /**
      * @Route("/", name="index")
      */
-    public function listProduct(ProductRepository $productRepository)
+    public function index()
     {
-
-        $products = $productRepository->findAll();
-
-        return $this->render('index/index.html.twig', [
-            "products" => $products
-        ]);
+        return $this->render('index/index.html.twig');
     }
 
     /**
@@ -64,7 +58,4 @@ class IndexController extends AbstractController
         ]);
 
      }
-
-
-
 }

@@ -18,7 +18,7 @@ return [
         '/admin/category/add' => [[['_route' => 'add_category', '_controller' => 'App\\Controller\\AdminController::createUpdateCategory'], null, null, null, false, false, null]],
         '/admin/product' => [[['_route' => 'liste_product', '_controller' => 'App\\Controller\\AdminController::listProduct'], null, null, null, false, false, null]],
         '/admin/product/add' => [[['_route' => 'add_product', '_controller' => 'App\\Controller\\AdminController::createUpdateProduct'], null, null, null, false, false, null]],
-        '/' => [[['_route' => 'index', '_controller' => 'App\\Controller\\IndexController::listProduct'], null, null, null, false, false, null]],
+        '/' => [[['_route' => 'index', '_controller' => 'App\\Controller\\IndexController::index'], null, null, null, false, false, null]],
         '/index/login' => [[['_route' => 'inscription', '_controller' => 'App\\Controller\\IndexController::inscription'], null, null, null, false, false, null]],
         '/index/login/1' => [[['_route' => 'login', '_controller' => 'App\\Controller\\IndexController::login'], null, null, null, false, false, null]],
     ],

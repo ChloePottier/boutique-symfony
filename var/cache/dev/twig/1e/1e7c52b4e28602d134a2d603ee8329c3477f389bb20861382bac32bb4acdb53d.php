@@ -94,14 +94,15 @@ class __TwigTemplate_c6ff0b28cff0943daddb10235f8386978ba6d9022098e5127685625d6d9
                     <h1>Listing des catégories</h1>
                 </div>
             </div>
-          
-            <div class=\"input-formCat col-12 mb-2\">
-                <a class=\"text-decoration-none\" href=\"";
+            <div class=\"row\">
+                <div class=\"col-12 d-flex justify-content-end\">
+                    <a class=\"text-decoration-none add-category\" href=\"";
         // line 16
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("add_category");
         echo "\"><i class=\"fas fa-plus mr-2\"></i>Nouvelle catégorie</a>
-                <table class=\"table table-hover mt-5 text\">
-                        <thead class=\"thead-dark text-uppercase\">
+                </div>
+                <table class=\"table table-hover mt-3 text col-12\">
+                        <thead class=\"thead-dark  title-listing\">
                             <tr>
                                 <th class=\"text-center\">Nom</th>
                                 <th class=\"text-center\">Modifier</th>
@@ -110,32 +111,32 @@ class __TwigTemplate_c6ff0b28cff0943daddb10235f8386978ba6d9022098e5127685625d6d9
                         </thead>
                             
                         ";
-        // line 26
+        // line 27
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["categories"]) || array_key_exists("categories", $context) ? $context["categories"] : (function () { throw new RuntimeError('Variable "categories" does not exist.', 26, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["categories"]) || array_key_exists("categories", $context) ? $context["categories"] : (function () { throw new RuntimeError('Variable "categories" does not exist.', 27, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["cat"]) {
-            // line 27
+            // line 28
             echo "                        
                         <tr>
                             
                             <td class=\"text-center font-weight-bold\">";
-            // line 30
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["cat"], "nom", [], "any", false, false, false, 30), "html", null, true);
-            echo "</td>
-                            <td class=\"text-center\"><a class=\"both input-style color-blue\" href=\"";
             // line 31
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("update_category", ["id" => twig_get_attribute($this->env, $this->source, $context["cat"], "id", [], "any", false, false, false, 31)]), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["cat"], "nom", [], "any", false, false, false, 31), "html", null, true);
+            echo "</td>
+                            <td class=\"text-center\"><a class=\"both input-style btn btn-outline-info\" href=\"";
+            // line 32
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("update_category", ["id" => twig_get_attribute($this->env, $this->source, $context["cat"], "id", [], "any", false, false, false, 32)]), "html", null, true);
             echo "\">Update</a></td>
                             <td class=\"text-center\"><form action=\"";
-            // line 32
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("delete_cat", ["id" => twig_get_attribute($this->env, $this->source, $context["cat"], "id", [], "any", false, false, false, 32)]), "html", null, true);
+            // line 33
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("delete_cat", ["id" => twig_get_attribute($this->env, $this->source, $context["cat"], "id", [], "any", false, false, false, 33)]), "html", null, true);
             echo "\" method=\"post\" class=\"col\" onsubmit=\"return confirm('Voulez-vous vraiment supprimer ?');\">
                                 <input type=\"hidden\" name=\"_method\" value=\"SUP\">
                                 <input type=\"hidden\" name=\"_token\" value=\"";
-            // line 34
-            echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken(("SUP" . twig_get_attribute($this->env, $this->source, $context["cat"], "id", [], "any", false, false, false, 34))), "html", null, true);
+            // line 35
+            echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken(("SUP" . twig_get_attribute($this->env, $this->source, $context["cat"], "id", [], "any", false, false, false, 35))), "html", null, true);
             echo "\">
-                                <input type=\"submit\" value=\"Supprimer\" class=\"input-style both input-style-color\">
+                                <input type=\"submit\" value=\"Supprimer\" class=\"input-style both btn btn-outline-danger\">
                             </form></td>
 
                         </tr>
@@ -144,9 +145,10 @@ class __TwigTemplate_c6ff0b28cff0943daddb10235f8386978ba6d9022098e5127685625d6d9
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['cat'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 40
+        // line 41
         echo "                    </table>
             </div>
+            
         </div>
     </div>
 
@@ -172,7 +174,7 @@ class __TwigTemplate_c6ff0b28cff0943daddb10235f8386978ba6d9022098e5127685625d6d9
 
     public function getDebugInfo()
     {
-        return array (  148 => 40,  136 => 34,  131 => 32,  127 => 31,  123 => 30,  118 => 27,  114 => 26,  101 => 16,  89 => 6,  79 => 5,  59 => 4,  36 => 2,);
+        return array (  149 => 41,  137 => 35,  132 => 33,  128 => 32,  124 => 31,  119 => 28,  115 => 27,  101 => 16,  89 => 6,  79 => 5,  59 => 4,  36 => 2,);
     }
 
     public function getSourceContext()
@@ -190,11 +192,12 @@ class __TwigTemplate_c6ff0b28cff0943daddb10235f8386978ba6d9022098e5127685625d6d9
                     <h1>Listing des catégories</h1>
                 </div>
             </div>
-          
-            <div class=\"input-formCat col-12 mb-2\">
-                <a class=\"text-decoration-none\" href=\"{{path('add_category')}}\"><i class=\"fas fa-plus mr-2\"></i>Nouvelle catégorie</a>
-                <table class=\"table table-hover mt-5 text\">
-                        <thead class=\"thead-dark text-uppercase\">
+            <div class=\"row\">
+                <div class=\"col-12 d-flex justify-content-end\">
+                    <a class=\"text-decoration-none add-category\" href=\"{{path('add_category')}}\"><i class=\"fas fa-plus mr-2\"></i>Nouvelle catégorie</a>
+                </div>
+                <table class=\"table table-hover mt-3 text col-12\">
+                        <thead class=\"thead-dark  title-listing\">
                             <tr>
                                 <th class=\"text-center\">Nom</th>
                                 <th class=\"text-center\">Modifier</th>
@@ -207,17 +210,18 @@ class __TwigTemplate_c6ff0b28cff0943daddb10235f8386978ba6d9022098e5127685625d6d9
                         <tr>
                             
                             <td class=\"text-center font-weight-bold\">{{ cat.nom }}</td>
-                            <td class=\"text-center\"><a class=\"both input-style color-blue\" href=\"{{ path('update_category', {'id' : cat.id}) }}\">Update</a></td>
+                            <td class=\"text-center\"><a class=\"both input-style btn btn-outline-info\" href=\"{{ path('update_category', {'id' : cat.id}) }}\">Update</a></td>
                             <td class=\"text-center\"><form action=\"{{path('delete_cat', {'id' : cat.id})}}\" method=\"post\" class=\"col\" onsubmit=\"return confirm('Voulez-vous vraiment supprimer ?');\">
                                 <input type=\"hidden\" name=\"_method\" value=\"SUP\">
                                 <input type=\"hidden\" name=\"_token\" value=\"{{csrf_token('SUP' ~ cat.id)}}\">
-                                <input type=\"submit\" value=\"Supprimer\" class=\"input-style both input-style-color\">
+                                <input type=\"submit\" value=\"Supprimer\" class=\"input-style both btn btn-outline-danger\">
                             </form></td>
 
                         </tr>
                         {% endfor %}
                     </table>
             </div>
+            
         </div>
     </div>
 

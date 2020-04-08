@@ -1,3 +1,5 @@
+.text-bold{font-weight: 600;}
+body{font-family: Helvetica, Arial,  sans-serif;}
 /* HEADER */
 .logo{font-family: 'Leckerli One',  Helvetica,Arial, sans-serif; font-size: 2rem;}
 .slide{
@@ -9,11 +11,21 @@
     width: 420px !important;
     max-width: unset;
 }
+.add-product, .add-category{color: #000;}
+.add-product:hover, .add-category:hover{color: #545b62;}
+
 @media screen  and (max-width:991px){
+    .title-listing{font-size: .8rem;}
 
 }
 
 @media screen  and (max-width:767px){
+    .title-listing{font-size: .8rem;}
+    tbody, .btn{font-size: .8rem;}
+    .btn{padding: 0; border: none;}
+    .btn:hover{padding: 0; border: none; color: #545b62; background-color: transparent!important;}
+    .table td,.table th{padding:.3rem .5rem!important;}
+
 }
 @media screen  and (max-width:575px){
     .btn-submit-form{width: 100% !important;}
