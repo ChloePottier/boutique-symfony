@@ -24,6 +24,8 @@ return [
     'add_product' => [[], ['_controller' => 'App\\Controller\\AdminController::createUpdateProduct'], [], [['text', '/admin/product/add']], [], []],
     'product_update' => [['id'], ['_controller' => 'App\\Controller\\AdminController::createUpdateProduct'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/admin/product/add']], [], []],
     'delete_product' => [['id'], ['_controller' => 'App\\Controller\\AdminController::deleteProduct'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/admin/product']], [], []],
+    'details_user' => [['id'], ['_controller' => 'App\\Controller\\AdminController::detailsClient'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/admin/user']], [], []],
+    'liste_user' => [[], ['_controller' => 'App\\Controller\\AdminController::listClient'], [], [['text', '/admin/user']], [], []],
     'index' => [[], ['_controller' => 'App\\Controller\\IndexController::listProduct'], [], [['text', '/']], [], []],
     'inscription' => [[], ['_controller' => 'App\\Controller\\IndexController::inscription'], [], [['text', '/index/login']], [], []],
     'login' => [[], ['_controller' => 'App\\Controller\\IndexController::login'], [], [['text', '/index/login1']], [], []],

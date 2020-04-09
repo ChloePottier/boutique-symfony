@@ -18,6 +18,7 @@ return [
         '/admin/category/add' => [[['_route' => 'add_category', '_controller' => 'App\\Controller\\AdminController::createUpdateCategory'], null, null, null, false, false, null]],
         '/admin/product' => [[['_route' => 'liste_product', '_controller' => 'App\\Controller\\AdminController::listProduct'], null, null, null, false, false, null]],
         '/admin/product/add' => [[['_route' => 'add_product', '_controller' => 'App\\Controller\\AdminController::createUpdateProduct'], null, null, null, false, false, null]],
+        '/admin/user' => [[['_route' => 'liste_user', '_controller' => 'App\\Controller\\AdminController::listClient'], null, null, null, false, false, null]],
         '/' => [[['_route' => 'index', '_controller' => 'App\\Controller\\IndexController::listProduct'], null, null, null, false, false, null]],
         '/index/login' => [[['_route' => 'inscription', '_controller' => 'App\\Controller\\IndexController::inscription'], null, null, null, false, false, null]],
         '/index/login1' => [[['_route' => 'login', '_controller' => 'App\\Controller\\IndexController::login'], null, null, null, false, false, null]],
@@ -48,6 +49,7 @@ return [
                         .'|add/([^/]++)(*:251)'
                         .'|([^/]++)(*:267)'
                     .')'
+                    .'|user/([^/]++)(*:289)'
                 .')'
             .')/?$}sD',
     ],
@@ -62,8 +64,9 @@ return [
         203 => [[['_route' => 'update_category', '_controller' => 'App\\Controller\\AdminController::createUpdateCategory'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
         219 => [[['_route' => 'delete_cat', '_controller' => 'App\\Controller\\AdminController::deleteCategory'], ['id'], ['SUP' => 0], null, false, true, null]],
         251 => [[['_route' => 'product_update', '_controller' => 'App\\Controller\\AdminController::createUpdateProduct'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
-        267 => [
-            [['_route' => 'delete_product', '_controller' => 'App\\Controller\\AdminController::deleteProduct'], ['id'], ['SUP' => 0], null, false, true, null],
+        267 => [[['_route' => 'delete_product', '_controller' => 'App\\Controller\\AdminController::deleteProduct'], ['id'], ['SUP' => 0], null, false, true, null]],
+        289 => [
+            [['_route' => 'details_user', '_controller' => 'App\\Controller\\AdminController::detailsClient'], ['id'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
     ],

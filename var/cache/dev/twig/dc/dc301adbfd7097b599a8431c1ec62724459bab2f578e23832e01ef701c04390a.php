@@ -86,19 +86,57 @@ class __TwigTemplate_94c02bdf8f57bb270a51d219d1d792c0267a6e68eaf090429e3f94f72fe
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "content"));
 
         // line 5
-        echo "\t<div class=\"container-fluid \">
+        echo "\t <div class=\"container-fluid\">
         <div class=\"container\">
             <div class=\"row\">
-                <div class=\"col-12 mt-5 mb-3\">
-                    <h1>Administration</h1>
-                </div>
-                <div class=\"col-4\">
-                    ";
-        // line 13
-        echo "                </div>
-
+            <div class=\"col-12 mt-5 mb-3\">
+                <h1>Listing des catégories</h1>
             </div>
         </div>
+        <div class=\"row d-flex\">
+            <div class=\"col-3\">
+                <div class=\"card text-white bg-primary mb-3\" style=\"max-width: 18rem; height: 150px;\">
+                    <div class=\"card-body d-flex justify-content-center align-items-center\">
+                            <a href=\"";
+        // line 16
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("liste_cat");
+        echo "\" class=\"font-size text-white text-decoration-none\">Catégories</a>
+                    </div>
+                  </div>
+            </div>
+            <div class=\"col-3\">
+                <div class=\"card text-white bg-primary mb-3\" style=\"max-width: 18rem; height: 150px;\">
+                    <div class=\"card-body d-flex justify-content-center align-items-center\">
+                        <a href=\"";
+        // line 23
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("liste_product");
+        echo "\" class=\"font-size text-white text-decoration-none\">Produits</a>
+
+                    </div>
+                  </div>
+            </div>
+            <div class=\"col-3\">
+                <div class=\"card text-white bg-primary mb-3\" style=\"max-width: 18rem; height: 150px;\">
+                    <div class=\"card-body d-flex justify-content-center align-items-center\">
+                        <a href=\"";
+        // line 31
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("liste_user");
+        echo "\" class=\"font-size text-white text-decoration-none\">Clients</a>
+
+                    </div>
+                  </div>
+            </div>
+            <div class=\"col-3\">
+                <div class=\"card text-white bg-primary mb-3\" style=\"max-width: 18rem; height: 150px;\">
+                    <div class=\"card-body d-flex justify-content-center align-items-center\">
+                        <a href=\"\" class=\"font-size text-white text-decoration-none\">Commandes</a>
+
+                    </div>
+                  </div>
+            </div>
+        </div>
+        </div>
+        
     </div>
 ";
         
@@ -121,7 +159,7 @@ class __TwigTemplate_94c02bdf8f57bb270a51d219d1d792c0267a6e68eaf090429e3f94f72fe
 
     public function getDebugInfo()
     {
-        return array (  98 => 13,  89 => 5,  79 => 4,  59 => 3,  36 => 1,);
+        return array (  123 => 31,  112 => 23,  102 => 16,  89 => 5,  79 => 4,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -130,18 +168,48 @@ class __TwigTemplate_94c02bdf8f57bb270a51d219d1d792c0267a6e68eaf090429e3f94f72fe
 
 {% block title %}Admin | {{ parent() }}{% endblock %}
 {% block content %}
-\t<div class=\"container-fluid \">
+\t <div class=\"container-fluid\">
         <div class=\"container\">
             <div class=\"row\">
-                <div class=\"col-12 mt-5 mb-3\">
-                    <h1>Administration</h1>
-                </div>
-                <div class=\"col-4\">
-                    {# <img src=\"\" alt=\"\" title=\"{{category.nom}}\"/> #}
-                </div>
-
+            <div class=\"col-12 mt-5 mb-3\">
+                <h1>Listing des catégories</h1>
             </div>
         </div>
+        <div class=\"row d-flex\">
+            <div class=\"col-3\">
+                <div class=\"card text-white bg-primary mb-3\" style=\"max-width: 18rem; height: 150px;\">
+                    <div class=\"card-body d-flex justify-content-center align-items-center\">
+                            <a href=\"{{path('liste_cat')}}\" class=\"font-size text-white text-decoration-none\">Catégories</a>
+                    </div>
+                  </div>
+            </div>
+            <div class=\"col-3\">
+                <div class=\"card text-white bg-primary mb-3\" style=\"max-width: 18rem; height: 150px;\">
+                    <div class=\"card-body d-flex justify-content-center align-items-center\">
+                        <a href=\"{{path('liste_product')}}\" class=\"font-size text-white text-decoration-none\">Produits</a>
+
+                    </div>
+                  </div>
+            </div>
+            <div class=\"col-3\">
+                <div class=\"card text-white bg-primary mb-3\" style=\"max-width: 18rem; height: 150px;\">
+                    <div class=\"card-body d-flex justify-content-center align-items-center\">
+                        <a href=\"{{path('liste_user')}}\" class=\"font-size text-white text-decoration-none\">Clients</a>
+
+                    </div>
+                  </div>
+            </div>
+            <div class=\"col-3\">
+                <div class=\"card text-white bg-primary mb-3\" style=\"max-width: 18rem; height: 150px;\">
+                    <div class=\"card-body d-flex justify-content-center align-items-center\">
+                        <a href=\"\" class=\"font-size text-white text-decoration-none\">Commandes</a>
+
+                    </div>
+                  </div>
+            </div>
+        </div>
+        </div>
+        
     </div>
 {% endblock %}
 ", "admin/index.html.twig", "C:\\xampp\\htdocs\\boutique_symphony\\boutique-symphony\\templates\\admin\\index.html.twig");

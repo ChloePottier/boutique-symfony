@@ -2,17 +2,47 @@
 
 {% block title %}Admin | {{ parent() }}{% endblock %}
 {% block content %}
-	<div class="container-fluid ">
+	 <div class="container-fluid">
         <div class="container">
             <div class="row">
-                <div class="col-12 mt-5 mb-3">
-                    <h1>Administration</h1>
-                </div>
-                <div class="col-4">
-                    {# <img src="" alt="" title="{{category.nom}}"/> #}
-                </div>
-
+            <div class="col-12 mt-5 mb-3">
+                <h1>Listing des catégories</h1>
             </div>
         </div>
+        <div class="row d-flex">
+            <div class="col-3">
+                <div class="card text-white bg-primary mb-3" style="max-width: 18rem; height: 150px;">
+                    <div class="card-body d-flex justify-content-center align-items-center">
+                            <a href="{{path('liste_cat')}}" class="font-size text-white text-decoration-none">Catégories</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-3">
+                <div class="card text-white bg-primary mb-3" style="max-width: 18rem; height: 150px;">
+                    <div class="card-body d-flex justify-content-center align-items-center">
+                        <a href="{{path('liste_product')}}" class="font-size text-white text-decoration-none">Produits</a>
+
+                    </div>
+                  </div>
+            </div>
+            <div class="col-3">
+                <div class="card text-white bg-primary mb-3" style="max-width: 18rem; height: 150px;">
+                    <div class="card-body d-flex justify-content-center align-items-center">
+                        <a href="{{path('liste_user')}}" class="font-size text-white text-decoration-none">Clients</a>
+
+                    </div>
+                  </div>
+            </div>
+            <div class="col-3">
+                <div class="card text-white bg-primary mb-3" style="max-width: 18rem; height: 150px;">
+                    <div class="card-body d-flex justify-content-center align-items-center">
+                        <a href="" class="font-size text-white text-decoration-none">Commandes</a>
+
+                    </div>
+                  </div>
+            </div>
+        </div>
+        </div>
+        
     </div>
 {% endblock %}
