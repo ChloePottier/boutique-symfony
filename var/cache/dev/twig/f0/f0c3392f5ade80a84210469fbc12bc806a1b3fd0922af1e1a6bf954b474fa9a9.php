@@ -26,6 +26,7 @@ class __TwigTemplate_7838f0df2912483810b3bc05262604c84090b0da25ee46c151d8fad1b60
 
         $this->blocks = [
             'title' => [$this, 'block_title'],
+            'header' => [$this, 'block_header'],
             'content' => [$this, 'block_content'],
         ];
     }
@@ -75,7 +76,28 @@ class __TwigTemplate_7838f0df2912483810b3bc05262604c84090b0da25ee46c151d8fad1b60
 
     }
 
-    // line 5
+    // line 4
+    public function block_header($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "header"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "header"));
+
+        // line 5
+        echo "    ";
+        $this->loadTemplate("includes/adminNavBar.html.twig", "admin/user/user.html.twig", 5)->display($context);
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
+
+    }
+
+    // line 7
     public function block_content($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -85,7 +107,7 @@ class __TwigTemplate_7838f0df2912483810b3bc05262604c84090b0da25ee46c151d8fad1b60
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "content"));
 
-        // line 6
+        // line 8
         echo "\t<div class=\"container-fluid \">
         <div class=\"container\">
             <div class=\"row\">
@@ -106,30 +128,32 @@ class __TwigTemplate_7838f0df2912483810b3bc05262604c84090b0da25ee46c151d8fad1b60
                     </thead>
                         
                     ";
-        // line 25
+        // line 27
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["users"]) || array_key_exists("users", $context) ? $context["users"] : (function () { throw new RuntimeError('Variable "users" does not exist.', 25, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["users"]) || array_key_exists("users", $context) ? $context["users"] : (function () { throw new RuntimeError('Variable "users" does not exist.', 27, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["user"]) {
-            // line 26
+            // line 28
             echo "                    
                     <tr>
                         <td class=\"text-center font-weight-bold\">";
-            // line 28
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "nom", [], "any", false, false, false, 28), "html", null, true);
-            echo "</td>
-                        <td class=\"text-center font-weight-bold\">";
-            // line 29
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "prenom", [], "any", false, false, false, 29), "html", null, true);
-            echo "</td>
-                        <td class=\"text-center font-weight-bold\">";
             // line 30
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "mail", [], "any", false, false, false, 30), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "nom", [], "any", false, false, false, 30), "html", null, true);
+            echo "</td>
+                        <td class=\"text-center font-weight-bold\">";
+            // line 31
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "prenom", [], "any", false, false, false, 31), "html", null, true);
+            echo "</td>
+                        <td class=\"text-center font-weight-bold\">";
+            // line 32
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "mail", [], "any", false, false, false, 32), "html", null, true);
             echo "</td>
                         <td class=\"text-center font-weight-bold\">
                             <a href=\"";
-            // line 32
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("details_user", ["id" => twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 32)]), "html", null, true);
-            echo "\">Détails</a>
+            // line 34
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("details_user", ["id" => twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 34)]), "html", null, true);
+            echo "\"><img src=\"";
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("images/" . "show.svg")), "html", null, true);
+            echo "\" width=\"40\" height=\"40\" alt=\"détails\"/></a>
                         </td>
                     </tr>
                     ";
@@ -137,7 +161,7 @@ class __TwigTemplate_7838f0df2912483810b3bc05262604c84090b0da25ee46c151d8fad1b60
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['user'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 36
+        // line 38
         echo "                </table>            </div>
         </div>  
     </div>
@@ -164,7 +188,7 @@ class __TwigTemplate_7838f0df2912483810b3bc05262604c84090b0da25ee46c151d8fad1b60
 
     public function getDebugInfo()
     {
-        return array (  141 => 36,  131 => 32,  126 => 30,  122 => 29,  118 => 28,  114 => 26,  110 => 25,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
+        return array (  165 => 38,  153 => 34,  148 => 32,  144 => 31,  140 => 30,  136 => 28,  132 => 27,  111 => 8,  101 => 7,  90 => 5,  80 => 4,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -172,7 +196,9 @@ class __TwigTemplate_7838f0df2912483810b3bc05262604c84090b0da25ee46c151d8fad1b60
         return new Source("{% extends 'base.html.twig' %}
 
 {% block title %}Liste des clients | Admin | {{ parent() }}{% endblock %}
-
+{% block header %}
+    {% include \"includes/adminNavBar.html.twig\" %}
+{% endblock %}
 {% block content %}
 \t<div class=\"container-fluid \">
         <div class=\"container\">
@@ -200,7 +226,7 @@ class __TwigTemplate_7838f0df2912483810b3bc05262604c84090b0da25ee46c151d8fad1b60
                         <td class=\"text-center font-weight-bold\">{{ user.prenom }}</td>
                         <td class=\"text-center font-weight-bold\">{{ user.mail }}</td>
                         <td class=\"text-center font-weight-bold\">
-                            <a href=\"{{path('details_user', {'id' : user.id})}}\">Détails</a>
+                            <a href=\"{{path('details_user', {'id' : user.id})}}\"><img src=\"{{asset('images/' ~ 'show.svg')}}\" width=\"40\" height=\"40\" alt=\"détails\"/></a>
                         </td>
                     </tr>
                     {% endfor %}

@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Inscription{% endblock %}
+{% block title %}Inscription | {{ parent() }}{% endblock %}
 
 {% block content %}
 	<div class="container-fluid ">
@@ -55,11 +55,12 @@
                     </div>
                     <div class=" col-12 mb-2 d-flex justify-content-end">
                             <input type="submit" name="" value="Enregistrer" class="btn btn-dark btn-submit-form">
-                        </div>                    {{form_end(form)}}
+                        </div>                    
+                {{form_end(form)}}
                 </div>
                 <div class="col-12 col-md-6 signup-image">
                     <figure><img src="{{asset('images/' ~ 'test.jpg')}}" alt="logo" class="img-signup"></figure>
-                    <a href="#" class="signup-image-link">Je suis déjà membre !</a>
+                    <a href="{{ path('login') }}" class="signup-image-link">Je suis déjà membre !</a>
                 </div>
             </div>
                     

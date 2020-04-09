@@ -87,67 +87,8 @@ class __TwigTemplate_94c02bdf8f57bb270a51d219d1d792c0267a6e68eaf090429e3f94f72fe
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "header"));
 
         // line 5
-        echo "        <nav class=\"navbar navbar-expand-lg navbar-light bg-light text-right\">
-            <a class=\"navbar-brand logo\" href=\"";
-        // line 6
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("index");
-        echo "\">My Tshirt</a>
-            <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNavDropdown\" aria-controls=\"navbarNavDropdown\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
-                <span class=\"navbar-toggler-icon\"></span>
-            </button>
-            <div class=\"collapse navbar-collapse justify-content-end\" id=\"navbarNavDropdown\">
-                <ul class=\"navbar-nav\">
-                    <li class=\"nav-item active\">
-                        <a class=\"nav-link\" href=\"";
-        // line 13
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin");
-        echo "\">Dashboard <span class=\"sr-only\">(current)</span></a>
-                    </li>
-                    <li class=\"nav-item active\">
-                        <a class=\"nav-link\" href=\"";
-        // line 16
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("liste_product");
-        echo "\">Produits <span class=\"sr-only\">(current)</span></a>
-                    </li>
-                    <li class=\"nav-item active\">
-                        <a class=\"nav-link\" href=\"";
-        // line 19
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("liste_cat");
-        echo "\">Catégories <span class=\"sr-only\">(current)</span></a>
-                    </li>
-                    <li class=\"nav-item active\">
-                        <a class=\"nav-link\" href=\"";
-        // line 22
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("liste_user");
-        echo "\">Clients <span class=\"sr-only\">(current)</span></a>
-                    </li>
-                    <li class=\"nav-item active\">
-                        <a class=\"nav-link\" href=\"\">Commandes <span class=\"sr-only\">(current)</span></a>
-                    </li>
-                    <li class=\"nav-item active\">
-                        <a class=\"nav-link\" href=\"";
-        // line 28
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("index");
-        echo "\">voir la boutique <span class=\"sr-only\">(current)</span></a>
-                    </li>
-                    <li class=\"nav-item active\">
-                        ";
-        // line 31
-        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 31, $this->source); })()), "user", [], "any", false, false, false, 31)) {
-            // line 32
-            echo "                        <a class=\"nav-link\" href=\"/logout\">Se déconnecter</a>
-                        ";
-        } else {
-            // line 34
-            echo "                        <a class=\"nav-link\" href=\"/login\">Se connecter</a>
-                        ";
-        }
-        // line 36
-        echo "                    </li>
-                </ul>
-            </div>
-        </nav>
-";
+        echo "    ";
+        $this->loadTemplate("includes/adminNavBar.html.twig", "admin/index.html.twig", 5)->display($context);
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -156,7 +97,7 @@ class __TwigTemplate_94c02bdf8f57bb270a51d219d1d792c0267a6e68eaf090429e3f94f72fe
 
     }
 
-    // line 41
+    // line 7
     public function block_content($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -166,7 +107,7 @@ class __TwigTemplate_94c02bdf8f57bb270a51d219d1d792c0267a6e68eaf090429e3f94f72fe
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "content"));
 
-        // line 42
+        // line 8
         echo "\t <div class=\"container-fluid\">
         <div class=\"container\">
             <div class=\"row\">
@@ -179,7 +120,7 @@ class __TwigTemplate_94c02bdf8f57bb270a51d219d1d792c0267a6e68eaf090429e3f94f72fe
                 <div class=\"card text-white bg-primary mb-3\" style=\"max-width: 18rem; height: 150px;\">
                     <div class=\"card-body d-flex justify-content-center align-items-center\">
                             <a href=\"";
-        // line 53
+        // line 19
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("liste_cat");
         echo "\" class=\"font-size text-white text-decoration-none\">Catégories</a>
                     </div>
@@ -189,7 +130,7 @@ class __TwigTemplate_94c02bdf8f57bb270a51d219d1d792c0267a6e68eaf090429e3f94f72fe
                 <div class=\"card text-white bg-primary mb-3\" style=\"max-width: 18rem; height: 150px;\">
                     <div class=\"card-body d-flex justify-content-center align-items-center\">
                         <a href=\"";
-        // line 60
+        // line 26
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("liste_product");
         echo "\" class=\"font-size text-white text-decoration-none\">Produits</a>
 
@@ -200,7 +141,7 @@ class __TwigTemplate_94c02bdf8f57bb270a51d219d1d792c0267a6e68eaf090429e3f94f72fe
                 <div class=\"card text-white bg-primary mb-3\" style=\"max-width: 18rem; height: 150px;\">
                     <div class=\"card-body d-flex justify-content-center align-items-center\">
                         <a href=\"";
-        // line 68
+        // line 34
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("liste_user");
         echo "\" class=\"font-size text-white text-decoration-none\">Clients</a>
 
@@ -240,7 +181,7 @@ class __TwigTemplate_94c02bdf8f57bb270a51d219d1d792c0267a6e68eaf090429e3f94f72fe
 
     public function getDebugInfo()
     {
-        return array (  204 => 68,  193 => 60,  183 => 53,  170 => 42,  160 => 41,  146 => 36,  142 => 34,  138 => 32,  136 => 31,  130 => 28,  121 => 22,  115 => 19,  109 => 16,  103 => 13,  93 => 6,  90 => 5,  80 => 4,  60 => 3,  37 => 1,);
+        return array (  145 => 34,  134 => 26,  124 => 19,  111 => 8,  101 => 7,  90 => 5,  80 => 4,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -249,41 +190,7 @@ class __TwigTemplate_94c02bdf8f57bb270a51d219d1d792c0267a6e68eaf090429e3f94f72fe
 
 {% block title %}Admin | {{ parent() }}{% endblock %}
 {% block header %}
-        <nav class=\"navbar navbar-expand-lg navbar-light bg-light text-right\">
-            <a class=\"navbar-brand logo\" href=\"{{ path('index') }}\">My Tshirt</a>
-            <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNavDropdown\" aria-controls=\"navbarNavDropdown\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
-                <span class=\"navbar-toggler-icon\"></span>
-            </button>
-            <div class=\"collapse navbar-collapse justify-content-end\" id=\"navbarNavDropdown\">
-                <ul class=\"navbar-nav\">
-                    <li class=\"nav-item active\">
-                        <a class=\"nav-link\" href=\"{{ path('admin') }}\">Dashboard <span class=\"sr-only\">(current)</span></a>
-                    </li>
-                    <li class=\"nav-item active\">
-                        <a class=\"nav-link\" href=\"{{ path('liste_product') }}\">Produits <span class=\"sr-only\">(current)</span></a>
-                    </li>
-                    <li class=\"nav-item active\">
-                        <a class=\"nav-link\" href=\"{{ path('liste_cat') }}\">Catégories <span class=\"sr-only\">(current)</span></a>
-                    </li>
-                    <li class=\"nav-item active\">
-                        <a class=\"nav-link\" href=\"{{ path('liste_user') }}\">Clients <span class=\"sr-only\">(current)</span></a>
-                    </li>
-                    <li class=\"nav-item active\">
-                        <a class=\"nav-link\" href=\"\">Commandes <span class=\"sr-only\">(current)</span></a>
-                    </li>
-                    <li class=\"nav-item active\">
-                        <a class=\"nav-link\" href=\"{{ path('index') }}\">voir la boutique <span class=\"sr-only\">(current)</span></a>
-                    </li>
-                    <li class=\"nav-item active\">
-                        {% if app.user %}
-                        <a class=\"nav-link\" href=\"/logout\">Se déconnecter</a>
-                        {% else %}
-                        <a class=\"nav-link\" href=\"/login\">Se connecter</a>
-                        {% endif %}
-                    </li>
-                </ul>
-            </div>
-        </nav>
+    {% include \"includes/adminNavBar.html.twig\" %}
 {% endblock %}
 {% block content %}
 \t <div class=\"container-fluid\">

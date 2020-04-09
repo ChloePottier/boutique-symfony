@@ -2,6 +2,9 @@
  {% extends 'base.html.twig' %}
 
 {% block title %}Admin | Listing des catégories | {{ parent() }}{% endblock %}
+{% block header %}
+    {% include "includes/adminNavBar.html.twig" %}
+{% endblock %}
 {% block content %}
 
 	<div class="container-fluid ">

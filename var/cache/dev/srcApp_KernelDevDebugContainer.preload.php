@@ -6,7 +6,7 @@
 use Symfony\Component\DependencyInjection\Dumper\Preloader;
 
 require dirname(__DIR__, 3).'\\vendor/autoload.php';
-require __DIR__.'/ContainerNxatUvT/srcApp_KernelDevDebugContainer.php';
+require __DIR__.'/ContainerGVQx3wM/srcApp_KernelDevDebugContainer.php';
 
 $classes = [];
 $classes[] = 'Symfony\Bundle\FrameworkBundle\FrameworkBundle';
@@ -340,6 +340,10 @@ $classes[] = 'Symfony\Bundle\SecurityBundle\Security\FirewallContext';
 $classes[] = 'Symfony\Bundle\SecurityBundle\Security\FirewallConfig';
 $classes[] = 'Symfony\Component\Security\Http\Firewall\ExceptionListener';
 $classes[] = 'Symfony\Component\Security\Http\EntryPoint\FormAuthenticationEntryPoint';
+$classes[] = 'Symfony\Component\Security\Http\Firewall\LogoutListener';
+$classes[] = 'Symfony\Component\Security\Http\Logout\DefaultLogoutSuccessHandler';
+$classes[] = 'Symfony\Component\Security\Http\Logout\CsrfTokenClearingLogoutHandler';
+$classes[] = 'Symfony\Component\Security\Http\Logout\SessionLogoutHandler';
 $classes[] = 'Symfony\Component\Security\Http\HttpUtils';
 $classes[] = 'Symfony\Component\Security\Http\Logout\LogoutUrlGenerator';
 $classes[] = 'Symfony\Component\Security\Core\Encoder\UserPasswordEncoder';

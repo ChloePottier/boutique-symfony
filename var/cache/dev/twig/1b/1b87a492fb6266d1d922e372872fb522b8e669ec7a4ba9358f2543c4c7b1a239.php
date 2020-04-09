@@ -65,7 +65,8 @@ class __TwigTemplate_4bd56362c25b8c22408e8eae90248f826b4d83ff8b8bae18c35bf29c119
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Inscription";
+        echo "Inscription | ";
+        $this->displayParentBlock("title", $context, $blocks);
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -170,17 +171,21 @@ class __TwigTemplate_4bd56362c25b8c22408e8eae90248f826b4d83ff8b8bae18c35bf29c119
                     </div>
                     <div class=\" col-12 mb-2 d-flex justify-content-end\">
                             <input type=\"submit\" name=\"\" value=\"Enregistrer\" class=\"btn btn-dark btn-submit-form\">
-                        </div>                    ";
-        // line 58
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 58, $this->source); })()), 'form_end');
+                        </div>                    
+                ";
+        // line 59
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 59, $this->source); })()), 'form_end');
         echo "
                 </div>
                 <div class=\"col-12 col-md-6 signup-image\">
                     <figure><img src=\"";
-        // line 61
+        // line 62
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("images/" . "test.jpg")), "html", null, true);
         echo "\" alt=\"logo\" class=\"img-signup\"></figure>
-                    <a href=\"#\" class=\"signup-image-link\">Je suis déjà membre !</a>
+                    <a href=\"";
+        // line 63
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("login");
+        echo "\" class=\"signup-image-link\">Je suis déjà membre !</a>
                 </div>
             </div>
                     
@@ -209,14 +214,14 @@ class __TwigTemplate_4bd56362c25b8c22408e8eae90248f826b4d83ff8b8bae18c35bf29c119
 
     public function getDebugInfo()
     {
-        return array (  181 => 61,  175 => 58,  168 => 54,  161 => 50,  154 => 46,  147 => 42,  140 => 38,  133 => 34,  126 => 30,  119 => 26,  112 => 22,  105 => 18,  99 => 15,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  187 => 63,  183 => 62,  177 => 59,  169 => 54,  162 => 50,  155 => 46,  148 => 42,  141 => 38,  134 => 34,  127 => 30,  120 => 26,  113 => 22,  106 => 18,  100 => 15,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block title %}Inscription{% endblock %}
+{% block title %}Inscription | {{ parent() }}{% endblock %}
 
 {% block content %}
 \t<div class=\"container-fluid \">
@@ -271,11 +276,12 @@ class __TwigTemplate_4bd56362c25b8c22408e8eae90248f826b4d83ff8b8bae18c35bf29c119
                     </div>
                     <div class=\" col-12 mb-2 d-flex justify-content-end\">
                             <input type=\"submit\" name=\"\" value=\"Enregistrer\" class=\"btn btn-dark btn-submit-form\">
-                        </div>                    {{form_end(form)}}
+                        </div>                    
+                {{form_end(form)}}
                 </div>
                 <div class=\"col-12 col-md-6 signup-image\">
                     <figure><img src=\"{{asset('images/' ~ 'test.jpg')}}\" alt=\"logo\" class=\"img-signup\"></figure>
-                    <a href=\"#\" class=\"signup-image-link\">Je suis déjà membre !</a>
+                    <a href=\"{{ path('login') }}\" class=\"signup-image-link\">Je suis déjà membre !</a>
                 </div>
             </div>
                     

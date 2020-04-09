@@ -65,7 +65,8 @@ class __TwigTemplate_94dcddbf3a88c1f06e4499eec2e5ffe138345b516cd849c035697402a81
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Inscription";
+        echo "Connexion | ";
+        $this->displayParentBlock("title", $context, $blocks);
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -90,7 +91,7 @@ class __TwigTemplate_94dcddbf3a88c1f06e4499eec2e5ffe138345b516cd849c035697402a81
         <div class=\"signin-content\">
             <div class=\"signin-image\">
                 <figure><img src=\"images/signin-image.jpg\" alt=\"sing up image\"></figure>
-                <a href=\"#\" class=\"signup-image-link\">S'inscrire</a>
+                <a href=\"/inscription\" class=\"signup-image-link\">S'inscrire</a>
             </div>
 
             <div class=\"signin-form\">
@@ -122,7 +123,7 @@ class __TwigTemplate_94dcddbf3a88c1f06e4499eec2e5ffe138345b516cd849c035697402a81
                     <label for=\"\">Mot de passe : </label>
                     <input type=\"password\" name=\"_password\" required class=\"form-control\">
                 </div>
-                <input type=\"submit\" value=\"se connecter\" class=\"btn btn-primary\">
+                <input type=\"submit\" value=\"se connecter\" class=\"btn btn-dark\">
             </form>
             </div>
         </div>
@@ -150,14 +151,14 @@ class __TwigTemplate_94dcddbf3a88c1f06e4499eec2e5ffe138345b516cd849c035697402a81
 
     public function getDebugInfo()
     {
-        return array (  114 => 22,  111 => 21,  105 => 18,  102 => 17,  100 => 16,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  115 => 22,  112 => 21,  106 => 18,  103 => 17,  101 => 16,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block title %}Inscription{% endblock %}
+{% block title %}Connexion | {{parent() }}{% endblock %}
 
 {% block content %}
 <section class=\"sign-in\">
@@ -165,7 +166,7 @@ class __TwigTemplate_94dcddbf3a88c1f06e4499eec2e5ffe138345b516cd849c035697402a81
         <div class=\"signin-content\">
             <div class=\"signin-image\">
                 <figure><img src=\"images/signin-image.jpg\" alt=\"sing up image\"></figure>
-                <a href=\"#\" class=\"signup-image-link\">S'inscrire</a>
+                <a href=\"/inscription\" class=\"signup-image-link\">S'inscrire</a>
             </div>
 
             <div class=\"signin-form\">
@@ -186,7 +187,7 @@ class __TwigTemplate_94dcddbf3a88c1f06e4499eec2e5ffe138345b516cd849c035697402a81
                     <label for=\"\">Mot de passe : </label>
                     <input type=\"password\" name=\"_password\" required class=\"form-control\">
                 </div>
-                <input type=\"submit\" value=\"se connecter\" class=\"btn btn-primary\">
+                <input type=\"submit\" value=\"se connecter\" class=\"btn btn-dark\">
             </form>
             </div>
         </div>

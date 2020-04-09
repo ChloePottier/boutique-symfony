@@ -1,7 +1,9 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}Ajouter un produit | Admin | {{ parent() }}{% endblock %}
-
+{% block header %}
+    {% include "includes/adminNavBar.html.twig" %}
+{% endblock %}
 {% block content %}
 	<div class="container-fluid ">
         <div class="container">

@@ -6,9 +6,9 @@ security:
     providers:
         users_in_memory: { memory: null }
         in_database: 
-                entity:
-                    class: App\Entity\Utilisateur
-                    property: username
+            entity:
+                class: App\Entity\User
+                property: username
     firewalls:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
@@ -21,6 +21,9 @@ security:
                 login_path: login
                 check_path: login
             
+            logout:
+                path: logout
+                target: index
             
             # logout:
             #     path: deconnexion
@@ -35,5 +38,5 @@ security:
     # Easy way to control access for large sections of your site
     # Note: Only the *first* access control that matches will be used
     access_control:
-        # - { path: ^/admin, roles: ROLE_ADMIN }
+        - { path: ^/admin, roles: ROLE_ADMIN }
         # - { path: ^/profile, roles: ROLE_USER }

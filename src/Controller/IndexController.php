@@ -29,9 +29,9 @@ class IndexController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/index/login", name="inscription")
-     */ 
+     /**
+     * @Route("/inscription", name="inscription")
+     */
     public function inscription(EntityManagerInterface $manager, HttpFoundationRequest $request, UserPasswordEncoderInterface $encoder)
     {
 
@@ -55,18 +55,23 @@ class IndexController extends AbstractController
     }
 
      /**
-     * @Route("/index/login1", name="login")
+     * @Route("/login ", name="login")
      */
-
     public function login(AuthenticationUtils $util) {
 
         return $this->render('index/login/login.html.twig', [
             "lastUserName" => $util->getLastUsername(),
             "error" => $util->getLastAuthenticationError()
         ]);
-
+ 
      }
 
+     /**
+     * @Route("/logout ", name="logout")
+     */
+    public function logout() {
+
+     }
     /**
      * @Route("/index/details/{id}", name="details_product")
      */

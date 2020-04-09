@@ -27,7 +27,8 @@ return [
     'details_user' => [['id'], ['_controller' => 'App\\Controller\\AdminController::detailsClient'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/admin/user']], [], []],
     'liste_user' => [[], ['_controller' => 'App\\Controller\\AdminController::listClient'], [], [['text', '/admin/user']], [], []],
     'index' => [[], ['_controller' => 'App\\Controller\\IndexController::listProduct'], [], [['text', '/']], [], []],
-    'inscription' => [[], ['_controller' => 'App\\Controller\\IndexController::inscription'], [], [['text', '/index/login']], [], []],
-    'login' => [[], ['_controller' => 'App\\Controller\\IndexController::login'], [], [['text', '/index/login1']], [], []],
+    'inscription' => [[], ['_controller' => 'App\\Controller\\IndexController::inscription'], [], [['text', '/inscription']], [], []],
+    'login' => [[], ['_controller' => 'App\\Controller\\IndexController::login'], [], [['text', '/login']], [], []],
+    'logout' => [[], ['_controller' => 'App\\Controller\\IndexController::logout'], [], [['text', '/logout']], [], []],
     'details_product' => [['id'], ['_controller' => 'App\\Controller\\IndexController::detailsProduct'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/index/details']], [], []],
 ];
