@@ -49,6 +49,11 @@ class Product
      */
     private $isPublished;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $Prix;
+
     public function __construct()
     {
         $this->lignePaniers = new ArrayCollection();
@@ -146,6 +151,18 @@ class Product
     public function setIsPublished(bool $isPublished): self
     {
         $this->isPublished = $isPublished;
+
+        return $this;
+    }
+
+    public function getPrix(): ?string
+    {
+        return $this->Prix;
+    }
+
+    public function setPrix(string $Prix): self
+    {
+        $this->Prix = $Prix;
 
         return $this;
     }

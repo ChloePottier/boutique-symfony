@@ -41,6 +41,13 @@
                     </div>
                     <div class="input-formP col-12 mb-2">
                         {# Label #}
+                        {{ form_label(formP.prix, 'Prix') }}
+                        {# Input title class input-title #}
+                        {{form_widget(formP.prix, {'attr': {'class':'form-control'}})}}
+                        <span id="msg-errors" class="error text-danger">{{ form_errors(formP.category) }}</span>
+                    </div>
+                    <div class="input-formP col-12 mb-2">
+                        {# Label #}
 
                         <label class="d-flex justify-content-end">
                             {{ form_widget(formP.isPublished, {'attr': {'class': 'filled-in '}}) }}

@@ -95,7 +95,7 @@ class __TwigTemplate_c6ff0b28cff0943daddb10235f8386978ba6d9022098e5127685625d6d9
                 </div>
             </div>
             <div class=\"row\">
-            <div class=\"col-6 d-flex justify-content-start\">
+                <div class=\"col-6 d-flex justify-content-start\">
                     <a class=\"text-decoration-none add-category\" href=\"";
         // line 16
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin");
@@ -201,7 +201,7 @@ class __TwigTemplate_c6ff0b28cff0943daddb10235f8386978ba6d9022098e5127685625d6d9
                 </div>
             </div>
             <div class=\"row\">
-            <div class=\"col-6 d-flex justify-content-start\">
+                <div class=\"col-6 d-flex justify-content-start\">
                     <a class=\"text-decoration-none add-category\" href=\"{{path('admin')}}\"><i class=\"fas fa-arrow-left mr-2\"></i>Retour au Dashboard de l'admin</a>
                 </div>
                 <div class=\"col-6 d-flex justify-content-end\">

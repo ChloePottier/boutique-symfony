@@ -65,7 +65,8 @@ class __TwigTemplate_7838f0df2912483810b3bc05262604c84090b0da25ee46c151d8fad1b60
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Liste des produits";
+        echo "Liste des clients | Admin | ";
+        $this->displayParentBlock("title", $context, $blocks);
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -163,14 +164,14 @@ class __TwigTemplate_7838f0df2912483810b3bc05262604c84090b0da25ee46c151d8fad1b60
 
     public function getDebugInfo()
     {
-        return array (  140 => 36,  130 => 32,  125 => 30,  121 => 29,  117 => 28,  113 => 26,  109 => 25,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  141 => 36,  131 => 32,  126 => 30,  122 => 29,  118 => 28,  114 => 26,  110 => 25,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block title %}Liste des produits{% endblock %}
+{% block title %}Liste des clients | Admin | {{ parent() }}{% endblock %}
 
 {% block content %}
 \t<div class=\"container-fluid \">

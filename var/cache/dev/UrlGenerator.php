@@ -29,4 +29,5 @@ return [
     'index' => [[], ['_controller' => 'App\\Controller\\IndexController::listProduct'], [], [['text', '/']], [], []],
     'inscription' => [[], ['_controller' => 'App\\Controller\\IndexController::inscription'], [], [['text', '/index/login']], [], []],
     'login' => [[], ['_controller' => 'App\\Controller\\IndexController::login'], [], [['text', '/index/login1']], [], []],
+    'details_product' => [['id'], ['_controller' => 'App\\Controller\\IndexController::detailsProduct'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/index/details']], [], []],
 ];

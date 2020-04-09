@@ -151,10 +151,11 @@ class __TwigTemplate_5c3854fc4bcc5f3fd2330747e511600539022855857d58b103aa10b2994
             // line 47
             echo "                                <div  class=\"mb-2 text-muted text-bold\">...</div>
 
-                            <a href=\"\" class=\"btn btn-outline-dark p-2\">Lire la suite...</a>
-                            ";
-            // line 51
-            echo "                        </div>
+                            <a href=\"";
+            // line 49
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("details_product", ["id" => twig_get_attribute($this->env, $this->source, $context["product"], "id", [], "any", false, false, false, 49)]), "html", null, true);
+            echo "\" class=\"btn btn-outline-dark p-2\">Lire la suite...</a>
+                        </div>
                     </div>
                 </div>
             ";
@@ -162,7 +163,7 @@ class __TwigTemplate_5c3854fc4bcc5f3fd2330747e511600539022855857d58b103aa10b2994
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['product'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 55
+        // line 54
         echo "            </div>
 
         </div>
@@ -188,7 +189,7 @@ class __TwigTemplate_5c3854fc4bcc5f3fd2330747e511600539022855857d58b103aa10b2994
 
     public function getDebugInfo()
     {
-        return array (  166 => 55,  157 => 51,  152 => 47,  150 => 46,  145 => 44,  141 => 42,  131 => 39,  128 => 38,  124 => 35,  119 => 34,  89 => 5,  79 => 4,  59 => 3,  36 => 1,);
+        return array (  167 => 54,  156 => 49,  152 => 47,  150 => 46,  145 => 44,  141 => 42,  131 => 39,  128 => 38,  124 => 35,  119 => 34,  89 => 5,  79 => 4,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -241,8 +242,7 @@ class __TwigTemplate_5c3854fc4bcc5f3fd2330747e511600539022855857d58b103aa10b2994
                             {# on retourne le chemin canonique absolu avec path de l'article et on ajoute l'id de l'article #}
                                 <div  class=\"mb-2 text-muted text-bold\">...</div>
 
-                            <a href=\"\" class=\"btn btn-outline-dark p-2\">Lire la suite...</a>
-                            {# <a href=\"{{ path('article_show', {'id': article.id}) }}\" class=\"btn btn-outline-dark p-2\">Lire la suite...</a> #}
+                            <a href=\"{{path('details_product', {'id' : product.id})}}\" class=\"btn btn-outline-dark p-2\">Lire la suite...</a>
                         </div>
                     </div>
                 </div>
