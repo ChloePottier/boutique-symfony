@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Category;
 use App\Entity\User;
 use App\Entity\Product;
 use App\Form\InscriptionType;
@@ -76,10 +77,11 @@ class IndexController extends AbstractController
     /**
      * @Route("/index/details/{id}", name="details_product")
      */
-    public function detailsProduct(Product $product)
+    public function detailsProduct(Product $product, Category $category)
     {
         return $this->render('index/details/detailsProduct.html.twig', [
-            "product" => $product
+            "product" => $product,
+            "category" => $category
         ]);
     }
  /**

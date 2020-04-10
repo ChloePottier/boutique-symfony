@@ -11,6 +11,9 @@
                 <div class="col-12 mt-5 mb-3">
                     <h1> Ajouter ou modifier une catégorie</h1>
                 </div>
+                <div class="col-12 text-right ">
+                    <a href="{{ path('liste_category')}}" class="btn btn-danger" alt="retour listing"> Annuler</a>
+                </div>
             </div>
             {{form_start(formCat, {'attr': {'class':'row'}})}}
                 {# {{form_widget(formP)}} #}

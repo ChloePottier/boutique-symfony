@@ -7,15 +7,19 @@
 {% block content %}
 	<div class="container-fluid ">
         <div class="container">
-            <div class="row">
-                <div class="col-12 mt-5 mb-3">
+            <div class="row  mt-5 mb-3">
+                <div class="col-12">
                     <h1>Ajouter ou modifier un produit</h1>
                 </div>
+                <div class="col-12 text-right ">
+                    <a href="{{ path('liste_product')}}" class="btn btn-danger" alt="retour listing"> Annuler</a>
+                </div>
+            </div>
                 {{form_start(formP, {'attr': {'class':'row'}})}}
                         {# {{form_widget(formP)}} #}
                     <div class="input-formP col-12 mb-2">
                         {# Label #}
-                        {{ form_label(formP.nom, 'Nom du produit') }}
+                        {{ form_label(formP.nom, 'Nom du produit', {'attr': {'class':'font-weight-bold'}}) }}
                         {# Input title class input-title #}
                         {{form_widget(formP.nom, {'attr': {'class':'form-control'}})}}
                         <span id="msg-errors" class="error text-danger">{{ form_errors(formP.nom) }}</span>
@@ -39,7 +43,7 @@
                         {{ form_label(formP.category, 'Catégorie du produit') }}
                         {# Input title class input-title #}
                         {{form_widget(formP.category, {'attr': {'class':'form-control'}})}}
-                        <span id="msg-errors" class="error text-danger">{{ form_errors(formP.category) }}</span>
+                        <span id="msg-errors" class="error text-da, {'attr': {'class':'form-control'}}nger">{{ form_errors(formP.category) }}</span>
                     </div>
                     <div class="input-formP col-12 mb-2">
                         {# Label #}
@@ -63,6 +67,8 @@
                         </div>
                                            
                     {{form_end(formP)}}
+        </div>
+    </div>
 
 
 {% endblock %}

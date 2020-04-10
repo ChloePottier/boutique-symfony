@@ -9,7 +9,7 @@
         <div class="row">
         {# boucle for afin d'afficher les articles #}
             <div class="col-12 mt-5 mb-3">
-                <h1>{{ product.nom }}</h1>
+                <h1>{{ category.nom }}</h1>
             </div>
         </div>
         <div class=" row">
@@ -21,7 +21,9 @@
                 <h2>{{ product.nom }}</h2>
                 <p>{{ product.description }}</p>
                 <p>{{ product.prix }} €</p>
-                <a href="{{path('add_panier', {'id' : product.id })}}">Add</a>
+                <a href=" {{ path('add_panier',{'id': product.id }) }} " class="btn btn-success">
+                    <i class="fas fa-shopping-cart mr-1"></i>Ajouter
+                </a>
             </div>
         </div>
 

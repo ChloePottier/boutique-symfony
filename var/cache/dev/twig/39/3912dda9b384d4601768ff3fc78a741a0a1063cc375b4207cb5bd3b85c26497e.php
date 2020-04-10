@@ -96,7 +96,7 @@ class __TwigTemplate_f7a0d5f8994271a3da783c28920a5af99e248d6cdbc0cb2f4e41a299f61
         echo "            <div class=\"col-12 mt-5 mb-3\">
                 <h1>";
         // line 12
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["product"]) || array_key_exists("product", $context) ? $context["product"] : (function () { throw new RuntimeError('Variable "product" does not exist.', 12, $this->source); })()), "nom", [], "any", false, false, false, 12), "html", null, true);
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["category"]) || array_key_exists("category", $context) ? $context["category"] : (function () { throw new RuntimeError('Variable "category" does not exist.', 12, $this->source); })()), "nom", [], "any", false, false, false, 12), "html", null, true);
         echo "</h1>
             </div>
         </div>
@@ -125,10 +125,12 @@ class __TwigTemplate_f7a0d5f8994271a3da783c28920a5af99e248d6cdbc0cb2f4e41a299f61
         // line 23
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["product"]) || array_key_exists("product", $context) ? $context["product"] : (function () { throw new RuntimeError('Variable "product" does not exist.', 23, $this->source); })()), "prix", [], "any", false, false, false, 23), "html", null, true);
         echo " €</p>
-                <a href=\"";
+                <a href=\" ";
         // line 24
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("add_panier", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["product"]) || array_key_exists("product", $context) ? $context["product"] : (function () { throw new RuntimeError('Variable "product" does not exist.', 24, $this->source); })()), "id", [], "any", false, false, false, 24)]), "html", null, true);
-        echo "\">Add</a>
+        echo " \" class=\"btn btn-success\">
+                    <i class=\"fas fa-shopping-cart mr-1\"></i>Ajouter
+                </a>
             </div>
         </div>
 
@@ -173,7 +175,7 @@ class __TwigTemplate_f7a0d5f8994271a3da783c28920a5af99e248d6cdbc0cb2f4e41a299f61
         <div class=\"row\">
         {# boucle for afin d'afficher les articles #}
             <div class=\"col-12 mt-5 mb-3\">
-                <h1>{{ product.nom }}</h1>
+                <h1>{{ category.nom }}</h1>
             </div>
         </div>
         <div class=\" row\">
@@ -185,7 +187,9 @@ class __TwigTemplate_f7a0d5f8994271a3da783c28920a5af99e248d6cdbc0cb2f4e41a299f61
                 <h2>{{ product.nom }}</h2>
                 <p>{{ product.description }}</p>
                 <p>{{ product.prix }} €</p>
-                <a href=\"{{path('add_panier', {'id' : product.id })}}\">Add</a>
+                <a href=\" {{ path('add_panier',{'id': product.id }) }} \" class=\"btn btn-success\">
+                    <i class=\"fas fa-shopping-cart mr-1\"></i>Ajouter
+                </a>
             </div>
         </div>
 
