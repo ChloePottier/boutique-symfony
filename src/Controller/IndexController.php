@@ -9,6 +9,7 @@ use App\Repository\ProductRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request as HttpFoundationRequest;
 use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
@@ -81,6 +82,52 @@ class IndexController extends AbstractController
             "product" => $product
         ]);
     }
+ /**
+     * @Route("/panier/add/{id}", name="add_panier")
+     */
+    public function addPanier($id, SessionInterface $sessionInterface)
+    {
+        $panier = $sessionInterface->get('panier', []);
 
+        if (!empty($panier[$id])) {
+            $panier[$id]++;
+        } else {
+            $panier[$id] = 1;
+        }
+
+        $sessionInterface->set('panier', $panier);
+        return $this->redirectToRoute('panier');
+        // dd($sessionInterface->get('panier'));
+    }
+
+    /**
+     * @Route("/panier/", name="panier")
+     */
+    public function panier(SessionInterface $sessionInterface, ProductRepository $productRepository)
+    {
+        $panier = $sessionInterface->get('panier', []);
+
+        $panierData = [];
+
+        foreach ($panier as $id => $quantity) {
+
+            $panierData[] = [ 
+                'product' => $productRepository->find($id),
+                'quantity' => $quantity
+            ];
+        }
+        $total = 0;
+        foreach($panierData as $item){
+            $totalItem = $item['product']->getPrix() * $item['quantity'];
+            //rajouter le tout a $total
+            $total += $totalItem;
+        }
+        // dd($panierData);
+
+        return $this->render('panier/panier.html.twig', [
+            'items' => $panierData,
+            'total' => $total
+        ]);
+    }
 
 }

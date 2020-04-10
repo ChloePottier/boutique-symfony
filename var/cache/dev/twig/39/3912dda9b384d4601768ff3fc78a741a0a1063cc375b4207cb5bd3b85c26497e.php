@@ -106,14 +106,29 @@ class __TwigTemplate_f7a0d5f8994271a3da783c28920a5af99e248d6cdbc0cb2f4e41a299f61
         // line 18
         echo "                <img src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("uploads/" . twig_get_attribute($this->env, $this->source, (isset($context["product"]) || array_key_exists("product", $context) ? $context["product"] : (function () { throw new RuntimeError('Variable "product" does not exist.', 18, $this->source); })()), "image", [], "any", false, false, false, 18))), "html", null, true);
-        echo "\" class=\"card-img-top\" width=\"256\" height=\"208\" title=\"";
+        echo "\" class=\"image-page-produit\"  title=\"";
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["product"]) || array_key_exists("product", $context) ? $context["product"] : (function () { throw new RuntimeError('Variable "product" does not exist.', 18, $this->source); })()), "nom", [], "any", false, false, false, 18), "html", null, true);
         echo "\" alt=\"image ";
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["product"]) || array_key_exists("product", $context) ? $context["product"] : (function () { throw new RuntimeError('Variable "product" does not exist.', 18, $this->source); })()), "nom", [], "any", false, false, false, 18), "html", null, true);
         echo "\">
             </div>
             <div class=\"col-6\">
-            
+                <h2>";
+        // line 21
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["product"]) || array_key_exists("product", $context) ? $context["product"] : (function () { throw new RuntimeError('Variable "product" does not exist.', 21, $this->source); })()), "nom", [], "any", false, false, false, 21), "html", null, true);
+        echo "</h2>
+                <p>";
+        // line 22
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["product"]) || array_key_exists("product", $context) ? $context["product"] : (function () { throw new RuntimeError('Variable "product" does not exist.', 22, $this->source); })()), "description", [], "any", false, false, false, 22), "html", null, true);
+        echo "</p>
+                <p>";
+        // line 23
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["product"]) || array_key_exists("product", $context) ? $context["product"] : (function () { throw new RuntimeError('Variable "product" does not exist.', 23, $this->source); })()), "prix", [], "any", false, false, false, 23), "html", null, true);
+        echo " €</p>
+                <a href=\"";
+        // line 24
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("add_panier", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["product"]) || array_key_exists("product", $context) ? $context["product"] : (function () { throw new RuntimeError('Variable "product" does not exist.', 24, $this->source); })()), "id", [], "any", false, false, false, 24)]), "html", null, true);
+        echo "\">Add</a>
             </div>
         </div>
 
@@ -142,7 +157,7 @@ class __TwigTemplate_f7a0d5f8994271a3da783c28920a5af99e248d6cdbc0cb2f4e41a299f61
 
     public function getDebugInfo()
     {
-        return array (  107 => 18,  99 => 12,  96 => 11,  90 => 6,  80 => 5,  59 => 3,  36 => 1,);
+        return array (  130 => 24,  126 => 23,  122 => 22,  118 => 21,  107 => 18,  99 => 12,  96 => 11,  90 => 6,  80 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -164,10 +179,13 @@ class __TwigTemplate_f7a0d5f8994271a3da783c28920a5af99e248d6cdbc0cb2f4e41a299f61
         <div class=\" row\">
             <div class=\"col-6\">
                 {# gestion de l'url : dossier uploads/table article col picture #}
-                <img src=\"{{ asset('uploads/' ~ product.image) }}\" class=\"card-img-top\" width=\"256\" height=\"208\" title=\"{{ product.nom }}\" alt=\"image {{ product.nom  }}\">
+                <img src=\"{{ asset('uploads/' ~ product.image) }}\" class=\"image-page-produit\"  title=\"{{ product.nom }}\" alt=\"image {{ product.nom  }}\">
             </div>
             <div class=\"col-6\">
-            
+                <h2>{{ product.nom }}</h2>
+                <p>{{ product.description }}</p>
+                <p>{{ product.prix }} €</p>
+                <a href=\"{{path('add_panier', {'id' : product.id })}}\">Add</a>
             </div>
         </div>
 

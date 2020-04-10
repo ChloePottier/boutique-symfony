@@ -1,0 +1,57 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Détails du panier | {{ parent() }}{% endblock %}
+
+{% block content %}
+	<div class="container-fluid ">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 mt-5 mb-3">
+                    <h1>Détails du panier</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    {% if items | length > 0 %}
+    <table class="table">
+        <thead>
+            <tr>
+                <th colspan="2">Produit</th>
+                <th>Prix</th>
+                <th>Quantité</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in items %}
+            <tr>
+                <td><img src="{{ asset('uploads/') ~ item.product.image }}" alt="{{ item.product.nom }}" width="50" height="50"></td>
+                <td>{{ item.product.nom }}</td>
+                <td>{{ item.product.prix }} €</td>
+                <td>{{ item.quantity }}</td>
+                <td>{{ item.product.prix * item.quantity }} €</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+                <tfoot>
+            <tr class="">
+                <td colspan="3" class="font-weight-bold text-right">Total :</td>
+                <td>
+                    {# résultat du total #}
+                    {{ total}} €
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+    {% else %}
+    <p>panier vide</p>
+    {% endif %}
+                </div>
+
+            </div>
+                    
+        </div>
+            
+    </div>
+</section>
+{% endblock %}

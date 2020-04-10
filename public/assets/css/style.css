@@ -44,7 +44,6 @@ form, input, ::placeholder{font-family: Helvetica, Arial, sans-serif;}
     border: none;
     border-bottom: 1px solid #999;
     padding: 6px 30px;
-    font-family: Poppins;
     box-sizing: border-box;
     border-radius: 0 !important;
 }
@@ -55,6 +54,8 @@ form, input, ::placeholder{font-family: Helvetica, Arial, sans-serif;}
 } */
 .add-product, .add-category{color: #000;}
 .add-product:hover, .add-category:hover{color: #545b62;}
+/* page produit */
+.image-page-produit{width: 100%; height:auto;}
 /* Firefox */
 input[type=number] {
     -moz-appearance: textfield;

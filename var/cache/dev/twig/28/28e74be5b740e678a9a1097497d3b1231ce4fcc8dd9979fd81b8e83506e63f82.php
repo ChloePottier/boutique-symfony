@@ -26,6 +26,7 @@ class __TwigTemplate_5c8d0f6377b9fcb191f20a6910e1697bbfef7be81b54404779c02f8effd
 
         $this->blocks = [
             'title' => [$this, 'block_title'],
+            'header' => [$this, 'block_header'],
             'content' => [$this, 'block_content'],
         ];
     }
@@ -75,7 +76,28 @@ class __TwigTemplate_5c8d0f6377b9fcb191f20a6910e1697bbfef7be81b54404779c02f8effd
 
     }
 
-    // line 5
+    // line 4
+    public function block_header($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "header"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "header"));
+
+        // line 5
+        echo "    ";
+        $this->loadTemplate("includes/adminNavBar.html.twig", "admin/category/add/newCategory.html.twig", 5)->display($context);
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
+
+    }
+
+    // line 7
     public function block_content($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -85,7 +107,7 @@ class __TwigTemplate_5c8d0f6377b9fcb191f20a6910e1697bbfef7be81b54404779c02f8effd
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "content"));
 
-        // line 6
+        // line 8
         echo "<div class=\"container-fluid \">
         <div class=\"container\">
             <div class=\"row\">
@@ -94,32 +116,32 @@ class __TwigTemplate_5c8d0f6377b9fcb191f20a6910e1697bbfef7be81b54404779c02f8effd
                 </div>
             </div>
             ";
-        // line 13
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formCat"]) || array_key_exists("formCat", $context) ? $context["formCat"] : (function () { throw new RuntimeError('Variable "formCat" does not exist.', 13, $this->source); })()), 'form_start', ["attr" => ["class" => "row"]]);
-        echo "
-                ";
         // line 15
-        echo "            <div class=\"input-formCat col-12 mb-2\">
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formCat"]) || array_key_exists("formCat", $context) ? $context["formCat"] : (function () { throw new RuntimeError('Variable "formCat" does not exist.', 15, $this->source); })()), 'form_start', ["attr" => ["class" => "row"]]);
+        echo "
                 ";
         // line 17
-        echo "                ";
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formCat"]) || array_key_exists("formCat", $context) ? $context["formCat"] : (function () { throw new RuntimeError('Variable "formCat" does not exist.', 17, $this->source); })()), "nom", [], "any", false, false, false, 17), 'label', ["label" => "Nom de la catégorie"]);
-        echo "
+        echo "            <div class=\"input-formCat col-12 mb-2\">
                 ";
         // line 19
         echo "                ";
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formCat"]) || array_key_exists("formCat", $context) ? $context["formCat"] : (function () { throw new RuntimeError('Variable "formCat" does not exist.', 19, $this->source); })()), "nom", [], "any", false, false, false, 19), 'widget', ["attr" => ["class" => "form-control"]]);
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formCat"]) || array_key_exists("formCat", $context) ? $context["formCat"] : (function () { throw new RuntimeError('Variable "formCat" does not exist.', 19, $this->source); })()), "nom", [], "any", false, false, false, 19), 'label', ["label" => "Nom de la catégorie"]);
+        echo "
+                ";
+        // line 21
+        echo "                ";
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formCat"]) || array_key_exists("formCat", $context) ? $context["formCat"] : (function () { throw new RuntimeError('Variable "formCat" does not exist.', 21, $this->source); })()), "nom", [], "any", false, false, false, 21), 'widget', ["attr" => ["class" => "form-control"]]);
         echo "
                     <span id=\"msg-errors\" class=\"error text-danger\">";
-        // line 20
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formCat"]) || array_key_exists("formCat", $context) ? $context["formCat"] : (function () { throw new RuntimeError('Variable "formCat" does not exist.', 20, $this->source); })()), "nom", [], "any", false, false, false, 20), 'errors');
+        // line 22
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formCat"]) || array_key_exists("formCat", $context) ? $context["formCat"] : (function () { throw new RuntimeError('Variable "formCat" does not exist.', 22, $this->source); })()), "nom", [], "any", false, false, false, 22), 'errors');
         echo "</span>
                     <div class=\"input-formP submit-formP col-12 mb-2 d-flex justify-content-end\">
                         <input type=\"submit\" name=\"\" value=\"Enregistrer\" class=\"btn btn-dark btn-submit-form mt-4\">
                     </div>
                 ";
-        // line 24
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formCat"]) || array_key_exists("formCat", $context) ? $context["formCat"] : (function () { throw new RuntimeError('Variable "formCat" does not exist.', 24, $this->source); })()), 'form_end');
+        // line 26
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formCat"]) || array_key_exists("formCat", $context) ? $context["formCat"] : (function () { throw new RuntimeError('Variable "formCat" does not exist.', 26, $this->source); })()), 'form_end');
         echo " 
             </div>
         </div>
@@ -146,15 +168,17 @@ class __TwigTemplate_5c8d0f6377b9fcb191f20a6910e1697bbfef7be81b54404779c02f8effd
 
     public function getDebugInfo()
     {
-        return array (  122 => 24,  115 => 20,  110 => 19,  105 => 17,  102 => 15,  98 => 13,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
+        return array (  144 => 26,  137 => 22,  132 => 21,  127 => 19,  124 => 17,  120 => 15,  111 => 8,  101 => 7,  90 => 5,  80 => 4,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'base.html.twig' %}
 
- {% block title %}Admin | Ajouter une catégorie | {{ parent() }}{% endblock %}
-
+{% block title %}Admin | Ajouter une catégorie | {{ parent() }}{% endblock %}
+{% block header %}
+    {% include \"includes/adminNavBar.html.twig\" %}
+{% endblock %}
 {% block content %}
 <div class=\"container-fluid \">
         <div class=\"container\">

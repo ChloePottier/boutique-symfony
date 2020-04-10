@@ -90,8 +90,9 @@ class __TwigTemplate_94dcddbf3a88c1f06e4499eec2e5ffe138345b516cd849c035697402a81
     <div class=\"container\">
         <div class=\"signin-content\">
             <div class=\"signin-image\">
-                <figure><img src=\"images/signin-image.jpg\" alt=\"sing up image\"></figure>
-                <a href=\"/inscription\" class=\"signup-image-link\">S'inscrire</a>
+                ";
+        // line 11
+        echo "                <a href=\"/inscription\" class=\"signup-image-link\">S'inscrire</a>
             </div>
 
             <div class=\"signin-form\">
@@ -151,7 +152,7 @@ class __TwigTemplate_94dcddbf3a88c1f06e4499eec2e5ffe138345b516cd849c035697402a81
 
     public function getDebugInfo()
     {
-        return array (  115 => 22,  112 => 21,  106 => 18,  103 => 17,  101 => 16,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
+        return array (  116 => 22,  113 => 21,  107 => 18,  104 => 17,  102 => 16,  95 => 11,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -165,7 +166,7 @@ class __TwigTemplate_94dcddbf3a88c1f06e4499eec2e5ffe138345b516cd849c035697402a81
     <div class=\"container\">
         <div class=\"signin-content\">
             <div class=\"signin-image\">
-                <figure><img src=\"images/signin-image.jpg\" alt=\"sing up image\"></figure>
+                {# <figure><img src=\"images/signin-image.jpg\" alt=\"sing up image\"></figure> #}
                 <a href=\"/inscription\" class=\"signup-image-link\">S'inscrire</a>
             </div>
 

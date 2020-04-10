@@ -5124,7 +5124,20 @@
         <argument key="product" type="service" id=".errored..service_locator.JW5D6Lx.App\Entity\Product"/>
       </argument>
     </service>
-    <service id=".service_locator..W4zBPo" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.Uo87FkM" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="sessionInterface" type="service" id="session"/>
+      </argument>
+    </service>
+    <service id=".service_locator.2VU2dLk" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="productRepository" type="service" id="App\Repository\ProductRepository"/>
+        <argument key="sessionInterface" type="service" id="session"/>
+      </argument>
+    </service>
+    <service id=".service_locator.vJ0EcqA" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\AdminController::createUpdateCategory" type="service" id=".service_locator.ud9G3O0"/>
@@ -5135,10 +5148,12 @@
         <argument key="App\Controller\AdminController::listCategory" type="service" id=".service_locator.CvFKf6j"/>
         <argument key="App\Controller\AdminController::listClient" type="service" id=".service_locator.1UuH9tO"/>
         <argument key="App\Controller\AdminController::listProduct" type="service" id=".service_locator.cFGoL72"/>
+        <argument key="App\Controller\IndexController::addPanier" type="service" id=".service_locator.Uo87FkM"/>
         <argument key="App\Controller\IndexController::detailsProduct" type="service" id=".service_locator.JW5D6Lx"/>
         <argument key="App\Controller\IndexController::inscription" type="service" id=".service_locator.0ca1fUt"/>
         <argument key="App\Controller\IndexController::listProduct" type="service" id=".service_locator.cFGoL72"/>
         <argument key="App\Controller\IndexController::login" type="service" id=".service_locator.L3BqksV"/>
+        <argument key="App\Controller\IndexController::panier" type="service" id=".service_locator.2VU2dLk"/>
         <argument key="App\Controller\AdminController:createUpdateCategory" type="service" id=".service_locator.ud9G3O0"/>
         <argument key="App\Controller\AdminController:createUpdateProduct" type="service" id=".service_locator.yt3IzSk"/>
         <argument key="App\Controller\AdminController:deleteCategory" type="service" id=".service_locator.Z.oLrGd"/>
@@ -5147,10 +5162,12 @@
         <argument key="App\Controller\AdminController:listCategory" type="service" id=".service_locator.CvFKf6j"/>
         <argument key="App\Controller\AdminController:listClient" type="service" id=".service_locator.1UuH9tO"/>
         <argument key="App\Controller\AdminController:listProduct" type="service" id=".service_locator.cFGoL72"/>
+        <argument key="App\Controller\IndexController:addPanier" type="service" id=".service_locator.Uo87FkM"/>
         <argument key="App\Controller\IndexController:detailsProduct" type="service" id=".service_locator.JW5D6Lx"/>
         <argument key="App\Controller\IndexController:inscription" type="service" id=".service_locator.0ca1fUt"/>
         <argument key="App\Controller\IndexController:listProduct" type="service" id=".service_locator.cFGoL72"/>
         <argument key="App\Controller\IndexController:login" type="service" id=".service_locator.L3BqksV"/>
+        <argument key="App\Controller\IndexController:panier" type="service" id=".service_locator.2VU2dLk"/>
       </argument>
     </service>
     <service id=".service_locator.Y7gDuDN" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
@@ -5585,12 +5602,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-      <argument type="service" id=".service_locator..W4zBPo"/>
+      <argument type="service" id=".service_locator.vJ0EcqA"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver" public="false">
-      <argument type="service" id=".service_locator..W4zBPo"/>
+      <argument type="service" id=".service_locator.vJ0EcqA"/>
     </service>
     <service id=".debug.http_client.inner" class="Symfony\Contracts\HttpClient\HttpClientInterface" public="false">
       <argument type="collection"/>
@@ -5980,7 +5997,7 @@
     <service id="Psr\Log\LoggerInterface" alias="monolog.logger" public="false"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.CmORmuK" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem" public="false"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator..W4zBPo"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.vJ0EcqA"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
     <service id="Psr\Log\LoggerInterface $consoleLogger" alias="monolog.logger.console"/>

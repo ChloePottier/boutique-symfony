@@ -111,7 +111,7 @@ class __TwigTemplate_94c02bdf8f57bb270a51d219d1d792c0267a6e68eaf090429e3f94f72fe
         echo "\t <div class=\"container-fluid\">
         <div class=\"container\">
             <div class=\"row\">
-            <div class=\"col-12 mt-5 mb-3\">
+            <div class=\"col-12 mt-5 mb-5\">
                 <h1>Listing des catégories</h1>
             </div>
         </div>
@@ -196,7 +196,7 @@ class __TwigTemplate_94c02bdf8f57bb270a51d219d1d792c0267a6e68eaf090429e3f94f72fe
 \t <div class=\"container-fluid\">
         <div class=\"container\">
             <div class=\"row\">
-            <div class=\"col-12 mt-5 mb-3\">
+            <div class=\"col-12 mt-5 mb-5\">
                 <h1>Listing des catégories</h1>
             </div>
         </div>

@@ -23,6 +23,7 @@ return [
         '/inscription' => [[['_route' => 'inscription', '_controller' => 'App\\Controller\\IndexController::inscription'], null, null, null, false, false, null]],
         '/login' => [[['_route' => 'login', '_controller' => 'App\\Controller\\IndexController::login'], null, null, null, false, false, null]],
         '/logout' => [[['_route' => 'logout', '_controller' => 'App\\Controller\\IndexController::logout'], null, null, null, false, false, null]],
+        '/panier' => [[['_route' => 'panier', '_controller' => 'App\\Controller\\IndexController::panier'], null, null, null, true, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'
@@ -53,6 +54,7 @@ return [
                     .'|user/([^/]++)(*:289)'
                 .')'
                 .'|/index/details/([^/]++)(*:321)'
+                .'|/panier/add/([^/]++)(*:349)'
             .')/?$}sD',
     ],
     [ // $dynamicRoutes
@@ -68,8 +70,9 @@ return [
         251 => [[['_route' => 'product_update', '_controller' => 'App\\Controller\\AdminController::createUpdateProduct'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
         267 => [[['_route' => 'delete_product', '_controller' => 'App\\Controller\\AdminController::deleteProduct'], ['id'], ['SUP' => 0], null, false, true, null]],
         289 => [[['_route' => 'details_user', '_controller' => 'App\\Controller\\AdminController::detailsClient'], ['id'], null, null, false, true, null]],
-        321 => [
-            [['_route' => 'details_product', '_controller' => 'App\\Controller\\IndexController::detailsProduct'], ['id'], null, null, false, true, null],
+        321 => [[['_route' => 'details_product', '_controller' => 'App\\Controller\\IndexController::detailsProduct'], ['id'], null, null, false, true, null]],
+        349 => [
+            [['_route' => 'add_panier', '_controller' => 'App\\Controller\\IndexController::addPanier'], ['id'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
     ],

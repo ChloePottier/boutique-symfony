@@ -31,4 +31,6 @@ return [
     'login' => [[], ['_controller' => 'App\\Controller\\IndexController::login'], [], [['text', '/login']], [], []],
     'logout' => [[], ['_controller' => 'App\\Controller\\IndexController::logout'], [], [['text', '/logout']], [], []],
     'details_product' => [['id'], ['_controller' => 'App\\Controller\\IndexController::detailsProduct'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/index/details']], [], []],
+    'add_panier' => [['id'], ['_controller' => 'App\\Controller\\IndexController::addPanier'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/panier/add']], [], []],
+    'panier' => [[], ['_controller' => 'App\\Controller\\IndexController::panier'], [], [['text', '/panier/']], [], []],
 ];
