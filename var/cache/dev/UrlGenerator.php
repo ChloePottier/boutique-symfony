@@ -33,4 +33,5 @@ return [
     'details_product' => [['id'], ['_controller' => 'App\\Controller\\IndexController::detailsProduct'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/index/details']], [], []],
     'add_panier' => [['id'], ['_controller' => 'App\\Controller\\IndexController::addPanier'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/panier/add']], [], []],
     'panier' => [[], ['_controller' => 'App\\Controller\\IndexController::panier'], [], [['text', '/panier/']], [], []],
+    'panier_remove' => [['id'], ['_controller' => 'App\\Controller\\IndexController::remove'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/panier/remove']], [], []],
 ];

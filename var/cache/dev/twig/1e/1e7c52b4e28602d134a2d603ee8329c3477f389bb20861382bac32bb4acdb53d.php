@@ -157,14 +157,15 @@ class __TwigTemplate_c6ff0b28cff0943daddb10235f8386978ba6d9022098e5127685625d6d9
             echo "\"><img src=\"";
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("images/" . "edit.svg")), "html", null, true);
             echo "\" width=\"30\" height=\"30\" alt=\"Modifier\"/></a></td>
-                            <td class=\"text-center\"><form action=\"";
-            // line 39
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("delete_cat", ["id" => twig_get_attribute($this->env, $this->source, $context["cat"], "id", [], "any", false, false, false, 39)]), "html", null, true);
+                            <td class=\"text-center\">
+                            <form action=\"";
+            // line 40
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("delete_cat", ["id" => twig_get_attribute($this->env, $this->source, $context["cat"], "id", [], "any", false, false, false, 40)]), "html", null, true);
             echo "\" method=\"post\" class=\"col\" onsubmit=\"return confirm('Voulez-vous vraiment supprimer ?');\">
                                 <input type=\"hidden\" name=\"_method\" value=\"SUP\">
                                 <input type=\"hidden\" name=\"_token\" value=\"";
-            // line 41
-            echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken(("SUP" . twig_get_attribute($this->env, $this->source, $context["cat"], "id", [], "any", false, false, false, 41))), "html", null, true);
+            // line 42
+            echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken(("SUP" . twig_get_attribute($this->env, $this->source, $context["cat"], "id", [], "any", false, false, false, 42))), "html", null, true);
             echo "\">
                                 <input type=\"submit\" value=\"Supprimer\"  class=\"btn btn-outline-danger btn-submit-form\">
                             </form></td>
@@ -175,7 +176,7 @@ class __TwigTemplate_c6ff0b28cff0943daddb10235f8386978ba6d9022098e5127685625d6d9
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['cat'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 47
+        // line 48
         echo "                    </table>
             </div>
             
@@ -204,7 +205,7 @@ class __TwigTemplate_c6ff0b28cff0943daddb10235f8386978ba6d9022098e5127685625d6d9
 
     public function getDebugInfo()
     {
-        return array (  179 => 47,  167 => 41,  162 => 39,  156 => 38,  152 => 37,  147 => 34,  143 => 33,  129 => 22,  123 => 19,  111 => 9,  101 => 8,  90 => 6,  80 => 5,  60 => 4,  37 => 2,);
+        return array (  180 => 48,  168 => 42,  163 => 40,  156 => 38,  152 => 37,  147 => 34,  143 => 33,  129 => 22,  123 => 19,  111 => 9,  101 => 8,  90 => 6,  80 => 5,  60 => 4,  37 => 2,);
     }
 
     public function getSourceContext()
@@ -247,7 +248,8 @@ class __TwigTemplate_c6ff0b28cff0943daddb10235f8386978ba6d9022098e5127685625d6d9
                             
                             <td class=\"text-center font-weight-bold\">{{ cat.nom }}</td>
                             <td class=\"text-center\"><a class=\"btn-edit\" href=\"{{ path('update_category', {'id' : cat.id}) }}\"><img src=\"{{asset('images/' ~ 'edit.svg')}}\" width=\"30\" height=\"30\" alt=\"Modifier\"/></a></td>
-                            <td class=\"text-center\"><form action=\"{{path('delete_cat', {'id' : cat.id})}}\" method=\"post\" class=\"col\" onsubmit=\"return confirm('Voulez-vous vraiment supprimer ?');\">
+                            <td class=\"text-center\">
+                            <form action=\"{{path('delete_cat', {'id' : cat.id})}}\" method=\"post\" class=\"col\" onsubmit=\"return confirm('Voulez-vous vraiment supprimer ?');\">
                                 <input type=\"hidden\" name=\"_method\" value=\"SUP\">
                                 <input type=\"hidden\" name=\"_token\" value=\"{{csrf_token('SUP' ~ cat.id)}}\">
                                 <input type=\"submit\" value=\"Supprimer\"  class=\"btn btn-outline-danger btn-submit-form\">

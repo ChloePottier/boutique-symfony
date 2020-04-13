@@ -54,7 +54,10 @@ return [
                     .'|user/([^/]++)(*:289)'
                 .')'
                 .'|/index/details/([^/]++)(*:321)'
-                .'|/panier/add/([^/]++)(*:349)'
+                .'|/panier/(?'
+                    .'|add/([^/]++)(*:352)'
+                    .'|remove/([^/]++)(*:375)'
+                .')'
             .')/?$}sD',
     ],
     [ // $dynamicRoutes
@@ -71,8 +74,9 @@ return [
         267 => [[['_route' => 'delete_product', '_controller' => 'App\\Controller\\AdminController::deleteProduct'], ['id'], ['SUP' => 0], null, false, true, null]],
         289 => [[['_route' => 'details_user', '_controller' => 'App\\Controller\\AdminController::detailsClient'], ['id'], null, null, false, true, null]],
         321 => [[['_route' => 'details_product', '_controller' => 'App\\Controller\\IndexController::detailsProduct'], ['id'], null, null, false, true, null]],
-        349 => [
-            [['_route' => 'add_panier', '_controller' => 'App\\Controller\\IndexController::addPanier'], ['id'], null, null, false, true, null],
+        352 => [[['_route' => 'add_panier', '_controller' => 'App\\Controller\\IndexController::addPanier'], ['id'], null, null, false, true, null]],
+        375 => [
+            [['_route' => 'panier_remove', '_controller' => 'App\\Controller\\IndexController::remove'], ['id'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
     ],

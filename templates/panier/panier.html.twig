@@ -11,15 +11,18 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-12 col-md-6">
+                <div class="col-12">
                     {% if items | length > 0 %}
                     <table class="table">
                         <thead class="thead-dark  title-listing">
                             <tr>
-                                <th colspan="2">Produit</th>
+                                <th>Image</th>
+                                <th>Produit</th>
                                 <th>Prix</th>
                                 <th>Quantité</th>
+                                <th>Supprimer</th>
                                 <th>Total</th>
+                                
                             </tr>
                         </thead>
                         <tbody>
@@ -29,22 +32,37 @@
                                 <td>{{ item.product.nom }}</td>
                                 <td>{{ item.product.prix }} €</td>
                                 <td>{{ item.quantity }}</td>
+                                <td>
+                                    <a href=" {{path('panier_remove', {'id' : item.product.id})}} " class="btn btn-danger btn-sm">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </a>
+                                </td>
                                 <td>{{ item.product.prix * item.quantity }} €</td>
                             </tr>
                             {% endfor %}
                         </tbody>
-                                <tfoot>
+                        <tfoot>
                             <tr class="">
-                                <td colspan="4" class="font-weight-bold text-right">Total :</td>
+
+                                <td colspan="5" class="font-weight-bold text-right">Total :</td>
                                 <td class="font-weight-bold ">
                                     {# résultat du total #}
                                     {{ total}} €
                                 </td>
                             </tr>
+                            
                         </tfoot>
                     </table>
+                    <div class="d-flex justify-content-between">
+                            <a class="text-decoration-none add-category" href="{{path('index')}}"><i class="fas fa-arrow-left mr-2"></i>Retour à la boutique</a>
+                            <a href="" class="btn btn-dark ">Valider mon panier</a>
+                    </div>
+                    
                     {% else %}
-                    <p>panier vide</p>
+                    <h2 class="text-center mt-5">Votre panier est vide !  </h2>                         
+                     <div class="d-flex justify-content-center mt-5">
+                        <a class="btn btn-outline-info" href="{{path('index')}}">Commencez votre shopping</a>
+                     </div>                   
                     {% endif %}
                 </div>
 

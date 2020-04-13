@@ -36,7 +36,8 @@
                             
                             <td class="text-center font-weight-bold">{{ cat.nom }}</td>
                             <td class="text-center"><a class="btn-edit" href="{{ path('update_category', {'id' : cat.id}) }}"><img src="{{asset('images/' ~ 'edit.svg')}}" width="30" height="30" alt="Modifier"/></a></td>
-                            <td class="text-center"><form action="{{path('delete_cat', {'id' : cat.id})}}" method="post" class="col" onsubmit="return confirm('Voulez-vous vraiment supprimer ?');">
+                            <td class="text-center">
+                            <form action="{{path('delete_cat', {'id' : cat.id})}}" method="post" class="col" onsubmit="return confirm('Voulez-vous vraiment supprimer ?');">
                                 <input type="hidden" name="_method" value="SUP">
                                 <input type="hidden" name="_token" value="{{csrf_token('SUP' ~ cat.id)}}">
                                 <input type="submit" value="Supprimer"  class="btn btn-outline-danger btn-submit-form">

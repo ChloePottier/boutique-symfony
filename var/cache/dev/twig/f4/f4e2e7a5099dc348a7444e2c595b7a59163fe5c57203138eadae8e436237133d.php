@@ -69,14 +69,14 @@ class __TwigTemplate_f5ad9447614ba7d89cba7c853e95c88d604865a9eab41abc75ecec51397
             <li class=\"nav-item \">
                 <a class=\"nav-link\" href=\"";
             // line 16
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("liste_product");
-            echo "\">Produits <span class=\"sr-only\">(current)</span></a>
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("liste_cat");
+            echo "\">Catégories <span class=\"sr-only\">(current)</span></a>
             </li>
             <li class=\"nav-item \">
                 <a class=\"nav-link\" href=\"";
             // line 19
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("liste_cat");
-            echo "\">Catégories <span class=\"sr-only\">(current)</span></a>
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("liste_product");
+            echo "\">Produits <span class=\"sr-only\">(current)</span></a>
             </li>
             <li class=\"nav-item \">
                 <a class=\"nav-link\" href=\"";
@@ -156,10 +156,10 @@ class __TwigTemplate_f5ad9447614ba7d89cba7c853e95c88d604865a9eab41abc75ecec51397
                 <a class=\"nav-link active\" href=\" {{path('admin')}} \">Dashboard</a>
             </li>
             <li class=\"nav-item \">
-                <a class=\"nav-link\" href=\"{{ path('liste_product') }}\">Produits <span class=\"sr-only\">(current)</span></a>
+                <a class=\"nav-link\" href=\"{{ path('liste_cat') }}\">Catégories <span class=\"sr-only\">(current)</span></a>
             </li>
             <li class=\"nav-item \">
-                <a class=\"nav-link\" href=\"{{ path('liste_cat') }}\">Catégories <span class=\"sr-only\">(current)</span></a>
+                <a class=\"nav-link\" href=\"{{ path('liste_product') }}\">Produits <span class=\"sr-only\">(current)</span></a>
             </li>
             <li class=\"nav-item \">
                 <a class=\"nav-link\" href=\"{{ path('liste_user') }}\">Clients <span class=\"sr-only\">(current)</span></a>

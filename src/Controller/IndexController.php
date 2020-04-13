@@ -2,7 +2,6 @@
 
 namespace App\Controller;
 
-use App\Entity\Category;
 use App\Entity\User;
 use App\Entity\Product;
 use App\Form\InscriptionType;
@@ -77,12 +76,11 @@ class IndexController extends AbstractController
     /**
      * @Route("/index/details/{id}", name="details_product")
      */
-    public function detailsProduct(Product $product, Category $category)
+    public function detailsProduct(Product $product)
     {
         return $this->render('index/details/detailsProduct.html.twig', [
-            "product" => $product,
-            "category" => $category
-        ]);
+            "product" => $product
+            ]);
     }
  /**
      * @Route("/panier/add/{id}", name="add_panier")
@@ -130,6 +128,21 @@ class IndexController extends AbstractController
             'items' => $panierData,
             'total' => $total
         ]);
+    }
+        /**
+     * @Route("/panier/remove/{id}", name="panier_remove")
+     */
+    public function remove($id, SessionInterface $sessionInterface) 
+    {
+        $panier = $sessionInterface->get('panier', []);
+
+        if(!empty($panier[$id])) {
+            unset($panier[$id]);
+        }
+
+        $sessionInterface->set('panier', $panier);
+
+        return $this->redirectToRoute('panier');
     }
 
 }

@@ -90,7 +90,7 @@ class __TwigTemplate_4bd56362c25b8c22408e8eae90248f826b4d83ff8b8bae18c35bf29c119
         <div class=\"container\">
             <div class=\"row\">
                 <div class=\"col-12 mt-5 mb-3\">
-                    <h1>Inscrition</h1>
+                    <h1>Inscription</h1>
                 </div>
             </div>
             <div class=\"row\">
@@ -228,7 +228,7 @@ class __TwigTemplate_4bd56362c25b8c22408e8eae90248f826b4d83ff8b8bae18c35bf29c119
         <div class=\"container\">
             <div class=\"row\">
                 <div class=\"col-12 mt-5 mb-3\">
-                    <h1>Inscrition</h1>
+                    <h1>Inscription</h1>
                 </div>
             </div>
             <div class=\"row\">

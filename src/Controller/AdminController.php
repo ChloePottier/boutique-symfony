@@ -24,20 +24,20 @@ class AdminController extends AbstractController
     */
     public function index()
     {
-    return $this->render('admin/index.html.twig');
-    }
+        return $this->render('admin/index.html.twig');
+        }
 
-    /**
-    * @Route("/admin/category", name="liste_cat")
-    */
-    public function listCategory(CategoryRepository $categoryRepository)
-    {
+        /**
+        * @Route("/admin/category", name="liste_cat")
+        */
+        public function listCategory(CategoryRepository $categoryRepository)
+        {
 
-    $categories = $categoryRepository->findAll();
+        $categories = $categoryRepository->findAll();
 
-    return $this->render('admin/category/category.html.twig', [
-    "categories" => $categories
-    ]);
+        return $this->render('admin/category/category.html.twig', [
+         "categories" => $categories
+        ]);
     }
 
     /**

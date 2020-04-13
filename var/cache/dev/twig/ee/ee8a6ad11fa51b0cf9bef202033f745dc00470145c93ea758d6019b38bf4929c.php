@@ -184,7 +184,7 @@ class __TwigTemplate_64291756e7c1c6cca465a78005d93e7e90974ebb4192596ccc1bb47023f
                         ";
         // line 45
         echo "                        ";
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formP"]) || array_key_exists("formP", $context) ? $context["formP"] : (function () { throw new RuntimeError('Variable "formP" does not exist.', 45, $this->source); })()), "category", [], "any", false, false, false, 45), 'widget');
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formP"]) || array_key_exists("formP", $context) ? $context["formP"] : (function () { throw new RuntimeError('Variable "formP" does not exist.', 45, $this->source); })()), "category", [], "any", false, false, false, 45), 'widget', ["attr" => ["class" => "form-control"]]);
         echo "
                         <span id=\"msg-errors\" class=\"error text-da, {'attr': {'class':'form-control'}}nger\">";
         // line 46
@@ -306,7 +306,7 @@ class __TwigTemplate_64291756e7c1c6cca465a78005d93e7e90974ebb4192596ccc1bb47023f
                         {# Label #}
                         {{ form_label(formP.category, 'Catégorie du produit') }}
                         {# Input title class input-title #}
-                        {{form_widget(formP.category)}}
+                        {{form_widget(formP.category, {'attr': {'class':'form-control'}})}}
                         <span id=\"msg-errors\" class=\"error text-da, {'attr': {'class':'form-control'}}nger\">{{ form_errors(formP.category) }}</span>
                     </div>
                     <div class=\"input-formP col-12 mb-2\">

@@ -94,11 +94,9 @@ class __TwigTemplate_f7a0d5f8994271a3da783c28920a5af99e248d6cdbc0cb2f4e41a299f61
         ";
         // line 11
         echo "            <div class=\"col-12 mt-5 mb-3\">
-                <h1>";
-        // line 12
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["category"]) || array_key_exists("category", $context) ? $context["category"] : (function () { throw new RuntimeError('Variable "category" does not exist.', 12, $this->source); })()), "nom", [], "any", false, false, false, 12), "html", null, true);
-        echo "</h1>
-            </div>
+                ";
+        // line 13
+        echo "            </div>
         </div>
         <div class=\" row\">
             <div class=\"col-6\">
@@ -159,7 +157,7 @@ class __TwigTemplate_f7a0d5f8994271a3da783c28920a5af99e248d6cdbc0cb2f4e41a299f61
 
     public function getDebugInfo()
     {
-        return array (  130 => 24,  126 => 23,  122 => 22,  118 => 21,  107 => 18,  99 => 12,  96 => 11,  90 => 6,  80 => 5,  59 => 3,  36 => 1,);
+        return array (  128 => 24,  124 => 23,  120 => 22,  116 => 21,  105 => 18,  99 => 13,  96 => 11,  90 => 6,  80 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -175,7 +173,7 @@ class __TwigTemplate_f7a0d5f8994271a3da783c28920a5af99e248d6cdbc0cb2f4e41a299f61
         <div class=\"row\">
         {# boucle for afin d'afficher les articles #}
             <div class=\"col-12 mt-5 mb-3\">
-                <h1>{{ category.nom }}</h1>
+                {# <h1>{{ category.nom }}</h1> #}
             </div>
         </div>
         <div class=\" row\">

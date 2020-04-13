@@ -114,34 +114,40 @@ class __TwigTemplate_5c8d0f6377b9fcb191f20a6910e1697bbfef7be81b54404779c02f8effd
                 <div class=\"col-12 mt-5 mb-3\">
                     <h1> Ajouter ou modifier une catégorie</h1>
                 </div>
+                <div class=\"col-12 text-right \">
+                    <a href=\"";
+        // line 15
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("liste_cat");
+        echo "\" class=\"btn btn-danger\" alt=\"retour listing\"> Annuler</a>
+                </div>
             </div>
             ";
-        // line 15
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formCat"]) || array_key_exists("formCat", $context) ? $context["formCat"] : (function () { throw new RuntimeError('Variable "formCat" does not exist.', 15, $this->source); })()), 'form_start', ["attr" => ["class" => "row"]]);
+        // line 18
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formCat"]) || array_key_exists("formCat", $context) ? $context["formCat"] : (function () { throw new RuntimeError('Variable "formCat" does not exist.', 18, $this->source); })()), 'form_start', ["attr" => ["class" => "row"]]);
         echo "
                 ";
-        // line 17
+        // line 20
         echo "            <div class=\"input-formCat col-12 mb-2\">
                 ";
-        // line 19
+        // line 22
         echo "                ";
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formCat"]) || array_key_exists("formCat", $context) ? $context["formCat"] : (function () { throw new RuntimeError('Variable "formCat" does not exist.', 19, $this->source); })()), "nom", [], "any", false, false, false, 19), 'label', ["label" => "Nom de la catégorie"]);
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formCat"]) || array_key_exists("formCat", $context) ? $context["formCat"] : (function () { throw new RuntimeError('Variable "formCat" does not exist.', 22, $this->source); })()), "nom", [], "any", false, false, false, 22), 'label', ["label" => "Nom de la catégorie"]);
         echo "
                 ";
-        // line 21
+        // line 24
         echo "                ";
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formCat"]) || array_key_exists("formCat", $context) ? $context["formCat"] : (function () { throw new RuntimeError('Variable "formCat" does not exist.', 21, $this->source); })()), "nom", [], "any", false, false, false, 21), 'widget', ["attr" => ["class" => "form-control"]]);
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formCat"]) || array_key_exists("formCat", $context) ? $context["formCat"] : (function () { throw new RuntimeError('Variable "formCat" does not exist.', 24, $this->source); })()), "nom", [], "any", false, false, false, 24), 'widget', ["attr" => ["class" => "form-control"]]);
         echo "
                     <span id=\"msg-errors\" class=\"error text-danger\">";
-        // line 22
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formCat"]) || array_key_exists("formCat", $context) ? $context["formCat"] : (function () { throw new RuntimeError('Variable "formCat" does not exist.', 22, $this->source); })()), "nom", [], "any", false, false, false, 22), 'errors');
+        // line 25
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formCat"]) || array_key_exists("formCat", $context) ? $context["formCat"] : (function () { throw new RuntimeError('Variable "formCat" does not exist.', 25, $this->source); })()), "nom", [], "any", false, false, false, 25), 'errors');
         echo "</span>
-                    <div class=\"input-formP submit-formP col-12 mb-2 d-flex justify-content-end\">
+                    <div class=\"input-formP submit-formP mb-2 d-flex justify-content-end\">
                         <input type=\"submit\" name=\"\" value=\"Enregistrer\" class=\"btn btn-dark btn-submit-form mt-4\">
                     </div>
                 ";
-        // line 26
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formCat"]) || array_key_exists("formCat", $context) ? $context["formCat"] : (function () { throw new RuntimeError('Variable "formCat" does not exist.', 26, $this->source); })()), 'form_end');
+        // line 29
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formCat"]) || array_key_exists("formCat", $context) ? $context["formCat"] : (function () { throw new RuntimeError('Variable "formCat" does not exist.', 29, $this->source); })()), 'form_end');
         echo " 
             </div>
         </div>
@@ -168,7 +174,7 @@ class __TwigTemplate_5c8d0f6377b9fcb191f20a6910e1697bbfef7be81b54404779c02f8effd
 
     public function getDebugInfo()
     {
-        return array (  144 => 26,  137 => 22,  132 => 21,  127 => 19,  124 => 17,  120 => 15,  111 => 8,  101 => 7,  90 => 5,  80 => 4,  60 => 3,  37 => 1,);
+        return array (  150 => 29,  143 => 25,  138 => 24,  133 => 22,  130 => 20,  126 => 18,  120 => 15,  111 => 8,  101 => 7,  90 => 5,  80 => 4,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -186,6 +192,9 @@ class __TwigTemplate_5c8d0f6377b9fcb191f20a6910e1697bbfef7be81b54404779c02f8effd
                 <div class=\"col-12 mt-5 mb-3\">
                     <h1> Ajouter ou modifier une catégorie</h1>
                 </div>
+                <div class=\"col-12 text-right \">
+                    <a href=\"{{ path('liste_cat')}}\" class=\"btn btn-danger\" alt=\"retour listing\"> Annuler</a>
+                </div>
             </div>
             {{form_start(formCat, {'attr': {'class':'row'}})}}
                 {# {{form_widget(formP)}} #}
@@ -195,7 +204,7 @@ class __TwigTemplate_5c8d0f6377b9fcb191f20a6910e1697bbfef7be81b54404779c02f8effd
                 {# Input title class input-title #}
                 {{form_widget(formCat.nom, {'attr': {'class':'form-control'}})}}
                     <span id=\"msg-errors\" class=\"error text-danger\">{{ form_errors(formCat.nom) }}</span>
-                    <div class=\"input-formP submit-formP col-12 mb-2 d-flex justify-content-end\">
+                    <div class=\"input-formP submit-formP mb-2 d-flex justify-content-end\">
                         <input type=\"submit\" name=\"\" value=\"Enregistrer\" class=\"btn btn-dark btn-submit-form mt-4\">
                     </div>
                 {{form_end(formCat)}} 
