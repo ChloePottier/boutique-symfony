@@ -30,10 +30,13 @@
                     <li class="nav-item">
                         <a class="nav-link" href=" {{path('admin')}} "><i class="fas fa-cogs"></i> Administration</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href=" {{path('compte')}}"><i class="fas fa-user-cog"></i> Mon compte</a>
+                    </li>
                     {% endif %}
                     {% if is_granted('ROLE_USER') %}
                     <li class="nav-item">
-                        <a class="nav-link" href=" "><i class="fas fa-user-cog"></i> Mon compte</a>
+                        <a class="nav-link" href=" {{path('compte')}}"><i class="fas fa-user-cog"></i> Mon compte</a>
                     </li>
                     
                     {% endif %}

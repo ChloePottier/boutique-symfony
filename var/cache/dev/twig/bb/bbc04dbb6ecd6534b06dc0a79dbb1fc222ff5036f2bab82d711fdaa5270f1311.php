@@ -86,17 +86,16 @@ class __TwigTemplate_94dcddbf3a88c1f06e4499eec2e5ffe138345b516cd849c035697402a81
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "content"));
 
         // line 6
-        echo "<section class=\"sign-in\">
+        echo "<div class=\"container-fluid\">
     <div class=\"container\">
-        <div class=\"signin-content\">
-            <div class=\"signin-image\">
-                ";
-        // line 11
-        echo "                <a href=\"/inscription\" class=\"signup-image-link\">S'inscrire</a>
+        <div class=\"row\">
+            <div class=\"col-12 mt-5 mb-5\">
+                <h1 class=\"\">Connexion</h1>
+                <div>Je n'ai pas encore de compte, <a href=\"/inscription\" class=\"signup-link\">je veux m'inscrire</a></div>
             </div>
-
-            <div class=\"signin-form\">
-                <h2 class=\"form-title\">Connexion</h2>
+        </div>
+        <div class=\"row\">
+            <div class=\"col-12 mb-5\">
                 ";
         // line 16
         if ((isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 16, $this->source); })())) {
@@ -107,29 +106,29 @@ class __TwigTemplate_94dcddbf3a88c1f06e4499eec2e5ffe138345b516cd849c035697402a81
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans(twig_get_attribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 18, $this->source); })()), "messageKey", [], "any", false, false, false, 18), twig_get_attribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 18, $this->source); })()), "messagedata", [], "any", false, false, false, 18), "security"), "html", null, true);
             echo "
                 </div>
-            ";
+                ";
         }
         // line 21
-        echo "        
-            <form action=\"";
+        echo "    
+                <form action=\"";
         // line 22
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("login");
         echo "\" method=\"post\">
-                <div class=\"form-group\">
-                    <label for=\"\">Login : </label>
-                    <input type=\"text\" name=\"_username\" required class=\"form-control\">
-                </div>
-        
-                <div class=\"form-group\">
-                    <label for=\"\">Mot de passe : </label>
-                    <input type=\"password\" name=\"_password\" required class=\"form-control\">
-                </div>
-                <input type=\"submit\" value=\"se connecter\" class=\"btn btn-dark\">
-            </form>
+                    <div class=\"form-group\">
+                        <label for=\"\">Login : </label>
+                        <input type=\"text\" name=\"_username\" required class=\"form-control\">
+                    </div>
+            
+                    <div class=\"form-group\">
+                        <label for=\"\">Mot de passe : </label>
+                        <input type=\"password\" name=\"_password\" required class=\"form-control\">
+                    </div>
+                    <input type=\"submit\" value=\"se connecter\" class=\"btn btn-info\">
+                </form>
             </div>
         </div>
     </div>
-</section>
+</div>
 
 ";
         
@@ -152,7 +151,7 @@ class __TwigTemplate_94dcddbf3a88c1f06e4499eec2e5ffe138345b516cd849c035697402a81
 
     public function getDebugInfo()
     {
-        return array (  116 => 22,  113 => 21,  107 => 18,  104 => 17,  102 => 16,  95 => 11,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
+        return array (  115 => 22,  112 => 21,  106 => 18,  103 => 17,  101 => 16,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -162,38 +161,38 @@ class __TwigTemplate_94dcddbf3a88c1f06e4499eec2e5ffe138345b516cd849c035697402a81
 {% block title %}Connexion | {{parent() }}{% endblock %}
 
 {% block content %}
-<section class=\"sign-in\">
+<div class=\"container-fluid\">
     <div class=\"container\">
-        <div class=\"signin-content\">
-            <div class=\"signin-image\">
-                {# <figure><img src=\"images/signin-image.jpg\" alt=\"sing up image\"></figure> #}
-                <a href=\"/inscription\" class=\"signup-image-link\">S'inscrire</a>
+        <div class=\"row\">
+            <div class=\"col-12 mt-5 mb-5\">
+                <h1 class=\"\">Connexion</h1>
+                <div>Je n'ai pas encore de compte, <a href=\"/inscription\" class=\"signup-link\">je veux m'inscrire</a></div>
             </div>
-
-            <div class=\"signin-form\">
-                <h2 class=\"form-title\">Connexion</h2>
+        </div>
+        <div class=\"row\">
+            <div class=\"col-12 mb-5\">
                 {% if error %}
                 <div class=\"alert alert-danger\">
                     {{error.messageKey | trans(error.messagedata,'security')}}
                 </div>
-            {% endif %}
-        
-            <form action=\"{{path('login')}}\" method=\"post\">
-                <div class=\"form-group\">
-                    <label for=\"\">Login : </label>
-                    <input type=\"text\" name=\"_username\" required class=\"form-control\">
-                </div>
-        
-                <div class=\"form-group\">
-                    <label for=\"\">Mot de passe : </label>
-                    <input type=\"password\" name=\"_password\" required class=\"form-control\">
-                </div>
-                <input type=\"submit\" value=\"se connecter\" class=\"btn btn-dark\">
-            </form>
+                {% endif %}
+    
+                <form action=\"{{path('login')}}\" method=\"post\">
+                    <div class=\"form-group\">
+                        <label for=\"\">Login : </label>
+                        <input type=\"text\" name=\"_username\" required class=\"form-control\">
+                    </div>
+            
+                    <div class=\"form-group\">
+                        <label for=\"\">Mot de passe : </label>
+                        <input type=\"password\" name=\"_password\" required class=\"form-control\">
+                    </div>
+                    <input type=\"submit\" value=\"se connecter\" class=\"btn btn-info\">
+                </form>
             </div>
         </div>
     </div>
-</section>
+</div>
 
 {% endblock %}", "index/login/login.html.twig", "C:\\xampp\\htdocs\\boutique_symphony\\boutique-symphony\\templates\\index\\login\\login.html.twig");
     }

@@ -50,68 +50,53 @@ class __TwigTemplate_f5ad9447614ba7d89cba7c853e95c88d604865a9eab41abc75ecec51397
     </button>
     <div class=\"collapse navbar-collapse justify-content-end\" id=\"navbarNavDropdown\">
         <ul class=\"navbar-nav\">
-            <li class=\"nav-item active\">
+            <li class=\"nav-item \">
                 <a class=\"nav-link\" href=\"";
         // line 9
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("index");
-        echo "\" alt=\"Voir la boutique\">Home <span class=\"sr-only\">(current)</span></a>
+        echo "\"><i class=\"fas fa-home\"></i> Voir la boutique <span class=\"sr-only\">(current)</span></a>
             </li>
-            ";
-        // line 11
-        if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN")) {
-            // line 12
-            echo "            <li class=\"nav-item\">
+            <li class=\"nav-item\">
                 <a class=\"nav-link\" href=\" ";
-            // line 13
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin");
-            echo " \">Dashboard</a>
+        // line 12
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin");
+        echo " \">Dashboard</a>
             </li>
             <li class=\"nav-item \">
                 <a class=\"nav-link\" href=\"";
-            // line 16
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("liste_cat");
-            echo "\">Catégories <span class=\"sr-only\">(current)</span></a>
+        // line 15
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("liste_cat");
+        echo "\">Catégories <span class=\"sr-only\">(current)</span></a>
             </li>
             <li class=\"nav-item \">
                 <a class=\"nav-link\" href=\"";
-            // line 19
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("liste_product");
-            echo "\">Produits <span class=\"sr-only\">(current)</span></a>
+        // line 18
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("liste_product");
+        echo "\">Produits <span class=\"sr-only\">(current)</span></a>
             </li>
             <li class=\"nav-item \">
                 <a class=\"nav-link\" href=\"";
-            // line 22
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("liste_user");
-            echo "\">Clients <span class=\"sr-only\">(current)</span></a>
+        // line 21
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("liste_user");
+        echo "\">Clients <span class=\"sr-only\">(current)</span></a>
             </li>
             <li class=\"nav-item \">
                 <a class=\"nav-link\" href=\"\">Commandes <span class=\"sr-only\">(current)</span></a>
             </li>
-            ";
-        }
-        // line 28
-        echo "            ";
-        if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_USER")) {
-            // line 29
-            echo "            <li class=\"nav-item\">
-                <a class=\"nav-link\" href=\" \">Mon compte</a>
-            </li>
-            ";
-        }
-        // line 33
-        echo "            <li class=\"nav-item \">
+     
+            <li class=\"nav-item \">
                 ";
-        // line 34
-        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 34, $this->source); })()), "user", [], "any", false, false, false, 34)) {
-            // line 35
-            echo "                <a class=\"nav-link\" href=\"/logout\">Se déconnecter</a>
+        // line 28
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 28, $this->source); })()), "user", [], "any", false, false, false, 28)) {
+            // line 29
+            echo "                <a class=\"nav-link\" href=\"/logout\"><i class=\"fas fa-sign-out-alt\"></i> Se déconnecter</a>
                 ";
         } else {
-            // line 37
-            echo "                <a class=\"nav-link\" href=\"/login\">Se connecter</a>
+            // line 31
+            echo "                <a class=\"nav-link\" href=\"/login\"><i class=\"fas fa-sign-in-alt\"></i> Se connecter</a>
                 ";
         }
-        // line 39
+        // line 33
         echo "            </li>
         </ul>
     </div>
@@ -136,7 +121,7 @@ class __TwigTemplate_f5ad9447614ba7d89cba7c853e95c88d604865a9eab41abc75ecec51397
 
     public function getDebugInfo()
     {
-        return array (  115 => 39,  111 => 37,  107 => 35,  105 => 34,  102 => 33,  96 => 29,  93 => 28,  84 => 22,  78 => 19,  72 => 16,  66 => 13,  63 => 12,  61 => 11,  56 => 9,  46 => 2,  43 => 1,);
+        return array (  100 => 33,  96 => 31,  92 => 29,  90 => 28,  80 => 21,  74 => 18,  68 => 15,  62 => 12,  56 => 9,  46 => 2,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -148,10 +133,9 @@ class __TwigTemplate_f5ad9447614ba7d89cba7c853e95c88d604865a9eab41abc75ecec51397
     </button>
     <div class=\"collapse navbar-collapse justify-content-end\" id=\"navbarNavDropdown\">
         <ul class=\"navbar-nav\">
-            <li class=\"nav-item active\">
-                <a class=\"nav-link\" href=\"{{ path('index') }}\" alt=\"Voir la boutique\">Home <span class=\"sr-only\">(current)</span></a>
+            <li class=\"nav-item \">
+                <a class=\"nav-link\" href=\"{{ path('index') }}\"><i class=\"fas fa-home\"></i> Voir la boutique <span class=\"sr-only\">(current)</span></a>
             </li>
-            {% if is_granted('ROLE_ADMIN') %}
             <li class=\"nav-item\">
                 <a class=\"nav-link\" href=\" {{path('admin')}} \">Dashboard</a>
             </li>
@@ -167,17 +151,12 @@ class __TwigTemplate_f5ad9447614ba7d89cba7c853e95c88d604865a9eab41abc75ecec51397
             <li class=\"nav-item \">
                 <a class=\"nav-link\" href=\"\">Commandes <span class=\"sr-only\">(current)</span></a>
             </li>
-            {% endif %}
-            {% if is_granted('ROLE_USER') %}
-            <li class=\"nav-item\">
-                <a class=\"nav-link\" href=\" \">Mon compte</a>
-            </li>
-            {% endif %}
+     
             <li class=\"nav-item \">
                 {% if app.user %}
-                <a class=\"nav-link\" href=\"/logout\">Se déconnecter</a>
+                <a class=\"nav-link\" href=\"/logout\"><i class=\"fas fa-sign-out-alt\"></i> Se déconnecter</a>
                 {% else %}
-                <a class=\"nav-link\" href=\"/login\">Se connecter</a>
+                <a class=\"nav-link\" href=\"/login\"><i class=\"fas fa-sign-in-alt\"></i> Se connecter</a>
                 {% endif %}
             </li>
         </ul>

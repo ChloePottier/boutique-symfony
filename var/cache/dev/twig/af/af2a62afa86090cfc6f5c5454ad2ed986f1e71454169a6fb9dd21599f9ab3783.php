@@ -110,49 +110,49 @@ class __TwigTemplate_28076ae5ba1ab6811910534954ecb7012567a9e2d1641d2efb02451d69a
                         <label for=\"\" class=\"icone-form\"><i class=\"fas fa-at\"></i> </label>
                         ";
         // line 21
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 21, $this->source); })()), "mail", [], "any", false, false, false, 21), 'widget', ["attr" => ["placeholder" => "E-mail", "class" => "ml-2"], "label" => false]);
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 21, $this->source); })()), "mail", [], "any", false, false, false, 21), 'widget', ["attr" => ["placeholder" => "E-mail", "class" => "input"], "label" => false]);
         echo "
                     </div>
                     <div class=\"form-group  d-flex mt-4\">
                         <label for=\"\" class=\"icone-form\"><i class=\"far fa-address-card\"></i> </label>
                         ";
         // line 25
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 25, $this->source); })()), "nom", [], "any", false, false, false, 25), 'widget', ["attr" => ["placeholder" => "Nom", "class" => "ml-2"], "label" => false]);
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 25, $this->source); })()), "nom", [], "any", false, false, false, 25), 'widget', ["attr" => ["placeholder" => "Nom", "class" => "input"], "label" => false]);
         echo "
                     </div>
                     <div class=\"form-group  d-flex mt-4\">
                         <label for=\"\" class=\"icone-form\"><i class=\"far fa-address-card\"></i> </label>
                         ";
         // line 29
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 29, $this->source); })()), "prenom", [], "any", false, false, false, 29), 'widget', ["attr" => ["placeholder" => "Prénom", "class" => "ml-2"], "label" => false]);
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 29, $this->source); })()), "prenom", [], "any", false, false, false, 29), 'widget', ["attr" => ["placeholder" => "Prénom", "class" => "input"], "label" => false]);
         echo "
                     </div>
                     <div class=\"form-group  d-flex mt-4\">
                         <label for=\"\" class=\"icone-form\"><i class=\"fas fa-map-marker-alt\"></i> </label>
                         ";
         // line 33
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 33, $this->source); })()), "adresse", [], "any", false, false, false, 33), 'widget', ["attr" => ["placeholder" => "Adresse postale", "class" => "ml-2"], "label" => false]);
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 33, $this->source); })()), "adresse", [], "any", false, false, false, 33), 'widget', ["attr" => ["placeholder" => "Adresse postale", "class" => " input"], "label" => false]);
         echo "
                     </div>
                     <div class=\"form-group  d-flex mt-4\">
                         <label for=\"\" class=\"icone-form\"><i class=\"fas fa-map-marker-alt\"></i> </label>
                         ";
         // line 37
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 37, $this->source); })()), "ville", [], "any", false, false, false, 37), 'widget', ["attr" => ["placeholder" => "Ville", "class" => "ml-2"], "label" => false]);
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 37, $this->source); })()), "ville", [], "any", false, false, false, 37), 'widget', ["attr" => ["placeholder" => "Ville", "class" => "input"], "label" => false]);
         echo "
                     </div>
                     <div class=\"form-group  d-flex mt-4\">
                         <label for=\"\" class=\"icone-form\"><i class=\"fas fa-map-marker-alt\"></i> </label>
                         ";
         // line 41
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 41, $this->source); })()), "cp", [], "any", false, false, false, 41), 'widget', ["attr" => ["placeholder" => "Code Postal", "class" => "ml-2"], "label" => false]);
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 41, $this->source); })()), "cp", [], "any", false, false, false, 41), 'widget', ["attr" => ["placeholder" => "Code Postal", "class" => "input"], "label" => false]);
         echo "
                     </div>
                     <div class=\"form-group  d-flex mt-4\">
                         <label for=\"\" class=\"icone-form\"><i class=\"fas fa-mobile-alt\"></i> </label>
                         ";
         // line 45
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 45, $this->source); })()), "phone", [], "any", false, false, false, 45), 'widget', ["attr" => ["placeholder" => "Téléphone", "class" => "ml-2"], "label" => false]);
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 45, $this->source); })()), "phone", [], "any", false, false, false, 45), 'widget', ["attr" => ["placeholder" => "Téléphone", "class" => "input"], "label" => false]);
         echo "
                     </div>
                     <div class=\"mb-2 d-flex justify-content-center\">
@@ -213,31 +213,31 @@ class __TwigTemplate_28076ae5ba1ab6811910534954ecb7012567a9e2d1641d2efb02451d69a
 
                     <div class=\"form-group  d-flex mt-4\">
                         <label for=\"\" class=\"icone-form\"><i class=\"fas fa-at\"></i> </label>
-                        {{form_widget(form.mail, {'attr' : {'placeholder' : 'E-mail', 'class' : 'ml-2'}, 'label' : false})}}
+                        {{form_widget(form.mail, {'attr' : {'placeholder' : 'E-mail', 'class' : 'input'}, 'label' : false})}}
                     </div>
                     <div class=\"form-group  d-flex mt-4\">
                         <label for=\"\" class=\"icone-form\"><i class=\"far fa-address-card\"></i> </label>
-                        {{form_widget(form.nom, {'attr' : {'placeholder' : 'Nom', 'class' : 'ml-2'}, 'label' : false})}}
+                        {{form_widget(form.nom, {'attr' : {'placeholder' : 'Nom', 'class' : 'input'}, 'label' : false})}}
                     </div>
                     <div class=\"form-group  d-flex mt-4\">
                         <label for=\"\" class=\"icone-form\"><i class=\"far fa-address-card\"></i> </label>
-                        {{form_widget(form.prenom, {'attr' : {'placeholder' : 'Prénom', 'class' : 'ml-2'}, 'label' : false})}}
+                        {{form_widget(form.prenom, {'attr' : {'placeholder' : 'Prénom', 'class' : 'input'}, 'label' : false})}}
                     </div>
                     <div class=\"form-group  d-flex mt-4\">
                         <label for=\"\" class=\"icone-form\"><i class=\"fas fa-map-marker-alt\"></i> </label>
-                        {{form_widget(form.adresse, {'attr' : {'placeholder' : 'Adresse postale', 'class' : 'ml-2'}, 'label' : false})}}
+                        {{form_widget(form.adresse, {'attr' : {'placeholder' : 'Adresse postale', 'class' : ' input'}, 'label' : false})}}
                     </div>
                     <div class=\"form-group  d-flex mt-4\">
                         <label for=\"\" class=\"icone-form\"><i class=\"fas fa-map-marker-alt\"></i> </label>
-                        {{form_widget(form.ville, {'attr' : {'placeholder' : 'Ville', 'class' : 'ml-2'}, 'label' : false})}}
+                        {{form_widget(form.ville, {'attr' : {'placeholder' : 'Ville', 'class' : 'input'}, 'label' : false})}}
                     </div>
                     <div class=\"form-group  d-flex mt-4\">
                         <label for=\"\" class=\"icone-form\"><i class=\"fas fa-map-marker-alt\"></i> </label>
-                        {{form_widget(form.cp, {'attr' : {'placeholder' : 'Code Postal', 'class' : 'ml-2'}, 'label' : false})}}
+                        {{form_widget(form.cp, {'attr' : {'placeholder' : 'Code Postal', 'class' : 'input'}, 'label' : false})}}
                     </div>
                     <div class=\"form-group  d-flex mt-4\">
                         <label for=\"\" class=\"icone-form\"><i class=\"fas fa-mobile-alt\"></i> </label>
-                        {{form_widget(form.phone, {'attr' : {'placeholder' : 'Téléphone', 'class' : 'ml-2'}, 'label' : false})}}
+                        {{form_widget(form.phone, {'attr' : {'placeholder' : 'Téléphone', 'class' : 'input'}, 'label' : false})}}
                     </div>
                     <div class=\"mb-2 d-flex justify-content-center\">
                         <input type=\"submit\" value=\"Modifier\" class=\"btn btn-info\">

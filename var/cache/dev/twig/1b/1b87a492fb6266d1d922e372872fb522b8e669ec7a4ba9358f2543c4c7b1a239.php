@@ -170,7 +170,7 @@ class __TwigTemplate_4bd56362c25b8c22408e8eae90248f826b4d83ff8b8bae18c35bf29c119
         echo "
                     </div>
                     <div class=\" col-12 mb-2 d-flex justify-content-end\">
-                            <input type=\"submit\" name=\"\" value=\"Enregistrer\" class=\"btn btn-dark btn-submit-form\">
+                            <input type=\"submit\" name=\"\" value=\"Enregistrer\" class=\"btn btn-info btn-submit-form\">
                         </div>                    
                 ";
         // line 59
@@ -180,7 +180,7 @@ class __TwigTemplate_4bd56362c25b8c22408e8eae90248f826b4d83ff8b8bae18c35bf29c119
                 <div class=\"col-12 col-md-6 signup-image\">
                     <figure><img src=\"";
         // line 62
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("images/" . "test.jpg")), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("images/" . "tshirt-4.jpg")), "html", null, true);
         echo "\" alt=\"logo\" class=\"img-signup\"></figure>
                     <a href=\"";
         // line 63
@@ -275,12 +275,12 @@ class __TwigTemplate_4bd56362c25b8c22408e8eae90248f826b4d83ff8b8bae18c35bf29c119
                         {{form_widget(form.phone, {'attr' : {'placeholder' : 'Téléphone', 'class' : 'input'}, 'label' : false})}}
                     </div>
                     <div class=\" col-12 mb-2 d-flex justify-content-end\">
-                            <input type=\"submit\" name=\"\" value=\"Enregistrer\" class=\"btn btn-dark btn-submit-form\">
+                            <input type=\"submit\" name=\"\" value=\"Enregistrer\" class=\"btn btn-info btn-submit-form\">
                         </div>                    
                 {{form_end(form)}}
                 </div>
                 <div class=\"col-12 col-md-6 signup-image\">
-                    <figure><img src=\"{{asset('images/' ~ 'test.jpg')}}\" alt=\"logo\" class=\"img-signup\"></figure>
+                    <figure><img src=\"{{asset('images/' ~ 'tshirt-4.jpg')}}\" alt=\"logo\" class=\"img-signup\"></figure>
                     <a href=\"{{ path('login') }}\" class=\"signup-image-link\">Je suis déjà membre !</a>
                 </div>
             </div>

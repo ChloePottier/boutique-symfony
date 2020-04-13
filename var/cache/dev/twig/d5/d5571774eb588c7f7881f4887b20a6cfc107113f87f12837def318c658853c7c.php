@@ -100,7 +100,7 @@ class __TwigTemplate_2dd74e719dddf6657a40c89c69b337c5ef67fc0c49c94af0ba9ff3b0c9b
         if (1 === twig_compare(twig_length_filter($this->env, (isset($context["items"]) || array_key_exists("items", $context) ? $context["items"] : (function () { throw new RuntimeError('Variable "items" does not exist.', 15, $this->source); })())), 0)) {
             // line 16
             echo "                    <table class=\"table\">
-                        <thead class=\"thead-dark  title-listing\">
+                        <thead class=\"thead-light  title-listing\">
                             <tr>
                                 <th>Image</th>
                                 <th>Produit</th>
@@ -177,7 +177,7 @@ class __TwigTemplate_2dd74e719dddf6657a40c89c69b337c5ef67fc0c49c94af0ba9ff3b0c9b
             // line 57
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("index");
             echo "\"><i class=\"fas fa-arrow-left mr-2\"></i>Retour à la boutique</a>
-                            <a href=\"\" class=\"btn btn-dark \">Valider mon panier</a>
+                            <a href=\"\" class=\"btn btn-info \">Valider mon panier</a>
                     </div>
                     
                     ";
@@ -243,7 +243,7 @@ class __TwigTemplate_2dd74e719dddf6657a40c89c69b337c5ef67fc0c49c94af0ba9ff3b0c9b
                 <div class=\"col-12\">
                     {% if items | length > 0 %}
                     <table class=\"table\">
-                        <thead class=\"thead-dark  title-listing\">
+                        <thead class=\"thead-light  title-listing\">
                             <tr>
                                 <th>Image</th>
                                 <th>Produit</th>
@@ -284,7 +284,7 @@ class __TwigTemplate_2dd74e719dddf6657a40c89c69b337c5ef67fc0c49c94af0ba9ff3b0c9b
                     </table>
                     <div class=\"d-flex justify-content-between\">
                             <a class=\"text-decoration-none add-category\" href=\"{{path('index')}}\"><i class=\"fas fa-arrow-left mr-2\"></i>Retour à la boutique</a>
-                            <a href=\"\" class=\"btn btn-dark \">Valider mon panier</a>
+                            <a href=\"\" class=\"btn btn-info \">Valider mon panier</a>
                     </div>
                     
                     {% else %}

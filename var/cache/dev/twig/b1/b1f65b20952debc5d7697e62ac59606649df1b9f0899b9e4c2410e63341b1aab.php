@@ -154,7 +154,7 @@ class __TwigTemplate_5c3854fc4bcc5f3fd2330747e511600539022855857d58b103aa10b2994
                             <a href=\"";
             // line 49
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("details_product", ["id" => twig_get_attribute($this->env, $this->source, $context["product"], "id", [], "any", false, false, false, 49)]), "html", null, true);
-            echo "\" class=\"btn btn-outline-dark p-2\">Lire la suite...</a>
+            echo "\" class=\"btn btn-outline-info p-2\">Lire la suite...</a>
                         </div>
                     </div>
                 </div>
@@ -242,7 +242,7 @@ class __TwigTemplate_5c3854fc4bcc5f3fd2330747e511600539022855857d58b103aa10b2994
                             {# on retourne le chemin canonique absolu avec path de l'article et on ajoute l'id de l'article #}
                                 <div  class=\"mb-2 text-muted text-bold\">...</div>
 
-                            <a href=\"{{path('details_product', {'id' : product.id})}}\" class=\"btn btn-outline-dark p-2\">Lire la suite...</a>
+                            <a href=\"{{path('details_product', {'id' : product.id})}}\" class=\"btn btn-outline-info p-2\">Lire la suite...</a>
                         </div>
                     </div>
                 </div>

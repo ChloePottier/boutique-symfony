@@ -126,8 +126,8 @@ class __TwigTemplate_f7a0d5f8994271a3da783c28920a5af99e248d6cdbc0cb2f4e41a299f61
                 <a href=\" ";
         // line 24
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("add_panier", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["product"]) || array_key_exists("product", $context) ? $context["product"] : (function () { throw new RuntimeError('Variable "product" does not exist.', 24, $this->source); })()), "id", [], "any", false, false, false, 24)]), "html", null, true);
-        echo " \" class=\"btn btn-success\">
-                    <i class=\"fas fa-shopping-cart mr-1\"></i>Ajouter
+        echo " \" class=\"btn btn-info\">
+                    <i class=\"fas fa-shopping-cart mr-1\"></i> Ajouter
                 </a>
             </div>
         </div>
@@ -185,8 +185,8 @@ class __TwigTemplate_f7a0d5f8994271a3da783c28920a5af99e248d6cdbc0cb2f4e41a299f61
                 <h2>{{ product.nom }}</h2>
                 <p>{{ product.description }}</p>
                 <p>{{ product.prix }} €</p>
-                <a href=\" {{ path('add_panier',{'id': product.id }) }} \" class=\"btn btn-success\">
-                    <i class=\"fas fa-shopping-cart mr-1\"></i>Ajouter
+                <a href=\" {{ path('add_panier',{'id': product.id }) }} \" class=\"btn btn-info\">
+                    <i class=\"fas fa-shopping-cart mr-1\"></i> Ajouter
                 </a>
             </div>
         </div>

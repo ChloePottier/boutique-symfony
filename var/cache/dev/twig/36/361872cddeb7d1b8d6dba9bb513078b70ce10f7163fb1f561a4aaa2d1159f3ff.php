@@ -64,15 +64,15 @@ class __TwigTemplate_cd7715d02fe11c9bf330b021c3670eed5a05cd7d0b022ba3353b55b4c07
         ";
         // line 15
         $this->displayBlock('header', $context, $blocks);
-        // line 51
+        // line 54
         echo "        </header>
         ";
-        // line 52
+        // line 55
         $this->displayBlock('content', $context, $blocks);
-        // line 54
+        // line 57
         echo "        ";
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 59
+        // line 62
         echo "    </body>
 </html>
 ";
@@ -173,32 +173,41 @@ class __TwigTemplate_cd7715d02fe11c9bf330b021c3670eed5a05cd7d0b022ba3353b55b4c07
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin");
             echo " \"><i class=\"fas fa-cogs\"></i> Administration</a>
                     </li>
+                    <li class=\"nav-item\">
+                        <a class=\"nav-link\" href=\" ";
+            // line 34
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("compte");
+            echo "\"><i class=\"fas fa-user-cog\"></i> Mon compte</a>
+                    </li>
                     ";
         }
-        // line 34
+        // line 37
         echo "                    ";
         if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_USER")) {
-            // line 35
+            // line 38
             echo "                    <li class=\"nav-item\">
-                        <a class=\"nav-link\" href=\" \"><i class=\"fas fa-user-cog\"></i> Mon compte</a>
+                        <a class=\"nav-link\" href=\" ";
+            // line 39
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("compte");
+            echo "\"><i class=\"fas fa-user-cog\"></i> Mon compte</a>
                     </li>
                     
                     ";
         }
-        // line 40
+        // line 43
         echo "                    <li class=\"nav-item \">
                         ";
-        // line 41
-        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 41, $this->source); })()), "user", [], "any", false, false, false, 41)) {
-            // line 42
+        // line 44
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 44, $this->source); })()), "user", [], "any", false, false, false, 44)) {
+            // line 45
             echo "                        <a class=\"nav-link\" href=\"/logout\"><i class=\"fas fa-sign-out-alt\"></i> Se déconnecter</a>
                         ";
         } else {
-            // line 44
+            // line 47
             echo "                        <a class=\"nav-link\" href=\"/login\"><i class=\"fas fa-sign-in-alt\"></i> Se connecter</a>
                         ";
         }
-        // line 46
+        // line 49
         echo "                    </li>
                 </ul>
             </div>
@@ -212,7 +221,7 @@ class __TwigTemplate_cd7715d02fe11c9bf330b021c3670eed5a05cd7d0b022ba3353b55b4c07
 
     }
 
-    // line 52
+    // line 55
     public function block_content($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -222,7 +231,7 @@ class __TwigTemplate_cd7715d02fe11c9bf330b021c3670eed5a05cd7d0b022ba3353b55b4c07
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "content"));
 
-        // line 53
+        // line 56
         echo "        ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -232,7 +241,7 @@ class __TwigTemplate_cd7715d02fe11c9bf330b021c3670eed5a05cd7d0b022ba3353b55b4c07
 
     }
 
-    // line 54
+    // line 57
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -242,7 +251,7 @@ class __TwigTemplate_cd7715d02fe11c9bf330b021c3670eed5a05cd7d0b022ba3353b55b4c07
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 55
+        // line 58
         echo "            <script src=\"https://code.jquery.com/jquery-3.4.1.slim.min.js\" integrity=\"sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n\" crossorigin=\"anonymous\"></script>
             <script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js\" integrity=\"sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo\" crossorigin=\"anonymous\"></script>
             <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js\" integrity=\"sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6\" crossorigin=\"anonymous\"></script>
@@ -262,7 +271,7 @@ class __TwigTemplate_cd7715d02fe11c9bf330b021c3670eed5a05cd7d0b022ba3353b55b4c07
 
     public function getDebugInfo()
     {
-        return array (  246 => 55,  236 => 54,  226 => 53,  216 => 52,  202 => 46,  198 => 44,  194 => 42,  192 => 41,  189 => 40,  182 => 35,  179 => 34,  173 => 31,  170 => 30,  168 => 29,  163 => 27,  157 => 24,  147 => 17,  144 => 16,  134 => 15,  122 => 11,  117 => 8,  107 => 7,  88 => 6,  76 => 59,  73 => 54,  71 => 52,  68 => 51,  66 => 15,  61 => 12,  59 => 7,  55 => 6,  48 => 1,);
+        return array (  255 => 58,  245 => 57,  235 => 56,  225 => 55,  211 => 49,  207 => 47,  203 => 45,  201 => 44,  198 => 43,  191 => 39,  188 => 38,  185 => 37,  179 => 34,  173 => 31,  170 => 30,  168 => 29,  163 => 27,  157 => 24,  147 => 17,  144 => 16,  134 => 15,  122 => 11,  117 => 8,  107 => 7,  88 => 6,  76 => 62,  73 => 57,  71 => 55,  68 => 54,  66 => 15,  61 => 12,  59 => 7,  55 => 6,  48 => 1,);
     }
 
     public function getSourceContext()
@@ -299,10 +308,13 @@ class __TwigTemplate_cd7715d02fe11c9bf330b021c3670eed5a05cd7d0b022ba3353b55b4c07
                     <li class=\"nav-item\">
                         <a class=\"nav-link\" href=\" {{path('admin')}} \"><i class=\"fas fa-cogs\"></i> Administration</a>
                     </li>
+                    <li class=\"nav-item\">
+                        <a class=\"nav-link\" href=\" {{path('compte')}}\"><i class=\"fas fa-user-cog\"></i> Mon compte</a>
+                    </li>
                     {% endif %}
                     {% if is_granted('ROLE_USER') %}
                     <li class=\"nav-item\">
-                        <a class=\"nav-link\" href=\" \"><i class=\"fas fa-user-cog\"></i> Mon compte</a>
+                        <a class=\"nav-link\" href=\" {{path('compte')}}\"><i class=\"fas fa-user-cog\"></i> Mon compte</a>
                     </li>
                     
                     {% endif %}

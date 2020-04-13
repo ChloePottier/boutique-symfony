@@ -53,12 +53,10 @@ form, input, ::placeholder{font-family: Helvetica, Arial, sans-serif;}
     border-radius: 0 !important;
 }
 .signup-image{ width: 100%; height: 90vh; overflow:hidden;}
-/* .img-signup {
-    width: 420px !important;
-    max-width: unset;
-} */
-.add-product, .add-category{color: #000;}
-.add-product:hover, .add-category:hover{color: #17a2b8;}
+.signup-link{color: #17a2b8;}
+.signup-link:hover{color: #138496;}
+.add-product, .add-category{color: #17a2b8;}
+.add-product:hover, .add-category:hover{color: #000;}
 .btn-edit:hover{ background-color: #c3c3c3; padding: .7rem.5rem; border-radius: .5rem;}
 /* page produit */
 .image-page-produit{width: 100%; height:auto;}
