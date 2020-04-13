@@ -5,6 +5,8 @@ namespace App\Controller;
 use App\Entity\User;
 use App\Entity\Product;
 use App\Form\InscriptionType;
+use App\Form\InfosClientType;
+use App\Form\UpdatePasswordType;
 use App\Repository\ProductRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\Routing\Annotation\Route;
@@ -143,6 +145,68 @@ class IndexController extends AbstractController
         $sessionInterface->set('panier', $panier);
 
         return $this->redirectToRoute('panier');
+    }
+     // methods Mon Compte
+
+    /**
+     * @Route("/mon_compte", name="compte")
+     */
+    public function monCompte()
+    {
+        $user = $this->getUser();
+
+
+        return $this->render('index/client/compteClient.html.twig', [
+            "user" => $user
+        ]);
+    }
+
+    
+    /**
+     * @Route("/mon_compte/infos", name="update_infos")
+     */
+    public function updateInfos(EntityManagerInterface $manager, HttpFoundationRequest $request)
+    {
+        $user = $this->getUser();
+
+        $form = $this->createForm(InfosClientType::class, $user);
+        $form->handleRequest($request);
+
+        if($form->isSubmitted() && $form->isValid()) {
+            $manager->persist($user);
+            $manager->flush();
+            return $this->redirectToRoute("compte");
+        }
+
+
+        return $this->render('index/client/updateInfosClient.html.twig', [
+            "user" => $user,
+            "form" => $form->createView()
+        ]);
+    }
+    /**
+     * @Route("/mon_compte/password", name="update_password")
+     */
+    public function updatePassword(EntityManagerInterface $manager, HttpFoundationRequest $request, UserPasswordEncoderInterface $encoder)
+    {
+        $user = $this->getUser();
+
+        $form = $this->createForm(UpdatePasswordType::class, $user);
+        $form->handleRequest($request);
+
+        if($form->isSubmitted() && $form->isValid()) {
+            $passwordCrypte = $encoder->encodePassword($user, $this->getUser()->getPassword());
+            $user->setPassword($passwordCrypte);
+            $manager->persist($user);
+            $manager->flush();
+            return $this->redirectToRoute("compte");
+        }
+
+
+        return $this->render('index/client/updatePassword.html.twig', [
+            "user" => $user,
+            "form" => $form->createView()
+        ]);
     }
 
 }

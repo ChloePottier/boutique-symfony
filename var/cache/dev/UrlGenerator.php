@@ -34,4 +34,7 @@ return [
     'add_panier' => [['id'], ['_controller' => 'App\\Controller\\IndexController::addPanier'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/panier/add']], [], []],
     'panier' => [[], ['_controller' => 'App\\Controller\\IndexController::panier'], [], [['text', '/panier/']], [], []],
     'panier_remove' => [['id'], ['_controller' => 'App\\Controller\\IndexController::remove'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/panier/remove']], [], []],
+    'compte' => [[], ['_controller' => 'App\\Controller\\IndexController::monCompte'], [], [['text', '/mon_compte']], [], []],
+    'update_infos' => [[], ['_controller' => 'App\\Controller\\IndexController::updateInfos'], [], [['text', '/mon_compte/infos']], [], []],
+    'update_password' => [[], ['_controller' => 'App\\Controller\\IndexController::updatePassword'], [], [['text', '/mon_compte/password']], [], []],
 ];

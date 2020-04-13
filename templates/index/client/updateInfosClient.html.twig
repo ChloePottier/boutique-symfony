@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Espace client | {{ parent() }}{% endblock %}
+{% block content %}
+<div class="container-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 mt-5 mb-3">
+                <h1 class="form-title">Modifier mes infos</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 d-flex justify-content-start">
+                <a class="text-decoration-none add-category" href="{{path('compte')}}"><i class="fas fa-arrow-left mr-2"></i>Retour au détail de mon compte</a>
+            </div>
+            <div class="col-12 d-flex justify-content-center form-modif-infos">
+                {{form_start(form)}}
+
+                    <div class="form-group  d-flex mt-4">
+                        <label for="" class="icone-form"><i class="fas fa-at"></i> </label>
+                        {{form_widget(form.mail, {'attr' : {'placeholder' : 'E-mail', 'class' : 'ml-2'}, 'label' : false})}}
+                    </div>
+                    <div class="form-group  d-flex mt-4">
+                        <label for="" class="icone-form"><i class="far fa-address-card"></i> </label>
+                        {{form_widget(form.nom, {'attr' : {'placeholder' : 'Nom', 'class' : 'ml-2'}, 'label' : false})}}
+                    </div>
+                    <div class="form-group  d-flex mt-4">
+                        <label for="" class="icone-form"><i class="far fa-address-card"></i> </label>
+                        {{form_widget(form.prenom, {'attr' : {'placeholder' : 'Prénom', 'class' : 'ml-2'}, 'label' : false})}}
+                    </div>
+                    <div class="form-group  d-flex mt-4">
+                        <label for="" class="icone-form"><i class="fas fa-map-marker-alt"></i> </label>
+                        {{form_widget(form.adresse, {'attr' : {'placeholder' : 'Adresse postale', 'class' : 'ml-2'}, 'label' : false})}}
+                    </div>
+                    <div class="form-group  d-flex mt-4">
+                        <label for="" class="icone-form"><i class="fas fa-map-marker-alt"></i> </label>
+                        {{form_widget(form.ville, {'attr' : {'placeholder' : 'Ville', 'class' : 'ml-2'}, 'label' : false})}}
+                    </div>
+                    <div class="form-group  d-flex mt-4">
+                        <label for="" class="icone-form"><i class="fas fa-map-marker-alt"></i> </label>
+                        {{form_widget(form.cp, {'attr' : {'placeholder' : 'Code Postal', 'class' : 'ml-2'}, 'label' : false})}}
+                    </div>
+                    <div class="form-group  d-flex mt-4">
+                        <label for="" class="icone-form"><i class="fas fa-mobile-alt"></i> </label>
+                        {{form_widget(form.phone, {'attr' : {'placeholder' : 'Téléphone', 'class' : 'ml-2'}, 'label' : false})}}
+                    </div>
+                    <div class="mb-2 d-flex justify-content-center">
+                        <input type="submit" value="Modifier" class="btn btn-info">
+                    </div>
+                {{form_end(form)}}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

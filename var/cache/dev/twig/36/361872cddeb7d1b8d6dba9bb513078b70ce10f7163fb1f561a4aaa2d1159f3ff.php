@@ -155,7 +155,7 @@ class __TwigTemplate_cd7715d02fe11c9bf330b021c3670eed5a05cd7d0b022ba3353b55b4c07
                         <a class=\"nav-link\" href=\"";
         // line 24
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("index");
-        echo "\">Home <span class=\"sr-only\">(current)</span></a>
+        echo "\"><i class=\"fas fa-home\"></i> Home <span class=\"sr-only\">(current)</span></a>
                     </li>
                     <li class=\"nav-item\">
                         <a class=\"nav-link\" href=\" ";
@@ -171,7 +171,7 @@ class __TwigTemplate_cd7715d02fe11c9bf330b021c3670eed5a05cd7d0b022ba3353b55b4c07
                         <a class=\"nav-link\" href=\" ";
             // line 31
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin");
-            echo " \">Administration</a>
+            echo " \"><i class=\"fas fa-cogs\"></i> Administration</a>
                     </li>
                     ";
         }
@@ -180,7 +180,7 @@ class __TwigTemplate_cd7715d02fe11c9bf330b021c3670eed5a05cd7d0b022ba3353b55b4c07
         if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_USER")) {
             // line 35
             echo "                    <li class=\"nav-item\">
-                        <a class=\"nav-link\" href=\" \">Mon compte</a>
+                        <a class=\"nav-link\" href=\" \"><i class=\"fas fa-user-cog\"></i> Mon compte</a>
                     </li>
                     
                     ";
@@ -191,11 +191,11 @@ class __TwigTemplate_cd7715d02fe11c9bf330b021c3670eed5a05cd7d0b022ba3353b55b4c07
         // line 41
         if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 41, $this->source); })()), "user", [], "any", false, false, false, 41)) {
             // line 42
-            echo "                        <a class=\"nav-link\" href=\"/logout\">Se déconnecter</a>
+            echo "                        <a class=\"nav-link\" href=\"/logout\"><i class=\"fas fa-sign-out-alt\"></i> Se déconnecter</a>
                         ";
         } else {
             // line 44
-            echo "                        <a class=\"nav-link\" href=\"/login\">Se connecter</a>
+            echo "                        <a class=\"nav-link\" href=\"/login\"><i class=\"fas fa-sign-in-alt\"></i> Se connecter</a>
                         ";
         }
         // line 46
@@ -290,27 +290,27 @@ class __TwigTemplate_cd7715d02fe11c9bf330b021c3670eed5a05cd7d0b022ba3353b55b4c07
             <div class=\"collapse navbar-collapse justify-content-end\" id=\"navbarNavDropdown\">
                 <ul class=\"navbar-nav\">
                     <li class=\"nav-item active\">
-                        <a class=\"nav-link\" href=\"{{ path('index') }}\">Home <span class=\"sr-only\">(current)</span></a>
+                        <a class=\"nav-link\" href=\"{{ path('index') }}\"><i class=\"fas fa-home\"></i> Home <span class=\"sr-only\">(current)</span></a>
                     </li>
                     <li class=\"nav-item\">
                         <a class=\"nav-link\" href=\" {{path('panier')}} \"><i class=\"color fas fa-shopping-cart\"></i> Mon panier</a>
                     </li>
                     {% if is_granted('ROLE_ADMIN') %}
                     <li class=\"nav-item\">
-                        <a class=\"nav-link\" href=\" {{path('admin')}} \">Administration</a>
+                        <a class=\"nav-link\" href=\" {{path('admin')}} \"><i class=\"fas fa-cogs\"></i> Administration</a>
                     </li>
                     {% endif %}
                     {% if is_granted('ROLE_USER') %}
                     <li class=\"nav-item\">
-                        <a class=\"nav-link\" href=\" \">Mon compte</a>
+                        <a class=\"nav-link\" href=\" \"><i class=\"fas fa-user-cog\"></i> Mon compte</a>
                     </li>
                     
                     {% endif %}
                     <li class=\"nav-item \">
                         {% if app.user %}
-                        <a class=\"nav-link\" href=\"/logout\">Se déconnecter</a>
+                        <a class=\"nav-link\" href=\"/logout\"><i class=\"fas fa-sign-out-alt\"></i> Se déconnecter</a>
                         {% else %}
-                        <a class=\"nav-link\" href=\"/login\">Se connecter</a>
+                        <a class=\"nav-link\" href=\"/login\"><i class=\"fas fa-sign-in-alt\"></i> Se connecter</a>
                         {% endif %}
                     </li>
                 </ul>

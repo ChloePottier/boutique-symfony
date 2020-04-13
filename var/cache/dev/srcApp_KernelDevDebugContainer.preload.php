@@ -6,7 +6,7 @@
 use Symfony\Component\DependencyInjection\Dumper\Preloader;
 
 require dirname(__DIR__, 3).'\\vendor/autoload.php';
-require __DIR__.'/ContainerGTpRXxa/srcApp_KernelDevDebugContainer.php';
+require __DIR__.'/ContainerK8tONAF/srcApp_KernelDevDebugContainer.php';
 
 $classes = [];
 $classes[] = 'Symfony\Bundle\FrameworkBundle\FrameworkBundle';
@@ -32,8 +32,10 @@ $classes[] = 'Symfony\Component\DependencyInjection\ServiceLocator';
 $classes[] = 'App\Controller\AdminController';
 $classes[] = 'App\Controller\IndexController';
 $classes[] = 'App\Form\CategoryType';
+$classes[] = 'App\Form\InfosClientType';
 $classes[] = 'App\Form\InscriptionType';
 $classes[] = 'App\Form\ProductType';
+$classes[] = 'App\Form\UpdatePasswordType';
 $classes[] = 'App\Repository\CategoryRepository';
 $classes[] = 'App\Repository\LignePanierRepository';
 $classes[] = 'App\Repository\OrderRepository';

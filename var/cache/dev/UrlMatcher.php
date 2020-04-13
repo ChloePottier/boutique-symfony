@@ -24,6 +24,9 @@ return [
         '/login' => [[['_route' => 'login', '_controller' => 'App\\Controller\\IndexController::login'], null, null, null, false, false, null]],
         '/logout' => [[['_route' => 'logout', '_controller' => 'App\\Controller\\IndexController::logout'], null, null, null, false, false, null]],
         '/panier' => [[['_route' => 'panier', '_controller' => 'App\\Controller\\IndexController::panier'], null, null, null, true, false, null]],
+        '/mon_compte' => [[['_route' => 'compte', '_controller' => 'App\\Controller\\IndexController::monCompte'], null, null, null, false, false, null]],
+        '/mon_compte/infos' => [[['_route' => 'update_infos', '_controller' => 'App\\Controller\\IndexController::updateInfos'], null, null, null, false, false, null]],
+        '/mon_compte/password' => [[['_route' => 'update_password', '_controller' => 'App\\Controller\\IndexController::updatePassword'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'
