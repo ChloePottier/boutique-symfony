@@ -117,7 +117,7 @@ class __TwigTemplate_94c02bdf8f57bb270a51d219d1d792c0267a6e68eaf090429e3f94f72fe
         </div>
         <div class=\"row d-flex\">
             <div class=\"col-3\">
-                <div class=\"card text-white bg-primary mb-3\" style=\"max-width: 18rem; height: 150px;\">
+                <div class=\"card text-white bg-info mb-3\" style=\"max-width: 18rem; height: 150px;\">
                     <div class=\"card-body d-flex justify-content-center align-items-center\">
                             <a href=\"";
         // line 19
@@ -127,7 +127,7 @@ class __TwigTemplate_94c02bdf8f57bb270a51d219d1d792c0267a6e68eaf090429e3f94f72fe
                   </div>
             </div>
             <div class=\"col-3\">
-                <div class=\"card text-white bg-primary mb-3\" style=\"max-width: 18rem; height: 150px;\">
+                <div class=\"card text-white bg-info mb-3\" style=\"max-width: 18rem; height: 150px;\">
                     <div class=\"card-body d-flex justify-content-center align-items-center\">
                         <a href=\"";
         // line 26
@@ -138,7 +138,7 @@ class __TwigTemplate_94c02bdf8f57bb270a51d219d1d792c0267a6e68eaf090429e3f94f72fe
                   </div>
             </div>
             <div class=\"col-3\">
-                <div class=\"card text-white bg-primary mb-3\" style=\"max-width: 18rem; height: 150px;\">
+                <div class=\"card text-white bg-info mb-3\" style=\"max-width: 18rem; height: 150px;\">
                     <div class=\"card-body d-flex justify-content-center align-items-center\">
                         <a href=\"";
         // line 34
@@ -149,7 +149,7 @@ class __TwigTemplate_94c02bdf8f57bb270a51d219d1d792c0267a6e68eaf090429e3f94f72fe
                   </div>
             </div>
             <div class=\"col-3\">
-                <div class=\"card text-white bg-primary mb-3\" style=\"max-width: 18rem; height: 150px;\">
+                <div class=\"card text-white bg-info mb-3\" style=\"max-width: 18rem; height: 150px;\">
                     <div class=\"card-body d-flex justify-content-center align-items-center\">
                         <a href=\"\" class=\"font-size text-white text-decoration-none\">Commandes</a>
 
@@ -202,14 +202,14 @@ class __TwigTemplate_94c02bdf8f57bb270a51d219d1d792c0267a6e68eaf090429e3f94f72fe
         </div>
         <div class=\"row d-flex\">
             <div class=\"col-3\">
-                <div class=\"card text-white bg-primary mb-3\" style=\"max-width: 18rem; height: 150px;\">
+                <div class=\"card text-white bg-info mb-3\" style=\"max-width: 18rem; height: 150px;\">
                     <div class=\"card-body d-flex justify-content-center align-items-center\">
                             <a href=\"{{path('liste_cat')}}\" class=\"font-size text-white text-decoration-none\">Catégories</a>
                     </div>
                   </div>
             </div>
             <div class=\"col-3\">
-                <div class=\"card text-white bg-primary mb-3\" style=\"max-width: 18rem; height: 150px;\">
+                <div class=\"card text-white bg-info mb-3\" style=\"max-width: 18rem; height: 150px;\">
                     <div class=\"card-body d-flex justify-content-center align-items-center\">
                         <a href=\"{{path('liste_product')}}\" class=\"font-size text-white text-decoration-none\">Produits</a>
 
@@ -217,7 +217,7 @@ class __TwigTemplate_94c02bdf8f57bb270a51d219d1d792c0267a6e68eaf090429e3f94f72fe
                   </div>
             </div>
             <div class=\"col-3\">
-                <div class=\"card text-white bg-primary mb-3\" style=\"max-width: 18rem; height: 150px;\">
+                <div class=\"card text-white bg-info mb-3\" style=\"max-width: 18rem; height: 150px;\">
                     <div class=\"card-body d-flex justify-content-center align-items-center\">
                         <a href=\"{{path('liste_user')}}\" class=\"font-size text-white text-decoration-none\">Clients</a>
 
@@ -225,7 +225,7 @@ class __TwigTemplate_94c02bdf8f57bb270a51d219d1d792c0267a6e68eaf090429e3f94f72fe
                   </div>
             </div>
             <div class=\"col-3\">
-                <div class=\"card text-white bg-primary mb-3\" style=\"max-width: 18rem; height: 150px;\">
+                <div class=\"card text-white bg-info mb-3\" style=\"max-width: 18rem; height: 150px;\">
                     <div class=\"card-body d-flex justify-content-center align-items-center\">
                         <a href=\"\" class=\"font-size text-white text-decoration-none\">Commandes</a>
 

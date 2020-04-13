@@ -184,16 +184,15 @@ class __TwigTemplate_2dd74e719dddf6657a40c89c69b337c5ef67fc0c49c94af0ba9ff3b0c9b
         } else {
             // line 62
             echo "                    <h2 class=\"text-center mt-5\">Votre panier est vide !  </h2>                         
-                     <div class=\"d-flex justify-content-center\">
-                                                <a class=\"btn btn-outline-info\" href=\"";
+                    <div class=\"d-flex justify-content-center mt-3\">
+                        <a class=\"btn-shopping btn btn-outline-info\" href=\"";
             // line 64
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("index");
             echo "\">Commencez votre shopping</a>
-
-                     </div>                   
+                    </div>                   
                     ";
         }
-        // line 68
+        // line 67
         echo "                </div>
 
             </div>
@@ -223,7 +222,7 @@ class __TwigTemplate_2dd74e719dddf6657a40c89c69b337c5ef67fc0c49c94af0ba9ff3b0c9b
 
     public function getDebugInfo()
     {
-        return array (  197 => 68,  190 => 64,  186 => 62,  178 => 57,  167 => 50,  159 => 43,  150 => 40,  143 => 36,  138 => 34,  134 => 33,  130 => 32,  124 => 31,  121 => 30,  117 => 29,  102 => 16,  100 => 15,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
+        return array (  196 => 67,  190 => 64,  186 => 62,  178 => 57,  167 => 50,  159 => 43,  150 => 40,  143 => 36,  138 => 34,  134 => 33,  130 => 32,  124 => 31,  121 => 30,  117 => 29,  102 => 16,  100 => 15,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -290,10 +289,9 @@ class __TwigTemplate_2dd74e719dddf6657a40c89c69b337c5ef67fc0c49c94af0ba9ff3b0c9b
                     
                     {% else %}
                     <h2 class=\"text-center mt-5\">Votre panier est vide !  </h2>                         
-                     <div class=\"d-flex justify-content-center\">
-                                                <a class=\"btn btn-outline-info\" href=\"{{path('index')}}\">Commencez votre shopping</a>
-
-                     </div>                   
+                    <div class=\"d-flex justify-content-center mt-3\">
+                        <a class=\"btn-shopping btn btn-outline-info\" href=\"{{path('index')}}\">Commencez votre shopping</a>
+                    </div>                   
                     {% endif %}
                 </div>
 

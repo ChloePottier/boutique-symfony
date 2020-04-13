@@ -6,6 +6,11 @@ body{font-family: Helvetica, Arial,  sans-serif;}
     height: 300px;
     overflow: hidden;
 }
+/* NAvbar */
+.navbar-light .navbar-nav .active > .nav-link{color: #17a2b8;}
+.navbar-light .navbar-nav .nav-link{color: #000;}
+.navbar-light .navbar-nav .nav-link:hover{color: #17a2b8;}
+
 /* connexion */
 .font-size {
     font-size: 1.5rem;
@@ -34,7 +39,7 @@ body{font-family: Helvetica, Arial,  sans-serif;}
 }
 
 .color-blue {
-    background-color: #3E7EEB;
+    background-color: #17a2b8;
 }
 
 form, input, ::placeholder{font-family: Helvetica, Arial, sans-serif;}
@@ -53,7 +58,7 @@ form, input, ::placeholder{font-family: Helvetica, Arial, sans-serif;}
     max-width: unset;
 } */
 .add-product, .add-category{color: #000;}
-.add-product:hover, .add-category:hover{color: #545b62;}
+.add-product:hover, .add-category:hover{color: #17a2b8;}
 .btn-edit:hover{ background-color: #c3c3c3; padding: .7rem.5rem; border-radius: .5rem;}
 /* page produit */
 .image-page-produit{width: 100%; height:auto;}
@@ -68,6 +73,8 @@ input::-webkit-outer-spin-button {
 	-webkit-appearance: none;
 	margin:0;
 }
+/* panier */
+.btn-shopping{font-size: 1.5rem!important;}
 @media screen  and (max-width:991px){
     .title-listing{font-size: .8rem;}
 

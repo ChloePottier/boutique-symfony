@@ -186,7 +186,7 @@ class __TwigTemplate_cd7715d02fe11c9bf330b021c3670eed5a05cd7d0b022ba3353b55b4c07
                     ";
         }
         // line 40
-        echo "                    <li class=\"nav-item active\">
+        echo "                    <li class=\"nav-item \">
                         ";
         // line 41
         if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 41, $this->source); })()), "user", [], "any", false, false, false, 41)) {
@@ -306,7 +306,7 @@ class __TwigTemplate_cd7715d02fe11c9bf330b021c3670eed5a05cd7d0b022ba3353b55b4c07
                     </li>
                     
                     {% endif %}
-                    <li class=\"nav-item active\">
+                    <li class=\"nav-item \">
                         {% if app.user %}
                         <a class=\"nav-link\" href=\"/logout\">Se déconnecter</a>
                         {% else %}

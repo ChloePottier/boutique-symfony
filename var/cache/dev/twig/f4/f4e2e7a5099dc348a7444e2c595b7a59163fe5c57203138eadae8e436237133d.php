@@ -61,7 +61,7 @@ class __TwigTemplate_f5ad9447614ba7d89cba7c853e95c88d604865a9eab41abc75ecec51397
         if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN")) {
             // line 12
             echo "            <li class=\"nav-item\">
-                <a class=\"nav-link active\" href=\" ";
+                <a class=\"nav-link\" href=\" ";
             // line 13
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin");
             echo " \">Dashboard</a>
@@ -99,7 +99,7 @@ class __TwigTemplate_f5ad9447614ba7d89cba7c853e95c88d604865a9eab41abc75ecec51397
             ";
         }
         // line 33
-        echo "            <li class=\"nav-item active\">
+        echo "            <li class=\"nav-item \">
                 ";
         // line 34
         if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 34, $this->source); })()), "user", [], "any", false, false, false, 34)) {
@@ -153,7 +153,7 @@ class __TwigTemplate_f5ad9447614ba7d89cba7c853e95c88d604865a9eab41abc75ecec51397
             </li>
             {% if is_granted('ROLE_ADMIN') %}
             <li class=\"nav-item\">
-                <a class=\"nav-link active\" href=\" {{path('admin')}} \">Dashboard</a>
+                <a class=\"nav-link\" href=\" {{path('admin')}} \">Dashboard</a>
             </li>
             <li class=\"nav-item \">
                 <a class=\"nav-link\" href=\"{{ path('liste_cat') }}\">Catégories <span class=\"sr-only\">(current)</span></a>
@@ -173,7 +173,7 @@ class __TwigTemplate_f5ad9447614ba7d89cba7c853e95c88d604865a9eab41abc75ecec51397
                 <a class=\"nav-link\" href=\" \">Mon compte</a>
             </li>
             {% endif %}
-            <li class=\"nav-item active\">
+            <li class=\"nav-item \">
                 {% if app.user %}
                 <a class=\"nav-link\" href=\"/logout\">Se déconnecter</a>
                 {% else %}

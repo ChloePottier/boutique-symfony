@@ -93,13 +93,13 @@ class __TwigTemplate_5c3854fc4bcc5f3fd2330747e511600539022855857d58b103aa10b2994
                     <div id=\"carouselExampleControls\" class=\"carousel slide\" data-ride=\"carousel\">
                         <div class=\"carousel-inner\">
                             <div class=\"carousel-item active\">
-                                <img src=\"/uploads/test.jpg\" class=\"d-block w-100\" alt=\"...\" >
+                                <img src=\"/images/tshirt-1.jpg\" class=\"d-block w-100\" alt=\"Tshirt\" >
                             </div>
                             <div class=\"carousel-item\">
-                                <img src=\"/uploads/test2.jpg\" class=\"d-block w-100\" alt=\"...\" >
+                                <img src=\"/images/tshirt-2.jpg\" class=\"d-block w-100\" alt=\"Tshirt\" >
                             </div>
                             <div class=\"carousel-item\">
-                                <img src=\"/uploads/test3.jpg\" class=\"d-block w-100\" alt=\"...\">
+                                <img src=\"/images/tshirt-3.jpg\" class=\"d-block w-100\" alt=\"Tshirt\">
                             </div>
                         </div>
                         <a class=\"carousel-control-prev\" href=\"#carouselExampleControls\" role=\"button\" data-slide=\"prev\">
@@ -129,7 +129,7 @@ class __TwigTemplate_5c3854fc4bcc5f3fd2330747e511600539022855857d58b103aa10b2994
                             <img src=\"";
             // line 39
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("uploads/" . twig_get_attribute($this->env, $this->source, $context["product"], "image", [], "any", false, false, false, 39))), "html", null, true);
-            echo "\" class=\"card-img-top\" width=\"256\" height=\"208\" title=\"";
+            echo "\" class=\"card-img-top img-fluid\" width=\"256\" height=\"208\" title=\"";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["product"], "nom", [], "any", false, false, false, 39), "html", null, true);
             echo "\" alt=\"image ";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["product"], "nom", [], "any", false, false, false, 39), "html", null, true);
@@ -205,13 +205,13 @@ class __TwigTemplate_5c3854fc4bcc5f3fd2330747e511600539022855857d58b103aa10b2994
                     <div id=\"carouselExampleControls\" class=\"carousel slide\" data-ride=\"carousel\">
                         <div class=\"carousel-inner\">
                             <div class=\"carousel-item active\">
-                                <img src=\"/uploads/test.jpg\" class=\"d-block w-100\" alt=\"...\" >
+                                <img src=\"/images/tshirt-1.jpg\" class=\"d-block w-100\" alt=\"Tshirt\" >
                             </div>
                             <div class=\"carousel-item\">
-                                <img src=\"/uploads/test2.jpg\" class=\"d-block w-100\" alt=\"...\" >
+                                <img src=\"/images/tshirt-2.jpg\" class=\"d-block w-100\" alt=\"Tshirt\" >
                             </div>
                             <div class=\"carousel-item\">
-                                <img src=\"/uploads/test3.jpg\" class=\"d-block w-100\" alt=\"...\">
+                                <img src=\"/images/tshirt-3.jpg\" class=\"d-block w-100\" alt=\"Tshirt\">
                             </div>
                         </div>
                         <a class=\"carousel-control-prev\" href=\"#carouselExampleControls\" role=\"button\" data-slide=\"prev\">
@@ -232,7 +232,7 @@ class __TwigTemplate_5c3854fc4bcc5f3fd2330747e511600539022855857d58b103aa10b2994
                     <div class=\"card\">
                     {# gestion de l'url : dossier uploads/table article col picture #}
                         <div class=\"image-carte\">
-                            <img src=\"{{ asset('uploads/' ~ product.image) }}\" class=\"card-img-top\" width=\"256\" height=\"208\" title=\"{{ product.nom }}\" alt=\"image {{ product.nom  }}\">
+                            <img src=\"{{ asset('uploads/' ~ product.image) }}\" class=\"card-img-top img-fluid\" width=\"256\" height=\"208\" title=\"{{ product.nom }}\" alt=\"image {{ product.nom  }}\">
                         </div>
                         <div class=\"card-body\">
                             <h5 class=\"card-title\">{{ product.nom}}</h5>
