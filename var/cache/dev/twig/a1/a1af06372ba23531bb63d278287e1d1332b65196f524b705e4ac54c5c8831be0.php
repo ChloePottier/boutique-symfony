@@ -144,7 +144,7 @@ class __TwigTemplate_3b0ed15b31ac91b9c7fc251e04570e06553df7c83ee03a67dda14981cb6
             // line 35
             echo "                        
                         <tr>
-                            <td class=\"text-center font-weight-bold\">n° ";
+                            <td class=\"text-center font-weight-bold\">n°";
             // line 37
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["order"], "id", [], "any", false, false, false, 37), "html", null, true);
             echo "</td>
@@ -160,22 +160,19 @@ class __TwigTemplate_3b0ed15b31ac91b9c7fc251e04570e06553df7c83ee03a67dda14981cb6
             // line 40
             echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["order"], "date", [], "any", false, false, false, 40), "d/m/Y"), "html", null, true);
             echo "</td> 
-                            <td class=\"text-center font-weight-bold\">total ???</td>                          
-                            <td class=\"text-center font-weight-bold\">
-                                <a href=\"";
-            // line 43
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("details_order_user", ["id" => twig_get_attribute($this->env, $this->source, $context["order"], "id", [], "any", false, false, false, 43)]), "html", null, true);
-            echo "\"><img src=\"";
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("images/" . "show.svg")), "html", null, true);
-            echo "\" width=\"40\" height=\"40\" alt=\"détails\"/></a>
-                            </td>
+                            <td class=\"text-center font-weight-bold\">...€</td> 
+                            <td class=\"text-center font-weight-bold detail\"><a href=\"";
+            // line 42
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("details_order", ["id" => twig_get_attribute($this->env, $this->source, $context["order"], "id", [], "any", false, false, false, 42)]), "html", null, true);
+            echo "\"> <i class=\"fas fa-search-plus\"></i></a></td>                         
+
                         </tr>
                         ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['order'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 47
+        // line 46
         echo "                    </table>
             </div>
             
@@ -204,7 +201,7 @@ class __TwigTemplate_3b0ed15b31ac91b9c7fc251e04570e06553df7c83ee03a67dda14981cb6
 
     public function getDebugInfo()
     {
-        return array (  179 => 47,  167 => 43,  161 => 40,  157 => 39,  153 => 38,  149 => 37,  145 => 35,  141 => 34,  123 => 19,  111 => 9,  101 => 8,  90 => 6,  80 => 5,  60 => 4,  37 => 2,);
+        return array (  176 => 46,  166 => 42,  161 => 40,  157 => 39,  153 => 38,  149 => 37,  145 => 35,  141 => 34,  123 => 19,  111 => 9,  101 => 8,  90 => 6,  80 => 5,  60 => 4,  37 => 2,);
     }
 
     public function getSourceContext()
@@ -245,14 +242,13 @@ class __TwigTemplate_3b0ed15b31ac91b9c7fc251e04570e06553df7c83ee03a67dda14981cb6
                         {% for order in orders %}
                         
                         <tr>
-                            <td class=\"text-center font-weight-bold\">n° {{ order.id }}</td>
+                            <td class=\"text-center font-weight-bold\">n°{{ order.id }}</td>
                             <td class=\"text-center font-weight-bold\">{{ order.User.nom }}</td>
                             <td class=\"text-center font-weight-bold\">{{ order.User.prenom }}</td>
                             <td class=\"text-center font-weight-bold\">{{ order.date |date(\"d/m/Y\") }}</td> 
-                            <td class=\"text-center font-weight-bold\">total ???</td>                          
-                            <td class=\"text-center font-weight-bold\">
-                                <a href=\"{{path('details_order_user', {'id' : order.id})}}\"><img src=\"{{asset('images/' ~ 'show.svg')}}\" width=\"40\" height=\"40\" alt=\"détails\"/></a>
-                            </td>
+                            <td class=\"text-center font-weight-bold\">...€</td> 
+                            <td class=\"text-center font-weight-bold detail\"><a href=\"{{path('details_order', {'id' : order.id})}}\"> <i class=\"fas fa-search-plus\"></i></a></td>                         
+
                         </tr>
                         {% endfor %}
                     </table>

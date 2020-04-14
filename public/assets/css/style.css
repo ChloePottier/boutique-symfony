@@ -38,10 +38,6 @@ body{font-family: Helvetica, Arial,  sans-serif;}
     background-color: #ff1744!important;
 }
 
-.color-blue {
-    background-color: #17a2b8;
-}
-
 form, input, ::placeholder{font-family: Helvetica, Arial, sans-serif;}
 .input { 
     width: 100%;
@@ -74,6 +70,9 @@ input::-webkit-outer-spin-button {
 /* panier */
 .btn-shopping{font-size: 1.5rem!important;}
 .icone-form{width: 1.3rem;}
+
+.detail a{color: #17a2b8; font-size: 1.5rem;}
+.detail a:hover{color: #000;}
 @media screen  and (max-width:991px){
     .title-listing{font-size: .8rem;}
 

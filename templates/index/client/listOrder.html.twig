@@ -13,26 +13,26 @@
             <div class="row">
                 <div class="col-12">
                     <table class="table table-hover  mt-5 text">
-                    <thead class="thead-dark text-uppercase">
-                        <tr>
-                            <th class="text-center">Numéro de commande</th>
-                            <th class="text-center">Date d'achat</th>
-                            <th class="text-center">Détails</th>
+                        <thead class="thead-dark text-uppercase">
+                            <tr>
+                                <th class="text-center">Numéro de commande</th>
+                                <th class="text-center">Date d'achat</th>
+                                <th class="text-center">Détails</th>
+                                
+                            </tr>
+                        </thead>
                             
-                        </tr>
-                    </thead>
+                        {% for order in orders %}
                         
-                    {% for order in orders %}
-                    
-                    <tr>
-                        <td class="text-center font-weight-bold"> N° {{order.id}} </td>
-                        <td class="text-center font-weight-bold">{{ order.date|date("d/m/Y") }}</td>
-                        <td class="text-center font-weight-bold">
-                            <a href="{{path('details_order', {'id' : order.id})}}"/>Détails</a>
-                        </td>
-                    </tr>
-                    {% endfor %}
-                </table>        
+                        <tr>
+                            <td class="text-center font-weight-bold"> N° {{order.id}} </td>
+                            <td class="text-center font-weight-bold">{{ order.date|date("d/m/Y") }}</td>
+                            <td class="text-center font-weight-bold detail">
+                                <a href="{{path('details_order', {'id' : order.id})}}"/><i class="fas fa-search-plus"></i></a>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </table>        
                 </div>
             </div>
         </div>

@@ -137,12 +137,16 @@ class __TwigTemplate_8cd5227f7969f3237bcd9b7ff2b5c33da18eb046b58ab38138b96921428
         echo "</p>
                 </div>
                 <div class=\"col-12 d-flex justify-content-center mt-3\">
-                    <a href=\"";
+                 <a href=\"";
         // line 36
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("client_order");
+        echo "\" class=\"btn btn-warning mr-1\">Voir mes commandes</a>
+                    <a href=\"";
+        // line 37
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("update_infos");
         echo "\" class=\"btn btn-info mr-1\">Modifier mes infos</a>
                     <a href=\"";
-        // line 37
+        // line 38
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("update_password");
         echo "\" class=\"btn btn-danger ml-1\">Modifier mon mot de passe</a>
                 </div>
@@ -171,7 +175,7 @@ class __TwigTemplate_8cd5227f7969f3237bcd9b7ff2b5c33da18eb046b58ab38138b96921428
 
     public function getDebugInfo()
     {
-        return array (  146 => 37,  142 => 36,  136 => 33,  132 => 32,  128 => 31,  124 => 30,  120 => 29,  116 => 28,  112 => 27,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
+        return array (  150 => 38,  146 => 37,  142 => 36,  136 => 33,  132 => 32,  128 => 31,  124 => 30,  120 => 29,  116 => 28,  112 => 27,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -211,6 +215,7 @@ class __TwigTemplate_8cd5227f7969f3237bcd9b7ff2b5c33da18eb046b58ab38138b96921428
                     <p>{{ user.phone }}</p>
                 </div>
                 <div class=\"col-12 d-flex justify-content-center mt-3\">
+                 <a href=\"{{path('client_order')}}\" class=\"btn btn-warning mr-1\">Voir mes commandes</a>
                     <a href=\"{{path('update_infos')}}\" class=\"btn btn-info mr-1\">Modifier mes infos</a>
                     <a href=\"{{path('update_password')}}\" class=\"btn btn-danger ml-1\">Modifier mon mot de passe</a>
                 </div>

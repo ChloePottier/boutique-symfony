@@ -147,13 +147,11 @@ class __TwigTemplate_7838f0df2912483810b3bc05262604c84090b0da25ee46c151d8fad1b60
             // line 32
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "mail", [], "any", false, false, false, 32), "html", null, true);
             echo "</td>
-                        <td class=\"text-center font-weight-bold\">
+                        <td class=\"text-center font-weight-bold detail\">
                             <a href=\"";
             // line 34
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("details_user", ["id" => twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 34)]), "html", null, true);
-            echo "\"><img src=\"";
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("images/" . "show.svg")), "html", null, true);
-            echo "\" width=\"40\" height=\"40\" alt=\"détails\"/></a>
+            echo "\"><i class=\"fas fa-search-plus\"></i></a>
                         </td>
                     </tr>
                     ";
@@ -188,7 +186,7 @@ class __TwigTemplate_7838f0df2912483810b3bc05262604c84090b0da25ee46c151d8fad1b60
 
     public function getDebugInfo()
     {
-        return array (  165 => 38,  153 => 34,  148 => 32,  144 => 31,  140 => 30,  136 => 28,  132 => 27,  111 => 8,  101 => 7,  90 => 5,  80 => 4,  60 => 3,  37 => 1,);
+        return array (  163 => 38,  153 => 34,  148 => 32,  144 => 31,  140 => 30,  136 => 28,  132 => 27,  111 => 8,  101 => 7,  90 => 5,  80 => 4,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -225,8 +223,8 @@ class __TwigTemplate_7838f0df2912483810b3bc05262604c84090b0da25ee46c151d8fad1b60
                         <td class=\"text-center font-weight-bold\">{{ user.nom }}</td>
                         <td class=\"text-center font-weight-bold\">{{ user.prenom }}</td>
                         <td class=\"text-center font-weight-bold\">{{ user.mail }}</td>
-                        <td class=\"text-center font-weight-bold\">
-                            <a href=\"{{path('details_user', {'id' : user.id})}}\"><img src=\"{{asset('images/' ~ 'show.svg')}}\" width=\"40\" height=\"40\" alt=\"détails\"/></a>
+                        <td class=\"text-center font-weight-bold detail\">
+                            <a href=\"{{path('details_user', {'id' : user.id})}}\"><i class=\"fas fa-search-plus\"></i></a>
                         </td>
                     </tr>
                     {% endfor %}
