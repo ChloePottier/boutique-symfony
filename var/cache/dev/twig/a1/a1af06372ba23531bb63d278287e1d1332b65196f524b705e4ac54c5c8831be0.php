@@ -163,7 +163,7 @@ class __TwigTemplate_3b0ed15b31ac91b9c7fc251e04570e06553df7c83ee03a67dda14981cb6
                             <td class=\"text-center font-weight-bold\">...€</td> 
                             <td class=\"text-center font-weight-bold detail\"><a href=\"";
             // line 42
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("details_order", ["id" => twig_get_attribute($this->env, $this->source, $context["order"], "id", [], "any", false, false, false, 42)]), "html", null, true);
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("details_order_user", ["id" => twig_get_attribute($this->env, $this->source, $context["order"], "id", [], "any", false, false, false, 42)]), "html", null, true);
             echo "\"> <i class=\"fas fa-search-plus\"></i></a></td>                         
 
                         </tr>
@@ -247,7 +247,7 @@ class __TwigTemplate_3b0ed15b31ac91b9c7fc251e04570e06553df7c83ee03a67dda14981cb6
                             <td class=\"text-center font-weight-bold\">{{ order.User.prenom }}</td>
                             <td class=\"text-center font-weight-bold\">{{ order.date |date(\"d/m/Y\") }}</td> 
                             <td class=\"text-center font-weight-bold\">...€</td> 
-                            <td class=\"text-center font-weight-bold detail\"><a href=\"{{path('details_order', {'id' : order.id})}}\"> <i class=\"fas fa-search-plus\"></i></a></td>                         
+                            <td class=\"text-center font-weight-bold detail\"><a href=\"{{path('details_order_user', {'id' : order.id})}}\"> <i class=\"fas fa-search-plus\"></i></a></td>                         
 
                         </tr>
                         {% endfor %}

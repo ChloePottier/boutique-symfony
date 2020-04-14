@@ -39,7 +39,7 @@
                             <td class="text-center font-weight-bold">{{ order.User.prenom }}</td>
                             <td class="text-center font-weight-bold">{{ order.date |date("d/m/Y") }}</td> 
                             <td class="text-center font-weight-bold">...€</td> 
-                            <td class="text-center font-weight-bold detail"><a href="{{path('details_order', {'id' : order.id})}}"> <i class="fas fa-search-plus"></i></a></td>                         
+                            <td class="text-center font-weight-bold detail"><a href="{{path('details_order_user', {'id' : order.id})}}"> <i class="fas fa-search-plus"></i></a></td>                         
 
                         </tr>
                         {% endfor %}

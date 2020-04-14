@@ -108,78 +108,70 @@ class __TwigTemplate_a42d55ec170dfa3797b084dbb948d7400db1736119c7ac05dda145b5f73
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "content"));
 
         // line 8
-        echo "\t<div class=\"container-fluid text-center\">
+        echo "\t<div class=\"container-fluid\">
         <div class=\"container\">
             <div class=\"row\">
                 <div class=\"col-12 mt-5 mb-3\">
-                    <h1> Informations Clients</h1>
+                    <h1>Détail de la commande</h1>
                 </div>
             </div>
             <div class=\"row\">
-                <div class=\"col-6 d-flex flex-column align-items-end font-weight-bold\">
-                    <table class=\"table table-hover mt-3 text col-12\">
-                        <thead class=\"thead-dark  title-listing\">
+                <div class=\"col-12 d-flex flex-column align-items-end font-weight-bold\">
+                    <table class=\"table table-hover  mt-5 text\">
+                        <thead class=\"thead-dark text-uppercase\">
                             <tr>
-                                <th class=\"text-center text-nowrap\">N° de la commande</th>
-                                <th class=\"text-center text-nowrap\">Nom</th>
-                                <th class=\"text-center text-nowrap\">Prénom </th>
-                                <th class=\"text-center text-nowrap\">Description</th>
-                                <th class=\"text-center text-nowrap\">En ligne</th>
-                                <th class=\"text-center text-nowrap\">Modifier</th>
-                                <th class=\"text-center text-nowrap\">Supprimer</th>
+                                <th colspan=\"2\" class=\"text-center\">Produit</th>
+                                <th class=\"text-center\">Quantité</th>
+                                <th class=\"text-center\">Prix</th>
+                                <th class=\"text-center\"> Total /produit</th>
                             </tr>
                         </thead>
-                            
                         ";
-        // line 30
+        // line 26
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["details"]) || array_key_exists("details", $context) ? $context["details"] : (function () { throw new RuntimeError('Variable "details" does not exist.', 30, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["details"]) || array_key_exists("details", $context) ? $context["details"] : (function () { throw new RuntimeError('Variable "details" does not exist.', 26, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["detail"]) {
-            // line 31
-            echo "                        
-                        <tr>
-                            <td class=\"text-center \"> ";
-            // line 33
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["detail"], "id", [], "any", false, false, false, 33), "html", null, true);
+            // line 27
+            echo "                            <tr>
+                                <td class=\"text-center font-weight-bold\">  <img src=\"";
+            // line 28
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("uploads/" . twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["detail"], "productId", [], "any", false, false, false, 28), "image", [], "any", false, false, false, 28))), "html", null, true);
+            echo "\" alt=\"\" width=\"50\" height=\"50\"></td>
+                                <td class=\"text-center font-weight-bold\"> ";
+            // line 29
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["detail"], "productId", [], "any", false, false, false, 29), "nom", [], "any", false, false, false, 29), "html", null, true);
+            echo " </td>
+                                <td class=\"text-center font-weight-bold\">";
+            // line 30
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["detail"], "quantity", [], "any", false, false, false, 30), "html", null, true);
             echo "</td>
-                            
-
-                        </tr>
+                                <td class=\"text-center font-weight-bold\">";
+            // line 31
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["detail"], "price", [], "any", false, false, false, 31), "html", null, true);
+            echo "€  </td>
+                                <td class=\"text-center font-weight-bold\">";
+            // line 32
+            echo twig_escape_filter($this->env, (twig_get_attribute($this->env, $this->source, $context["detail"], "price", [], "any", false, false, false, 32) * twig_get_attribute($this->env, $this->source, $context["detail"], "quantity", [], "any", false, false, false, 32)), "html", null, true);
+            echo "€</td>
+                            </tr>
                         ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['detail'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 38
-        echo "                    </table>
-
-
-                </div>
-                
-                <div class=\"col-6 d-flex flex-column align-items-start\">
-                
-                    ";
-        // line 45
-        $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["details"]) || array_key_exists("details", $context) ? $context["details"] : (function () { throw new RuntimeError('Variable "details" does not exist.', 45, $this->source); })()));
-        foreach ($context['_seq'] as $context["_key"] => $context["detail"]) {
-            // line 46
-            echo "                        ";
-            // line 47
-            echo "                        ";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["detail"], "quantity", [], "any", false, false, false, 47), "html", null, true);
-            echo "
-                        ";
-            // line 48
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["detail"], "price", [], "any", false, false, false, 48), "html", null, true);
-            echo "
-                ";
-        }
-        $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['detail'], $context['_parent'], $context['loop']);
-        $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 50
-        echo "
+        // line 35
+        echo "                            <tfoot>
+                            <tr class=\"\">
+                                <td colspan=\"5\" class=\"font-weight-bold text-right\">Total :</td>
+                                <td class=\"font-weight-bold \">
+                                ";
+        // line 40
+        echo "                                ";
+        // line 41
+        echo "                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>   
                 </div>
             </div>
         </div>
@@ -205,7 +197,7 @@ class __TwigTemplate_a42d55ec170dfa3797b084dbb948d7400db1736119c7ac05dda145b5f73
 
     public function getDebugInfo()
     {
-        return array (  182 => 50,  174 => 48,  169 => 47,  167 => 46,  163 => 45,  154 => 38,  143 => 33,  139 => 31,  135 => 30,  111 => 8,  101 => 7,  90 => 5,  80 => 4,  60 => 3,  37 => 1,);
+        return array (  171 => 41,  169 => 40,  163 => 35,  154 => 32,  150 => 31,  146 => 30,  142 => 29,  138 => 28,  135 => 27,  131 => 26,  111 => 8,  101 => 7,  90 => 5,  80 => 4,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -217,49 +209,43 @@ class __TwigTemplate_a42d55ec170dfa3797b084dbb948d7400db1736119c7ac05dda145b5f73
     {% include \"includes/adminNavBar.html.twig\" %}
 {% endblock %}
 {% block content %}
-\t<div class=\"container-fluid text-center\">
+\t<div class=\"container-fluid\">
         <div class=\"container\">
             <div class=\"row\">
                 <div class=\"col-12 mt-5 mb-3\">
-                    <h1> Informations Clients</h1>
+                    <h1>Détail de la commande</h1>
                 </div>
             </div>
             <div class=\"row\">
-                <div class=\"col-6 d-flex flex-column align-items-end font-weight-bold\">
-                    <table class=\"table table-hover mt-3 text col-12\">
-                        <thead class=\"thead-dark  title-listing\">
+                <div class=\"col-12 d-flex flex-column align-items-end font-weight-bold\">
+                    <table class=\"table table-hover  mt-5 text\">
+                        <thead class=\"thead-dark text-uppercase\">
                             <tr>
-                                <th class=\"text-center text-nowrap\">N° de la commande</th>
-                                <th class=\"text-center text-nowrap\">Nom</th>
-                                <th class=\"text-center text-nowrap\">Prénom </th>
-                                <th class=\"text-center text-nowrap\">Description</th>
-                                <th class=\"text-center text-nowrap\">En ligne</th>
-                                <th class=\"text-center text-nowrap\">Modifier</th>
-                                <th class=\"text-center text-nowrap\">Supprimer</th>
+                                <th colspan=\"2\" class=\"text-center\">Produit</th>
+                                <th class=\"text-center\">Quantité</th>
+                                <th class=\"text-center\">Prix</th>
+                                <th class=\"text-center\"> Total /produit</th>
                             </tr>
                         </thead>
-                            
                         {% for detail in details %}
-                        
-                        <tr>
-                            <td class=\"text-center \"> {{detail.id}}</td>
-                            
-
-                        </tr>
+                            <tr>
+                                <td class=\"text-center font-weight-bold\">  <img src=\"{{asset('uploads/' ~ detail.productId.image)}}\" alt=\"\" width=\"50\" height=\"50\"></td>
+                                <td class=\"text-center font-weight-bold\"> {{detail.productId.nom}} </td>
+                                <td class=\"text-center font-weight-bold\">{{detail.quantity}}</td>
+                                <td class=\"text-center font-weight-bold\">{{detail.price}}€  </td>
+                                <td class=\"text-center font-weight-bold\">{{ detail.price * detail.quantity }}€</td>
+                            </tr>
                         {% endfor %}
-                    </table>
-
-
-                </div>
-                
-                <div class=\"col-6 d-flex flex-column align-items-start\">
-                
-                    {% for detail in details %}
-                        {# {{detail.product.nom}} #}
-                        {{detail.quantity}}
-                        {{detail.price}}
-                {% endfor %}
-
+                            <tfoot>
+                            <tr class=\"\">
+                                <td colspan=\"5\" class=\"font-weight-bold text-right\">Total :</td>
+                                <td class=\"font-weight-bold \">
+                                {# résultat du total #}
+                                {# {{ total}} € #}
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>   
                 </div>
             </div>
         </div>

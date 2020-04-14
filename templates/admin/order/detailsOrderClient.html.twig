@@ -5,51 +5,43 @@
     {% include "includes/adminNavBar.html.twig" %}
 {% endblock %}
 {% block content %}
-	<div class="container-fluid text-center">
+	<div class="container-fluid">
         <div class="container">
             <div class="row">
                 <div class="col-12 mt-5 mb-3">
-                    <h1> Informations Clients</h1>
+                    <h1>Détail de la commande</h1>
                 </div>
             </div>
             <div class="row">
-                <div class="col-6 d-flex flex-column align-items-end font-weight-bold">
-                <table class="table table-hover mt-3 text col-12">
-                        <thead class="thead-dark  title-listing">
+                <div class="col-12 d-flex flex-column align-items-end font-weight-bold">
+                    <table class="table table-hover  mt-5 text">
+                        <thead class="thead-dark text-uppercase">
                             <tr>
-                                <th class="text-center text-nowrap">N° de la commande</th>
-                                <th class="text-center text-nowrap">Nom</th>
-                                <th class="text-center text-nowrap">Prénom </th>
-                                <th class="text-center text-nowrap">Description</th>
-                                <th class="text-center text-nowrap">En ligne</th>
-                                <th class="text-center text-nowrap">Modifier</th>
-                                <th class="text-center text-nowrap">Supprimer</th>
+                                <th colspan="2" class="text-center">Produit</th>
+                                <th class="text-center">Quantité</th>
+                                <th class="text-center">Prix</th>
+                                <th class="text-center"> Total /produit</th>
                             </tr>
                         </thead>
-                            
                         {% for detail in details %}
-                        
-                        <tr>
-                            <td class="text-center "> {{detail.id}}</td>
-                            
-
-                        </tr>
+                            <tr>
+                                <td class="text-center font-weight-bold">  <img src="{{asset('uploads/' ~ detail.productId.image)}}" alt="" width="50" height="50"></td>
+                                <td class="text-center font-weight-bold"> {{detail.productId.nom}} </td>
+                                <td class="text-center font-weight-bold">{{detail.quantity}}</td>
+                                <td class="text-center font-weight-bold">{{detail.price}}€  </td>
+                                <td class="text-center font-weight-bold">{{ detail.price * detail.quantity }}€</td>
+                            </tr>
                         {% endfor %}
-                    </table>
-                    <p>N° de la commande</p>
-                    <p>Nom</p>
-                    <p>Prénom</p>
-
-                </div>
-                
-                <div class="col-6 d-flex flex-column align-items-start">
-                
-                    {% for detail in details %}
-                        {# {{detail.product.nom}} #}
-                        {{detail.quantity}}
-                        {{detail.price}}
-                {% endfor %}
-
+                            <tfoot>
+                            <tr class="">
+                                <td colspan="5" class="font-weight-bold text-right">Total :</td>
+                                <td class="font-weight-bold ">
+                                {# résultat du total #}
+                                {# {{ total}} € #}
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>   
                 </div>
             </div>
         </div>

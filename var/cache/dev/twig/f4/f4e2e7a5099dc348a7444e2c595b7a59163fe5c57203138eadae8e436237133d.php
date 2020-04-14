@@ -81,7 +81,10 @@ class __TwigTemplate_f5ad9447614ba7d89cba7c853e95c88d604865a9eab41abc75ecec51397
         echo "\">Clients <span class=\"sr-only\">(current)</span></a>
             </li>
             <li class=\"nav-item \">
-                <a class=\"nav-link\" href=\"\">Commandes <span class=\"sr-only\">(current)</span></a>
+                <a class=\"nav-link\" href=\"";
+        // line 24
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("liste_order");
+        echo "\">Commandes <span class=\"sr-only\">(current)</span></a>
             </li>
      
             <li class=\"nav-item \">
@@ -121,7 +124,7 @@ class __TwigTemplate_f5ad9447614ba7d89cba7c853e95c88d604865a9eab41abc75ecec51397
 
     public function getDebugInfo()
     {
-        return array (  100 => 33,  96 => 31,  92 => 29,  90 => 28,  80 => 21,  74 => 18,  68 => 15,  62 => 12,  56 => 9,  46 => 2,  43 => 1,);
+        return array (  103 => 33,  99 => 31,  95 => 29,  93 => 28,  86 => 24,  80 => 21,  74 => 18,  68 => 15,  62 => 12,  56 => 9,  46 => 2,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -149,7 +152,7 @@ class __TwigTemplate_f5ad9447614ba7d89cba7c853e95c88d604865a9eab41abc75ecec51397
                 <a class=\"nav-link\" href=\"{{ path('liste_user') }}\">Clients <span class=\"sr-only\">(current)</span></a>
             </li>
             <li class=\"nav-item \">
-                <a class=\"nav-link\" href=\"\">Commandes <span class=\"sr-only\">(current)</span></a>
+                <a class=\"nav-link\" href=\"{{path('liste_order')}}\">Commandes <span class=\"sr-only\">(current)</span></a>
             </li>
      
             <li class=\"nav-item \">
