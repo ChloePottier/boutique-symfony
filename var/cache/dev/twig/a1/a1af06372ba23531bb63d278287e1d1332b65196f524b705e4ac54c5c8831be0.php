@@ -126,6 +126,7 @@ class __TwigTemplate_3b0ed15b31ac91b9c7fc251e04570e06553df7c83ee03a67dda14981cb6
                 <table class=\"table table-hover mt-3 text col-12\">
                         <thead class=\"thead-dark  title-listing\">
                             <tr>
+                                <th class=\"text-center\">N° de commande</th>
                                 <th class=\"text-center\">Nom client</th>
                                 <th class=\"text-center\">Prénom client</th>
                                 <th class=\"text-center\">Date de la commande</th>
@@ -135,26 +136,30 @@ class __TwigTemplate_3b0ed15b31ac91b9c7fc251e04570e06553df7c83ee03a67dda14981cb6
                         </thead>
                             
                         ";
-        // line 32
+        // line 33
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["orders"]) || array_key_exists("orders", $context) ? $context["orders"] : (function () { throw new RuntimeError('Variable "orders" does not exist.', 32, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["orders"]) || array_key_exists("orders", $context) ? $context["orders"] : (function () { throw new RuntimeError('Variable "orders" does not exist.', 33, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["order"]) {
-            // line 33
+            // line 34
             echo "                        
                         <tr>
-                            <td class=\"text-center font-weight-bold\">";
-            // line 35
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["order"], "User", [], "any", false, false, false, 35), "nom", [], "any", false, false, false, 35), "html", null, true);
-            echo "</td>
-                            <td class=\"text-center font-weight-bold\">";
+                            <td class=\"text-center font-weight-bold\">n° ";
             // line 36
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["order"], "User", [], "any", false, false, false, 36), "prenom", [], "any", false, false, false, 36), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["order"], "id", [], "any", false, false, false, 36), "html", null, true);
             echo "</td>
                             <td class=\"text-center font-weight-bold\">";
             // line 37
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["order"], "date", [], "any", false, false, false, 37), "d/m/Y"), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["order"], "User", [], "any", false, false, false, 37), "nom", [], "any", false, false, false, 37), "html", null, true);
+            echo "</td>
+                            <td class=\"text-center font-weight-bold\">";
+            // line 38
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["order"], "User", [], "any", false, false, false, 38), "prenom", [], "any", false, false, false, 38), "html", null, true);
+            echo "</td>
+                            <td class=\"text-center font-weight-bold\">";
+            // line 39
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["order"], "date", [], "any", false, false, false, 39), "d/m/Y"), "html", null, true);
             echo "</td> 
-                            <td class=\"text-center font-weight-bold\">prix total</td>                         
+                            <td class=\"text-center font-weight-bold\">total ???</td>                          
 
                         </tr>
                         ";
@@ -162,7 +167,7 @@ class __TwigTemplate_3b0ed15b31ac91b9c7fc251e04570e06553df7c83ee03a67dda14981cb6
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['order'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 42
+        // line 44
         echo "                    </table>
             </div>
             
@@ -191,7 +196,7 @@ class __TwigTemplate_3b0ed15b31ac91b9c7fc251e04570e06553df7c83ee03a67dda14981cb6
 
     public function getDebugInfo()
     {
-        return array (  166 => 42,  155 => 37,  151 => 36,  147 => 35,  143 => 33,  139 => 32,  123 => 19,  111 => 9,  101 => 8,  90 => 6,  80 => 5,  60 => 4,  37 => 2,);
+        return array (  171 => 44,  160 => 39,  156 => 38,  152 => 37,  148 => 36,  144 => 34,  140 => 33,  123 => 19,  111 => 9,  101 => 8,  90 => 6,  80 => 5,  60 => 4,  37 => 2,);
     }
 
     public function getSourceContext()
@@ -219,6 +224,7 @@ class __TwigTemplate_3b0ed15b31ac91b9c7fc251e04570e06553df7c83ee03a67dda14981cb6
                 <table class=\"table table-hover mt-3 text col-12\">
                         <thead class=\"thead-dark  title-listing\">
                             <tr>
+                                <th class=\"text-center\">N° de commande</th>
                                 <th class=\"text-center\">Nom client</th>
                                 <th class=\"text-center\">Prénom client</th>
                                 <th class=\"text-center\">Date de la commande</th>
@@ -230,10 +236,11 @@ class __TwigTemplate_3b0ed15b31ac91b9c7fc251e04570e06553df7c83ee03a67dda14981cb6
                         {% for order in orders %}
                         
                         <tr>
+                            <td class=\"text-center font-weight-bold\">n° {{ order.id }}</td>
                             <td class=\"text-center font-weight-bold\">{{ order.User.nom }}</td>
                             <td class=\"text-center font-weight-bold\">{{ order.User.prenom }}</td>
                             <td class=\"text-center font-weight-bold\">{{ order.date |date(\"d/m/Y\") }}</td> 
-                            <td class=\"text-center font-weight-bold\">prix total</td>                         
+                            <td class=\"text-center font-weight-bold\">total ???</td>                          
 
                         </tr>
                         {% endfor %}

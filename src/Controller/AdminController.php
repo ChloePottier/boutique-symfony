@@ -184,15 +184,13 @@ class AdminController extends AbstractController
        /**
      * @Route("/admin/order", name="liste_order")
      */
-    public function listOrder(OrderRepository $orderRepository, OrderDetailRepository $orderDetail)
+    public function listOrder(OrderRepository $orderRepository, OrderDetailRepository $orderDetails)
     {
 
         $orders = $orderRepository->findAll();
 
         return $this->render('admin/order/order.html.twig', [
-            "orders" => $orders,
-            "orderDetails" =>$orderDetail
-        ]);
+            "orders" => $orders        ]);
     }
     
 }
