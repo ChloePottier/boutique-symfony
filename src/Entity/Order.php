@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -23,21 +25,23 @@ class Order
     private $date;
 
     /**
-     * @ORM\Column(type="integer")
-     */
-    private $nbProduct;
-
-    /**
      * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="orders")
      * @ORM\JoinColumn(nullable=false)
      */
     private $User;
 
     /**
-     * @ORM\OneToOne(targetEntity="App\Entity\Panier", mappedBy="panierOrder", cascade={"persist", "remove"})
+     * @ORM\OneToMany(targetEntity="App\Entity\OrderDetail", mappedBy="order_id")
      */
-    private $panier;
+    private $orderDetails;
 
+
+    public function __construct()
+    {
+        $this->orderDetails = new ArrayCollection();
+    }
+
+ 
     public function getId(): ?int
     {
         return $this->id;
@@ -55,17 +59,6 @@ class Order
         return $this;
     }
 
-    public function getNbProduct(): ?int
-    {
-        return $this->nbProduct;
-    }
-
-    public function setNbProduct(int $nbProduct): self
-    {
-        $this->nbProduct = $nbProduct;
-
-        return $this;
-    }
 
     public function getUser(): ?User
     {
@@ -79,20 +72,36 @@ class Order
         return $this;
     }
 
-    public function getPanier(): ?Panier
+    /**
+     * @return Collection|OrderDetail[]
+     */
+    public function getOrderDetails(): Collection
     {
-        return $this->panier;
+        return $this->orderDetails;
     }
 
-    public function setPanier(Panier $panier): self
+    public function addOrderDetail(OrderDetail $orderDetail): self
     {
-        $this->panier = $panier;
-
-        // set the owning side of the relation if necessary
-        if ($panier->getPanierOrder() !== $this) {
-            $panier->setPanierOrder($this);
+        if (!$this->orderDetails->contains($orderDetail)) {
+            $this->orderDetails[] = $orderDetail;
+            $orderDetail->setOrderId($this);
         }
 
         return $this;
     }
+
+    public function removeOrderDetail(OrderDetail $orderDetail): self
+    {
+        if ($this->orderDetails->contains($orderDetail)) {
+            $this->orderDetails->removeElement($orderDetail);
+            // set the owning side to null (unless already changed)
+            if ($orderDetail->getOrderId() === $this) {
+                $orderDetail->setOrderId(null);
+            }
+        }
+
+        return $this;
+    }
+
+   
 }

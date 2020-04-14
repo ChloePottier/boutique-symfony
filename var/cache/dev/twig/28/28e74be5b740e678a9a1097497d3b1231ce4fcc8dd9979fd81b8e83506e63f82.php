@@ -143,7 +143,7 @@ class __TwigTemplate_5c8d0f6377b9fcb191f20a6910e1697bbfef7be81b54404779c02f8effd
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formCat"]) || array_key_exists("formCat", $context) ? $context["formCat"] : (function () { throw new RuntimeError('Variable "formCat" does not exist.', 25, $this->source); })()), "nom", [], "any", false, false, false, 25), 'errors');
         echo "</span>
                     <div class=\"input-formP submit-formP mb-2 d-flex justify-content-end\">
-                        <input type=\"submit\" name=\"\" value=\"Enregistrer\" class=\"btn btn-dark btn-submit-form mt-4\">
+                        <input type=\"submit\" name=\"\" value=\"Enregistrer\" class=\"btn btn-info btn-submit-form mt-4\">
                     </div>
                 ";
         // line 29
@@ -205,7 +205,7 @@ class __TwigTemplate_5c8d0f6377b9fcb191f20a6910e1697bbfef7be81b54404779c02f8effd
                 {{form_widget(formCat.nom, {'attr': {'class':'form-control'}})}}
                     <span id=\"msg-errors\" class=\"error text-danger\">{{ form_errors(formCat.nom) }}</span>
                     <div class=\"input-formP submit-formP mb-2 d-flex justify-content-end\">
-                        <input type=\"submit\" name=\"\" value=\"Enregistrer\" class=\"btn btn-dark btn-submit-form mt-4\">
+                        <input type=\"submit\" name=\"\" value=\"Enregistrer\" class=\"btn btn-info btn-submit-form mt-4\">
                     </div>
                 {{form_end(formCat)}} 
             </div>

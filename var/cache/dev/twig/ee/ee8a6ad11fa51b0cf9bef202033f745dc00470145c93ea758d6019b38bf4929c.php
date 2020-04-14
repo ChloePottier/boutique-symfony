@@ -225,7 +225,7 @@ class __TwigTemplate_64291756e7c1c6cca465a78005d93e7e90974ebb4192596ccc1bb47023f
                     </div>
 
                         <div class=\"input-formP submit-formP col-12 mb-2 d-flex justify-content-end\">
-                            <input type=\"submit\" name=\"\" value=\"Enregistrer\" class=\"btn btn-dark btn-submit-form\">
+                            <input type=\"submit\" name=\"\" value=\"Enregistrer\" class=\"btn btn-info btn-submit-form\">
                         </div>
                                            
                     ";
@@ -327,7 +327,7 @@ class __TwigTemplate_64291756e7c1c6cca465a78005d93e7e90974ebb4192596ccc1bb47023f
                     </div>
 
                         <div class=\"input-formP submit-formP col-12 mb-2 d-flex justify-content-end\">
-                            <input type=\"submit\" name=\"\" value=\"Enregistrer\" class=\"btn btn-dark btn-submit-form\">
+                            <input type=\"submit\" name=\"\" value=\"Enregistrer\" class=\"btn btn-info btn-submit-form\">
                         </div>
                                            
                     {{form_end(formP)}}

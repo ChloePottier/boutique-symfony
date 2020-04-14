@@ -40,11 +40,6 @@ class Product
     private $category;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\LignePanier", mappedBy="product")
-     */
-    private $lignePaniers;
-
-    /**
      * @ORM\Column(type="boolean")
      */
     private $isPublished;
@@ -54,9 +49,15 @@ class Product
      */
     private $Prix;
 
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\OrderDetail", mappedBy="product_id")
+     */
+    private $orderDetails;
+
     public function __construct()
     {
         $this->lignePaniers = new ArrayCollection();
+        $this->orderDetails = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -112,37 +113,6 @@ class Product
         return $this;
     }
 
-    /**
-     * @return Collection|LignePanier[]
-     */
-    public function getLignePaniers(): Collection
-    {
-        return $this->lignePaniers;
-    }
-
-    public function addLignePanier(LignePanier $lignePanier): self
-    {
-        if (!$this->lignePaniers->contains($lignePanier)) {
-            $this->lignePaniers[] = $lignePanier;
-            $lignePanier->setProduct($this);
-        }
-
-        return $this;
-    }
-
-    public function removeLignePanier(LignePanier $lignePanier): self
-    {
-        if ($this->lignePaniers->contains($lignePanier)) {
-            $this->lignePaniers->removeElement($lignePanier);
-            // set the owning side to null (unless already changed)
-            if ($lignePanier->getProduct() === $this) {
-                $lignePanier->setProduct(null);
-            }
-        }
-
-        return $this;
-    }
-
     public function getIsPublished(): ?bool
     {
         return $this->isPublished;
@@ -154,7 +124,10 @@ class Product
 
         return $this;
     }
-
+    public function __toString()
+    {
+    return $this->Prix;
+    }
     public function getPrix(): ?string
     {
         return $this->Prix;
@@ -163,6 +136,37 @@ class Product
     public function setPrix(string $Prix): self
     {
         $this->Prix = $Prix;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|OrderDetail[]
+     */
+    public function getOrderDetails(): Collection
+    {
+        return $this->orderDetails;
+    }
+
+    public function addOrderDetail(OrderDetail $orderDetail): self
+    {
+        if (!$this->orderDetails->contains($orderDetail)) {
+            $this->orderDetails[] = $orderDetail;
+            $orderDetail->setProductId($this);
+        }
+
+        return $this;
+    }
+
+    public function removeOrderDetail(OrderDetail $orderDetail): self
+    {
+        if ($this->orderDetails->contains($orderDetail)) {
+            $this->orderDetails->removeElement($orderDetail);
+            // set the owning side to null (unless already changed)
+            if ($orderDetail->getProductId() === $this) {
+                $orderDetail->setProductId(null);
+            }
+        }
 
         return $this;
     }

@@ -16,8 +16,7 @@
                     <table class="table">
                         <thead class="thead-light  title-listing">
                             <tr>
-                                <th>Image</th>
-                                <th>Produit</th>
+                                <th colspan="2">Produit</th>
                                 <th>Prix</th>
                                 <th>Quantité</th>
                                 <th>Supprimer</th>
@@ -55,7 +54,7 @@
                     </table>
                     <div class="d-flex justify-content-between">
                             <a class="text-decoration-none add-category" href="{{path('index')}}"><i class="fas fa-arrow-left mr-2"></i>Retour à la boutique</a>
-                            <a href="" class="btn btn-info ">Valider mon panier</a>
+                            <a href="{{ path('order')}}" class="btn btn-info ">Valider mon panier</a>
                     </div>
                     
                     {% else %}

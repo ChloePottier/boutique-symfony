@@ -4,11 +4,15 @@ namespace App\Controller;
 
 use App\Entity\User;
 use App\Entity\Product;
-use App\Form\InscriptionType;
+use App\Entity\Order;
+use App\Entity\OrderDetail;
 use App\Form\InfosClientType;
+use App\Form\InscriptionType;
 use App\Form\UpdatePasswordType;
+use App\Repository\UserRepository;
 use App\Repository\ProductRepository;
 use Doctrine\ORM\EntityManagerInterface;
+use App\Repository\OrderDetailRepository;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
@@ -146,6 +150,98 @@ class IndexController extends AbstractController
 
         return $this->redirectToRoute('panier');
     }
+    
+//Order
+/**
+     * @Route("/order", name="order")
+     */
+    public function order(SessionInterface $sessionInterface, ProductRepository $productRepository) 
+    {
+        $panier = $sessionInterface->get('panier', []);
+        foreach ($panier as $id => $quantity) {
+
+            $panierData[] = [ 
+                'product' => $productRepository->find($id),
+                'quantity' => $quantity
+            ];
+        }
+        $user = $this->getUser();
+        // dd($user);
+
+        if ($user == null) {
+
+            return $this->redirectToRoute('login');
+            
+        } else {
+
+            return $this->render('order/order.html.twig', [
+                'items' => $panierData,
+                'user' => $user
+                ]);
+            }
+    }
+
+    /**
+     * @Route("/order/confirm", name="order_confirm")
+     */
+    public function orderConfirm(SessionInterface $sessionInterface, ProductRepository $productRepository, UserRepository $userRepository, EntityManagerInterface $manager, OrderDetailRepository $orderDetailRepository) 
+    {
+        $panier = $sessionInterface->get('panier', []);
+
+        foreach ($panier as $id => $quantity) {
+
+            $panierData[] = [ 
+                'product' => $productRepository->find($id),
+                'quantity' => $quantity
+            ];
+        }
+        // dd($panierData['product'] => $productRepository->find($id));
+        $user = [$this->getUser()];
+        $findId = [];
+        foreach ($user as $id) {
+
+            $findId = [
+                'id_user' => $userRepository->find($id)->getId()
+            ];
+        }
+        // dd($panierData[0]['quantity']);
+        $id_user = $findId['id_user'];
+        // dd($id_user);
+        // $osef = new User();
+        // $osef->getId();
+        // dd($osef);
+
+
+        $order = new Order();
+        $order->setDate(new \DateTime());
+        $order->setUser($this->getUser());
+        // dd($this->getDoctrine()->getRepository(Order::class)->findAll());
+        $manager->persist($order);
+        $manager->flush();
+
+        // dd($order->getId());
+        // $order_id = $order->getId();
+        
+        // dd($order_detail->setOrderId($order));
+        
+        for ($i=0; $i < count($panierData); $i++) {
+
+            $order_detail = new OrderDetail();
+
+            $order_detail->setOrderId($order);
+            $order_detail->setProductId($panierData[$i]['product']);
+            $order_detail->setPrice($panierData[$i]['product']);
+            $order_detail->setQuantity($panierData[$i]['quantity']);
+            $manager->persist($order_detail);
+            $manager->flush();
+        }
+
+        return $this->render('order/orderConfirm.html.twig', [
+            'order' => $order,
+            'items' => $panierData
+        ]);
+    }
+
      // methods Mon Compte
 
     /**
