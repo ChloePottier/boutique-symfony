@@ -120,7 +120,7 @@ class __TwigTemplate_a42d55ec170dfa3797b084dbb948d7400db1736119c7ac05dda145b5f73
                     <table class=\"table table-hover  mt-5 text\">
                         <thead class=\"thead-dark text-uppercase\">
                             <tr>
-                                <th colspan=\"2\" class=\"text-center\">Produit</th>
+                                <th colspan=\"2\" class=\"pl-4\">Produit</th>
                                 <th class=\"text-center\">Quantité</th>
                                 <th class=\"text-center\">Prix</th>
                                 <th class=\"text-center\"> Total /produit</th>
@@ -145,7 +145,7 @@ class __TwigTemplate_a42d55ec170dfa3797b084dbb948d7400db1736119c7ac05dda145b5f73
             // line 30
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["detail"], "quantity", [], "any", false, false, false, 30), "html", null, true);
             echo "</td>
-                                <td class=\"text-center font-weight-bold\">";
+                                <td class=\"text-center \">";
             // line 31
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["detail"], "price", [], "any", false, false, false, 31), "html", null, true);
             echo "€  </td>
@@ -160,9 +160,9 @@ class __TwigTemplate_a42d55ec170dfa3797b084dbb948d7400db1736119c7ac05dda145b5f73
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['detail'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 35
-        echo "                            <tfoot>
+        echo "                        <tfoot>
                             <tr class=\"\">
-                                <td colspan=\"5\" class=\"font-weight-bold text-right\">Total :</td>
+                                <td colspan=\"4\" class=\"font-weight-bold text-right\">Total :</td>
                                 <td class=\"font-weight-bold \">
                                 ";
         // line 40
@@ -222,7 +222,7 @@ class __TwigTemplate_a42d55ec170dfa3797b084dbb948d7400db1736119c7ac05dda145b5f73
                     <table class=\"table table-hover  mt-5 text\">
                         <thead class=\"thead-dark text-uppercase\">
                             <tr>
-                                <th colspan=\"2\" class=\"text-center\">Produit</th>
+                                <th colspan=\"2\" class=\"pl-4\">Produit</th>
                                 <th class=\"text-center\">Quantité</th>
                                 <th class=\"text-center\">Prix</th>
                                 <th class=\"text-center\"> Total /produit</th>
@@ -233,13 +233,13 @@ class __TwigTemplate_a42d55ec170dfa3797b084dbb948d7400db1736119c7ac05dda145b5f73
                                 <td class=\"text-center font-weight-bold\">  <img src=\"{{asset('uploads/' ~ detail.productId.image)}}\" alt=\"\" width=\"50\" height=\"50\"></td>
                                 <td class=\"text-center font-weight-bold\"> {{detail.productId.nom}} </td>
                                 <td class=\"text-center font-weight-bold\">{{detail.quantity}}</td>
-                                <td class=\"text-center font-weight-bold\">{{detail.price}}€  </td>
+                                <td class=\"text-center \">{{detail.price}}€  </td>
                                 <td class=\"text-center font-weight-bold\">{{ detail.price * detail.quantity }}€</td>
                             </tr>
                         {% endfor %}
-                            <tfoot>
+                        <tfoot>
                             <tr class=\"\">
-                                <td colspan=\"5\" class=\"font-weight-bold text-right\">Total :</td>
+                                <td colspan=\"4\" class=\"font-weight-bold text-right\">Total :</td>
                                 <td class=\"font-weight-bold \">
                                 {# résultat du total #}
                                 {{ total }} €

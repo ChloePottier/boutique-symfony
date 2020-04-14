@@ -114,6 +114,12 @@ class __TwigTemplate_7838f0df2912483810b3bc05262604c84090b0da25ee46c151d8fad1b60
                 <div class=\"col-12 mt-5 mb-3\">
                     <h1> Listing des clients</h1>
                 </div>
+                <div class=\"col-12 d-flex justify-content-start\">
+                    <a class=\"text-decoration-none add-category\" href=\"";
+        // line 15
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin");
+        echo "\"><i class=\"fas fa-arrow-left mr-2\"></i>Retour au Dashboard de l'admin</a>
+                </div>
             </div>
             <div class=\"row\">
                 <table class=\"col-12 table table-hover  mt-5 text\">
@@ -128,29 +134,29 @@ class __TwigTemplate_7838f0df2912483810b3bc05262604c84090b0da25ee46c151d8fad1b60
                     </thead>
                         
                     ";
-        // line 27
+        // line 30
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["users"]) || array_key_exists("users", $context) ? $context["users"] : (function () { throw new RuntimeError('Variable "users" does not exist.', 27, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["users"]) || array_key_exists("users", $context) ? $context["users"] : (function () { throw new RuntimeError('Variable "users" does not exist.', 30, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["user"]) {
-            // line 28
+            // line 31
             echo "                    
                     <tr>
                         <td class=\"text-center font-weight-bold\">";
-            // line 30
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "nom", [], "any", false, false, false, 30), "html", null, true);
+            // line 33
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "nom", [], "any", false, false, false, 33), "html", null, true);
             echo "</td>
                         <td class=\"text-center font-weight-bold\">";
-            // line 31
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "prenom", [], "any", false, false, false, 31), "html", null, true);
+            // line 34
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "prenom", [], "any", false, false, false, 34), "html", null, true);
             echo "</td>
                         <td class=\"text-center font-weight-bold\">";
-            // line 32
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "mail", [], "any", false, false, false, 32), "html", null, true);
+            // line 35
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "mail", [], "any", false, false, false, 35), "html", null, true);
             echo "</td>
                         <td class=\"text-center font-weight-bold detail\">
                             <a href=\"";
-            // line 34
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("details_user", ["id" => twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 34)]), "html", null, true);
+            // line 37
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("details_user", ["id" => twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 37)]), "html", null, true);
             echo "\"><i class=\"fas fa-search-plus\"></i></a>
                         </td>
                     </tr>
@@ -159,8 +165,9 @@ class __TwigTemplate_7838f0df2912483810b3bc05262604c84090b0da25ee46c151d8fad1b60
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['user'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 38
-        echo "                </table>            </div>
+        // line 41
+        echo "                </table>            
+            </div>
         </div>  
     </div>
 
@@ -186,7 +193,7 @@ class __TwigTemplate_7838f0df2912483810b3bc05262604c84090b0da25ee46c151d8fad1b60
 
     public function getDebugInfo()
     {
-        return array (  163 => 38,  153 => 34,  148 => 32,  144 => 31,  140 => 30,  136 => 28,  132 => 27,  111 => 8,  101 => 7,  90 => 5,  80 => 4,  60 => 3,  37 => 1,);
+        return array (  169 => 41,  159 => 37,  154 => 35,  150 => 34,  146 => 33,  142 => 31,  138 => 30,  120 => 15,  111 => 8,  101 => 7,  90 => 5,  80 => 4,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -203,6 +210,9 @@ class __TwigTemplate_7838f0df2912483810b3bc05262604c84090b0da25ee46c151d8fad1b60
             <div class=\"row\">
                 <div class=\"col-12 mt-5 mb-3\">
                     <h1> Listing des clients</h1>
+                </div>
+                <div class=\"col-12 d-flex justify-content-start\">
+                    <a class=\"text-decoration-none add-category\" href=\"{{path('admin')}}\"><i class=\"fas fa-arrow-left mr-2\"></i>Retour au Dashboard de l'admin</a>
                 </div>
             </div>
             <div class=\"row\">
@@ -228,7 +238,8 @@ class __TwigTemplate_7838f0df2912483810b3bc05262604c84090b0da25ee46c151d8fad1b60
                         </td>
                     </tr>
                     {% endfor %}
-                </table>            </div>
+                </table>            
+            </div>
         </div>  
     </div>
 
