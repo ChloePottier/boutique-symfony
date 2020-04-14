@@ -166,6 +166,12 @@ class IndexController extends AbstractController
                 'quantity' => $quantity
             ];
         }
+        $total = 0;
+        foreach($panierData as $item){
+            $totalItem = $item['product']->getPrix() * $item['quantity'];
+            //rajouter le tout a $total
+            $total += $totalItem;
+        }
         $user = $this->getUser();
         // dd($user);
 
@@ -177,7 +183,8 @@ class IndexController extends AbstractController
 
             return $this->render('order/order.html.twig', [
                 'items' => $panierData,
-                'user' => $user
+                'user' => $user,
+                'total' => $total
                 ]);
             }
     }

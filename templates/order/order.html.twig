@@ -28,7 +28,7 @@
         </div>
         <div class="row mt-5">  
             <div class="col-12">
-                <h2 class="">Récapitulatif de la commande</h2>
+                <h2 class="mb-3">Récapitulatif de la commande</h2>
             </div>
             <div class="col-12">
                 <table class="table ">
@@ -51,6 +51,15 @@
                         </tr>
                         {% endfor %}
                     </tbody>
+                    <tfoot>
+                        <tr class="">
+                            <td colspan="4" class="font-weight-bold text-right">Total :</td>
+                            <td class="font-weight-bold ">
+                            {# résultat du total #}
+                            {{ total }} €
+                            </td>
+                        </tr>
+                    </tfoot>
                 </table>
                 <div class="d-flex justify-content-between">
                     <a class="text-decoration-none add-category" href="{{path('index')}}"><i class="fas fa-arrow-left mr-2"></i>Retour à la boutique</a>

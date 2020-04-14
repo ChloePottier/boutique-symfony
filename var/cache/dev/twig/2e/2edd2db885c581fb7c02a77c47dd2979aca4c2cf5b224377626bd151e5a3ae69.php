@@ -136,7 +136,7 @@ class __TwigTemplate_865af75abc009167179d2cf1badcec847e82189c7bdf68e24ad7d0c6a35
         </div>
         <div class=\"row mt-5\">  
             <div class=\"col-12\">
-                <h2 class=\"\">Récapitulatif de la commande</h2>
+                <h2 class=\"mb-3\">Récapitulatif de la commande</h2>
             </div>
             <div class=\"col-12\">
                 <table class=\"table \">
@@ -184,14 +184,26 @@ class __TwigTemplate_865af75abc009167179d2cf1badcec847e82189c7bdf68e24ad7d0c6a35
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 53
         echo "                    </tbody>
+                    <tfoot>
+                        <tr class=\"\">
+                            <td colspan=\"4\" class=\"font-weight-bold text-right\">Total :</td>
+                            <td class=\"font-weight-bold \">
+                            ";
+        // line 59
+        echo "                            ";
+        echo twig_escape_filter($this->env, (isset($context["total"]) || array_key_exists("total", $context) ? $context["total"] : (function () { throw new RuntimeError('Variable "total" does not exist.', 59, $this->source); })()), "html", null, true);
+        echo " €
+                            </td>
+                        </tr>
+                    </tfoot>
                 </table>
                 <div class=\"d-flex justify-content-between\">
                     <a class=\"text-decoration-none add-category\" href=\"";
-        // line 56
+        // line 65
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("index");
         echo "\"><i class=\"fas fa-arrow-left mr-2\"></i>Retour à la boutique</a>
                     <a href=\"";
-        // line 57
+        // line 66
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("order_confirm");
         echo "\" class=\"btn btn-info \">Valider la commande</a>
                 </div> 
@@ -222,7 +234,7 @@ class __TwigTemplate_865af75abc009167179d2cf1badcec847e82189c7bdf68e24ad7d0c6a35
 
     public function getDebugInfo()
     {
-        return array (  195 => 57,  191 => 56,  186 => 53,  177 => 50,  173 => 49,  169 => 48,  165 => 47,  161 => 46,  158 => 45,  154 => 44,  131 => 26,  127 => 25,  121 => 24,  111 => 19,  107 => 18,  101 => 17,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  207 => 66,  203 => 65,  193 => 59,  186 => 53,  177 => 50,  173 => 49,  169 => 48,  165 => 47,  161 => 46,  158 => 45,  154 => 44,  131 => 26,  127 => 25,  121 => 24,  111 => 19,  107 => 18,  101 => 17,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -257,7 +269,7 @@ class __TwigTemplate_865af75abc009167179d2cf1badcec847e82189c7bdf68e24ad7d0c6a35
         </div>
         <div class=\"row mt-5\">  
             <div class=\"col-12\">
-                <h2 class=\"\">Récapitulatif de la commande</h2>
+                <h2 class=\"mb-3\">Récapitulatif de la commande</h2>
             </div>
             <div class=\"col-12\">
                 <table class=\"table \">
@@ -280,6 +292,15 @@ class __TwigTemplate_865af75abc009167179d2cf1badcec847e82189c7bdf68e24ad7d0c6a35
                         </tr>
                         {% endfor %}
                     </tbody>
+                    <tfoot>
+                        <tr class=\"\">
+                            <td colspan=\"4\" class=\"font-weight-bold text-right\">Total :</td>
+                            <td class=\"font-weight-bold \">
+                            {# résultat du total #}
+                            {{ total }} €
+                            </td>
+                        </tr>
+                    </tfoot>
                 </table>
                 <div class=\"d-flex justify-content-between\">
                     <a class=\"text-decoration-none add-category\" href=\"{{path('index')}}\"><i class=\"fas fa-arrow-left mr-2\"></i>Retour à la boutique</a>

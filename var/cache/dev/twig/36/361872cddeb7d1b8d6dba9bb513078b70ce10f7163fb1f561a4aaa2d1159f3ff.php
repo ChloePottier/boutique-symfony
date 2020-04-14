@@ -66,14 +66,28 @@ class __TwigTemplate_cd7715d02fe11c9bf330b021c3670eed5a05cd7d0b022ba3353b55b4c07
         $this->displayBlock('header', $context, $blocks);
         // line 55
         echo "        </header>
+        <div class=\"content\">
         ";
-        // line 56
+        // line 57
         $this->displayBlock('content', $context, $blocks);
-        // line 58
-        echo "        ";
+        // line 59
+        echo "        </div>
+        <footer class=\"container-fluid py-3 bg-light text-center\">
+            <div class=\"container\">
+                <div class=\"row\">
+                    <div class=\" col-12\">
+                        Boutique développée par Hugo, Romain et Chloé
+                    </div>
+                </div>  
+            </div>
+        </footer>
+        ";
+        // line 69
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 63
-        echo "    </body>
+        // line 74
+        echo "        
+    </body>
+    
 </html>
 ";
         
@@ -142,77 +156,77 @@ class __TwigTemplate_cd7715d02fe11c9bf330b021c3670eed5a05cd7d0b022ba3353b55b4c07
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "header"));
 
         // line 17
-        echo "        <nav class=\"navbar navbar-expand-lg navbar-light bg-light text-right\">
-            <a class=\"navbar-brand logo\" href=\"";
+        echo "            <nav class=\"navbar navbar-expand-lg navbar-light bg-light text-right\">
+                <a class=\"navbar-brand logo\" href=\"";
         // line 18
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("index");
         echo "\">My Tshirt</a>
-            <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNavDropdown\" aria-controls=\"navbarNavDropdown\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
-                <span class=\"navbar-toggler-icon\"></span>
-            </button>
-            <div class=\"collapse navbar-collapse justify-content-end\" id=\"navbarNavDropdown\">
-                <ul class=\"navbar-nav\">
-                    <li class=\"nav-item active\">
-                        <a class=\"nav-link\" href=\"";
+                <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNavDropdown\" aria-controls=\"navbarNavDropdown\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
+                    <span class=\"navbar-toggler-icon\"></span>
+                </button>
+                <div class=\"collapse navbar-collapse justify-content-end\" id=\"navbarNavDropdown\">
+                    <ul class=\"navbar-nav\">
+                        <li class=\"nav-item active\">
+                            <a class=\"nav-link\" href=\"";
         // line 25
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("index");
         echo "\"><i class=\"fas fa-home\"></i> Home <span class=\"sr-only\">(current)</span></a>
-                    </li>
-                    <li class=\"nav-item\">
-                        <a class=\"nav-link\" href=\" ";
+                        </li>
+                        <li class=\"nav-item\">
+                            <a class=\"nav-link\" href=\" ";
         // line 28
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("panier");
         echo " \"><i class=\"color fas fa-shopping-cart\"></i> Mon panier</a>
-                    </li>
-                    ";
+                        </li>
+                        ";
         // line 30
         if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN")) {
             // line 31
-            echo "                    <li class=\"nav-item\">
-                        <a class=\"nav-link\" href=\" ";
+            echo "                        <li class=\"nav-item\">
+                            <a class=\"nav-link\" href=\" ";
             // line 32
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin");
             echo " \"><i class=\"fas fa-cogs\"></i> Administration</a>
-                    </li>
-                    <li class=\"nav-item\">
-                        <a class=\"nav-link\" href=\" ";
+                        </li>
+                        <li class=\"nav-item\">
+                            <a class=\"nav-link\" href=\" ";
             // line 35
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("compte");
             echo "\"><i class=\"fas fa-user-cog\"></i> Mon compte</a>
-                    </li>
-                    ";
+                        </li>
+                        ";
         }
         // line 38
-        echo "                    ";
+        echo "                        ";
         if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_USER")) {
             // line 39
-            echo "                    <li class=\"nav-item\">
-                        <a class=\"nav-link\" href=\" ";
+            echo "                        <li class=\"nav-item\">
+                            <a class=\"nav-link\" href=\" ";
             // line 40
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("compte");
             echo "\"><i class=\"fas fa-user-cog\"></i> Mon compte</a>
-                    </li>
-                    
-                    ";
+                        </li>
+                        
+                        ";
         }
         // line 44
-        echo "                    <li class=\"nav-item \">
-                        ";
+        echo "                        <li class=\"nav-item \">
+                            ";
         // line 45
         if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 45, $this->source); })()), "user", [], "any", false, false, false, 45)) {
             // line 46
-            echo "                        <a class=\"nav-link\" href=\"/logout\"><i class=\"fas fa-sign-out-alt\"></i> Se déconnecter</a>
-                        ";
+            echo "                            <a class=\"nav-link\" href=\"/logout\"><i class=\"fas fa-sign-out-alt\"></i> Se déconnecter</a>
+                            ";
         } else {
             // line 48
-            echo "                        <a class=\"nav-link\" href=\"/login\"><i class=\"fas fa-sign-in-alt\"></i> Se connecter</a>
-                        ";
+            echo "                            <a class=\"nav-link\" href=\"/login\"><i class=\"fas fa-sign-in-alt\"></i> Se connecter</a>
+                            ";
         }
         // line 50
-        echo "                    </li>
-                </ul>
-            </div>
-        </nav>
+        echo "                        </li>
+                    </ul>
+                </div>
+            </nav>
         ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -222,7 +236,7 @@ class __TwigTemplate_cd7715d02fe11c9bf330b021c3670eed5a05cd7d0b022ba3353b55b4c07
 
     }
 
-    // line 56
+    // line 57
     public function block_content($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -232,7 +246,7 @@ class __TwigTemplate_cd7715d02fe11c9bf330b021c3670eed5a05cd7d0b022ba3353b55b4c07
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "content"));
 
-        // line 57
+        // line 58
         echo "        ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -242,7 +256,7 @@ class __TwigTemplate_cd7715d02fe11c9bf330b021c3670eed5a05cd7d0b022ba3353b55b4c07
 
     }
 
-    // line 58
+    // line 69
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -252,7 +266,7 @@ class __TwigTemplate_cd7715d02fe11c9bf330b021c3670eed5a05cd7d0b022ba3353b55b4c07
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 59
+        // line 70
         echo "            <script src=\"https://code.jquery.com/jquery-3.4.1.slim.min.js\" integrity=\"sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n\" crossorigin=\"anonymous\"></script>
             <script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js\" integrity=\"sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo\" crossorigin=\"anonymous\"></script>
             <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js\" integrity=\"sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6\" crossorigin=\"anonymous\"></script>
@@ -272,7 +286,7 @@ class __TwigTemplate_cd7715d02fe11c9bf330b021c3670eed5a05cd7d0b022ba3353b55b4c07
 
     public function getDebugInfo()
     {
-        return array (  256 => 59,  246 => 58,  236 => 57,  226 => 56,  212 => 50,  208 => 48,  204 => 46,  202 => 45,  199 => 44,  192 => 40,  189 => 39,  186 => 38,  180 => 35,  174 => 32,  171 => 31,  169 => 30,  164 => 28,  158 => 25,  148 => 18,  145 => 17,  135 => 16,  123 => 12,  117 => 8,  107 => 7,  88 => 6,  76 => 63,  73 => 58,  71 => 56,  68 => 55,  66 => 16,  61 => 13,  59 => 7,  55 => 6,  48 => 1,);
+        return array (  270 => 70,  260 => 69,  250 => 58,  240 => 57,  226 => 50,  222 => 48,  218 => 46,  216 => 45,  213 => 44,  206 => 40,  203 => 39,  200 => 38,  194 => 35,  188 => 32,  185 => 31,  183 => 30,  178 => 28,  172 => 25,  162 => 18,  159 => 17,  149 => 16,  137 => 12,  131 => 8,  121 => 7,  102 => 6,  88 => 74,  86 => 69,  74 => 59,  72 => 57,  68 => 55,  66 => 16,  61 => 13,  59 => 7,  55 => 6,  48 => 1,);
     }
 
     public function getSourceContext()
@@ -293,53 +307,66 @@ class __TwigTemplate_cd7715d02fe11c9bf330b021c3670eed5a05cd7d0b022ba3353b55b4c07
     <body>
         <header>
         {% block header %}
-        <nav class=\"navbar navbar-expand-lg navbar-light bg-light text-right\">
-            <a class=\"navbar-brand logo\" href=\"{{ path('index') }}\">My Tshirt</a>
-            <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNavDropdown\" aria-controls=\"navbarNavDropdown\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
-                <span class=\"navbar-toggler-icon\"></span>
-            </button>
-            <div class=\"collapse navbar-collapse justify-content-end\" id=\"navbarNavDropdown\">
-                <ul class=\"navbar-nav\">
-                    <li class=\"nav-item active\">
-                        <a class=\"nav-link\" href=\"{{ path('index') }}\"><i class=\"fas fa-home\"></i> Home <span class=\"sr-only\">(current)</span></a>
-                    </li>
-                    <li class=\"nav-item\">
-                        <a class=\"nav-link\" href=\" {{path('panier')}} \"><i class=\"color fas fa-shopping-cart\"></i> Mon panier</a>
-                    </li>
-                    {% if is_granted('ROLE_ADMIN') %}
-                    <li class=\"nav-item\">
-                        <a class=\"nav-link\" href=\" {{path('admin')}} \"><i class=\"fas fa-cogs\"></i> Administration</a>
-                    </li>
-                    <li class=\"nav-item\">
-                        <a class=\"nav-link\" href=\" {{path('compte')}}\"><i class=\"fas fa-user-cog\"></i> Mon compte</a>
-                    </li>
-                    {% endif %}
-                    {% if is_granted('ROLE_USER') %}
-                    <li class=\"nav-item\">
-                        <a class=\"nav-link\" href=\" {{path('compte')}}\"><i class=\"fas fa-user-cog\"></i> Mon compte</a>
-                    </li>
-                    
-                    {% endif %}
-                    <li class=\"nav-item \">
-                        {% if app.user %}
-                        <a class=\"nav-link\" href=\"/logout\"><i class=\"fas fa-sign-out-alt\"></i> Se déconnecter</a>
-                        {% else %}
-                        <a class=\"nav-link\" href=\"/login\"><i class=\"fas fa-sign-in-alt\"></i> Se connecter</a>
+            <nav class=\"navbar navbar-expand-lg navbar-light bg-light text-right\">
+                <a class=\"navbar-brand logo\" href=\"{{ path('index') }}\">My Tshirt</a>
+                <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNavDropdown\" aria-controls=\"navbarNavDropdown\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
+                    <span class=\"navbar-toggler-icon\"></span>
+                </button>
+                <div class=\"collapse navbar-collapse justify-content-end\" id=\"navbarNavDropdown\">
+                    <ul class=\"navbar-nav\">
+                        <li class=\"nav-item active\">
+                            <a class=\"nav-link\" href=\"{{ path('index') }}\"><i class=\"fas fa-home\"></i> Home <span class=\"sr-only\">(current)</span></a>
+                        </li>
+                        <li class=\"nav-item\">
+                            <a class=\"nav-link\" href=\" {{path('panier')}} \"><i class=\"color fas fa-shopping-cart\"></i> Mon panier</a>
+                        </li>
+                        {% if is_granted('ROLE_ADMIN') %}
+                        <li class=\"nav-item\">
+                            <a class=\"nav-link\" href=\" {{path('admin')}} \"><i class=\"fas fa-cogs\"></i> Administration</a>
+                        </li>
+                        <li class=\"nav-item\">
+                            <a class=\"nav-link\" href=\" {{path('compte')}}\"><i class=\"fas fa-user-cog\"></i> Mon compte</a>
+                        </li>
                         {% endif %}
-                    </li>
-                </ul>
-            </div>
-        </nav>
+                        {% if is_granted('ROLE_USER') %}
+                        <li class=\"nav-item\">
+                            <a class=\"nav-link\" href=\" {{path('compte')}}\"><i class=\"fas fa-user-cog\"></i> Mon compte</a>
+                        </li>
+                        
+                        {% endif %}
+                        <li class=\"nav-item \">
+                            {% if app.user %}
+                            <a class=\"nav-link\" href=\"/logout\"><i class=\"fas fa-sign-out-alt\"></i> Se déconnecter</a>
+                            {% else %}
+                            <a class=\"nav-link\" href=\"/login\"><i class=\"fas fa-sign-in-alt\"></i> Se connecter</a>
+                            {% endif %}
+                        </li>
+                    </ul>
+                </div>
+            </nav>
         {% endblock %}
         </header>
+        <div class=\"content\">
         {% block content %}
         {% endblock %}
+        </div>
+        <footer class=\"container-fluid py-3 bg-light text-center\">
+            <div class=\"container\">
+                <div class=\"row\">
+                    <div class=\" col-12\">
+                        Boutique développée par Hugo, Romain et Chloé
+                    </div>
+                </div>  
+            </div>
+        </footer>
         {% block javascripts %}
             <script src=\"https://code.jquery.com/jquery-3.4.1.slim.min.js\" integrity=\"sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n\" crossorigin=\"anonymous\"></script>
             <script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js\" integrity=\"sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo\" crossorigin=\"anonymous\"></script>
             <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js\" integrity=\"sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6\" crossorigin=\"anonymous\"></script>
         {% endblock %}
+        
     </body>
+    
 </html>
 ", "base.html.twig", "C:\\xampp\\htdocs\\boutique_symphony\\boutique-symphony\\templates\\base.html.twig");
     }

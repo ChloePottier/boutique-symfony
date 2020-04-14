@@ -86,7 +86,7 @@ class __TwigTemplate_2dd74e719dddf6657a40c89c69b337c5ef67fc0c49c94af0ba9ff3b0c9b
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "content"));
 
         // line 6
-        echo "\t<div class=\"container-fluid \">
+        echo "\t<div class=\"container-fluid mb-5\">
         <div class=\"container\">
             <div class=\"row\">
                 <div class=\"col-12 mt-5 mb-3\">
@@ -196,13 +196,9 @@ class __TwigTemplate_2dd74e719dddf6657a40c89c69b337c5ef67fc0c49c94af0ba9ff3b0c9b
         }
         // line 66
         echo "                </div>
-
-            </div>
-                    
-        </div>
-            
+            </div>      
+        </div>     
     </div>
-</section>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -234,7 +230,7 @@ class __TwigTemplate_2dd74e719dddf6657a40c89c69b337c5ef67fc0c49c94af0ba9ff3b0c9b
 {% block title %}Détails du panier | {{ parent() }}{% endblock %}
 
 {% block content %}
-\t<div class=\"container-fluid \">
+\t<div class=\"container-fluid mb-5\">
         <div class=\"container\">
             <div class=\"row\">
                 <div class=\"col-12 mt-5 mb-3\">
@@ -295,13 +291,9 @@ class __TwigTemplate_2dd74e719dddf6657a40c89c69b337c5ef67fc0c49c94af0ba9ff3b0c9b
                     </div>                   
                     {% endif %}
                 </div>
-
-            </div>
-                    
-        </div>
-            
+            </div>      
+        </div>     
     </div>
-</section>
 {% endblock %}", "panier/panier.html.twig", "C:\\xampp\\htdocs\\boutique_symphony\\boutique-symphony\\templates\\panier\\panier.html.twig");
     }
 }

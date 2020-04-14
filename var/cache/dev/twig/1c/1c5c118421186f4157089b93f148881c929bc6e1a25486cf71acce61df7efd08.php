@@ -112,7 +112,7 @@ class __TwigTemplate_a42d55ec170dfa3797b084dbb948d7400db1736119c7ac05dda145b5f73
         <div class=\"container\">
             <div class=\"row\">
                 <div class=\"col-12 mt-5 mb-3\">
-                    <h1>Détail de la commande</h1>
+                    <h1>Détail de la commande </h1>
                 </div>
             </div>
             <div class=\"row\">
@@ -167,8 +167,9 @@ class __TwigTemplate_a42d55ec170dfa3797b084dbb948d7400db1736119c7ac05dda145b5f73
                                 ";
         // line 40
         echo "                                ";
-        // line 41
-        echo "                                </td>
+        echo twig_escape_filter($this->env, (isset($context["total"]) || array_key_exists("total", $context) ? $context["total"] : (function () { throw new RuntimeError('Variable "total" does not exist.', 40, $this->source); })()), "html", null, true);
+        echo " €
+                                </td>
                             </tr>
                         </tfoot>
                     </table>   
@@ -197,7 +198,7 @@ class __TwigTemplate_a42d55ec170dfa3797b084dbb948d7400db1736119c7ac05dda145b5f73
 
     public function getDebugInfo()
     {
-        return array (  171 => 41,  169 => 40,  163 => 35,  154 => 32,  150 => 31,  146 => 30,  142 => 29,  138 => 28,  135 => 27,  131 => 26,  111 => 8,  101 => 7,  90 => 5,  80 => 4,  60 => 3,  37 => 1,);
+        return array (  169 => 40,  163 => 35,  154 => 32,  150 => 31,  146 => 30,  142 => 29,  138 => 28,  135 => 27,  131 => 26,  111 => 8,  101 => 7,  90 => 5,  80 => 4,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -213,7 +214,7 @@ class __TwigTemplate_a42d55ec170dfa3797b084dbb948d7400db1736119c7ac05dda145b5f73
         <div class=\"container\">
             <div class=\"row\">
                 <div class=\"col-12 mt-5 mb-3\">
-                    <h1>Détail de la commande</h1>
+                    <h1>Détail de la commande </h1>
                 </div>
             </div>
             <div class=\"row\">
@@ -241,7 +242,7 @@ class __TwigTemplate_a42d55ec170dfa3797b084dbb948d7400db1736119c7ac05dda145b5f73
                                 <td colspan=\"5\" class=\"font-weight-bold text-right\">Total :</td>
                                 <td class=\"font-weight-bold \">
                                 {# résultat du total #}
-                                {# {{ total}} € #}
+                                {{ total }} €
                                 </td>
                             </tr>
                         </tfoot>
