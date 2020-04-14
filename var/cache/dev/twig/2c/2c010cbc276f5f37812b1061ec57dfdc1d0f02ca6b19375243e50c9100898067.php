@@ -85,35 +85,35 @@ class __TwigTemplate_fb75eb35ba4a40f791e704204e2ae0ef428de196eb0ca9bb0ae04eaa39e
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "content"));
 
         // line 6
-        echo "
-<h1>Votre commande est validé</h1>
-<div class=\"container\">
-
-
-    <h2>Merci pour votre commande ";
-        // line 11
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["order"]) || array_key_exists("order", $context) ? $context["order"] : (function () { throw new RuntimeError('Variable "order" does not exist.', 11, $this->source); })()), "user", [], "any", false, false, false, 11), "nom", [], "any", false, false, false, 11), "html", null, true);
-        echo "</h2>
-
-    <a href=\"\">Voir mes commandes</a>
-
-    ";
+        echo "<div class=\"container-fluid\">
+    <div class=\"container\">
+        <div class=\"row  mt-5 mb-5 text-center\">
+            <div class=\"col-12\">
+                <h1 class=\"\">Votre commande est validée !</h1>
+            </div>
+        </div>  
+        <div class=\"row  mt-5 mb-5 text-center\">
+            <div class=\"col-12\">
+                <p>Merci pour votre commande, ";
         // line 15
-        $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["items"]) || array_key_exists("items", $context) ? $context["items"] : (function () { throw new RuntimeError('Variable "items" does not exist.', 15, $this->source); })()));
-        foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 16
-            echo "        ";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["item"], "product", [], "any", false, false, false, 16), "nom", [], "any", false, false, false, 16), "html", null, true);
-            echo " => ";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "quantity", [], "any", false, false, false, 16), "html", null, true);
-            echo "
-    ";
-        }
-        $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
-        $context = array_intersect_key($context, $_parent) + $_parent;
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["order"]) || array_key_exists("order", $context) ? $context["order"] : (function () { throw new RuntimeError('Variable "order" does not exist.', 15, $this->source); })()), "user", [], "any", false, false, false, 15), "nom", [], "any", false, false, false, 15), "html", null, true);
+        echo "</p>
+                 <div class=\"\">
+                    <a class=\"text-decoration-none add-category mt-3 mr-5\" href=\"";
+        // line 17
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("index");
+        echo "\"><i class=\"fas fa-arrow-left mr-2\"></i>Retour à la boutique</a>
+                    <a href=\"";
         // line 18
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("compte");
+        echo "\" class=\"btn btn-info ml-5\">Voir mes commandes</a>
+                </div>         
+            </div>
+        </div>  
+    </div>
+</div>
+";
+        // line 27
         echo "
    
 
@@ -138,7 +138,7 @@ class __TwigTemplate_fb75eb35ba4a40f791e704204e2ae0ef428de196eb0ca9bb0ae04eaa39e
 
     public function getDebugInfo()
     {
-        return array (  117 => 18,  106 => 16,  102 => 15,  95 => 11,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  117 => 27,  108 => 18,  104 => 17,  99 => 15,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -148,18 +148,27 @@ class __TwigTemplate_fb75eb35ba4a40f791e704204e2ae0ef428de196eb0ca9bb0ae04eaa39e
 {% block title %}Panier{% endblock %}
 
 {% block content %}
-
-<h1>Votre commande est validé</h1>
-<div class=\"container\">
-
-
-    <h2>Merci pour votre commande {{order.user.nom}}</h2>
-
-    <a href=\"\">Voir mes commandes</a>
-
-    {% for item in items %}
+<div class=\"container-fluid\">
+    <div class=\"container\">
+        <div class=\"row  mt-5 mb-5 text-center\">
+            <div class=\"col-12\">
+                <h1 class=\"\">Votre commande est validée !</h1>
+            </div>
+        </div>  
+        <div class=\"row  mt-5 mb-5 text-center\">
+            <div class=\"col-12\">
+                <p>Merci pour votre commande, {{order.user.nom}}</p>
+                 <div class=\"\">
+                    <a class=\"text-decoration-none add-category mt-3 mr-5\" href=\"{{path('index')}}\"><i class=\"fas fa-arrow-left mr-2\"></i>Retour à la boutique</a>
+                    <a href=\"{{ path('compte')}}\" class=\"btn btn-info ml-5\">Voir mes commandes</a>
+                </div>         
+            </div>
+        </div>  
+    </div>
+</div>
+{#  {% for item in items %}
         {{item.product.nom}} => {{ item.quantity}}
-    {% endfor %}
+    {% endfor %} #}
 
    
 
