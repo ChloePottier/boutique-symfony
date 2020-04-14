@@ -195,7 +195,6 @@ class IndexController extends AbstractController
                 'quantity' => $quantity
             ];
         }
-        // dd($panierData['product'] => $productRepository->find($id));
         $user = [$this->getUser()];
         $findId = [];
         foreach ($user as $id) {
@@ -204,26 +203,13 @@ class IndexController extends AbstractController
                 'id_user' => $userRepository->find($id)->getId()
             ];
         }
-        // dd($panierData[0]['quantity']);
         $id_user = $findId['id_user'];
-        // dd($id_user);
-        // $osef = new User();
-        // $osef->getId();
-        // dd($osef);
-
-
         $order = new Order();
         $order->setDate(new \DateTime());
         $order->setUser($this->getUser());
-        // dd($this->getDoctrine()->getRepository(Order::class)->findAll());
         $manager->persist($order);
         $manager->flush();
 
-        // dd($order->getId());
-        // $order_id = $order->getId();
-        
-        // dd($order_detail->setOrderId($order));
-        
         for ($i=0; $i < count($panierData); $i++) {
 
             $order_detail = new OrderDetail();
@@ -241,6 +227,9 @@ class IndexController extends AbstractController
             'items' => $panierData
         ]);
     }
+ 
+
+
 
      // methods Mon Compte
 

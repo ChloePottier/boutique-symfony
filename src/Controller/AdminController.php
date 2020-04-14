@@ -8,6 +8,7 @@ use App\Entity\Category;
 use App\Form\ProductType;
 use App\Form\CategoryType;
 use App\Repository\UserRepository;
+use App\Repository\OrderRepository;
 use App\Repository\ProductRepository;
 use App\Repository\CategoryRepository;
 use Doctrine\ORM\EntityManagerInterface;
@@ -177,4 +178,19 @@ class AdminController extends AbstractController
             "users" => $users
         ]);
     }
+
+    // METHODS ORDER 
+       /**
+     * @Route("/admin/order", name="list_order")
+     */
+    public function listOrder(OrderRepository $orderRepository)
+    {
+
+        $orders = $orderRepository->findAll();
+
+        return $this->render('admin/order/order.html.twig', [
+            "orders" => $orders
+        ]);
+    }
+    
 }
