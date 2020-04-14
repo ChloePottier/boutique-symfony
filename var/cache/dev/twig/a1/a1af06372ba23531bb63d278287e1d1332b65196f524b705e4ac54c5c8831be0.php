@@ -66,7 +66,7 @@ class __TwigTemplate_3b0ed15b31ac91b9c7fc251e04570e06553df7c83ee03a67dda14981cb6
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Admin | Listing des catégories | ";
+        echo "Admin | Listing des commandes | ";
         $this->displayParentBlock("title", $context, $blocks);
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -154,9 +154,8 @@ class __TwigTemplate_3b0ed15b31ac91b9c7fc251e04570e06553df7c83ee03a67dda14981cb6
             // line 37
             echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["order"], "date", [], "any", false, false, false, 37), "d/m/Y"), "html", null, true);
             echo "</td> 
-                            ";
-            // line 39
-            echo "
+                            <td class=\"text-center font-weight-bold\">prix total</td>                         
+
                         </tr>
                         ";
         }
@@ -192,7 +191,7 @@ class __TwigTemplate_3b0ed15b31ac91b9c7fc251e04570e06553df7c83ee03a67dda14981cb6
 
     public function getDebugInfo()
     {
-        return array (  167 => 42,  159 => 39,  155 => 37,  151 => 36,  147 => 35,  143 => 33,  139 => 32,  123 => 19,  111 => 9,  101 => 8,  90 => 6,  80 => 5,  60 => 4,  37 => 2,);
+        return array (  166 => 42,  155 => 37,  151 => 36,  147 => 35,  143 => 33,  139 => 32,  123 => 19,  111 => 9,  101 => 8,  90 => 6,  80 => 5,  60 => 4,  37 => 2,);
     }
 
     public function getSourceContext()
@@ -200,7 +199,7 @@ class __TwigTemplate_3b0ed15b31ac91b9c7fc251e04570e06553df7c83ee03a67dda14981cb6
         return new Source("
  {% extends 'base.html.twig' %}
 
-{% block title %}Admin | Listing des catégories | {{ parent() }}{% endblock %}
+{% block title %}Admin | Listing des commandes | {{ parent() }}{% endblock %}
 {% block header %}
     {% include \"includes/adminNavBar.html.twig\" %}
 {% endblock %}
@@ -234,7 +233,7 @@ class __TwigTemplate_3b0ed15b31ac91b9c7fc251e04570e06553df7c83ee03a67dda14981cb6
                             <td class=\"text-center font-weight-bold\">{{ order.User.nom }}</td>
                             <td class=\"text-center font-weight-bold\">{{ order.User.prenom }}</td>
                             <td class=\"text-center font-weight-bold\">{{ order.date |date(\"d/m/Y\") }}</td> 
-                            {# <td class=\"text-center font-weight-bold\">{{ order.orderDetail.price}}</td>                          #}
+                            <td class=\"text-center font-weight-bold\">prix total</td>                         
 
                         </tr>
                         {% endfor %}

@@ -151,7 +151,10 @@ class __TwigTemplate_94c02bdf8f57bb270a51d219d1d792c0267a6e68eaf090429e3f94f72fe
             <div class=\"col-3\">
                 <div class=\"card text-white bg-info mb-3\" style=\"max-width: 18rem; height: 150px;\">
                     <div class=\"card-body d-flex justify-content-center align-items-center\">
-                        <a href=\"\" class=\"font-size text-white text-decoration-none\">Commandes</a>
+                        <a href=\"";
+        // line 42
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("liste_order");
+        echo "\" class=\"font-size text-white text-decoration-none\">Commandes</a>
 
                     </div>
                   </div>
@@ -181,7 +184,7 @@ class __TwigTemplate_94c02bdf8f57bb270a51d219d1d792c0267a6e68eaf090429e3f94f72fe
 
     public function getDebugInfo()
     {
-        return array (  145 => 34,  134 => 26,  124 => 19,  111 => 8,  101 => 7,  90 => 5,  80 => 4,  60 => 3,  37 => 1,);
+        return array (  156 => 42,  145 => 34,  134 => 26,  124 => 19,  111 => 8,  101 => 7,  90 => 5,  80 => 4,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -227,7 +230,7 @@ class __TwigTemplate_94c02bdf8f57bb270a51d219d1d792c0267a6e68eaf090429e3f94f72fe
             <div class=\"col-3\">
                 <div class=\"card text-white bg-info mb-3\" style=\"max-width: 18rem; height: 150px;\">
                     <div class=\"card-body d-flex justify-content-center align-items-center\">
-                        <a href=\"\" class=\"font-size text-white text-decoration-none\">Commandes</a>
+                        <a href=\"{{path('liste_order')}}\" class=\"font-size text-white text-decoration-none\">Commandes</a>
 
                     </div>
                   </div>

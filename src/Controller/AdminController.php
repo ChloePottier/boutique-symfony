@@ -11,6 +11,7 @@ use App\Repository\UserRepository;
 use App\Repository\OrderRepository;
 use App\Repository\ProductRepository;
 use App\Repository\CategoryRepository;
+use App\Repository\OrderDetailRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -181,15 +182,16 @@ class AdminController extends AbstractController
 
     // METHODS ORDER 
        /**
-     * @Route("/admin/order", name="list_order")
+     * @Route("/admin/order", name="liste_order")
      */
-    public function listOrder(OrderRepository $orderRepository)
+    public function listOrder(OrderRepository $orderRepository, OrderDetailRepository $orderDetail)
     {
 
         $orders = $orderRepository->findAll();
 
         return $this->render('admin/order/order.html.twig', [
-            "orders" => $orders
+            "orders" => $orders,
+            "orderDetails" =>$orderDetail
         ]);
     }
     

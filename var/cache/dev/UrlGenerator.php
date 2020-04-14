@@ -26,7 +26,7 @@ return [
     'delete_product' => [['id'], ['_controller' => 'App\\Controller\\AdminController::deleteProduct'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/admin/product']], [], []],
     'details_user' => [['id'], ['_controller' => 'App\\Controller\\AdminController::detailsClient'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/admin/user']], [], []],
     'liste_user' => [[], ['_controller' => 'App\\Controller\\AdminController::listClient'], [], [['text', '/admin/user']], [], []],
-    'list_order' => [[], ['_controller' => 'App\\Controller\\AdminController::listOrder'], [], [['text', '/admin/order']], [], []],
+    'liste_order' => [[], ['_controller' => 'App\\Controller\\AdminController::listOrder'], [], [['text', '/admin/order']], [], []],
     'index' => [[], ['_controller' => 'App\\Controller\\IndexController::listProduct'], [], [['text', '/']], [], []],
     'inscription' => [[], ['_controller' => 'App\\Controller\\IndexController::inscription'], [], [['text', '/inscription']], [], []],
     'login' => [[], ['_controller' => 'App\\Controller\\IndexController::login'], [], [['text', '/login']], [], []],

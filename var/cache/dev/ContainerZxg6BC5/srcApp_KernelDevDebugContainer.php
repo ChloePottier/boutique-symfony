@@ -1,6 +1,6 @@
 <?php
 
-namespace ContainerIK6MpIf;
+namespace ContainerZxg6BC5;
 
 use Symfony\Component\DependencyInjection\Argument\RewindableGenerator;
 use Symfony\Component\DependencyInjection\ContainerInterface;
@@ -1868,6 +1868,98 @@ class srcApp_KernelDevDebugContainer extends Container
     }
 
     /**
+     * Gets the private '.service_locator.G0olUR9' shared service.
+     *
+     * @return \Symfony\Component\DependencyInjection\ServiceLocator
+     */
+    protected function get_ServiceLocator_G0olUR9Service()
+    {
+        return $this->privates['.service_locator.G0olUR9'] = new \Symfony\Component\DependencyInjection\Argument\ServiceLocator($this->getService, [
+            'App\\Controller\\AdminController::createUpdateCategory' => ['privates', '.service_locator.ud9G3O0', 'get_ServiceLocator_Ud9G3O0Service', false],
+            'App\\Controller\\AdminController::createUpdateProduct' => ['privates', '.service_locator.yt3IzSk', 'get_ServiceLocator_Yt3IzSkService', false],
+            'App\\Controller\\AdminController::deleteCategory' => ['privates', '.service_locator.Z.oLrGd', 'get_ServiceLocator_Z_OLrGdService', false],
+            'App\\Controller\\AdminController::deleteProduct' => ['privates', '.service_locator.De3GlD6', 'get_ServiceLocator_De3GlD6Service', false],
+            'App\\Controller\\AdminController::detailsClient' => ['privates', '.service_locator.tIQ5Q0N', 'get_ServiceLocator_TIQ5Q0NService', false],
+            'App\\Controller\\AdminController::listCategory' => ['privates', '.service_locator.CvFKf6j', 'get_ServiceLocator_CvFKf6jService', false],
+            'App\\Controller\\AdminController::listClient' => ['privates', '.service_locator.1UuH9tO', 'get_ServiceLocator_1UuH9tOService', false],
+            'App\\Controller\\AdminController::listOrder' => ['privates', '.service_locator.dwJWoHp', 'get_ServiceLocator_DwJWoHpService', false],
+            'App\\Controller\\AdminController::listProduct' => ['privates', '.service_locator.cFGoL72', 'get_ServiceLocator_CFGoL72Service', false],
+            'App\\Controller\\IndexController::addPanier' => ['privates', '.service_locator.Uo87FkM', 'get_ServiceLocator_Uo87FkMService', false],
+            'App\\Controller\\IndexController::detailsProduct' => ['privates', '.service_locator.JW5D6Lx', 'get_ServiceLocator_JW5D6LxService', false],
+            'App\\Controller\\IndexController::inscription' => ['privates', '.service_locator.0ca1fUt', 'get_ServiceLocator_0ca1fUtService', false],
+            'App\\Controller\\IndexController::listProduct' => ['privates', '.service_locator.cFGoL72', 'get_ServiceLocator_CFGoL72Service', false],
+            'App\\Controller\\IndexController::login' => ['privates', '.service_locator.L3BqksV', 'get_ServiceLocator_L3BqksVService', false],
+            'App\\Controller\\IndexController::order' => ['privates', '.service_locator.2VU2dLk', 'get_ServiceLocator_2VU2dLkService', false],
+            'App\\Controller\\IndexController::orderConfirm' => ['privates', '.service_locator.vmxhUC6', 'get_ServiceLocator_VmxhUC6Service', false],
+            'App\\Controller\\IndexController::panier' => ['privates', '.service_locator.2VU2dLk', 'get_ServiceLocator_2VU2dLkService', false],
+            'App\\Controller\\IndexController::remove' => ['privates', '.service_locator.Uo87FkM', 'get_ServiceLocator_Uo87FkMService', false],
+            'App\\Controller\\IndexController::updateInfos' => ['privates', '.service_locator.s.tJs.w', 'get_ServiceLocator_S_TJs_WService', false],
+            'App\\Controller\\IndexController::updatePassword' => ['privates', '.service_locator.0ca1fUt', 'get_ServiceLocator_0ca1fUtService', false],
+            'App\\Controller\\AdminController:createUpdateCategory' => ['privates', '.service_locator.ud9G3O0', 'get_ServiceLocator_Ud9G3O0Service', false],
+            'App\\Controller\\AdminController:createUpdateProduct' => ['privates', '.service_locator.yt3IzSk', 'get_ServiceLocator_Yt3IzSkService', false],
+            'App\\Controller\\AdminController:deleteCategory' => ['privates', '.service_locator.Z.oLrGd', 'get_ServiceLocator_Z_OLrGdService', false],
+            'App\\Controller\\AdminController:deleteProduct' => ['privates', '.service_locator.De3GlD6', 'get_ServiceLocator_De3GlD6Service', false],
+            'App\\Controller\\AdminController:detailsClient' => ['privates', '.service_locator.tIQ5Q0N', 'get_ServiceLocator_TIQ5Q0NService', false],
+            'App\\Controller\\AdminController:listCategory' => ['privates', '.service_locator.CvFKf6j', 'get_ServiceLocator_CvFKf6jService', false],
+            'App\\Controller\\AdminController:listClient' => ['privates', '.service_locator.1UuH9tO', 'get_ServiceLocator_1UuH9tOService', false],
+            'App\\Controller\\AdminController:listOrder' => ['privates', '.service_locator.dwJWoHp', 'get_ServiceLocator_DwJWoHpService', false],
+            'App\\Controller\\AdminController:listProduct' => ['privates', '.service_locator.cFGoL72', 'get_ServiceLocator_CFGoL72Service', false],
+            'App\\Controller\\IndexController:addPanier' => ['privates', '.service_locator.Uo87FkM', 'get_ServiceLocator_Uo87FkMService', false],
+            'App\\Controller\\IndexController:detailsProduct' => ['privates', '.service_locator.JW5D6Lx', 'get_ServiceLocator_JW5D6LxService', false],
+            'App\\Controller\\IndexController:inscription' => ['privates', '.service_locator.0ca1fUt', 'get_ServiceLocator_0ca1fUtService', false],
+            'App\\Controller\\IndexController:listProduct' => ['privates', '.service_locator.cFGoL72', 'get_ServiceLocator_CFGoL72Service', false],
+            'App\\Controller\\IndexController:login' => ['privates', '.service_locator.L3BqksV', 'get_ServiceLocator_L3BqksVService', false],
+            'App\\Controller\\IndexController:order' => ['privates', '.service_locator.2VU2dLk', 'get_ServiceLocator_2VU2dLkService', false],
+            'App\\Controller\\IndexController:orderConfirm' => ['privates', '.service_locator.vmxhUC6', 'get_ServiceLocator_VmxhUC6Service', false],
+            'App\\Controller\\IndexController:panier' => ['privates', '.service_locator.2VU2dLk', 'get_ServiceLocator_2VU2dLkService', false],
+            'App\\Controller\\IndexController:remove' => ['privates', '.service_locator.Uo87FkM', 'get_ServiceLocator_Uo87FkMService', false],
+            'App\\Controller\\IndexController:updateInfos' => ['privates', '.service_locator.s.tJs.w', 'get_ServiceLocator_S_TJs_WService', false],
+            'App\\Controller\\IndexController:updatePassword' => ['privates', '.service_locator.0ca1fUt', 'get_ServiceLocator_0ca1fUtService', false],
+        ], [
+            'App\\Controller\\AdminController::createUpdateCategory' => '?',
+            'App\\Controller\\AdminController::createUpdateProduct' => '?',
+            'App\\Controller\\AdminController::deleteCategory' => '?',
+            'App\\Controller\\AdminController::deleteProduct' => '?',
+            'App\\Controller\\AdminController::detailsClient' => '?',
+            'App\\Controller\\AdminController::listCategory' => '?',
+            'App\\Controller\\AdminController::listClient' => '?',
+            'App\\Controller\\AdminController::listOrder' => '?',
+            'App\\Controller\\AdminController::listProduct' => '?',
+            'App\\Controller\\IndexController::addPanier' => '?',
+            'App\\Controller\\IndexController::detailsProduct' => '?',
+            'App\\Controller\\IndexController::inscription' => '?',
+            'App\\Controller\\IndexController::listProduct' => '?',
+            'App\\Controller\\IndexController::login' => '?',
+            'App\\Controller\\IndexController::order' => '?',
+            'App\\Controller\\IndexController::orderConfirm' => '?',
+            'App\\Controller\\IndexController::panier' => '?',
+            'App\\Controller\\IndexController::remove' => '?',
+            'App\\Controller\\IndexController::updateInfos' => '?',
+            'App\\Controller\\IndexController::updatePassword' => '?',
+            'App\\Controller\\AdminController:createUpdateCategory' => '?',
+            'App\\Controller\\AdminController:createUpdateProduct' => '?',
+            'App\\Controller\\AdminController:deleteCategory' => '?',
+            'App\\Controller\\AdminController:deleteProduct' => '?',
+            'App\\Controller\\AdminController:detailsClient' => '?',
+            'App\\Controller\\AdminController:listCategory' => '?',
+            'App\\Controller\\AdminController:listClient' => '?',
+            'App\\Controller\\AdminController:listOrder' => '?',
+            'App\\Controller\\AdminController:listProduct' => '?',
+            'App\\Controller\\IndexController:addPanier' => '?',
+            'App\\Controller\\IndexController:detailsProduct' => '?',
+            'App\\Controller\\IndexController:inscription' => '?',
+            'App\\Controller\\IndexController:listProduct' => '?',
+            'App\\Controller\\IndexController:login' => '?',
+            'App\\Controller\\IndexController:order' => '?',
+            'App\\Controller\\IndexController:orderConfirm' => '?',
+            'App\\Controller\\IndexController:panier' => '?',
+            'App\\Controller\\IndexController:remove' => '?',
+            'App\\Controller\\IndexController:updateInfos' => '?',
+            'App\\Controller\\IndexController:updatePassword' => '?',
+        ]);
+    }
+
+    /**
      * Gets the private '.service_locator.JW5D6Lx' shared service.
      *
      * @return \Symfony\Component\DependencyInjection\ServiceLocator
@@ -1892,94 +1984,6 @@ class srcApp_KernelDevDebugContainer extends Container
             'util' => ['services', 'security.authentication_utils', 'getSecurity_AuthenticationUtilsService', false],
         ], [
             'util' => '?',
-        ]);
-    }
-
-    /**
-     * Gets the private '.service_locator.LVJKDlT' shared service.
-     *
-     * @return \Symfony\Component\DependencyInjection\ServiceLocator
-     */
-    protected function get_ServiceLocator_LVJKDlTService()
-    {
-        return $this->privates['.service_locator.LVJKDlT'] = new \Symfony\Component\DependencyInjection\Argument\ServiceLocator($this->getService, [
-            'App\\Controller\\AdminController::createUpdateCategory' => ['privates', '.service_locator.ud9G3O0', 'get_ServiceLocator_Ud9G3O0Service', false],
-            'App\\Controller\\AdminController::createUpdateProduct' => ['privates', '.service_locator.yt3IzSk', 'get_ServiceLocator_Yt3IzSkService', false],
-            'App\\Controller\\AdminController::deleteCategory' => ['privates', '.service_locator.Z.oLrGd', 'get_ServiceLocator_Z_OLrGdService', false],
-            'App\\Controller\\AdminController::deleteProduct' => ['privates', '.service_locator.De3GlD6', 'get_ServiceLocator_De3GlD6Service', false],
-            'App\\Controller\\AdminController::detailsClient' => ['privates', '.service_locator.tIQ5Q0N', 'get_ServiceLocator_TIQ5Q0NService', false],
-            'App\\Controller\\AdminController::listCategory' => ['privates', '.service_locator.CvFKf6j', 'get_ServiceLocator_CvFKf6jService', false],
-            'App\\Controller\\AdminController::listClient' => ['privates', '.service_locator.1UuH9tO', 'get_ServiceLocator_1UuH9tOService', false],
-            'App\\Controller\\AdminController::listProduct' => ['privates', '.service_locator.cFGoL72', 'get_ServiceLocator_CFGoL72Service', false],
-            'App\\Controller\\IndexController::addPanier' => ['privates', '.service_locator.Uo87FkM', 'get_ServiceLocator_Uo87FkMService', false],
-            'App\\Controller\\IndexController::detailsProduct' => ['privates', '.service_locator.JW5D6Lx', 'get_ServiceLocator_JW5D6LxService', false],
-            'App\\Controller\\IndexController::inscription' => ['privates', '.service_locator.0ca1fUt', 'get_ServiceLocator_0ca1fUtService', false],
-            'App\\Controller\\IndexController::listProduct' => ['privates', '.service_locator.cFGoL72', 'get_ServiceLocator_CFGoL72Service', false],
-            'App\\Controller\\IndexController::login' => ['privates', '.service_locator.L3BqksV', 'get_ServiceLocator_L3BqksVService', false],
-            'App\\Controller\\IndexController::order' => ['privates', '.service_locator.2VU2dLk', 'get_ServiceLocator_2VU2dLkService', false],
-            'App\\Controller\\IndexController::orderConfirm' => ['privates', '.service_locator.vmxhUC6', 'get_ServiceLocator_VmxhUC6Service', false],
-            'App\\Controller\\IndexController::panier' => ['privates', '.service_locator.2VU2dLk', 'get_ServiceLocator_2VU2dLkService', false],
-            'App\\Controller\\IndexController::remove' => ['privates', '.service_locator.Uo87FkM', 'get_ServiceLocator_Uo87FkMService', false],
-            'App\\Controller\\IndexController::updateInfos' => ['privates', '.service_locator.s.tJs.w', 'get_ServiceLocator_S_TJs_WService', false],
-            'App\\Controller\\IndexController::updatePassword' => ['privates', '.service_locator.0ca1fUt', 'get_ServiceLocator_0ca1fUtService', false],
-            'App\\Controller\\AdminController:createUpdateCategory' => ['privates', '.service_locator.ud9G3O0', 'get_ServiceLocator_Ud9G3O0Service', false],
-            'App\\Controller\\AdminController:createUpdateProduct' => ['privates', '.service_locator.yt3IzSk', 'get_ServiceLocator_Yt3IzSkService', false],
-            'App\\Controller\\AdminController:deleteCategory' => ['privates', '.service_locator.Z.oLrGd', 'get_ServiceLocator_Z_OLrGdService', false],
-            'App\\Controller\\AdminController:deleteProduct' => ['privates', '.service_locator.De3GlD6', 'get_ServiceLocator_De3GlD6Service', false],
-            'App\\Controller\\AdminController:detailsClient' => ['privates', '.service_locator.tIQ5Q0N', 'get_ServiceLocator_TIQ5Q0NService', false],
-            'App\\Controller\\AdminController:listCategory' => ['privates', '.service_locator.CvFKf6j', 'get_ServiceLocator_CvFKf6jService', false],
-            'App\\Controller\\AdminController:listClient' => ['privates', '.service_locator.1UuH9tO', 'get_ServiceLocator_1UuH9tOService', false],
-            'App\\Controller\\AdminController:listProduct' => ['privates', '.service_locator.cFGoL72', 'get_ServiceLocator_CFGoL72Service', false],
-            'App\\Controller\\IndexController:addPanier' => ['privates', '.service_locator.Uo87FkM', 'get_ServiceLocator_Uo87FkMService', false],
-            'App\\Controller\\IndexController:detailsProduct' => ['privates', '.service_locator.JW5D6Lx', 'get_ServiceLocator_JW5D6LxService', false],
-            'App\\Controller\\IndexController:inscription' => ['privates', '.service_locator.0ca1fUt', 'get_ServiceLocator_0ca1fUtService', false],
-            'App\\Controller\\IndexController:listProduct' => ['privates', '.service_locator.cFGoL72', 'get_ServiceLocator_CFGoL72Service', false],
-            'App\\Controller\\IndexController:login' => ['privates', '.service_locator.L3BqksV', 'get_ServiceLocator_L3BqksVService', false],
-            'App\\Controller\\IndexController:order' => ['privates', '.service_locator.2VU2dLk', 'get_ServiceLocator_2VU2dLkService', false],
-            'App\\Controller\\IndexController:orderConfirm' => ['privates', '.service_locator.vmxhUC6', 'get_ServiceLocator_VmxhUC6Service', false],
-            'App\\Controller\\IndexController:panier' => ['privates', '.service_locator.2VU2dLk', 'get_ServiceLocator_2VU2dLkService', false],
-            'App\\Controller\\IndexController:remove' => ['privates', '.service_locator.Uo87FkM', 'get_ServiceLocator_Uo87FkMService', false],
-            'App\\Controller\\IndexController:updateInfos' => ['privates', '.service_locator.s.tJs.w', 'get_ServiceLocator_S_TJs_WService', false],
-            'App\\Controller\\IndexController:updatePassword' => ['privates', '.service_locator.0ca1fUt', 'get_ServiceLocator_0ca1fUtService', false],
-        ], [
-            'App\\Controller\\AdminController::createUpdateCategory' => '?',
-            'App\\Controller\\AdminController::createUpdateProduct' => '?',
-            'App\\Controller\\AdminController::deleteCategory' => '?',
-            'App\\Controller\\AdminController::deleteProduct' => '?',
-            'App\\Controller\\AdminController::detailsClient' => '?',
-            'App\\Controller\\AdminController::listCategory' => '?',
-            'App\\Controller\\AdminController::listClient' => '?',
-            'App\\Controller\\AdminController::listProduct' => '?',
-            'App\\Controller\\IndexController::addPanier' => '?',
-            'App\\Controller\\IndexController::detailsProduct' => '?',
-            'App\\Controller\\IndexController::inscription' => '?',
-            'App\\Controller\\IndexController::listProduct' => '?',
-            'App\\Controller\\IndexController::login' => '?',
-            'App\\Controller\\IndexController::order' => '?',
-            'App\\Controller\\IndexController::orderConfirm' => '?',
-            'App\\Controller\\IndexController::panier' => '?',
-            'App\\Controller\\IndexController::remove' => '?',
-            'App\\Controller\\IndexController::updateInfos' => '?',
-            'App\\Controller\\IndexController::updatePassword' => '?',
-            'App\\Controller\\AdminController:createUpdateCategory' => '?',
-            'App\\Controller\\AdminController:createUpdateProduct' => '?',
-            'App\\Controller\\AdminController:deleteCategory' => '?',
-            'App\\Controller\\AdminController:deleteProduct' => '?',
-            'App\\Controller\\AdminController:detailsClient' => '?',
-            'App\\Controller\\AdminController:listCategory' => '?',
-            'App\\Controller\\AdminController:listClient' => '?',
-            'App\\Controller\\AdminController:listProduct' => '?',
-            'App\\Controller\\IndexController:addPanier' => '?',
-            'App\\Controller\\IndexController:detailsProduct' => '?',
-            'App\\Controller\\IndexController:inscription' => '?',
-            'App\\Controller\\IndexController:listProduct' => '?',
-            'App\\Controller\\IndexController:login' => '?',
-            'App\\Controller\\IndexController:order' => '?',
-            'App\\Controller\\IndexController:orderConfirm' => '?',
-            'App\\Controller\\IndexController:panier' => '?',
-            'App\\Controller\\IndexController:remove' => '?',
-            'App\\Controller\\IndexController:updateInfos' => '?',
-            'App\\Controller\\IndexController:updatePassword' => '?',
         ]);
     }
 
@@ -2024,6 +2028,22 @@ class srcApp_KernelDevDebugContainer extends Container
             'productRepository' => ['privates', 'App\\Repository\\ProductRepository', 'getProductRepositoryService', false],
         ], [
             'productRepository' => 'App\\Repository\\ProductRepository',
+        ]);
+    }
+
+    /**
+     * Gets the private '.service_locator.dwJWoHp' shared service.
+     *
+     * @return \Symfony\Component\DependencyInjection\ServiceLocator
+     */
+    protected function get_ServiceLocator_DwJWoHpService()
+    {
+        return $this->privates['.service_locator.dwJWoHp'] = new \Symfony\Component\DependencyInjection\Argument\ServiceLocator($this->getService, [
+            'orderDetail' => ['privates', 'App\\Repository\\OrderDetailRepository', 'getOrderDetailRepositoryService', false],
+            'orderRepository' => ['privates', 'App\\Repository\\OrderRepository', 'getOrderRepositoryService', false],
+        ], [
+            'orderDetail' => 'App\\Repository\\OrderDetailRepository',
+            'orderRepository' => 'App\\Repository\\OrderRepository',
         ]);
     }
 
@@ -3011,7 +3031,7 @@ class srcApp_KernelDevDebugContainer extends Container
         include_once \dirname(__DIR__, 4).'\\vendor\\symfony\\http-kernel\\Controller\\ArgumentResolver\\TraceableValueResolver.php';
         include_once \dirname(__DIR__, 4).'\\vendor\\symfony\\http-kernel\\Controller\\ArgumentResolver\\NotTaggedControllerValueResolver.php';
 
-        return $this->privates['debug.argument_resolver.not_tagged_controller'] = new \Symfony\Component\HttpKernel\Controller\ArgumentResolver\TraceableValueResolver(new \Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver(($this->privates['.service_locator.LVJKDlT'] ?? $this->get_ServiceLocator_LVJKDlTService())), ($this->privates['debug.stopwatch'] ?? ($this->privates['debug.stopwatch'] = new \Symfony\Component\Stopwatch\Stopwatch(true))));
+        return $this->privates['debug.argument_resolver.not_tagged_controller'] = new \Symfony\Component\HttpKernel\Controller\ArgumentResolver\TraceableValueResolver(new \Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver(($this->privates['.service_locator.G0olUR9'] ?? $this->get_ServiceLocator_G0olUR9Service())), ($this->privates['debug.stopwatch'] ?? ($this->privates['debug.stopwatch'] = new \Symfony\Component\Stopwatch\Stopwatch(true))));
     }
 
     /**
@@ -3053,7 +3073,7 @@ class srcApp_KernelDevDebugContainer extends Container
         include_once \dirname(__DIR__, 4).'\\vendor\\symfony\\http-kernel\\Controller\\ArgumentResolver\\TraceableValueResolver.php';
         include_once \dirname(__DIR__, 4).'\\vendor\\symfony\\http-kernel\\Controller\\ArgumentResolver\\ServiceValueResolver.php';
 
-        return $this->privates['debug.argument_resolver.service'] = new \Symfony\Component\HttpKernel\Controller\ArgumentResolver\TraceableValueResolver(new \Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver(($this->privates['.service_locator.LVJKDlT'] ?? $this->get_ServiceLocator_LVJKDlTService())), ($this->privates['debug.stopwatch'] ?? ($this->privates['debug.stopwatch'] = new \Symfony\Component\Stopwatch\Stopwatch(true))));
+        return $this->privates['debug.argument_resolver.service'] = new \Symfony\Component\HttpKernel\Controller\ArgumentResolver\TraceableValueResolver(new \Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver(($this->privates['.service_locator.G0olUR9'] ?? $this->get_ServiceLocator_G0olUR9Service())), ($this->privates['debug.stopwatch'] ?? ($this->privates['debug.stopwatch'] = new \Symfony\Component\Stopwatch\Stopwatch(true))));
     }
 
     /**
