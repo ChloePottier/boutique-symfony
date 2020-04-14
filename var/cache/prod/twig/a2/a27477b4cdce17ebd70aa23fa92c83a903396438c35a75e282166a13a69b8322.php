@@ -26,7 +26,7 @@ class __TwigTemplate_c12c4c2144a3fae025c356dda09d5b981b784986b623e176f87e12c6cc3
 
         $this->blocks = [
             'title' => [$this, 'block_title'],
-            'body' => [$this, 'block_body'],
+            'content' => [$this, 'block_content'],
         ];
     }
 
@@ -47,37 +47,98 @@ class __TwigTemplate_c12c4c2144a3fae025c356dda09d5b981b784986b623e176f87e12c6cc3
     public function block_title($context, array $blocks = [])
     {
         $macros = $this->macros;
-        echo "Hello IndexController!";
+        echo "Accueil | ";
+        $this->displayParentBlock("title", $context, $blocks);
     }
 
-    // line 5
-    public function block_body($context, array $blocks = [])
+    // line 4
+    public function block_content($context, array $blocks = [])
     {
         $macros = $this->macros;
-        // line 6
-        echo "<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+        // line 5
+        echo "\t<div class=\"container-fluid \">
+        <div class=\"container\">
+            <div class=\"row\">
+                <div class=\"col-12 text-center mt-0\">
+                    <div id=\"carouselExampleControls\" class=\"carousel slide\" data-ride=\"carousel\">
+                        <div class=\"carousel-inner\">
+                            <div class=\"carousel-item active\">
+                                <img src=\"/images/tshirt-1.jpg\" class=\"d-block w-100\" alt=\"Tshirt\" >
+                            </div>
+                            <div class=\"carousel-item\">
+                                <img src=\"/images/tshirt-2.jpg\" class=\"d-block w-100\" alt=\"Tshirt\" >
+                            </div>
+                            <div class=\"carousel-item\">
+                                <img src=\"/images/tshirt-3.jpg\" class=\"d-block w-100\" alt=\"Tshirt\">
+                            </div>
+                        </div>
+                        <a class=\"carousel-control-prev\" href=\"#carouselExampleControls\" role=\"button\" data-slide=\"prev\">
+                            <span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"></span>
+                            <span class=\"sr-only\">Previous</span>
+                        </a>
+                        <a class=\"carousel-control-next\" href=\"#carouselExampleControls\" role=\"button\" data-slide=\"next\">
+                            <span class=\"carousel-control-next-icon\" aria-hidden=\"true\"></span>
+                            <span class=\"sr-only\">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class=\"row\">
+            ";
+        // line 34
+        echo "             ";
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(($context["products"] ?? null));
+        foreach ($context['_seq'] as $context["_key"] => $context["product"]) {
+            // line 35
+            echo "                <div class=\"col-12 col-sm-6 col-lg-3  text-center my-5\">
+                    <div class=\"card\">
+                    ";
+            // line 38
+            echo "                        <div class=\"image-carte\">
+                            <img src=\"";
+            // line 39
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("uploads/" . twig_get_attribute($this->env, $this->source, $context["product"], "image", [], "any", false, false, false, 39))), "html", null, true);
+            echo "\" class=\"card-img-top img-fluid\" width=\"256\" height=\"208\" title=\"";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["product"], "nom", [], "any", false, false, false, 39), "html", null, true);
+            echo "\" alt=\"image ";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["product"], "nom", [], "any", false, false, false, 39), "html", null, true);
+            echo "\">
+                        </div>
+                        <div class=\"card-body\">
+                            <h5 class=\"card-title\">";
+            // line 42
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["product"], "nom", [], "any", false, false, false, 42), "html", null, true);
+            echo "</h5>
+                            ";
+            // line 44
+            echo "                            <p class=\"card-text card-decription text-muted mb-0\">";
+            echo twig_escape_filter($this->env, (twig_slice($this->env, twig_get_attribute($this->env, $this->source, $context["product"], "description", [], "any", false, false, false, 44), 0, 100) . "..."), "html", null, true);
+            echo "</p>                               
+                            ";
+            // line 46
+            echo "                            ";
+            // line 47
+            echo "                                ";
+            // line 48
+            echo "
+                            <a href=\"";
+            // line 49
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("details_product", ["id" => twig_get_attribute($this->env, $this->source, $context["product"], "id", [], "any", false, false, false, 49)]), "html", null, true);
+            echo "\" class=\"btn btn-outline-info p-2\">Lire la suite...</a>
+                        </div>
+                    </div>
+                </div>
+            ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['product'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 54
+        echo "            </div>
 
-<div class=\"example-wrapper\">
-    <h1>Hello ";
-        // line 12
-        echo twig_escape_filter($this->env, ($context["controller_name"] ?? null), "html", null, true);
-        echo "! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href=\"";
-        // line 16
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\CodeExtension']->getFileLink("C:/xampp/htdocs/boutique_symphony/boutique-symphony/src/Controller/IndexController.php", 0), "html", null, true);
-        echo "\">src/Controller/IndexController.php</a></code></li>
-        <li>Your template at <code><a href=\"";
-        // line 17
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\CodeExtension']->getFileLink("C:/xampp/htdocs/boutique_symphony/boutique-symphony/templates/index/index.html.twig", 0), "html", null, true);
-        echo "\">templates/index/index.html.twig</a></code></li>
-    </ul>
-</div>
+        </div>
+    </div>
 ";
     }
 
@@ -93,7 +154,7 @@ class __TwigTemplate_c12c4c2144a3fae025c356dda09d5b981b784986b623e176f87e12c6cc3
 
     public function getDebugInfo()
     {
-        return array (  77 => 17,  73 => 16,  66 => 12,  58 => 6,  54 => 5,  47 => 3,  36 => 1,);
+        return array (  138 => 54,  127 => 49,  124 => 48,  122 => 47,  120 => 46,  115 => 44,  111 => 42,  101 => 39,  98 => 38,  94 => 35,  89 => 34,  59 => 5,  55 => 4,  47 => 3,  36 => 1,);
     }
 
     public function getSourceContext()

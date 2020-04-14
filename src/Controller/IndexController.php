@@ -3,13 +3,14 @@
 namespace App\Controller;
 
 use App\Entity\User;
-use App\Entity\Product;
 use App\Entity\Order;
+use App\Entity\Product;
 use App\Entity\OrderDetail;
 use App\Form\InfosClientType;
 use App\Form\InscriptionType;
 use App\Form\UpdatePasswordType;
 use App\Repository\UserRepository;
+use App\Repository\OrderRepository;
 use App\Repository\ProductRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use App\Repository\OrderDetailRepository;
@@ -293,5 +294,34 @@ class IndexController extends AbstractController
             "form" => $form->createView()
         ]);
     }
+        // methods listing commandes
+    /**
+     * @Route("/client/order", name="client_order")
+     */
+    public function listOrder(OrderRepository $orderRepository)
+    {
+
+        $user = $this->getUser();
+        $orders = $orderRepository->findOrdersByIdUser($user);
+
+        return $this->render('index/client/listOrder.html.twig', [
+            "orders" => $orders
+        ]);
+
+    }
+         /**
+     * @Route("/client/order/{id}", name="details_order")
+     */
+    public function detailsOrder(OrderDetailRepository $orderDetailRepository, $id)
+    {
+        $detailsOrder = $orderDetailRepository->findDetailsOrder($id);
+
+        return $this->render('index/client/detailsOrder.html.twig', [
+            "details" => $detailsOrder
+        ]);
+    }
+
+
+
 
 }

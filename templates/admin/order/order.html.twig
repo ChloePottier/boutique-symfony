@@ -26,6 +26,7 @@
                                 <th class="text-center">Prénom client</th>
                                 <th class="text-center">Date de la commande</th>
                                 <th class="text-center">Total</th>
+                                <th class="text-center">Détails</th>
 
                             </tr>
                         </thead>
@@ -37,8 +38,10 @@
                             <td class="text-center font-weight-bold">{{ order.User.nom }}</td>
                             <td class="text-center font-weight-bold">{{ order.User.prenom }}</td>
                             <td class="text-center font-weight-bold">{{ order.date |date("d/m/Y") }}</td> 
-                            <td class="text-center font-weight-bold">total ???</td>                          
-
+                            <td class="text-center font-weight-bold">{{ order.price}}</td>                          
+                            <td class="text-center font-weight-bold">
+                                <a href="{{path('details_order_user', {'id' : order.id})}}"><img src="{{asset('images/' ~ 'show.svg')}}" width="40" height="40" alt="détails"/></a>
+                            </td>
                         </tr>
                         {% endfor %}
                     </table>

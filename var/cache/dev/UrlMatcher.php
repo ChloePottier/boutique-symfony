@@ -30,6 +30,7 @@ return [
         '/mon_compte' => [[['_route' => 'compte', '_controller' => 'App\\Controller\\IndexController::monCompte'], null, null, null, false, false, null]],
         '/mon_compte/infos' => [[['_route' => 'update_infos', '_controller' => 'App\\Controller\\IndexController::updateInfos'], null, null, null, false, false, null]],
         '/mon_compte/password' => [[['_route' => 'update_password', '_controller' => 'App\\Controller\\IndexController::updatePassword'], null, null, null, false, false, null]],
+        '/client/order' => [[['_route' => 'client_order', '_controller' => 'App\\Controller\\IndexController::listOrder'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'
@@ -58,12 +59,14 @@ return [
                         .'|([^/]++)(*:267)'
                     .')'
                     .'|user/([^/]++)(*:289)'
+                    .'|order/([^/]++)(*:311)'
                 .')'
-                .'|/index/details/([^/]++)(*:321)'
+                .'|/index/details/([^/]++)(*:343)'
                 .'|/panier/(?'
-                    .'|add/([^/]++)(*:352)'
-                    .'|remove/([^/]++)(*:375)'
+                    .'|add/([^/]++)(*:374)'
+                    .'|remove/([^/]++)(*:397)'
                 .')'
+                .'|/client/order/([^/]++)(*:428)'
             .')/?$}sD',
     ],
     [ // $dynamicRoutes
@@ -79,10 +82,12 @@ return [
         251 => [[['_route' => 'product_update', '_controller' => 'App\\Controller\\AdminController::createUpdateProduct'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
         267 => [[['_route' => 'delete_product', '_controller' => 'App\\Controller\\AdminController::deleteProduct'], ['id'], ['SUP' => 0], null, false, true, null]],
         289 => [[['_route' => 'details_user', '_controller' => 'App\\Controller\\AdminController::detailsClient'], ['id'], null, null, false, true, null]],
-        321 => [[['_route' => 'details_product', '_controller' => 'App\\Controller\\IndexController::detailsProduct'], ['id'], null, null, false, true, null]],
-        352 => [[['_route' => 'add_panier', '_controller' => 'App\\Controller\\IndexController::addPanier'], ['id'], null, null, false, true, null]],
-        375 => [
-            [['_route' => 'panier_remove', '_controller' => 'App\\Controller\\IndexController::remove'], ['id'], null, null, false, true, null],
+        311 => [[['_route' => 'details_order_user', '_controller' => 'App\\Controller\\AdminController::detailsOrderClient'], ['id'], null, null, false, true, null]],
+        343 => [[['_route' => 'details_product', '_controller' => 'App\\Controller\\IndexController::detailsProduct'], ['id'], null, null, false, true, null]],
+        374 => [[['_route' => 'add_panier', '_controller' => 'App\\Controller\\IndexController::addPanier'], ['id'], null, null, false, true, null]],
+        397 => [[['_route' => 'panier_remove', '_controller' => 'App\\Controller\\IndexController::remove'], ['id'], null, null, false, true, null]],
+        428 => [
+            [['_route' => 'details_order', '_controller' => 'App\\Controller\\IndexController::detailsOrder'], ['id'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
     ],

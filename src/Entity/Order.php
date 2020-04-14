@@ -25,24 +25,30 @@ class Order
     private $date;
 
     /**
+     * @ORM\OneToMany(targetEntity="App\Entity\OrderDetail", mappedBy="orderId")
+     */
+    private $orderDetailsId;
+
+    /**
      * @ORM\ManyToOne(targetEntity="App\Entity\User", inversedBy="orders")
      * @ORM\JoinColumn(nullable=false)
      */
-    private $User;
-
-    /**
-     * @ORM\OneToMany(targetEntity="App\Entity\OrderDetail", mappedBy="order_id")
-     */
-    private $orderDetails;
-
+    private $user;
 
     public function __construct()
     {
         $this->orderDetails = new ArrayCollection();
+        $this->orderDetailsId = new ArrayCollection();
     }
 
- 
+    
+
     public function getId(): ?int
+    {
+        return $this->id;
+    }
+
+    public function __toString()
     {
         return $this->id;
     }
@@ -60,48 +66,47 @@ class Order
     }
 
 
-    public function getUser(): ?User
-    {
-        return $this->User;
-    }
-
-    public function setUser(?User $User): self
-    {
-        $this->User = $User;
-
-        return $this;
-    }
-
     /**
      * @return Collection|OrderDetail[]
      */
-    public function getOrderDetails(): Collection
+    public function getOrderDetailsId(): Collection
     {
-        return $this->orderDetails;
+        return $this->orderDetailsId;
     }
 
-    public function addOrderDetail(OrderDetail $orderDetail): self
+    public function addOrderDetailsId(OrderDetail $orderDetailsId): self
     {
-        if (!$this->orderDetails->contains($orderDetail)) {
-            $this->orderDetails[] = $orderDetail;
-            $orderDetail->setOrderId($this);
+        if (!$this->orderDetailsId->contains($orderDetailsId)) {
+            $this->orderDetailsId[] = $orderDetailsId;
+            $orderDetailsId->setOrderId($this);
         }
 
         return $this;
     }
 
-    public function removeOrderDetail(OrderDetail $orderDetail): self
+    public function removeOrderDetailsId(OrderDetail $orderDetailsId): self
     {
-        if ($this->orderDetails->contains($orderDetail)) {
-            $this->orderDetails->removeElement($orderDetail);
+        if ($this->orderDetailsId->contains($orderDetailsId)) {
+            $this->orderDetailsId->removeElement($orderDetailsId);
             // set the owning side to null (unless already changed)
-            if ($orderDetail->getOrderId() === $this) {
-                $orderDetail->setOrderId(null);
+            if ($orderDetailsId->getOrderId() === $this) {
+                $orderDetailsId->setOrderId(null);
             }
         }
 
         return $this;
     }
 
-   
+    public function getUser(): ?User
+    {
+        return $this->user;
+    }
+
+    public function setUser(?User $user): self
+    {
+        $this->user = $user;
+
+        return $this;
+    }
+
 }

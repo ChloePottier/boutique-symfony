@@ -27,6 +27,7 @@ return [
     'details_user' => [['id'], ['_controller' => 'App\\Controller\\AdminController::detailsClient'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/admin/user']], [], []],
     'liste_user' => [[], ['_controller' => 'App\\Controller\\AdminController::listClient'], [], [['text', '/admin/user']], [], []],
     'liste_order' => [[], ['_controller' => 'App\\Controller\\AdminController::listOrder'], [], [['text', '/admin/order']], [], []],
+    'details_order_user' => [['id'], ['_controller' => 'App\\Controller\\AdminController::detailsOrderClient'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/admin/order']], [], []],
     'index' => [[], ['_controller' => 'App\\Controller\\IndexController::listProduct'], [], [['text', '/']], [], []],
     'inscription' => [[], ['_controller' => 'App\\Controller\\IndexController::inscription'], [], [['text', '/inscription']], [], []],
     'login' => [[], ['_controller' => 'App\\Controller\\IndexController::login'], [], [['text', '/login']], [], []],
@@ -40,4 +41,6 @@ return [
     'compte' => [[], ['_controller' => 'App\\Controller\\IndexController::monCompte'], [], [['text', '/mon_compte']], [], []],
     'update_infos' => [[], ['_controller' => 'App\\Controller\\IndexController::updateInfos'], [], [['text', '/mon_compte/infos']], [], []],
     'update_password' => [[], ['_controller' => 'App\\Controller\\IndexController::updatePassword'], [], [['text', '/mon_compte/password']], [], []],
+    'client_order' => [[], ['_controller' => 'App\\Controller\\IndexController::listOrder'], [], [['text', '/client/order']], [], []],
+    'details_order' => [['id'], ['_controller' => 'App\\Controller\\IndexController::detailsOrder'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/client/order']], [], []],
 ];

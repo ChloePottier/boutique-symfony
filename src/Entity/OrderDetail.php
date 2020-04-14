@@ -16,6 +16,7 @@ class OrderDetail
      */
     private $id;
 
+
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Product", inversedBy="orderDetails")
      * @ORM\JoinColumn(nullable=false)
@@ -33,22 +34,22 @@ class OrderDetail
     private $price;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Order", inversedBy="orderDetails")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Order", inversedBy="orderDetailsId")
      * @ORM\JoinColumn(nullable=false)
      */
-    private $order_id;
+    private $orderId;
 
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getProductId(): ?Product
+    public function getProductId(): ?product
     {
         return $this->product_id;
     }
 
-    public function setProductId(?Product $product_id): self
+    public function setProductId(?product $product_id): self
     {
         $this->product_id = $product_id;
 
@@ -72,21 +73,23 @@ class OrderDetail
         return $this->price;
     }
 
-    public function setPrice( ?object $price): self
+    public function setPrice(?object $price): self
     {
         $this->price = $price;
 
         return $this;
     }
 
+   
+
     public function getOrderId(): ?Order
     {
-        return $this->order_id;
+        return $this->orderId;
     }
 
-    public function setOrderId(?Order $order_id): self
+    public function setOrderId(?Order $orderId): self
     {
-        $this->order_id = $order_id;
+        $this->orderId = $orderId;
 
         return $this;
     }

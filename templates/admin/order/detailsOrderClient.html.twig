@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Infos Clients | Admin | {{ parent() }}{% endblock %}
+{% block header %}
+    {% include "includes/adminNavBar.html.twig" %}
+{% endblock %}
+{% block content %}
+	<div class="container-fluid text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 mt-5 mb-3">
+                    <h1> Informations Clients</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6 d-flex flex-column align-items-end font-weight-bold">
+                    <table class="table table-hover mt-3 text col-12">
+                        <thead class="thead-dark  title-listing">
+                            <tr>
+                                <th class="text-center text-nowrap">N° de la commande</th>
+                                <th class="text-center text-nowrap">Nom</th>
+                                <th class="text-center text-nowrap">Prénom </th>
+                                <th class="text-center text-nowrap">Description</th>
+                                <th class="text-center text-nowrap">En ligne</th>
+                                <th class="text-center text-nowrap">Modifier</th>
+                                <th class="text-center text-nowrap">Supprimer</th>
+                            </tr>
+                        </thead>
+                            
+                        {% for detail in details %}
+                        
+                        <tr>
+                            <td class="text-center "> {{detail.id}}</td>
+                            
+
+                        </tr>
+                        {% endfor %}
+                    </table>
+
+
+                </div>
+                
+                <div class="col-6 d-flex flex-column align-items-start">
+                
+                    {% for detail in details %}
+                        {# {{detail.product.nom}} #}
+                        {{detail.quantity}}
+                        {{detail.price}}
+                {% endfor %}
+
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\User;
+use App\Entity\Order;
 use App\Entity\Product;
 use App\Entity\Category;
 use App\Form\ProductType;
@@ -11,8 +12,8 @@ use App\Repository\UserRepository;
 use App\Repository\OrderRepository;
 use App\Repository\ProductRepository;
 use App\Repository\CategoryRepository;
-use App\Repository\OrderDetailRepository;
 use Doctrine\ORM\EntityManagerInterface;
+use App\Repository\OrderDetailRepository;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -180,17 +181,28 @@ class AdminController extends AbstractController
         ]);
     }
 
-    // METHODS ORDER 
+    // METHODS ORDER <
+
        /**
      * @Route("/admin/order", name="liste_order")
      */
     public function listOrder(OrderRepository $orderRepository, OrderDetailRepository $orderDetails)
     {
-
+        $user = $this->getUser();
         $orders = $orderRepository->findAll();
 
         return $this->render('admin/order/order.html.twig', [
-            "orders" => $orders        ]);
+            "orders" => $orders        
+            ]);
     }
-    
+    /**
+     * @Route("/admin/order/{id}", name="details_order_user")
+     */
+    public function detailsOrderClient(OrderDetailRepository $orderDetailRepository, $id)
+    {
+        $detailsOrder = $orderDetailRepository->findDetailsOrder($id);
+        return $this->render('admin/order/detailsOrderClient.html.twig', [
+            "details" => $detailsOrder
+        ]);
+    }  
 }

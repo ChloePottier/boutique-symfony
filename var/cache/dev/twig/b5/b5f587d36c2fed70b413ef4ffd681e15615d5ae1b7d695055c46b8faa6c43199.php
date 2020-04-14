@@ -146,6 +146,7 @@ class __TwigTemplate_8cd5227f7969f3237bcd9b7ff2b5c33da18eb046b58ab38138b96921428
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("update_password");
         echo "\" class=\"btn btn-danger ml-1\">Modifier mon mot de passe</a>
                 </div>
+            </div>
         </div>
     </div>
 
@@ -213,6 +214,7 @@ class __TwigTemplate_8cd5227f7969f3237bcd9b7ff2b5c33da18eb046b58ab38138b96921428
                     <a href=\"{{path('update_infos')}}\" class=\"btn btn-info mr-1\">Modifier mes infos</a>
                     <a href=\"{{path('update_password')}}\" class=\"btn btn-danger ml-1\">Modifier mon mot de passe</a>
                 </div>
+            </div>
         </div>
     </div>
 

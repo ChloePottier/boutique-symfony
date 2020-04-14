@@ -66,10 +66,10 @@ class Product extends \App\Entity\Product implements \Doctrine\ORM\Proxy\Proxy
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Product' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Product' . "\0" . 'nom', '' . "\0" . 'App\\Entity\\Product' . "\0" . 'image', '' . "\0" . 'App\\Entity\\Product' . "\0" . 'description', '' . "\0" . 'App\\Entity\\Product' . "\0" . 'category', '' . "\0" . 'App\\Entity\\Product' . "\0" . 'lignePaniers', '' . "\0" . 'App\\Entity\\Product' . "\0" . 'isPublished'];
+            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Product' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Product' . "\0" . 'nom', '' . "\0" . 'App\\Entity\\Product' . "\0" . 'image', '' . "\0" . 'App\\Entity\\Product' . "\0" . 'description', '' . "\0" . 'App\\Entity\\Product' . "\0" . 'category', '' . "\0" . 'App\\Entity\\Product' . "\0" . 'isPublished', '' . "\0" . 'App\\Entity\\Product' . "\0" . 'Prix', '' . "\0" . 'App\\Entity\\Product' . "\0" . 'orderDetails'];
         }
 
-        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Product' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Product' . "\0" . 'nom', '' . "\0" . 'App\\Entity\\Product' . "\0" . 'image', '' . "\0" . 'App\\Entity\\Product' . "\0" . 'description', '' . "\0" . 'App\\Entity\\Product' . "\0" . 'category', '' . "\0" . 'App\\Entity\\Product' . "\0" . 'lignePaniers', '' . "\0" . 'App\\Entity\\Product' . "\0" . 'isPublished'];
+        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Product' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Product' . "\0" . 'nom', '' . "\0" . 'App\\Entity\\Product' . "\0" . 'image', '' . "\0" . 'App\\Entity\\Product' . "\0" . 'description', '' . "\0" . 'App\\Entity\\Product' . "\0" . 'category', '' . "\0" . 'App\\Entity\\Product' . "\0" . 'isPublished', '' . "\0" . 'App\\Entity\\Product' . "\0" . 'Prix', '' . "\0" . 'App\\Entity\\Product' . "\0" . 'orderDetails'];
     }
 
     /**
@@ -282,39 +282,6 @@ class Product extends \App\Entity\Product implements \Doctrine\ORM\Proxy\Proxy
     /**
      * {@inheritDoc}
      */
-    public function getLignePaniers(): \Doctrine\Common\Collections\Collection
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getLignePaniers', []);
-
-        return parent::getLignePaniers();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function addLignePanier(\App\Entity\LignePanier $lignePanier): \App\Entity\Product
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addLignePanier', [$lignePanier]);
-
-        return parent::addLignePanier($lignePanier);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function removeLignePanier(\App\Entity\LignePanier $lignePanier): \App\Entity\Product
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeLignePanier', [$lignePanier]);
-
-        return parent::removeLignePanier($lignePanier);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
     public function getIsPublished(): ?bool
     {
 
@@ -332,6 +299,72 @@ class Product extends \App\Entity\Product implements \Doctrine\ORM\Proxy\Proxy
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'setIsPublished', [$isPublished]);
 
         return parent::setIsPublished($isPublished);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function __toString()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, '__toString', []);
+
+        return parent::__toString();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getPrix(): ?string
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getPrix', []);
+
+        return parent::getPrix();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setPrix(string $Prix): \App\Entity\Product
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setPrix', [$Prix]);
+
+        return parent::setPrix($Prix);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getOrderDetails(): \Doctrine\Common\Collections\Collection
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getOrderDetails', []);
+
+        return parent::getOrderDetails();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function addOrderDetail(\App\Entity\OrderDetail $orderDetail): \App\Entity\Product
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addOrderDetail', [$orderDetail]);
+
+        return parent::addOrderDetail($orderDetail);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function removeOrderDetail(\App\Entity\OrderDetail $orderDetail): \App\Entity\Product
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeOrderDetail', [$orderDetail]);
+
+        return parent::removeOrderDetail($orderDetail);
     }
 
 }

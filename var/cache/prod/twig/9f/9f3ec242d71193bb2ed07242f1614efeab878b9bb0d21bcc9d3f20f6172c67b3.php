@@ -26,7 +26,8 @@ class __TwigTemplate_cd401fa41573fcba17c14a64114401d8b9732e44756d23e1549542d3598
 
         $this->blocks = [
             'title' => [$this, 'block_title'],
-            'body' => [$this, 'block_body'],
+            'header' => [$this, 'block_header'],
+            'content' => [$this, 'block_content'],
         ];
     }
 
@@ -47,37 +48,79 @@ class __TwigTemplate_cd401fa41573fcba17c14a64114401d8b9732e44756d23e1549542d3598
     public function block_title($context, array $blocks = [])
     {
         $macros = $this->macros;
-        echo "Hello AdminController!";
+        echo "Admin | ";
+        $this->displayParentBlock("title", $context, $blocks);
     }
 
-    // line 5
-    public function block_body($context, array $blocks = [])
+    // line 4
+    public function block_header($context, array $blocks = [])
     {
         $macros = $this->macros;
-        // line 6
-        echo "<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+        // line 5
+        echo "    ";
+        $this->loadTemplate("includes/adminNavBar.html.twig", "admin/index.html.twig", 5)->display($context);
+    }
 
-<div class=\"example-wrapper\">
-    <h1>Hello ";
-        // line 12
-        echo twig_escape_filter($this->env, ($context["controller_name"] ?? null), "html", null, true);
-        echo "! ✅</h1>
+    // line 7
+    public function block_content($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        // line 8
+        echo "\t <div class=\"container-fluid\">
+        <div class=\"container\">
+            <div class=\"row\">
+            <div class=\"col-12 mt-5 mb-5\">
+                <h1>Listing des catégories</h1>
+            </div>
+        </div>
+        <div class=\"row d-flex\">
+            <div class=\"col-3\">
+                <div class=\"card text-white bg-info mb-3\" style=\"max-width: 18rem; height: 150px;\">
+                    <div class=\"card-body d-flex justify-content-center align-items-center\">
+                            <a href=\"";
+        // line 19
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("liste_cat");
+        echo "\" class=\"font-size text-white text-decoration-none\">Catégories</a>
+                    </div>
+                  </div>
+            </div>
+            <div class=\"col-3\">
+                <div class=\"card text-white bg-info mb-3\" style=\"max-width: 18rem; height: 150px;\">
+                    <div class=\"card-body d-flex justify-content-center align-items-center\">
+                        <a href=\"";
+        // line 26
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("liste_product");
+        echo "\" class=\"font-size text-white text-decoration-none\">Produits</a>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href=\"";
-        // line 16
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\CodeExtension']->getFileLink("C:/xampp/htdocs/boutique_symphony/boutique-symphony/src/Controller/AdminController.php", 0), "html", null, true);
-        echo "\">src/Controller/AdminController.php</a></code></li>
-        <li>Your template at <code><a href=\"";
-        // line 17
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\CodeExtension']->getFileLink("C:/xampp/htdocs/boutique_symphony/boutique-symphony/templates/admin/index.html.twig", 0), "html", null, true);
-        echo "\">templates/admin/index.html.twig</a></code></li>
-    </ul>
-</div>
+                    </div>
+                  </div>
+            </div>
+            <div class=\"col-3\">
+                <div class=\"card text-white bg-info mb-3\" style=\"max-width: 18rem; height: 150px;\">
+                    <div class=\"card-body d-flex justify-content-center align-items-center\">
+                        <a href=\"";
+        // line 34
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("liste_user");
+        echo "\" class=\"font-size text-white text-decoration-none\">Clients</a>
+
+                    </div>
+                  </div>
+            </div>
+            <div class=\"col-3\">
+                <div class=\"card text-white bg-info mb-3\" style=\"max-width: 18rem; height: 150px;\">
+                    <div class=\"card-body d-flex justify-content-center align-items-center\">
+                        <a href=\"";
+        // line 42
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("liste_order");
+        echo "\" class=\"font-size text-white text-decoration-none\">Commandes</a>
+
+                    </div>
+                  </div>
+            </div>
+        </div>
+        </div>
+        
+    </div>
 ";
     }
 
@@ -93,7 +136,7 @@ class __TwigTemplate_cd401fa41573fcba17c14a64114401d8b9732e44756d23e1549542d3598
 
     public function getDebugInfo()
     {
-        return array (  77 => 17,  73 => 16,  66 => 12,  58 => 6,  54 => 5,  47 => 3,  36 => 1,);
+        return array (  114 => 42,  103 => 34,  92 => 26,  82 => 19,  69 => 8,  65 => 7,  60 => 5,  56 => 4,  48 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
