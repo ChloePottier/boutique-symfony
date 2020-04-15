@@ -100,7 +100,7 @@ class __TwigTemplate_750146c84841d71dde9012408e4cd48b899c97b3ac833c43efae545c439
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("compte");
         echo "\"><i class=\"fas fa-arrow-left mr-2\"></i>Retour au détail de mon compte</a>
             </div>
-            <div class=\"col-12 d-flex justify-content-center form-modif-infos\">
+            <div class=\"col-12 d-flex justify-content-center form-modif-infos  mt-5\">
                 ";
         // line 16
         echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 16, $this->source); })()), 'form_start');
@@ -120,7 +120,7 @@ class __TwigTemplate_750146c84841d71dde9012408e4cd48b899c97b3ac833c43efae545c439
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 24, $this->source); })()), "verifPassword", [], "any", false, false, false, 24), 'row', ["attr" => ["placeholder" => "Confirmation", "class" => "input"], "label" => false]);
         echo "
                     </div>
-                    <div class=\"mb-2 d-flex justify-content-center\">
+                    <div class=\"mt-4 mb-2 d-flex justify-content-center\">
                         <input type=\"submit\" value=\"Modifier\" class=\"btn btn-info d-flex justify-content-center\">
                     </div>
                 ";
@@ -128,10 +128,9 @@ class __TwigTemplate_750146c84841d71dde9012408e4cd48b899c97b3ac833c43efae545c439
         echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 29, $this->source); })()), 'form_end');
         echo "
             </div>
-           
         </div>
     </div>
-</dic>
+</div>
 
 ";
         
@@ -173,7 +172,7 @@ class __TwigTemplate_750146c84841d71dde9012408e4cd48b899c97b3ac833c43efae545c439
             <div class=\"col-12 d-flex justify-content-start\">
                 <a class=\"text-decoration-none add-category\" href=\"{{path('compte')}}\"><i class=\"fas fa-arrow-left mr-2\"></i>Retour au détail de mon compte</a>
             </div>
-            <div class=\"col-12 d-flex justify-content-center form-modif-infos\">
+            <div class=\"col-12 d-flex justify-content-center form-modif-infos  mt-5\">
                 {{form_start(form)}}
 
                     <div class=\"form-group d-flex mt-4\">
@@ -184,15 +183,14 @@ class __TwigTemplate_750146c84841d71dde9012408e4cd48b899c97b3ac833c43efae545c439
                         <label for=\"\"><i class=\"fas fa-lock\"></i></label>
                         {{form_row(form.verifPassword, {'attr' : {'placeholder' : 'Confirmation', 'class' : 'input'}, 'label' : false})}}
                     </div>
-                    <div class=\"mb-2 d-flex justify-content-center\">
+                    <div class=\"mt-4 mb-2 d-flex justify-content-center\">
                         <input type=\"submit\" value=\"Modifier\" class=\"btn btn-info d-flex justify-content-center\">
                     </div>
                 {{form_end(form)}}
             </div>
-           
         </div>
     </div>
-</dic>
+</div>
 
 {% endblock %}", "index/client/updatePassword.html.twig", "C:\\xampp\\htdocs\\boutique_symphony\\boutique-symphony\\templates\\index\\client\\updatePassword.html.twig");
     }

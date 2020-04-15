@@ -53,11 +53,11 @@
                                     {% endif %}
                             </td>
                             <td class="text-center"><a class="btn-edit" href="{{ path('product_update', {'id' : product.id}) }}"><i class="fas fa-edit"></i></a></td>
-                            <td class="text-center">
+                             <td class="text-center">
                                 <form action="{{path('delete_product', {'id' : product.id})}}" method="post" class="col" onsubmit="return confirm('Voulez-vous vraiment supprimer ?');">
                                     <input type="hidden" name="_method" value="SUP">
                                     <input type="hidden" name="_token" value="{{csrf_token('SUP' ~ product.id)}}">
-                                    <input type="submit" value="X" class="btn btn-danger btn-submit-form font-weight-bold">
+                                    <input type="submit" value="Supprimer" class="btn btn-outline-danger btn-submit-form">
                                 </form>
                             </td>
 

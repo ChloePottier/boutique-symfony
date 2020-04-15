@@ -114,17 +114,36 @@ class __TwigTemplate_5f04653d8501690110386e68583ae5f6d8317412e88cb457567a62e0be7
                 <div class=\"col-12 mt-5 mb-3\">
                     <h1> Listing des produits</h1>
                 </div>
-            </div>
+                ";
+        // line 15
+        echo "                ";
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 15, $this->source); })()), "flashes", [0 => "success"], "method", false, false, false, 15));
+        foreach ($context['_seq'] as $context["_key"] => $context["message"]) {
+            // line 16
+            echo "                <div class=\"alert alert-success\">
+                    ";
+            // line 17
+            echo twig_escape_filter($this->env, $context["message"], "html", null, true);
+            echo "
+                </div>
+            ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['message'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 20
+        echo "            </div>
             <div class=\"row\">
                 <div class=\"col-6 d-flex justify-content-start\">
                     <a class=\"text-decoration-none add-category\" href=\"";
-        // line 17
+        // line 23
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin");
         echo "\"><i class=\"fas fa-arrow-left mr-2\"></i>Retour au Dashboard de l'admin</a>
                 </div>
                 <div class=\"col-6 d-flex justify-content-end\">
                     <a class=\"text-decoration-none add-product\" href=\"";
-        // line 20
+        // line 26
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("add_product");
         echo "\"><i class=\"fas fa-plus mr-2\"></i>Nouveau produit</a>
                 </div>
@@ -142,58 +161,58 @@ class __TwigTemplate_5f04653d8501690110386e68583ae5f6d8317412e88cb457567a62e0be7
                         </thead>
                             
                         ";
-        // line 35
+        // line 41
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["products"]) || array_key_exists("products", $context) ? $context["products"] : (function () { throw new RuntimeError('Variable "products" does not exist.', 35, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["products"]) || array_key_exists("products", $context) ? $context["products"] : (function () { throw new RuntimeError('Variable "products" does not exist.', 41, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["product"]) {
-            // line 36
+            // line 42
             echo "                        
                         <tr>
                             <td class=\"text-center \"> <img src=\"";
-            // line 38
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("uploads/" . twig_get_attribute($this->env, $this->source, $context["product"], "image", [], "any", false, false, false, 38))), "html", null, true);
+            // line 44
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("uploads/" . twig_get_attribute($this->env, $this->source, $context["product"], "image", [], "any", false, false, false, 44))), "html", null, true);
             echo "\" alt=\"\" width=\"50\" height=\"50\"> </td>
                             <td class=\"text-center font-weight-bold\">";
-            // line 39
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["product"], "nom", [], "any", false, false, false, 39), "html", null, true);
+            // line 45
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["product"], "nom", [], "any", false, false, false, 45), "html", null, true);
             echo "</td>
                             <td class=\"text-center \">";
-            // line 40
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["product"], "category", [], "any", false, false, false, 40), "nom", [], "any", false, false, false, 40), "html", null, true);
+            // line 46
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["product"], "category", [], "any", false, false, false, 46), "nom", [], "any", false, false, false, 46), "html", null, true);
             echo "</td>
                             <td class=\"text-center \">";
-            // line 41
-            echo twig_escape_filter($this->env, (twig_slice($this->env, twig_get_attribute($this->env, $this->source, $context["product"], "description", [], "any", false, false, false, 41), 0, 40) . " ..."), "html", null, true);
+            // line 47
+            echo twig_escape_filter($this->env, (twig_slice($this->env, twig_get_attribute($this->env, $this->source, $context["product"], "description", [], "any", false, false, false, 47), 0, 40) . " ..."), "html", null, true);
             echo "</td>
                             <td class=\"text-center\"> 
                                 ";
-            // line 43
-            if (twig_get_attribute($this->env, $this->source, $context["product"], "isPublished", [], "any", false, false, false, 43)) {
-                // line 44
+            // line 49
+            if (twig_get_attribute($this->env, $this->source, $context["product"], "isPublished", [], "any", false, false, false, 49)) {
+                // line 50
                 echo "                                    Oui
                                     ";
             } else {
-                // line 46
+                // line 52
                 echo "                                    Non
                                     ";
             }
-            // line 48
+            // line 54
             echo "                            </td>
                             <td class=\"text-center\"><a class=\"btn-edit\" href=\"";
-            // line 49
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("product_update", ["id" => twig_get_attribute($this->env, $this->source, $context["product"], "id", [], "any", false, false, false, 49)]), "html", null, true);
+            // line 55
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("product_update", ["id" => twig_get_attribute($this->env, $this->source, $context["product"], "id", [], "any", false, false, false, 55)]), "html", null, true);
             echo "\"><i class=\"fas fa-edit\"></i></a></td>
-                            <td class=\"text-center\">
+                             <td class=\"text-center\">
                                 <form action=\"";
-            // line 51
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("delete_product", ["id" => twig_get_attribute($this->env, $this->source, $context["product"], "id", [], "any", false, false, false, 51)]), "html", null, true);
+            // line 57
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("delete_product", ["id" => twig_get_attribute($this->env, $this->source, $context["product"], "id", [], "any", false, false, false, 57)]), "html", null, true);
             echo "\" method=\"post\" class=\"col\" onsubmit=\"return confirm('Voulez-vous vraiment supprimer ?');\">
                                     <input type=\"hidden\" name=\"_method\" value=\"SUP\">
                                     <input type=\"hidden\" name=\"_token\" value=\"";
-            // line 53
-            echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken(("SUP" . twig_get_attribute($this->env, $this->source, $context["product"], "id", [], "any", false, false, false, 53))), "html", null, true);
+            // line 59
+            echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken(("SUP" . twig_get_attribute($this->env, $this->source, $context["product"], "id", [], "any", false, false, false, 59))), "html", null, true);
             echo "\">
-                                    <input type=\"submit\" value=\"X\" class=\"btn btn-danger btn-submit-form font-weight-bold\">
+                                    <input type=\"submit\" value=\"Supprimer\" class=\"btn btn-outline-danger btn-submit-form\">
                                 </form>
                             </td>
 
@@ -203,7 +222,7 @@ class __TwigTemplate_5f04653d8501690110386e68583ae5f6d8317412e88cb457567a62e0be7
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['product'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 60
+        // line 66
         echo "                    </table>
             </div>
 
@@ -230,7 +249,7 @@ class __TwigTemplate_5f04653d8501690110386e68583ae5f6d8317412e88cb457567a62e0be7
 
     public function getDebugInfo()
     {
-        return array (  207 => 60,  194 => 53,  189 => 51,  184 => 49,  181 => 48,  177 => 46,  173 => 44,  171 => 43,  166 => 41,  162 => 40,  158 => 39,  154 => 38,  150 => 36,  146 => 35,  128 => 20,  122 => 17,  111 => 8,  101 => 7,  90 => 5,  80 => 4,  60 => 3,  37 => 1,);
+        return array (  226 => 66,  213 => 59,  208 => 57,  203 => 55,  200 => 54,  196 => 52,  192 => 50,  190 => 49,  185 => 47,  181 => 46,  177 => 45,  173 => 44,  169 => 42,  165 => 41,  147 => 26,  141 => 23,  136 => 20,  127 => 17,  124 => 16,  119 => 15,  111 => 8,  101 => 7,  90 => 5,  80 => 4,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -248,6 +267,12 @@ class __TwigTemplate_5f04653d8501690110386e68583ae5f6d8317412e88cb457567a62e0be7
                 <div class=\"col-12 mt-5 mb-3\">
                     <h1> Listing des produits</h1>
                 </div>
+                {# message de succes lors d'une modif #}
+                {% for message in app.flashes('success') %}
+                <div class=\"alert alert-success\">
+                    {{message}}
+                </div>
+            {% endfor %}
             </div>
             <div class=\"row\">
                 <div class=\"col-6 d-flex justify-content-start\">
@@ -284,11 +309,11 @@ class __TwigTemplate_5f04653d8501690110386e68583ae5f6d8317412e88cb457567a62e0be7
                                     {% endif %}
                             </td>
                             <td class=\"text-center\"><a class=\"btn-edit\" href=\"{{ path('product_update', {'id' : product.id}) }}\"><i class=\"fas fa-edit\"></i></a></td>
-                            <td class=\"text-center\">
+                             <td class=\"text-center\">
                                 <form action=\"{{path('delete_product', {'id' : product.id})}}\" method=\"post\" class=\"col\" onsubmit=\"return confirm('Voulez-vous vraiment supprimer ?');\">
                                     <input type=\"hidden\" name=\"_method\" value=\"SUP\">
                                     <input type=\"hidden\" name=\"_token\" value=\"{{csrf_token('SUP' ~ product.id)}}\">
-                                    <input type=\"submit\" value=\"X\" class=\"btn btn-danger btn-submit-form font-weight-bold\">
+                                    <input type=\"submit\" value=\"Supprimer\" class=\"btn btn-outline-danger btn-submit-form\">
                                 </form>
                             </td>
 

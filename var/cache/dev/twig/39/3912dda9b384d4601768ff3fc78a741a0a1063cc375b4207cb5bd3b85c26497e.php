@@ -119,7 +119,7 @@ class __TwigTemplate_f7a0d5f8994271a3da783c28920a5af99e248d6cdbc0cb2f4e41a299f61
         // line 22
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["product"]) || array_key_exists("product", $context) ? $context["product"] : (function () { throw new RuntimeError('Variable "product" does not exist.', 22, $this->source); })()), "description", [], "any", false, false, false, 22), "html", null, true);
         echo "</p>
-                <p>";
+                <p class=\"font-weight-bold prix-product\">";
         // line 23
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["product"]) || array_key_exists("product", $context) ? $context["product"] : (function () { throw new RuntimeError('Variable "product" does not exist.', 23, $this->source); })()), "prix", [], "any", false, false, false, 23), "html", null, true);
         echo " €</p>
@@ -184,7 +184,7 @@ class __TwigTemplate_f7a0d5f8994271a3da783c28920a5af99e248d6cdbc0cb2f4e41a299f61
             <div class=\"col-6\">
                 <h2>{{ product.nom }}</h2>
                 <p>{{ product.description }}</p>
-                <p>{{ product.prix }} €</p>
+                <p class=\"font-weight-bold prix-product\">{{ product.prix }} €</p>
                 <a href=\" {{ path('add_panier',{'id': product.id }) }} \" class=\"btn btn-info\">
                     <i class=\"fas fa-cart-plus mr-1\"></i></i> Ajouter
                 </a>

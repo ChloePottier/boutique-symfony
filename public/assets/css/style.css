@@ -59,6 +59,7 @@ form, input, ::placeholder{font-family: Helvetica, Arial, sans-serif;}
 .add-product:hover, .add-category:hover,.btn-edit:hover{color: #000;}
 /* page produit */
 .image-page-produit{width: 100%; height:auto;}
+.prix-product{font-size: 1.3rem;}
 /* Firefox */
 input[type=number] {
     -moz-appearance: textfield;
@@ -73,7 +74,6 @@ input::-webkit-outer-spin-button {
 /* panier */
 .btn-shopping, .btn-edit{font-size: 1.5rem!important;}
 .icone-form{width: 1.3rem;}
-
 .detail a{color: #17a2b8; font-size: 1.5rem;}
 .detail a:hover{color: #000;}
 @media screen  and (max-width:991px){

@@ -128,11 +128,11 @@ class __TwigTemplate_f54844248eac96aabbe0efd5598c123f4eb191c4c3a57ac76634cbf179d
             // line 31
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["detail"], "productId", [], "any", false, false, false, 31), "nom", [], "any", false, false, false, 31), "html", null, true);
             echo " </td>
-                                                <td class=\"text-center font-weight-bold\">";
+                                                <td class=\"text-center\">";
             // line 32
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["detail"], "quantity", [], "any", false, false, false, 32), "html", null, true);
             echo "</td>
-                                                <td class=\"text-center font-weight-bold\">";
+                                                <td class=\"text-center\">";
             // line 33
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["detail"], "price", [], "any", false, false, false, 33), "html", null, true);
             echo "€  </td>
@@ -149,12 +149,13 @@ class __TwigTemplate_f54844248eac96aabbe0efd5598c123f4eb191c4c3a57ac76634cbf179d
         // line 37
         echo "                                        <tfoot>
                                                 <tr class=\"\">
-                                                        <td colspan=\"5\" class=\"font-weight-bold text-right\">Total :</td>
+                                                        <td colspan=\"3\" class=\"font-weight-bold text-center\"></td>
+                                                        <td class=\"font-weight-bold text-center\">Total :</td>
                                                         <td class=\"font-weight-bold \">
                                                         ";
-        // line 42
-        echo "                                                        ";
         // line 43
+        echo "                                                        ";
+        // line 44
         echo "                                                        </td>
                                                 </tr>
                                         
@@ -185,7 +186,7 @@ class __TwigTemplate_f54844248eac96aabbe0efd5598c123f4eb191c4c3a57ac76634cbf179d
 
     public function getDebugInfo()
     {
-        return array (  158 => 43,  156 => 42,  150 => 37,  141 => 34,  137 => 33,  133 => 32,  129 => 31,  125 => 30,  122 => 29,  118 => 28,  103 => 16,  95 => 11,  89 => 7,  79 => 6,  59 => 4,  36 => 2,);
+        return array (  159 => 44,  157 => 43,  150 => 37,  141 => 34,  137 => 33,  133 => 32,  129 => 31,  125 => 30,  122 => 29,  118 => 28,  103 => 16,  95 => 11,  89 => 7,  79 => 6,  59 => 4,  36 => 2,);
     }
 
     public function getSourceContext()
@@ -221,14 +222,15 @@ class __TwigTemplate_f54844248eac96aabbe0efd5598c123f4eb191c4c3a57ac76634cbf179d
                                         <tr>
                                                 <td class=\"text-center font-weight-bold\">  <img src=\"{{asset('uploads/' ~ detail.productId.image)}}\" alt=\"\" width=\"50\" height=\"50\"></td>
                                                 <td class=\"text-center font-weight-bold\"> {{detail.productId.nom}} </td>
-                                                <td class=\"text-center font-weight-bold\">{{detail.quantity}}</td>
-                                                <td class=\"text-center font-weight-bold\">{{detail.price}}€  </td>
+                                                <td class=\"text-center\">{{detail.quantity}}</td>
+                                                <td class=\"text-center\">{{detail.price}}€  </td>
                                                 <td class=\"text-center font-weight-bold\">{{ detail.price * detail.quantity }}€</td>
                                         </tr>
                                         {% endfor %}
                                         <tfoot>
                                                 <tr class=\"\">
-                                                        <td colspan=\"5\" class=\"font-weight-bold text-right\">Total :</td>
+                                                        <td colspan=\"3\" class=\"font-weight-bold text-center\"></td>
+                                                        <td class=\"font-weight-bold text-center\">Total :</td>
                                                         <td class=\"font-weight-bold \">
                                                         {# résultat du total #}
                                                         {# {{ total}} € #}
