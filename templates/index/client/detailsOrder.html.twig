@@ -7,13 +7,15 @@
 <div class="container-fluid">
         <div class="container">
                 <div class="row">
-                        <div class="col-12 mt-5 mb-5">
-                                <h1 class="text-center mt-4">Détail de la commande</h1>
+                        <div class="col-12 mt-5 mb-3">
+                                <h1>Détail de la commande</h1>
                         </div>
                 </div>
                 <div class="row">
-                        <div class="col-12">
-                                <table class="table table-hover  mt-5 text">
+                        <div class="col-6 d-flex justify-content-start">
+                                <a class="text-decoration-none add-category" href="{{path('client_order')}}"><i class="fas fa-arrow-left mr-2"></i>Retour au listing de mes commandes</a>
+                        </div>
+                                <table class="table table-hover  mt-3 text col-12">
                                         <thead class="thead-dark text-uppercase">
                                                 <tr>
                                                 <th colspan="2" class="text-center">Produit</th>
@@ -43,7 +45,6 @@
                                         
                                         </tfoot>
                                 </table>   
-                        </div>
                 </div>
         </div>              
 </div>

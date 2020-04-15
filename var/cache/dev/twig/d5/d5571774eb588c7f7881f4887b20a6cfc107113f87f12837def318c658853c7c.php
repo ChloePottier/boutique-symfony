@@ -179,7 +179,7 @@ class __TwigTemplate_2dd74e719dddf6657a40c89c69b337c5ef67fc0c49c94af0ba9ff3b0c9b
                             <a href=\"";
             // line 57
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("order");
-            echo "\" class=\"btn btn-info \">Valider mon panier</a>
+            echo "\" class=\"btn btn-info \">Valider la commande</a>
                     </div>
                     
                     ";
@@ -281,7 +281,7 @@ class __TwigTemplate_2dd74e719dddf6657a40c89c69b337c5ef67fc0c49c94af0ba9ff3b0c9b
                     </table>
                     <div class=\"d-flex justify-content-between\">
                             <a class=\"text-decoration-none add-category\" href=\"{{path('index')}}\"><i class=\"fas fa-arrow-left mr-2\"></i>Retour à la boutique</a>
-                            <a href=\"{{ path('order')}}\" class=\"btn btn-info \">Valider mon panier</a>
+                            <a href=\"{{ path('order')}}\" class=\"btn btn-info \">Valider la commande</a>
                     </div>
                     
                     {% else %}

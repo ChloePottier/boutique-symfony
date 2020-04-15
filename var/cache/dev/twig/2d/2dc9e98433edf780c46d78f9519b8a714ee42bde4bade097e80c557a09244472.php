@@ -94,8 +94,13 @@ class __TwigTemplate_4ce4bc7f18bd47747c8097c1223fad01d88609bf4c8626756bf7119e66b
                 </div>
             </div>
             <div class=\"row\">
-                <div class=\"col-12\">
-                    <table class=\"table table-hover  mt-5 text\">
+            <div class=\"col-6 d-flex justify-content-start\">
+                    <a class=\"text-decoration-none add-category\" href=\"";
+        // line 15
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("compte");
+        echo "\"><i class=\"fas fa-arrow-left mr-2\"></i>Retour à mon compte</a>
+                </div>
+                    <table class=\"table table-hover col-12 mt-3 text\">
                         <thead class=\"thead-dark text-uppercase\">
                             <tr>
                                 <th class=\"text-center\">Numéro de commande</th>
@@ -106,25 +111,25 @@ class __TwigTemplate_4ce4bc7f18bd47747c8097c1223fad01d88609bf4c8626756bf7119e66b
                         </thead>
                             
                         ";
-        // line 25
+        // line 27
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["orders"]) || array_key_exists("orders", $context) ? $context["orders"] : (function () { throw new RuntimeError('Variable "orders" does not exist.', 25, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["orders"]) || array_key_exists("orders", $context) ? $context["orders"] : (function () { throw new RuntimeError('Variable "orders" does not exist.', 27, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["order"]) {
-            // line 26
+            // line 28
             echo "                        
                         <tr>
                             <td class=\"text-center font-weight-bold\"> N° ";
-            // line 28
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["order"], "id", [], "any", false, false, false, 28), "html", null, true);
+            // line 30
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["order"], "id", [], "any", false, false, false, 30), "html", null, true);
             echo " </td>
                             <td class=\"text-center font-weight-bold\">";
-            // line 29
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["order"], "date", [], "any", false, false, false, 29), "d/m/Y"), "html", null, true);
+            // line 31
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["order"], "date", [], "any", false, false, false, 31), "d/m/Y"), "html", null, true);
             echo "</td>
                             <td class=\"text-center font-weight-bold detail\">
                                 <a href=\"";
-            // line 31
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("details_order", ["id" => twig_get_attribute($this->env, $this->source, $context["order"], "id", [], "any", false, false, false, 31)]), "html", null, true);
+            // line 33
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("details_order", ["id" => twig_get_attribute($this->env, $this->source, $context["order"], "id", [], "any", false, false, false, 33)]), "html", null, true);
             echo "\"/><i class=\"fas fa-search-plus\"></i></a>
                             </td>
                         </tr>
@@ -133,9 +138,8 @@ class __TwigTemplate_4ce4bc7f18bd47747c8097c1223fad01d88609bf4c8626756bf7119e66b
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['order'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 35
+        // line 37
         echo "                    </table>        
-                </div>
             </div>
         </div>
     </div>
@@ -160,7 +164,7 @@ class __TwigTemplate_4ce4bc7f18bd47747c8097c1223fad01d88609bf4c8626756bf7119e66b
 
     public function getDebugInfo()
     {
-        return array (  137 => 35,  127 => 31,  122 => 29,  118 => 28,  114 => 26,  110 => 25,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
+        return array (  142 => 37,  132 => 33,  127 => 31,  123 => 30,  119 => 28,  115 => 27,  100 => 15,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -178,8 +182,10 @@ class __TwigTemplate_4ce4bc7f18bd47747c8097c1223fad01d88609bf4c8626756bf7119e66b
                 </div>
             </div>
             <div class=\"row\">
-                <div class=\"col-12\">
-                    <table class=\"table table-hover  mt-5 text\">
+            <div class=\"col-6 d-flex justify-content-start\">
+                    <a class=\"text-decoration-none add-category\" href=\"{{path('compte')}}\"><i class=\"fas fa-arrow-left mr-2\"></i>Retour à mon compte</a>
+                </div>
+                    <table class=\"table table-hover col-12 mt-3 text\">
                         <thead class=\"thead-dark text-uppercase\">
                             <tr>
                                 <th class=\"text-center\">Numéro de commande</th>
@@ -200,7 +206,6 @@ class __TwigTemplate_4ce4bc7f18bd47747c8097c1223fad01d88609bf4c8626756bf7119e66b
                         </tr>
                         {% endfor %}
                     </table>        
-                </div>
             </div>
         </div>
     </div>

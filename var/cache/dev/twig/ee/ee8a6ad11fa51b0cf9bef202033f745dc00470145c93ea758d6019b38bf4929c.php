@@ -114,11 +114,11 @@ class __TwigTemplate_64291756e7c1c6cca465a78005d93e7e90974ebb4192596ccc1bb47023f
                 <div class=\"col-12\">
                     <h1>Ajouter ou modifier un produit</h1>
                 </div>
-                <div class=\"col-12 text-right \">
-                    <a href=\"";
+                <div class=\"col-6 d-flex justify-content-start mb-3\">
+                    <a class=\"text-decoration-none add-category\" href=\"";
         // line 15
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("liste_product");
-        echo "\" class=\"btn btn-danger\" alt=\"retour listing\"> Annuler</a>
+        echo "\"><i class=\"fas fa-arrow-left mr-2\"></i>Retour au listing des catégories</a>
                 </div>
             </div>
                 ";
@@ -275,8 +275,8 @@ class __TwigTemplate_64291756e7c1c6cca465a78005d93e7e90974ebb4192596ccc1bb47023f
                 <div class=\"col-12\">
                     <h1>Ajouter ou modifier un produit</h1>
                 </div>
-                <div class=\"col-12 text-right \">
-                    <a href=\"{{ path('liste_product')}}\" class=\"btn btn-danger\" alt=\"retour listing\"> Annuler</a>
+                <div class=\"col-6 d-flex justify-content-start mb-3\">
+                    <a class=\"text-decoration-none add-category\" href=\"{{ path('liste_product')}}\"><i class=\"fas fa-arrow-left mr-2\"></i>Retour au listing des catégories</a>
                 </div>
             </div>
                 {{form_start(formP, {'attr': {'class':'row'}})}}

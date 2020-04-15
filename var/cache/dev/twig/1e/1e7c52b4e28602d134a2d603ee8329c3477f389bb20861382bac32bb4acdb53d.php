@@ -129,7 +129,7 @@ class __TwigTemplate_c6ff0b28cff0943daddb10235f8386978ba6d9022098e5127685625d6d9
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("add_category");
         echo "\"><i class=\"fas fa-plus mr-2\"></i>Nouvelle catégorie</a>
                 </div>
-                <table class=\"table table-hover mt-3 text col-12\">
+                <table class=\"table table-hover mt-3 text\">
                         <thead class=\"thead-dark  title-listing\">
                             <tr>
                                 <th class=\"text-center\">Nom</th>
@@ -154,9 +154,7 @@ class __TwigTemplate_c6ff0b28cff0943daddb10235f8386978ba6d9022098e5127685625d6d9
                             <td class=\"text-center\"><a class=\"btn-edit\" href=\"";
             // line 38
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("update_category", ["id" => twig_get_attribute($this->env, $this->source, $context["cat"], "id", [], "any", false, false, false, 38)]), "html", null, true);
-            echo "\"><img src=\"";
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("images/" . "edit.svg")), "html", null, true);
-            echo "\" width=\"30\" height=\"30\" alt=\"Modifier\"/></a></td>
+            echo "\"><i class=\"fas fa-edit\"></i></a></td>
                             <td class=\"text-center\">
                             <form action=\"";
             // line 40
@@ -205,7 +203,7 @@ class __TwigTemplate_c6ff0b28cff0943daddb10235f8386978ba6d9022098e5127685625d6d9
 
     public function getDebugInfo()
     {
-        return array (  180 => 48,  168 => 42,  163 => 40,  156 => 38,  152 => 37,  147 => 34,  143 => 33,  129 => 22,  123 => 19,  111 => 9,  101 => 8,  90 => 6,  80 => 5,  60 => 4,  37 => 2,);
+        return array (  178 => 48,  166 => 42,  161 => 40,  156 => 38,  152 => 37,  147 => 34,  143 => 33,  129 => 22,  123 => 19,  111 => 9,  101 => 8,  90 => 6,  80 => 5,  60 => 4,  37 => 2,);
     }
 
     public function getSourceContext()
@@ -233,7 +231,7 @@ class __TwigTemplate_c6ff0b28cff0943daddb10235f8386978ba6d9022098e5127685625d6d9
                 <div class=\"col-6 d-flex justify-content-end\">
                     <a class=\"text-decoration-none add-category\" href=\"{{path('add_category')}}\"><i class=\"fas fa-plus mr-2\"></i>Nouvelle catégorie</a>
                 </div>
-                <table class=\"table table-hover mt-3 text col-12\">
+                <table class=\"table table-hover mt-3 text\">
                         <thead class=\"thead-dark  title-listing\">
                             <tr>
                                 <th class=\"text-center\">Nom</th>
@@ -247,7 +245,7 @@ class __TwigTemplate_c6ff0b28cff0943daddb10235f8386978ba6d9022098e5127685625d6d9
                         <tr>
                             
                             <td class=\"text-center font-weight-bold\">{{ cat.nom }}</td>
-                            <td class=\"text-center\"><a class=\"btn-edit\" href=\"{{ path('update_category', {'id' : cat.id}) }}\"><img src=\"{{asset('images/' ~ 'edit.svg')}}\" width=\"30\" height=\"30\" alt=\"Modifier\"/></a></td>
+                            <td class=\"text-center\"><a class=\"btn-edit\" href=\"{{ path('update_category', {'id' : cat.id}) }}\"><i class=\"fas fa-edit\"></i></a></td>
                             <td class=\"text-center\">
                             <form action=\"{{path('delete_cat', {'id' : cat.id})}}\" method=\"post\" class=\"col\" onsubmit=\"return confirm('Voulez-vous vraiment supprimer ?');\">
                                 <input type=\"hidden\" name=\"_method\" value=\"SUP\">

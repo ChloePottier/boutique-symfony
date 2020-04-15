@@ -46,7 +46,7 @@
                                     Non
                                     {% endif %}
                             </td>
-                            <td class="text-center"><a class="btn-edit" href="{{ path('product_update', {'id' : product.id}) }}"><img src="{{asset('images/' ~ 'edit.svg')}}" width="30" height="30" alt="Modifier"/></a></td>
+                            <td class="text-center"><a class="btn-edit" href="{{ path('product_update', {'id' : product.id}) }}"><i class="fas fa-edit"></i></a></td>
                             <td class="text-center">
                                 <form action="{{path('delete_product', {'id' : product.id})}}" method="post" class="col" onsubmit="return confirm('Voulez-vous vraiment supprimer ?');">
                                     <input type="hidden" name="_method" value="SUP">

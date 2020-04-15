@@ -11,8 +11,10 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-12">
-                    <table class="table table-hover  mt-5 text">
+            <div class="col-6 d-flex justify-content-start">
+                    <a class="text-decoration-none add-category" href="{{path('compte')}}"><i class="fas fa-arrow-left mr-2"></i>Retour à mon compte</a>
+                </div>
+                    <table class="table table-hover col-12 mt-3 text">
                         <thead class="thead-dark text-uppercase">
                             <tr>
                                 <th class="text-center">Numéro de commande</th>
@@ -33,7 +35,6 @@
                         </tr>
                         {% endfor %}
                     </table>        
-                </div>
             </div>
         </div>
     </div>

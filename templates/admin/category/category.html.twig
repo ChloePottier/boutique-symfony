@@ -21,7 +21,7 @@
                 <div class="col-6 d-flex justify-content-end">
                     <a class="text-decoration-none add-category" href="{{path('add_category')}}"><i class="fas fa-plus mr-2"></i>Nouvelle catégorie</a>
                 </div>
-                <table class="table table-hover mt-3 text col-12">
+                <table class="table table-hover mt-3 text">
                         <thead class="thead-dark  title-listing">
                             <tr>
                                 <th class="text-center">Nom</th>
@@ -35,7 +35,7 @@
                         <tr>
                             
                             <td class="text-center font-weight-bold">{{ cat.nom }}</td>
-                            <td class="text-center"><a class="btn-edit" href="{{ path('update_category', {'id' : cat.id}) }}"><img src="{{asset('images/' ~ 'edit.svg')}}" width="30" height="30" alt="Modifier"/></a></td>
+                            <td class="text-center"><a class="btn-edit" href="{{ path('update_category', {'id' : cat.id}) }}"><i class="fas fa-edit"></i></a></td>
                             <td class="text-center">
                             <form action="{{path('delete_cat', {'id' : cat.id})}}" method="post" class="col" onsubmit="return confirm('Voulez-vous vraiment supprimer ?');">
                                 <input type="hidden" name="_method" value="SUP">

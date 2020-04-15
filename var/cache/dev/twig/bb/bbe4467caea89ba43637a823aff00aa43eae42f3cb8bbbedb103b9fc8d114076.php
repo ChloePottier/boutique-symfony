@@ -182,9 +182,7 @@ class __TwigTemplate_5f04653d8501690110386e68583ae5f6d8317412e88cb457567a62e0be7
                             <td class=\"text-center\"><a class=\"btn-edit\" href=\"";
             // line 49
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("product_update", ["id" => twig_get_attribute($this->env, $this->source, $context["product"], "id", [], "any", false, false, false, 49)]), "html", null, true);
-            echo "\"><img src=\"";
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("images/" . "edit.svg")), "html", null, true);
-            echo "\" width=\"30\" height=\"30\" alt=\"Modifier\"/></a></td>
+            echo "\"><i class=\"fas fa-edit\"></i></a></td>
                             <td class=\"text-center\">
                                 <form action=\"";
             // line 51
@@ -232,7 +230,7 @@ class __TwigTemplate_5f04653d8501690110386e68583ae5f6d8317412e88cb457567a62e0be7
 
     public function getDebugInfo()
     {
-        return array (  209 => 60,  196 => 53,  191 => 51,  184 => 49,  181 => 48,  177 => 46,  173 => 44,  171 => 43,  166 => 41,  162 => 40,  158 => 39,  154 => 38,  150 => 36,  146 => 35,  128 => 20,  122 => 17,  111 => 8,  101 => 7,  90 => 5,  80 => 4,  60 => 3,  37 => 1,);
+        return array (  207 => 60,  194 => 53,  189 => 51,  184 => 49,  181 => 48,  177 => 46,  173 => 44,  171 => 43,  166 => 41,  162 => 40,  158 => 39,  154 => 38,  150 => 36,  146 => 35,  128 => 20,  122 => 17,  111 => 8,  101 => 7,  90 => 5,  80 => 4,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -285,7 +283,7 @@ class __TwigTemplate_5f04653d8501690110386e68583ae5f6d8317412e88cb457567a62e0be7
                                     Non
                                     {% endif %}
                             </td>
-                            <td class=\"text-center\"><a class=\"btn-edit\" href=\"{{ path('product_update', {'id' : product.id}) }}\"><img src=\"{{asset('images/' ~ 'edit.svg')}}\" width=\"30\" height=\"30\" alt=\"Modifier\"/></a></td>
+                            <td class=\"text-center\"><a class=\"btn-edit\" href=\"{{ path('product_update', {'id' : product.id}) }}\"><i class=\"fas fa-edit\"></i></a></td>
                             <td class=\"text-center\">
                                 <form action=\"{{path('delete_product', {'id' : product.id})}}\" method=\"post\" class=\"col\" onsubmit=\"return confirm('Voulez-vous vraiment supprimer ?');\">
                                     <input type=\"hidden\" name=\"_method\" value=\"SUP\">

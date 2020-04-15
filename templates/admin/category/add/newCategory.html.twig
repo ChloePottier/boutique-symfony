@@ -11,8 +11,9 @@
                 <div class="col-12 mt-5 mb-3">
                     <h1> Ajouter ou modifier une catégorie</h1>
                 </div>
-                <div class="col-12 text-right ">
-                    <a href="{{ path('liste_cat')}}" class="btn btn-danger" alt="retour listing"> Annuler</a>
+
+                <div class="col-6 d-flex justify-content-start mb-3">
+                    <a class="text-decoration-none add-category" href="{{ path('liste_cat')}}"><i class="fas fa-arrow-left mr-2"></i>Retour au listing des catégories</a>
                 </div>
             </div>
             {{form_start(formCat, {'attr': {'class':'row'}})}}
