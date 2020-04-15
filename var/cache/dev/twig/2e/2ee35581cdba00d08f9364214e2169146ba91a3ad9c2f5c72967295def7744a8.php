@@ -139,17 +139,16 @@ class __TwigTemplate_f54844248eac96aabbe0efd5598c123f4eb191c4c3a57ac76634cbf179d
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['detail'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 35
-        echo "                                         <tfoot>
-                                        <tr class=\"\">
-
-                                                <td colspan=\"5\" class=\"font-weight-bold text-right\">Total :</td>
-                                                <td class=\"font-weight-bold \">
-                                                ";
+        echo "                                        <tfoot>
+                                                <tr class=\"\">
+                                                        <td colspan=\"5\" class=\"font-weight-bold text-right\">Total :</td>
+                                                        <td class=\"font-weight-bold \">
+                                                        ";
+        // line 40
+        echo "                                                        ";
         // line 41
-        echo "                                                ";
-        // line 42
-        echo "                                                </td>
-                                        </tr>
+        echo "                                                        </td>
+                                                </tr>
                                         
                                         </tfoot>
                                 </table>   
@@ -179,7 +178,7 @@ class __TwigTemplate_f54844248eac96aabbe0efd5598c123f4eb191c4c3a57ac76634cbf179d
 
     public function getDebugInfo()
     {
-        return array (  151 => 42,  149 => 41,  142 => 35,  133 => 32,  129 => 31,  125 => 30,  121 => 29,  117 => 28,  114 => 27,  110 => 26,  89 => 7,  79 => 6,  59 => 4,  36 => 2,);
+        return array (  150 => 41,  148 => 40,  142 => 35,  133 => 32,  129 => 31,  125 => 30,  121 => 29,  117 => 28,  114 => 27,  110 => 26,  89 => 7,  79 => 6,  59 => 4,  36 => 2,);
     }
 
     public function getSourceContext()
@@ -218,15 +217,14 @@ class __TwigTemplate_f54844248eac96aabbe0efd5598c123f4eb191c4c3a57ac76634cbf179d
                                                 <td class=\"text-center font-weight-bold\">{{ detail.price * detail.quantity }}€</td>
                                         </tr>
                                         {% endfor %}
-                                         <tfoot>
-                                        <tr class=\"\">
-
-                                                <td colspan=\"5\" class=\"font-weight-bold text-right\">Total :</td>
-                                                <td class=\"font-weight-bold \">
-                                                {# résultat du total #}
-                                                {# {{ total}} € #}
-                                                </td>
-                                        </tr>
+                                        <tfoot>
+                                                <tr class=\"\">
+                                                        <td colspan=\"5\" class=\"font-weight-bold text-right\">Total :</td>
+                                                        <td class=\"font-weight-bold \">
+                                                        {# résultat du total #}
+                                                        {# {{ total}} € #}
+                                                        </td>
+                                                </tr>
                                         
                                         </tfoot>
                                 </table>   

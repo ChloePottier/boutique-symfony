@@ -205,7 +205,7 @@ class __TwigTemplate_865af75abc009167179d2cf1badcec847e82189c7bdf68e24ad7d0c6a35
                     <a href=\"";
         // line 66
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("order_confirm");
-        echo "\" class=\"btn btn-info \">Valider la commande</a>
+        echo "\" class=\"btn btn-info \"><i class=\"far fa-credit-card\"></i> Valider la commande</a>
                 </div> 
             </div>
         </div>
@@ -304,7 +304,7 @@ class __TwigTemplate_865af75abc009167179d2cf1badcec847e82189c7bdf68e24ad7d0c6a35
                 </table>
                 <div class=\"d-flex justify-content-between\">
                     <a class=\"text-decoration-none add-category\" href=\"{{path('index')}}\"><i class=\"fas fa-arrow-left mr-2\"></i>Retour à la boutique</a>
-                    <a href=\"{{ path('order_confirm')}}\" class=\"btn btn-info \">Valider la commande</a>
+                    <a href=\"{{ path('order_confirm')}}\" class=\"btn btn-info \"><i class=\"far fa-credit-card\"></i> Valider la commande</a>
                 </div> 
             </div>
         </div>

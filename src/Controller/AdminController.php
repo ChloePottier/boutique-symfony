@@ -190,9 +190,9 @@ class AdminController extends AbstractController
     {
         $user = $this->getUser();
         $orders = $orderRepository->findAll();
-        
+
         return $this->render('admin/order/order.html.twig', [
-            "orders" => $orders      
+            "orders" => $orders        
             ]);
     }
     /**
@@ -201,16 +201,8 @@ class AdminController extends AbstractController
     public function detailsOrderClient(OrderDetailRepository $orderDetailRepository, $id)
     {
         $detailsOrder = $orderDetailRepository->findDetailsOrder($id);
-        $total = 0;
-        // dd($orderDetailRepository);
-        foreach($orderDetailRepository as $item){
-            $totalItem = $item['productId']->getPrice() * $item['quantity'];
-            //rajouter le tout a $total
-            $total += $totalItem;
-        }
         return $this->render('admin/order/detailsOrderClient.html.twig', [
-            "details" => $detailsOrder,
-            'total' => $total 
+            "details" => $detailsOrder
         ]);
     }  
 }

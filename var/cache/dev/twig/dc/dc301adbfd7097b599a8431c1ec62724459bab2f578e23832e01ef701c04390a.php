@@ -119,10 +119,10 @@ class __TwigTemplate_94c02bdf8f57bb270a51d219d1d792c0267a6e68eaf090429e3f94f72fe
             <div class=\"col-3\">
                 <div class=\"card text-white bg-info mb-3\" style=\"max-width: 18rem; height: 150px;\">
                     <div class=\"card-body d-flex justify-content-center align-items-center\">
-                            <a href=\"";
+                        <a href=\"";
         // line 19
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("liste_cat");
-        echo "\" class=\"font-size text-white text-decoration-none\">Catégories</a>
+        echo "\" class=\"font-size text-white text-decoration-none text-uppercase font-weight-bold\">Catégories</a>
                     </div>
                   </div>
             </div>
@@ -132,8 +132,7 @@ class __TwigTemplate_94c02bdf8f57bb270a51d219d1d792c0267a6e68eaf090429e3f94f72fe
                         <a href=\"";
         // line 26
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("liste_product");
-        echo "\" class=\"font-size text-white text-decoration-none\">Produits</a>
-
+        echo "\" class=\"font-size text-white text-decoration-none text-uppercase font-weight-bold\">Produits</a>
                     </div>
                   </div>
             </div>
@@ -141,9 +140,9 @@ class __TwigTemplate_94c02bdf8f57bb270a51d219d1d792c0267a6e68eaf090429e3f94f72fe
                 <div class=\"card text-white bg-info mb-3\" style=\"max-width: 18rem; height: 150px;\">
                     <div class=\"card-body d-flex justify-content-center align-items-center\">
                         <a href=\"";
-        // line 34
+        // line 33
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("liste_user");
-        echo "\" class=\"font-size text-white text-decoration-none\">Clients</a>
+        echo "\" class=\"font-size text-white text-decoration-none text-uppercase font-weight-bold\">Clients</a>
 
                     </div>
                   </div>
@@ -152,9 +151,9 @@ class __TwigTemplate_94c02bdf8f57bb270a51d219d1d792c0267a6e68eaf090429e3f94f72fe
                 <div class=\"card text-white bg-info mb-3\" style=\"max-width: 18rem; height: 150px;\">
                     <div class=\"card-body d-flex justify-content-center align-items-center\">
                         <a href=\"";
-        // line 42
+        // line 41
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("liste_order");
-        echo "\" class=\"font-size text-white text-decoration-none\">Commandes</a>
+        echo "\" class=\"font-size text-white text-decoration-none text-uppercase font-weight-bold\">Commandes</a>
 
                     </div>
                   </div>
@@ -184,7 +183,7 @@ class __TwigTemplate_94c02bdf8f57bb270a51d219d1d792c0267a6e68eaf090429e3f94f72fe
 
     public function getDebugInfo()
     {
-        return array (  156 => 42,  145 => 34,  134 => 26,  124 => 19,  111 => 8,  101 => 7,  90 => 5,  80 => 4,  60 => 3,  37 => 1,);
+        return array (  155 => 41,  144 => 33,  134 => 26,  124 => 19,  111 => 8,  101 => 7,  90 => 5,  80 => 4,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -207,14 +206,21 @@ class __TwigTemplate_94c02bdf8f57bb270a51d219d1d792c0267a6e68eaf090429e3f94f72fe
             <div class=\"col-3\">
                 <div class=\"card text-white bg-info mb-3\" style=\"max-width: 18rem; height: 150px;\">
                     <div class=\"card-body d-flex justify-content-center align-items-center\">
-                            <a href=\"{{path('liste_cat')}}\" class=\"font-size text-white text-decoration-none\">Catégories</a>
+                        <a href=\"{{path('liste_cat')}}\" class=\"font-size text-white text-decoration-none text-uppercase font-weight-bold\">Catégories</a>
                     </div>
                   </div>
             </div>
             <div class=\"col-3\">
                 <div class=\"card text-white bg-info mb-3\" style=\"max-width: 18rem; height: 150px;\">
                     <div class=\"card-body d-flex justify-content-center align-items-center\">
-                        <a href=\"{{path('liste_product')}}\" class=\"font-size text-white text-decoration-none\">Produits</a>
+                        <a href=\"{{path('liste_product')}}\" class=\"font-size text-white text-decoration-none text-uppercase font-weight-bold\">Produits</a>
+                    </div>
+                  </div>
+            </div>
+            <div class=\"col-3\">
+                <div class=\"card text-white bg-info mb-3\" style=\"max-width: 18rem; height: 150px;\">
+                    <div class=\"card-body d-flex justify-content-center align-items-center\">
+                        <a href=\"{{path('liste_user')}}\" class=\"font-size text-white text-decoration-none text-uppercase font-weight-bold\">Clients</a>
 
                     </div>
                   </div>
@@ -222,15 +228,7 @@ class __TwigTemplate_94c02bdf8f57bb270a51d219d1d792c0267a6e68eaf090429e3f94f72fe
             <div class=\"col-3\">
                 <div class=\"card text-white bg-info mb-3\" style=\"max-width: 18rem; height: 150px;\">
                     <div class=\"card-body d-flex justify-content-center align-items-center\">
-                        <a href=\"{{path('liste_user')}}\" class=\"font-size text-white text-decoration-none\">Clients</a>
-
-                    </div>
-                  </div>
-            </div>
-            <div class=\"col-3\">
-                <div class=\"card text-white bg-info mb-3\" style=\"max-width: 18rem; height: 150px;\">
-                    <div class=\"card-body d-flex justify-content-center align-items-center\">
-                        <a href=\"{{path('liste_order')}}\" class=\"font-size text-white text-decoration-none\">Commandes</a>
+                        <a href=\"{{path('liste_order')}}\" class=\"font-size text-white text-decoration-none text-uppercase font-weight-bold\">Commandes</a>
 
                     </div>
                   </div>

@@ -99,7 +99,7 @@ class __TwigTemplate_4ce4bc7f18bd47747c8097c1223fad01d88609bf4c8626756bf7119e66b
                         <thead class=\"thead-dark text-uppercase\">
                             <tr>
                                 <th class=\"text-center\">Numéro de commande</th>
-                                <th class=\"text-center\">Date d'achat</th>
+                                <th class=\"text-center\">Date</th>
                                 <th class=\"text-center\">Détails</th>
                                 
                             </tr>
@@ -183,7 +183,7 @@ class __TwigTemplate_4ce4bc7f18bd47747c8097c1223fad01d88609bf4c8626756bf7119e66b
                         <thead class=\"thead-dark text-uppercase\">
                             <tr>
                                 <th class=\"text-center\">Numéro de commande</th>
-                                <th class=\"text-center\">Date d'achat</th>
+                                <th class=\"text-center\">Date</th>
                                 <th class=\"text-center\">Détails</th>
                                 
                             </tr>
