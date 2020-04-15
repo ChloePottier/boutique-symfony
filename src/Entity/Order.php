@@ -35,6 +35,11 @@ class Order
      */
     private $user;
 
+    /**
+     * @ORM\Column(type="float")
+     */
+    private $price;
+
     public function __construct()
     {
         $this->orderDetails = new ArrayCollection();
@@ -105,6 +110,18 @@ class Order
     public function setUser(?User $user): self
     {
         $this->user = $user;
+
+        return $this;
+    }
+
+    public function getPrice(): ?float
+    {
+        return $this->price;
+    }
+
+    public function setPrice(float $price): self
+    {
+        $this->price = $price;
 
         return $this;
     }

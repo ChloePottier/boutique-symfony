@@ -66,10 +66,10 @@ class Order extends \App\Entity\Order implements \Doctrine\ORM\Proxy\Proxy
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Order' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Order' . "\0" . 'date', '' . "\0" . 'App\\Entity\\Order' . "\0" . 'orderDetailsId', '' . "\0" . 'App\\Entity\\Order' . "\0" . 'user'];
+            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Order' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Order' . "\0" . 'date', '' . "\0" . 'App\\Entity\\Order' . "\0" . 'orderDetailsId', '' . "\0" . 'App\\Entity\\Order' . "\0" . 'user', '' . "\0" . 'App\\Entity\\Order' . "\0" . 'price'];
         }
 
-        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Order' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Order' . "\0" . 'date', '' . "\0" . 'App\\Entity\\Order' . "\0" . 'orderDetailsId', '' . "\0" . 'App\\Entity\\Order' . "\0" . 'user'];
+        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Order' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Order' . "\0" . 'date', '' . "\0" . 'App\\Entity\\Order' . "\0" . 'orderDetailsId', '' . "\0" . 'App\\Entity\\Order' . "\0" . 'user', '' . "\0" . 'App\\Entity\\Order' . "\0" . 'price'];
     }
 
     /**
@@ -277,6 +277,28 @@ class Order extends \App\Entity\Order implements \Doctrine\ORM\Proxy\Proxy
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'setUser', [$user]);
 
         return parent::setUser($user);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getPrice(): ?float
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getPrice', []);
+
+        return parent::getPrice();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setPrice(float $price): \App\Entity\Order
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setPrice', [$price]);
+
+        return parent::setPrice($price);
     }
 
 }

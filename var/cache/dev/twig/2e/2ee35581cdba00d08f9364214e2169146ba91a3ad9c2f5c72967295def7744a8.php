@@ -90,7 +90,10 @@ class __TwigTemplate_f54844248eac96aabbe0efd5598c123f4eb191c4c3a57ac76634cbf179d
         <div class=\"container\">
                 <div class=\"row\">
                         <div class=\"col-12 mt-5 mb-3\">
-                                <h1>Détail de la commande</h1>
+                                <h1>Détails commande N°";
+        // line 11
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["details"]) || array_key_exists("details", $context) ? $context["details"] : (function () { throw new RuntimeError('Variable "details" does not exist.', 11, $this->source); })()), 0, [], "array", false, false, false, 11), "orderId", [], "any", false, false, false, 11), "id", [], "any", false, false, false, 11), "html", null, true);
+        echo "</h1>
                         </div>
                 </div>
                 <div class=\"row\">
@@ -182,7 +185,7 @@ class __TwigTemplate_f54844248eac96aabbe0efd5598c123f4eb191c4c3a57ac76634cbf179d
 
     public function getDebugInfo()
     {
-        return array (  155 => 43,  153 => 42,  147 => 37,  138 => 34,  134 => 33,  130 => 32,  126 => 31,  122 => 30,  119 => 29,  115 => 28,  100 => 16,  89 => 7,  79 => 6,  59 => 4,  36 => 2,);
+        return array (  158 => 43,  156 => 42,  150 => 37,  141 => 34,  137 => 33,  133 => 32,  129 => 31,  125 => 30,  122 => 29,  118 => 28,  103 => 16,  95 => 11,  89 => 7,  79 => 6,  59 => 4,  36 => 2,);
     }
 
     public function getSourceContext()
@@ -197,7 +200,7 @@ class __TwigTemplate_f54844248eac96aabbe0efd5598c123f4eb191c4c3a57ac76634cbf179d
         <div class=\"container\">
                 <div class=\"row\">
                         <div class=\"col-12 mt-5 mb-3\">
-                                <h1>Détail de la commande</h1>
+                                <h1>Détails commande N°{{details[0].orderId.id}}</h1>
                         </div>
                 </div>
                 <div class=\"row\">
