@@ -138,14 +138,14 @@ class __TwigTemplate_28076ae5ba1ab6811910534954ecb7012567a9e2d1641d2efb02451d69a
                         <label for=\"\" class=\"icone-form\"><i class=\"fas fa-map-marker-alt\"></i> </label>
                         ";
         // line 37
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 37, $this->source); })()), "ville", [], "any", false, false, false, 37), 'widget', ["attr" => ["placeholder" => "Ville", "class" => "input"], "label" => false]);
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 37, $this->source); })()), "cp", [], "any", false, false, false, 37), 'widget', ["attr" => ["placeholder" => "Code Postal", "class" => "input"], "label" => false]);
         echo "
                     </div>
                     <div class=\"form-group  d-flex mt-4\">
                         <label for=\"\" class=\"icone-form\"><i class=\"fas fa-map-marker-alt\"></i> </label>
                         ";
         // line 41
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 41, $this->source); })()), "cp", [], "any", false, false, false, 41), 'widget', ["attr" => ["placeholder" => "Code Postal", "class" => "input"], "label" => false]);
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 41, $this->source); })()), "ville", [], "any", false, false, false, 41), 'widget', ["attr" => ["placeholder" => "Ville", "class" => "input"], "label" => false]);
         echo "
                     </div>
                     <div class=\"form-group  d-flex mt-4\">
@@ -229,11 +229,11 @@ class __TwigTemplate_28076ae5ba1ab6811910534954ecb7012567a9e2d1641d2efb02451d69a
                     </div>
                     <div class=\"form-group  d-flex mt-4\">
                         <label for=\"\" class=\"icone-form\"><i class=\"fas fa-map-marker-alt\"></i> </label>
-                        {{form_widget(form.ville, {'attr' : {'placeholder' : 'Ville', 'class' : 'input'}, 'label' : false})}}
+                        {{form_widget(form.cp, {'attr' : {'placeholder' : 'Code Postal', 'class' : 'input'}, 'label' : false})}}
                     </div>
                     <div class=\"form-group  d-flex mt-4\">
                         <label for=\"\" class=\"icone-form\"><i class=\"fas fa-map-marker-alt\"></i> </label>
-                        {{form_widget(form.cp, {'attr' : {'placeholder' : 'Code Postal', 'class' : 'input'}, 'label' : false})}}
+                        {{form_widget(form.ville, {'attr' : {'placeholder' : 'Ville', 'class' : 'input'}, 'label' : false})}}
                     </div>
                     <div class=\"form-group  d-flex mt-4\">
                         <label for=\"\" class=\"icone-form\"><i class=\"fas fa-mobile-alt\"></i> </label>

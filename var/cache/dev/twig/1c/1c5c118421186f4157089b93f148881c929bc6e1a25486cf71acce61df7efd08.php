@@ -140,7 +140,7 @@ class __TwigTemplate_a42d55ec170dfa3797b084dbb948d7400db1736119c7ac05dda145b5f73
                 
                 <div class=\"col-12 d-flex flex-column align-items-end font-weight-bold\">
                     <table class=\"table table-hover  mt-3 text\">
-                        <thead class=\"thead-dark text-uppercase\">
+                        <thead class=\"thead-dark\">
                             <tr>
                                 <th colspan=\"2\" class=\"pl-4\">Produit</th>
                                 <th class=\"text-center\">Quantité</th>
@@ -249,7 +249,7 @@ class __TwigTemplate_a42d55ec170dfa3797b084dbb948d7400db1736119c7ac05dda145b5f73
                 
                 <div class=\"col-12 d-flex flex-column align-items-end font-weight-bold\">
                     <table class=\"table table-hover  mt-3 text\">
-                        <thead class=\"thead-dark text-uppercase\">
+                        <thead class=\"thead-dark\">
                             <tr>
                                 <th colspan=\"2\" class=\"pl-4\">Produit</th>
                                 <th class=\"text-center\">Quantité</th>

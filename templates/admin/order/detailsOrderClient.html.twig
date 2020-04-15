@@ -9,7 +9,6 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 mt-5 mb-3">
-                    {# <h1>Détail de la commande </h1> #}
                     <h1>Détails commande N°{{details[0].orderId.id}}</h1>
                 
                     <p><span class="font-weight-bold">Client : </span>{{details[0].orderId.user.nom}} {{details[0].orderId.user.prenom}}</p>
@@ -23,7 +22,7 @@
                 
                 <div class="col-12 d-flex flex-column align-items-end font-weight-bold">
                     <table class="table table-hover  mt-3 text">
-                        <thead class="thead-dark text-uppercase">
+                        <thead class="thead-dark">
                             <tr>
                                 <th colspan="2" class="pl-4">Produit</th>
                                 <th class="text-center">Quantité</th>
