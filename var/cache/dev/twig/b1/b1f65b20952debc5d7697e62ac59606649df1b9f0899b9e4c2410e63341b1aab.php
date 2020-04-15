@@ -122,41 +122,43 @@ class __TwigTemplate_5c3854fc4bcc5f3fd2330747e511600539022855857d58b103aa10b2994
         foreach ($context['_seq'] as $context["_key"] => $context["product"]) {
             // line 35
             echo "                <div class=\"col-12 col-sm-6 col-lg-3  text-center my-5\">
+                <a href=\"";
+            // line 36
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("details_product", ["id" => twig_get_attribute($this->env, $this->source, $context["product"], "id", [], "any", false, false, false, 36)]), "html", null, true);
+            echo "\" class=\"card-product\">
                     <div class=\"card\">
                     ";
-            // line 38
+            // line 39
             echo "                        <div class=\"image-carte\">
                             <img src=\"";
-            // line 39
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("uploads/" . twig_get_attribute($this->env, $this->source, $context["product"], "image", [], "any", false, false, false, 39))), "html", null, true);
+            // line 40
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("uploads/" . twig_get_attribute($this->env, $this->source, $context["product"], "image", [], "any", false, false, false, 40))), "html", null, true);
             echo "\" class=\"card-img-top img-fluid\" width=\"256\" height=\"208\" title=\"";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["product"], "nom", [], "any", false, false, false, 39), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["product"], "nom", [], "any", false, false, false, 40), "html", null, true);
             echo "\" alt=\"image ";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["product"], "nom", [], "any", false, false, false, 39), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["product"], "nom", [], "any", false, false, false, 40), "html", null, true);
             echo "\">
                         </div>
                         <div class=\"card-body\">
                             <h5 class=\"card-title\">";
-            // line 42
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["product"], "nom", [], "any", false, false, false, 42), "html", null, true);
+            // line 43
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["product"], "nom", [], "any", false, false, false, 43), "html", null, true);
             echo "</h5>
                             ";
-            // line 44
+            // line 45
             echo "                            <p class=\"card-text card-decription text-muted mb-0\">";
-            echo twig_escape_filter($this->env, twig_slice($this->env, twig_get_attribute($this->env, $this->source, $context["product"], "description", [], "any", false, false, false, 44), 0, 100), "html", null, true);
+            echo twig_escape_filter($this->env, twig_slice($this->env, twig_get_attribute($this->env, $this->source, $context["product"], "description", [], "any", false, false, false, 45), 0, 50), "html", null, true);
             echo "</p>                               
                             ";
-            // line 46
-            echo "                            ";
             // line 47
-            echo "                                <div  class=\"mb-2 text-muted text-bold\">...</div>
-
-                            <a href=\"";
-            // line 49
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("details_product", ["id" => twig_get_attribute($this->env, $this->source, $context["product"], "id", [], "any", false, false, false, 49)]), "html", null, true);
-            echo "\" class=\"btn btn-outline-info p-2\">Lire la suite...</a>
+            echo "                            ";
+            // line 48
+            echo "                                <div  class=\"mb-2 text-muted text-bold text-right\">";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["product"], "prix", [], "any", false, false, false, 48), "html", null, true);
+            echo " €</div>
                         </div>
                     </div>
+                </a>
                 </div>
             ";
         }
@@ -189,7 +191,7 @@ class __TwigTemplate_5c3854fc4bcc5f3fd2330747e511600539022855857d58b103aa10b2994
 
     public function getDebugInfo()
     {
-        return array (  167 => 54,  156 => 49,  152 => 47,  150 => 46,  145 => 44,  141 => 42,  131 => 39,  128 => 38,  124 => 35,  119 => 34,  89 => 5,  79 => 4,  59 => 3,  36 => 1,);
+        return array (  169 => 54,  156 => 48,  154 => 47,  149 => 45,  145 => 43,  135 => 40,  132 => 39,  127 => 36,  124 => 35,  119 => 34,  89 => 5,  79 => 4,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -229,6 +231,7 @@ class __TwigTemplate_5c3854fc4bcc5f3fd2330747e511600539022855857d58b103aa10b2994
             {# boucle for afin d'afficher les articles #}
              {% for product in products %}
                 <div class=\"col-12 col-sm-6 col-lg-3  text-center my-5\">
+                <a href=\"{{path('details_product', {'id' : product.id})}}\" class=\"card-product\">
                     <div class=\"card\">
                     {# gestion de l'url : dossier uploads/table article col picture #}
                         <div class=\"image-carte\">
@@ -237,14 +240,13 @@ class __TwigTemplate_5c3854fc4bcc5f3fd2330747e511600539022855857d58b103aa10b2994
                         <div class=\"card-body\">
                             <h5 class=\"card-title\">{{ product.nom}}</h5>
                             {# date de publication que l'on met au format jj/mm/aa #}
-                            <p class=\"card-text card-decription text-muted mb-0\">{{product.description |slice(0,100)}}</p>                               
+                            <p class=\"card-text card-decription text-muted mb-0\">{{product.description |slice(0,50)}}</p>                               
                             {# <h6 class=\"card-subtitle mb-2 text-muted text-right\"></h6> #}
                             {# on retourne le chemin canonique absolu avec path de l'article et on ajoute l'id de l'article #}
-                                <div  class=\"mb-2 text-muted text-bold\">...</div>
-
-                            <a href=\"{{path('details_product', {'id' : product.id})}}\" class=\"btn btn-outline-info p-2\">Lire la suite...</a>
+                                <div  class=\"mb-2 text-muted text-bold text-right\">{{ product.prix}} €</div>
                         </div>
                     </div>
+                </a>
                 </div>
             {% endfor %}
             </div>

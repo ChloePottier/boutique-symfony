@@ -7,6 +7,10 @@ body{font-family: Helvetica, Arial,  sans-serif;}
     height: 300px;
     overflow: hidden;
 }
+.card-product h5{color: #000;}
+.card-product h5:hover{color: #17a2b8;}
+.card-product:hover{text-decoration: none;}
+
 /* NAvbar */
 .navbar-light .navbar-nav .active > .nav-link{color: #17a2b8;}
 .navbar-light .navbar-nav .nav-link{color: #000;}

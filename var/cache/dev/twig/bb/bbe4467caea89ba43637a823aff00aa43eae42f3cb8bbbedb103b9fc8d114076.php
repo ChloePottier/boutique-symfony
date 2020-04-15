@@ -135,7 +135,7 @@ class __TwigTemplate_5f04653d8501690110386e68583ae5f6d8317412e88cb457567a62e0be7
                                 <th class=\"text-center text-nowrap\">Nom</th>
                                 <th class=\"text-center text-nowrap\">Catégorie</th>
                                 <th class=\"text-center text-nowrap\">Description</th>
-                                <th class=\"text-center text-nowrap\">En ligne</th>
+                                <th class=\"text-center text-nowrap\">Publié</th>
                                 <th class=\"text-center text-nowrap\">Modifier</th>
                                 <th class=\"text-center text-nowrap\">Supprimer</th>
                             </tr>
@@ -165,7 +165,7 @@ class __TwigTemplate_5f04653d8501690110386e68583ae5f6d8317412e88cb457567a62e0be7
             // line 41
             echo twig_escape_filter($this->env, (twig_slice($this->env, twig_get_attribute($this->env, $this->source, $context["product"], "description", [], "any", false, false, false, 41), 0, 40) . " ..."), "html", null, true);
             echo "</td>
-                            <td class=\"text-center\">
+                            <td class=\"text-center\"> 
                                 ";
             // line 43
             if (twig_get_attribute($this->env, $this->source, $context["product"], "isPublished", [], "any", false, false, false, 43)) {
@@ -193,7 +193,7 @@ class __TwigTemplate_5f04653d8501690110386e68583ae5f6d8317412e88cb457567a62e0be7
             // line 53
             echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken(("SUP" . twig_get_attribute($this->env, $this->source, $context["product"], "id", [], "any", false, false, false, 53))), "html", null, true);
             echo "\">
-                                    <input type=\"submit\" value=\"Supprimer\" class=\"btn btn-outline-danger btn-submit-form\">
+                                    <input type=\"submit\" value=\"X\" class=\"btn btn-danger btn-submit-form font-weight-bold\">
                                 </form>
                             </td>
 
@@ -263,7 +263,7 @@ class __TwigTemplate_5f04653d8501690110386e68583ae5f6d8317412e88cb457567a62e0be7
                                 <th class=\"text-center text-nowrap\">Nom</th>
                                 <th class=\"text-center text-nowrap\">Catégorie</th>
                                 <th class=\"text-center text-nowrap\">Description</th>
-                                <th class=\"text-center text-nowrap\">En ligne</th>
+                                <th class=\"text-center text-nowrap\">Publié</th>
                                 <th class=\"text-center text-nowrap\">Modifier</th>
                                 <th class=\"text-center text-nowrap\">Supprimer</th>
                             </tr>
@@ -276,7 +276,7 @@ class __TwigTemplate_5f04653d8501690110386e68583ae5f6d8317412e88cb457567a62e0be7
                             <td class=\"text-center font-weight-bold\">{{ product.nom}}</td>
                             <td class=\"text-center \">{{ product.category.nom }}</td>
                             <td class=\"text-center \">{{ product.description |slice(0,40) ~ ' ...'}}</td>
-                            <td class=\"text-center\">
+                            <td class=\"text-center\"> 
                                 {% if product.isPublished %}
                                     Oui
                                     {% else %}
@@ -288,7 +288,7 @@ class __TwigTemplate_5f04653d8501690110386e68583ae5f6d8317412e88cb457567a62e0be7
                                 <form action=\"{{path('delete_product', {'id' : product.id})}}\" method=\"post\" class=\"col\" onsubmit=\"return confirm('Voulez-vous vraiment supprimer ?');\">
                                     <input type=\"hidden\" name=\"_method\" value=\"SUP\">
                                     <input type=\"hidden\" name=\"_token\" value=\"{{csrf_token('SUP' ~ product.id)}}\">
-                                    <input type=\"submit\" value=\"Supprimer\" class=\"btn btn-outline-danger btn-submit-form\">
+                                    <input type=\"submit\" value=\"X\" class=\"btn btn-danger btn-submit-form font-weight-bold\">
                                 </form>
                             </td>
 
