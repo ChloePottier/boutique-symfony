@@ -24,6 +24,7 @@
                                 <th class="text-center">N° de commande</th>
                                 <th class="text-center">Nom, prénom client</th>
                                 <th class="text-center">Date de la commande</th>
+                                <th class="text-center">Montant</th>
                                 <th class="text-center">Détails</th>
 
                             </tr>
@@ -35,6 +36,7 @@
                             <td class="text-center font-weight-bold">n°{{ order.id }}</td>
                             <td class="text-center font-weight-bold">{{ order.User.nom }} {{ order.User.prenom }}</td>
                             <td class="text-center font-weight-bold">{{ order.date |date("d/m/Y") }}</td> 
+                            <td class="text-center font-weight-bold"> {{order.price}}€ </td>
                             <td class="text-center font-weight-bold detail"><a href="{{path('details_order_user', {'id' : order.id})}}"> <i class="fas fa-search-plus"></i></a></td>                         
 
                         </tr>

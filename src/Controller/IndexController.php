@@ -196,7 +196,7 @@ class IndexController extends AbstractController
     public function orderConfirm(SessionInterface $sessionInterface, ProductRepository $productRepository, UserRepository $userRepository, EntityManagerInterface $manager, OrderDetailRepository $orderDetailRepository) 
     {
         $panier = $sessionInterface->get('panier', []);
-
+        $order = new Order();
         foreach ($panier as $id => $quantity) {
 
             $panierData[] = [ 
@@ -204,6 +204,13 @@ class IndexController extends AbstractController
                 'quantity' => $quantity
             ];
         }
+        $total = 0;
+
+        foreach ($panierData as $item) {
+            $totalItem = $item['product']->getPrix() * $item['quantity'];
+            $total += $totalItem;
+        } 
+        $order->setPrice($total);
         $user = [$this->getUser()];
         $findId = [];
         foreach ($user as $id) {
@@ -213,7 +220,7 @@ class IndexController extends AbstractController
             ];
         }
         $id_user = $findId['id_user'];
-        $order = new Order();
+        
         $order->setDate(new \DateTime());
         $order->setUser($this->getUser());
         $manager->persist($order);
