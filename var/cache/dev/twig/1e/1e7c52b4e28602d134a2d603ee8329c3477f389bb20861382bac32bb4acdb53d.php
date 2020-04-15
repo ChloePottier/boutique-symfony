@@ -113,19 +113,37 @@ class __TwigTemplate_c6ff0b28cff0943daddb10235f8386978ba6d9022098e5127685625d6d9
         <div class=\"container\">
             <div class=\"row\">
                 <div class=\"col-12 mt-5 mb-3\">
-                    <h1>Listing des catégories</h1>
+                    ";
+        // line 14
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 14, $this->source); })()), "flashes", [0 => "success"], "method", false, false, false, 14));
+        foreach ($context['_seq'] as $context["_key"] => $context["message"]) {
+            // line 15
+            echo "                    <div class=\"alert alert-success\">
+                        ";
+            // line 16
+            echo twig_escape_filter($this->env, $context["message"], "html", null, true);
+            echo "
+                    </div>
+                    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['message'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 19
+        echo "                    <h1>Listing des catégories</h1>
                 </div>
             </div>
             <div class=\"row\">
                 <div class=\"col-6 d-flex justify-content-start\">
                     <a class=\"text-decoration-none add-category\" href=\"";
-        // line 19
+        // line 24
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin");
         echo "\"><i class=\"fas fa-arrow-left mr-2\"></i>Retour au Dashboard de l'admin</a>
                 </div>
                 <div class=\"col-6 d-flex justify-content-end\">
                     <a class=\"text-decoration-none add-category\" href=\"";
-        // line 22
+        // line 27
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("add_category");
         echo "\"><i class=\"fas fa-plus mr-2\"></i>Nouvelle catégorie</a>
                 </div>
@@ -139,31 +157,31 @@ class __TwigTemplate_c6ff0b28cff0943daddb10235f8386978ba6d9022098e5127685625d6d9
                         </thead>
                             
                         ";
-        // line 33
+        // line 38
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["categories"]) || array_key_exists("categories", $context) ? $context["categories"] : (function () { throw new RuntimeError('Variable "categories" does not exist.', 33, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["categories"]) || array_key_exists("categories", $context) ? $context["categories"] : (function () { throw new RuntimeError('Variable "categories" does not exist.', 38, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["cat"]) {
-            // line 34
+            // line 39
             echo "                        
                         <tr>
                             
                             <td class=\"text-center font-weight-bold\">";
-            // line 37
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["cat"], "nom", [], "any", false, false, false, 37), "html", null, true);
+            // line 42
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["cat"], "nom", [], "any", false, false, false, 42), "html", null, true);
             echo "</td>
                             <td class=\"text-center\"><a class=\"btn-edit\" href=\"";
-            // line 38
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("update_category", ["id" => twig_get_attribute($this->env, $this->source, $context["cat"], "id", [], "any", false, false, false, 38)]), "html", null, true);
+            // line 43
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("update_category", ["id" => twig_get_attribute($this->env, $this->source, $context["cat"], "id", [], "any", false, false, false, 43)]), "html", null, true);
             echo "\"><i class=\"fas fa-edit\"></i></a></td>
                             <td class=\"text-center\">
                             <form action=\"";
-            // line 40
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("delete_cat", ["id" => twig_get_attribute($this->env, $this->source, $context["cat"], "id", [], "any", false, false, false, 40)]), "html", null, true);
+            // line 45
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("delete_cat", ["id" => twig_get_attribute($this->env, $this->source, $context["cat"], "id", [], "any", false, false, false, 45)]), "html", null, true);
             echo "\" method=\"post\" class=\"col\" onsubmit=\"return confirm('Voulez-vous vraiment supprimer ?');\">
                                 <input type=\"hidden\" name=\"_method\" value=\"SUP\">
                                 <input type=\"hidden\" name=\"_token\" value=\"";
-            // line 42
-            echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken(("SUP" . twig_get_attribute($this->env, $this->source, $context["cat"], "id", [], "any", false, false, false, 42))), "html", null, true);
+            // line 47
+            echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken(("SUP" . twig_get_attribute($this->env, $this->source, $context["cat"], "id", [], "any", false, false, false, 47))), "html", null, true);
             echo "\">
                                 <input type=\"submit\" value=\"Supprimer\"  class=\"btn btn-outline-danger btn-submit-form\">
                             </form></td>
@@ -174,7 +192,7 @@ class __TwigTemplate_c6ff0b28cff0943daddb10235f8386978ba6d9022098e5127685625d6d9
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['cat'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 48
+        // line 53
         echo "                    </table>
             </div>
             
@@ -203,7 +221,7 @@ class __TwigTemplate_c6ff0b28cff0943daddb10235f8386978ba6d9022098e5127685625d6d9
 
     public function getDebugInfo()
     {
-        return array (  178 => 48,  166 => 42,  161 => 40,  156 => 38,  152 => 37,  147 => 34,  143 => 33,  129 => 22,  123 => 19,  111 => 9,  101 => 8,  90 => 6,  80 => 5,  60 => 4,  37 => 2,);
+        return array (  196 => 53,  184 => 47,  179 => 45,  174 => 43,  170 => 42,  165 => 39,  161 => 38,  147 => 27,  141 => 24,  134 => 19,  125 => 16,  122 => 15,  118 => 14,  111 => 9,  101 => 8,  90 => 6,  80 => 5,  60 => 4,  37 => 2,);
     }
 
     public function getSourceContext()
@@ -221,6 +239,11 @@ class __TwigTemplate_c6ff0b28cff0943daddb10235f8386978ba6d9022098e5127685625d6d9
         <div class=\"container\">
             <div class=\"row\">
                 <div class=\"col-12 mt-5 mb-3\">
+                    {% for message in app.flashes('success') %}
+                    <div class=\"alert alert-success\">
+                        {{message}}
+                    </div>
+                    {% endfor %}
                     <h1>Listing des catégories</h1>
                 </div>
             </div>

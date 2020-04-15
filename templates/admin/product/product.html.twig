@@ -11,6 +11,12 @@
                 <div class="col-12 mt-5 mb-3">
                     <h1> Listing des produits</h1>
                 </div>
+                {# message de succes lors d'une modif #}
+                {% for message in app.flashes('success') %}
+                <div class="alert alert-success">
+                    {{message}}
+                </div>
+            {% endfor %}
             </div>
             <div class="row">
                 <div class="col-6 d-flex justify-content-start">

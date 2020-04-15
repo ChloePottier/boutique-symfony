@@ -49,26 +49,29 @@ class AdminController extends AbstractController
     */
     public function createUpdateCategory(Category $category = null, EntityManagerInterface $manager, HttpFoundationRequest $request)
     {
-    if(!$category) {
+        if(!$category) {
 
-    $category = new Category();
-    }
+            $category = new Category();
+        }
 
-    $form = $this->createForm(CategoryType::class, $category);
-    $form->handleRequest($request);
+        $form = $this->createForm(CategoryType::class, $category);
+        $form->handleRequest($request);
 
-    if($form->isSubmitted() && $form->isValid()) {
+        if($form->isSubmitted() && $form->isValid()) {
+            // si modif = true nous sommes dans le cas de la modification, si false on add un new élément 
+            $modif = $category->getId() !== null;
+            // dd($modif);
+            $manager->persist($category);
+            $manager->flush();
+            $this->addFlash("success", ($modif) ?  "La modification à été effectuée !" : "L'ajout à été effectuée !");
+            return $this->redirectToRoute('liste_cat');
+        }
 
-    $manager->persist($category);
-    $manager->flush();
-
-    return $this->redirectToRoute('liste_cat');
-    }
-
-    return $this->render('admin/category/add/newCategory.html.twig', [
-    "category" => $category,
-    "formCat" => $form->createView()
-    ]);
+        return $this->render('admin/category/add/newCategory.html.twig', [
+            "category" => $category,
+            "formCat" => $form->createView(),
+            "isModif" => $category->getId() !== null
+        ]);
     }
 
     /**
@@ -107,42 +110,45 @@ class AdminController extends AbstractController
     */
     public function createUpdateProduct(Product $product = null, EntityManagerInterface $manager, HttpFoundationRequest $request)
     {
-    if(!$product) {
-    $product = new Product();
-    }
+        if(!$product) {
+            $product = new Product();
+        }
 
-    $form = $this->createForm(ProductType::class, $product);
-    $form->handleRequest($request);
+        $form = $this->createForm(ProductType::class, $product);
+        $form->handleRequest($request);
+        
+        if($form->isSubmitted() && $form->isValid()) {
+            $modif = $product->getId() !== null;
 
-    if($form->isSubmitted() && $form->isValid()) {
-    // $product->setIsPublished(true);
+            // $product->setIsPublished(true);
 
-    // traitement de l'image
-    if($product->getImage() !==null) {
+             // traitement de l'image
+             if($product->getImage() !==null) {
 
-    $file = $form->get('image')->getData();
+                 $file = $form->get('image')->getData();
 
-    $filename = uniqid(). '.' . $file->guessExtension();
-    try {
-    $file->move($this->getParameter('images_directory'), $filename);
-    } catch (FileException $e) {
-    return new Response($e->getMessage());
-    }
+                 $filename = uniqid(). '.' . $file->guessExtension();
+                try {
+                    $file->move($this->getParameter('images_directory'), $filename);
+                } catch (FileException $e) {
+                    return new Response($e->getMessage());
+                }
 
-    $product->setImage($filename);
+                $product->setImage($filename);
 
-    }
+             }
 
-    $manager->persist($product);
-    $manager->flush();
+            $manager->persist($product);
+            $manager->flush();
+            $this->addFlash("success", ($modif) ?  "La modification à été effectuée !" : "L'ajout à été effectuée !");
+            return $this->redirectToRoute("liste_product");
+        }
 
-    return $this->redirectToRoute("liste_product");
-    }
-
-    return $this->render('admin/product/add/newProduct.html.twig', [
-    "product" => $product,
-    "formP" => $form->createView()
-    ]);
+        return $this->render('admin/product/add/newProduct.html.twig', [
+            "product" => $product,
+            "formP" => $form->createView(),
+            "isModif" => $product->getId() !== null
+        ]);
     }
 
     /**
