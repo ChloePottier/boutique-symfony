@@ -116,8 +116,14 @@ class __TwigTemplate_a42d55ec170dfa3797b084dbb948d7400db1736119c7ac05dda145b5f73
                 </div>
             </div>
             <div class=\"row\">
+            <div class=\"col-6 d-flex justify-content-start\">
+                    <a class=\"text-decoration-none add-category\" href=\"";
+        // line 17
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("liste_order");
+        echo "\"><i class=\"fas fa-arrow-left mr-2\"></i>Retour au listing des commandes</a>
+                </div>
                 <div class=\"col-12 d-flex flex-column align-items-end font-weight-bold\">
-                    <table class=\"table table-hover  mt-5 text\">
+                    <table class=\"table table-hover  mt-3 text\">
                         <thead class=\"thead-dark text-uppercase\">
                             <tr>
                                 <th colspan=\"2\" class=\"pl-4\">Produit</th>
@@ -127,31 +133,31 @@ class __TwigTemplate_a42d55ec170dfa3797b084dbb948d7400db1736119c7ac05dda145b5f73
                             </tr>
                         </thead>
                         ";
-        // line 26
+        // line 29
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["details"]) || array_key_exists("details", $context) ? $context["details"] : (function () { throw new RuntimeError('Variable "details" does not exist.', 26, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["details"]) || array_key_exists("details", $context) ? $context["details"] : (function () { throw new RuntimeError('Variable "details" does not exist.', 29, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["detail"]) {
-            // line 27
+            // line 30
             echo "                            <tr>
                                 <td class=\"text-center font-weight-bold\">  <img src=\"";
-            // line 28
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("uploads/" . twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["detail"], "productId", [], "any", false, false, false, 28), "image", [], "any", false, false, false, 28))), "html", null, true);
+            // line 31
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("uploads/" . twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["detail"], "productId", [], "any", false, false, false, 31), "image", [], "any", false, false, false, 31))), "html", null, true);
             echo "\" alt=\"\" width=\"50\" height=\"50\"></td>
                                 <td class=\"text-center font-weight-bold\"> ";
-            // line 29
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["detail"], "productId", [], "any", false, false, false, 29), "nom", [], "any", false, false, false, 29), "html", null, true);
+            // line 32
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["detail"], "productId", [], "any", false, false, false, 32), "nom", [], "any", false, false, false, 32), "html", null, true);
             echo " </td>
                                 <td class=\"text-center font-weight-bold\">";
-            // line 30
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["detail"], "quantity", [], "any", false, false, false, 30), "html", null, true);
+            // line 33
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["detail"], "quantity", [], "any", false, false, false, 33), "html", null, true);
             echo "</td>
                                 <td class=\"text-center \">";
-            // line 31
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["detail"], "price", [], "any", false, false, false, 31), "html", null, true);
+            // line 34
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["detail"], "price", [], "any", false, false, false, 34), "html", null, true);
             echo "€  </td>
                                 <td class=\"text-center font-weight-bold\">";
-            // line 32
-            echo twig_escape_filter($this->env, (twig_get_attribute($this->env, $this->source, $context["detail"], "price", [], "any", false, false, false, 32) * twig_get_attribute($this->env, $this->source, $context["detail"], "quantity", [], "any", false, false, false, 32)), "html", null, true);
+            // line 35
+            echo twig_escape_filter($this->env, (twig_get_attribute($this->env, $this->source, $context["detail"], "price", [], "any", false, false, false, 35) * twig_get_attribute($this->env, $this->source, $context["detail"], "quantity", [], "any", false, false, false, 35)), "html", null, true);
             echo "€</td>
                             </tr>
                         ";
@@ -159,15 +165,15 @@ class __TwigTemplate_a42d55ec170dfa3797b084dbb948d7400db1736119c7ac05dda145b5f73
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['detail'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 35
+        // line 38
         echo "                        <tfoot>
                             <tr class=\"\">
                                 <td colspan=\"4\" class=\"font-weight-bold text-right\">Total :</td>
                                 <td class=\"font-weight-bold \">
                                 ";
-        // line 40
+        // line 43
         echo "                                ";
-        // line 41
+        // line 44
         echo "                                </td>
                             </tr>
                         </tfoot>
@@ -197,7 +203,7 @@ class __TwigTemplate_a42d55ec170dfa3797b084dbb948d7400db1736119c7ac05dda145b5f73
 
     public function getDebugInfo()
     {
-        return array (  171 => 41,  169 => 40,  163 => 35,  154 => 32,  150 => 31,  146 => 30,  142 => 29,  138 => 28,  135 => 27,  131 => 26,  111 => 8,  101 => 7,  90 => 5,  80 => 4,  60 => 3,  37 => 1,);
+        return array (  177 => 44,  175 => 43,  169 => 38,  160 => 35,  156 => 34,  152 => 33,  148 => 32,  144 => 31,  141 => 30,  137 => 29,  122 => 17,  111 => 8,  101 => 7,  90 => 5,  80 => 4,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -217,8 +223,11 @@ class __TwigTemplate_a42d55ec170dfa3797b084dbb948d7400db1736119c7ac05dda145b5f73
                 </div>
             </div>
             <div class=\"row\">
+            <div class=\"col-6 d-flex justify-content-start\">
+                    <a class=\"text-decoration-none add-category\" href=\"{{path('liste_order')}}\"><i class=\"fas fa-arrow-left mr-2\"></i>Retour au listing des commandes</a>
+                </div>
                 <div class=\"col-12 d-flex flex-column align-items-end font-weight-bold\">
-                    <table class=\"table table-hover  mt-5 text\">
+                    <table class=\"table table-hover  mt-3 text\">
                         <thead class=\"thead-dark text-uppercase\">
                             <tr>
                                 <th colspan=\"2\" class=\"pl-4\">Produit</th>

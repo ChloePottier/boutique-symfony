@@ -41,10 +41,10 @@
                         <div class="card-body">
                             <h5 class="card-title">{{ product.nom}}</h5>
                             {# date de publication que l'on met au format jj/mm/aa #}
-                            <p class="card-text card-decription text-muted mb-0">{{product.description |slice(0,100) ~ '...'}}</p>                               
+                            <p class="card-text card-decription text-muted mb-0">{{product.description |slice(0,100)}}</p>                               
                             {# <h6 class="card-subtitle mb-2 text-muted text-right"></h6> #}
                             {# on retourne le chemin canonique absolu avec path de l'article et on ajoute l'id de l'article #}
-                                {# <div  class="mb-2 text-muted text-bold">...</div> #}
+                                <div  class="mb-2 text-muted text-bold">...</div>
 
                             <a href="{{path('details_product', {'id' : product.id})}}" class="btn btn-outline-info p-2">Lire la suite...</a>
                         </div>

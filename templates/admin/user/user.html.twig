@@ -16,7 +16,7 @@
                 </div>
             </div>
             <div class="row">
-                <table class="col-12 table table-hover  mt-5 text">
+                <table class="col-12 table table-hover mt-3 text">
                     <thead class="thead-dark text-uppercase">
                         <tr>
                             <th class="text-center">Nom</th>
@@ -32,8 +32,8 @@
                     <tr>
                         <td class="text-center font-weight-bold">{{ user.nom }}</td>
                         <td class="text-center font-weight-bold">{{ user.prenom }}</td>
-                        <td class="text-center font-weight-bold">{{ user.mail }}</td>
-                        <td class="text-center font-weight-bold detail">
+                        <td class="text-center ">{{ user.mail }}</td>
+                        <td class="text-center detail">
                             <a href="{{path('details_user', {'id' : user.id})}}"><i class="fas fa-search-plus"></i></a>
                         </td>
                     </tr>

@@ -163,7 +163,7 @@ class __TwigTemplate_5f04653d8501690110386e68583ae5f6d8317412e88cb457567a62e0be7
             echo "</td>
                             <td class=\"text-center \">";
             // line 41
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["product"], "description", [], "any", false, false, false, 41), "html", null, true);
+            echo twig_escape_filter($this->env, (twig_slice($this->env, twig_get_attribute($this->env, $this->source, $context["product"], "description", [], "any", false, false, false, 41), 0, 40) . " ..."), "html", null, true);
             echo "</td>
                             <td class=\"text-center\">
                                 ";
@@ -273,9 +273,9 @@ class __TwigTemplate_5f04653d8501690110386e68583ae5f6d8317412e88cb457567a62e0be7
                         
                         <tr>
                             <td class=\"text-center \"> <img src=\"{{asset('uploads/' ~ product.image)}}\" alt=\"\" width=\"50\" height=\"50\"> </td>
-                            <td class=\"text-center font-weight-bold\">{{ product.nom }}</td>
+                            <td class=\"text-center font-weight-bold\">{{ product.nom}}</td>
                             <td class=\"text-center \">{{ product.category.nom }}</td>
-                            <td class=\"text-center \">{{ product.description }}</td>
+                            <td class=\"text-center \">{{ product.description |slice(0,40) ~ ' ...'}}</td>
                             <td class=\"text-center\">
                                 {% if product.isPublished %}
                                     Oui

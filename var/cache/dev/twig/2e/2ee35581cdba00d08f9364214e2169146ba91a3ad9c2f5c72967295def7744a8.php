@@ -103,7 +103,7 @@ class __TwigTemplate_f54844248eac96aabbe0efd5598c123f4eb191c4c3a57ac76634cbf179d
                                 <table class=\"table table-hover  mt-3 text col-12\">
                                         <thead class=\"thead-dark text-uppercase\">
                                                 <tr>
-                                                <th colspan=\"2\" class=\"text-center\">Produit</th>
+                                                <th colspan=\"2\" class=\"pl-5\">Produit</th>
                                                 <th class=\"text-center\">Quantité</th>
                                                 <th class=\"text-center\">Prix</th>
                                                 <th class=\"text-center\"> Total /produit</th>
@@ -207,7 +207,7 @@ class __TwigTemplate_f54844248eac96aabbe0efd5598c123f4eb191c4c3a57ac76634cbf179d
                                 <table class=\"table table-hover  mt-3 text col-12\">
                                         <thead class=\"thead-dark text-uppercase\">
                                                 <tr>
-                                                <th colspan=\"2\" class=\"text-center\">Produit</th>
+                                                <th colspan=\"2\" class=\"pl-5\">Produit</th>
                                                 <th class=\"text-center\">Quantité</th>
                                                 <th class=\"text-center\">Prix</th>
                                                 <th class=\"text-center\"> Total /produit</th>

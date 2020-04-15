@@ -25,7 +25,6 @@
                                 <th class="text-center">Nom client</th>
                                 <th class="text-center">Prénom client</th>
                                 <th class="text-center">Date de la commande</th>
-                                <th class="text-center">Total</th>
                                 <th class="text-center">Détails</th>
 
                             </tr>
@@ -38,7 +37,6 @@
                             <td class="text-center font-weight-bold">{{ order.User.nom }}</td>
                             <td class="text-center font-weight-bold">{{ order.User.prenom }}</td>
                             <td class="text-center font-weight-bold">{{ order.date |date("d/m/Y") }}</td> 
-                            <td class="text-center font-weight-bold"></td> 
                             <td class="text-center font-weight-bold detail"><a href="{{path('details_order_user', {'id' : order.id})}}"> <i class="fas fa-search-plus"></i></a></td>                         
 
                         </tr>

@@ -143,15 +143,14 @@ class __TwigTemplate_5c3854fc4bcc5f3fd2330747e511600539022855857d58b103aa10b2994
                             ";
             // line 44
             echo "                            <p class=\"card-text card-decription text-muted mb-0\">";
-            echo twig_escape_filter($this->env, (twig_slice($this->env, twig_get_attribute($this->env, $this->source, $context["product"], "description", [], "any", false, false, false, 44), 0, 100) . "..."), "html", null, true);
+            echo twig_escape_filter($this->env, twig_slice($this->env, twig_get_attribute($this->env, $this->source, $context["product"], "description", [], "any", false, false, false, 44), 0, 100), "html", null, true);
             echo "</p>                               
                             ";
             // line 46
             echo "                            ";
             // line 47
-            echo "                                ";
-            // line 48
-            echo "
+            echo "                                <div  class=\"mb-2 text-muted text-bold\">...</div>
+
                             <a href=\"";
             // line 49
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("details_product", ["id" => twig_get_attribute($this->env, $this->source, $context["product"], "id", [], "any", false, false, false, 49)]), "html", null, true);
@@ -190,7 +189,7 @@ class __TwigTemplate_5c3854fc4bcc5f3fd2330747e511600539022855857d58b103aa10b2994
 
     public function getDebugInfo()
     {
-        return array (  168 => 54,  157 => 49,  154 => 48,  152 => 47,  150 => 46,  145 => 44,  141 => 42,  131 => 39,  128 => 38,  124 => 35,  119 => 34,  89 => 5,  79 => 4,  59 => 3,  36 => 1,);
+        return array (  167 => 54,  156 => 49,  152 => 47,  150 => 46,  145 => 44,  141 => 42,  131 => 39,  128 => 38,  124 => 35,  119 => 34,  89 => 5,  79 => 4,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -238,10 +237,10 @@ class __TwigTemplate_5c3854fc4bcc5f3fd2330747e511600539022855857d58b103aa10b2994
                         <div class=\"card-body\">
                             <h5 class=\"card-title\">{{ product.nom}}</h5>
                             {# date de publication que l'on met au format jj/mm/aa #}
-                            <p class=\"card-text card-decription text-muted mb-0\">{{product.description |slice(0,100) ~ '...'}}</p>                               
+                            <p class=\"card-text card-decription text-muted mb-0\">{{product.description |slice(0,100)}}</p>                               
                             {# <h6 class=\"card-subtitle mb-2 text-muted text-right\"></h6> #}
                             {# on retourne le chemin canonique absolu avec path de l'article et on ajoute l'id de l'article #}
-                                {# <div  class=\"mb-2 text-muted text-bold\">...</div> #}
+                                <div  class=\"mb-2 text-muted text-bold\">...</div>
 
                             <a href=\"{{path('details_product', {'id' : product.id})}}\" class=\"btn btn-outline-info p-2\">Lire la suite...</a>
                         </div>

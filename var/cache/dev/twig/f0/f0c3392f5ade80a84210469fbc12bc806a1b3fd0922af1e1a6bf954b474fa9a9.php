@@ -122,7 +122,7 @@ class __TwigTemplate_7838f0df2912483810b3bc05262604c84090b0da25ee46c151d8fad1b60
                 </div>
             </div>
             <div class=\"row\">
-                <table class=\"col-12 table table-hover  mt-5 text\">
+                <table class=\"col-12 table table-hover mt-3 text\">
                     <thead class=\"thead-dark text-uppercase\">
                         <tr>
                             <th class=\"text-center\">Nom</th>
@@ -149,11 +149,11 @@ class __TwigTemplate_7838f0df2912483810b3bc05262604c84090b0da25ee46c151d8fad1b60
             // line 34
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "prenom", [], "any", false, false, false, 34), "html", null, true);
             echo "</td>
-                        <td class=\"text-center font-weight-bold\">";
+                        <td class=\"text-center \">";
             // line 35
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "mail", [], "any", false, false, false, 35), "html", null, true);
             echo "</td>
-                        <td class=\"text-center font-weight-bold detail\">
+                        <td class=\"text-center detail\">
                             <a href=\"";
             // line 37
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("details_user", ["id" => twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 37)]), "html", null, true);
@@ -216,7 +216,7 @@ class __TwigTemplate_7838f0df2912483810b3bc05262604c84090b0da25ee46c151d8fad1b60
                 </div>
             </div>
             <div class=\"row\">
-                <table class=\"col-12 table table-hover  mt-5 text\">
+                <table class=\"col-12 table table-hover mt-3 text\">
                     <thead class=\"thead-dark text-uppercase\">
                         <tr>
                             <th class=\"text-center\">Nom</th>
@@ -232,8 +232,8 @@ class __TwigTemplate_7838f0df2912483810b3bc05262604c84090b0da25ee46c151d8fad1b60
                     <tr>
                         <td class=\"text-center font-weight-bold\">{{ user.nom }}</td>
                         <td class=\"text-center font-weight-bold\">{{ user.prenom }}</td>
-                        <td class=\"text-center font-weight-bold\">{{ user.mail }}</td>
-                        <td class=\"text-center font-weight-bold detail\">
+                        <td class=\"text-center \">{{ user.mail }}</td>
+                        <td class=\"text-center detail\">
                             <a href=\"{{path('details_user', {'id' : user.id})}}\"><i class=\"fas fa-search-plus\"></i></a>
                         </td>
                     </tr>
