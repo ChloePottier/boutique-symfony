@@ -95,7 +95,7 @@ class __TwigTemplate_8cd5227f7969f3237bcd9b7ff2b5c33da18eb046b58ab38138b96921428
             </div>
 
             <div class=\"row\">
-                <div class=\"col-6 d-flex flex-column align-items-end\">
+                <div class=\"col-6 d-flex flex-column align-items-end font-weight-bold\">
                     <p>Nom</p>
                     <p>Prénom</p>
                     <p>Mail</p>
@@ -194,7 +194,7 @@ class __TwigTemplate_8cd5227f7969f3237bcd9b7ff2b5c33da18eb046b58ab38138b96921428
             </div>
 
             <div class=\"row\">
-                <div class=\"col-6 d-flex flex-column align-items-end\">
+                <div class=\"col-6 d-flex flex-column align-items-end font-weight-bold\">
                     <p>Nom</p>
                     <p>Prénom</p>
                     <p>Mail</p>
