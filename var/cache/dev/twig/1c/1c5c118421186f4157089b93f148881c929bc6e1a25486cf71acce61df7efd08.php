@@ -112,28 +112,27 @@ class __TwigTemplate_a42d55ec170dfa3797b084dbb948d7400db1736119c7ac05dda145b5f73
         <div class=\"container\">
             <div class=\"row\">
                 <div class=\"col-12 mt-5 mb-3\">
-                    ";
-        // line 13
-        echo "                    <h1>Détails commande N°";
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["details"]) || array_key_exists("details", $context) ? $context["details"] : (function () { throw new RuntimeError('Variable "details" does not exist.', 13, $this->source); })()), 0, [], "array", false, false, false, 13), "orderId", [], "any", false, false, false, 13), "id", [], "any", false, false, false, 13), "html", null, true);
+                    <h1>Détails commande N°";
+        // line 12
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["details"]) || array_key_exists("details", $context) ? $context["details"] : (function () { throw new RuntimeError('Variable "details" does not exist.', 12, $this->source); })()), 0, [], "array", false, false, false, 12), "orderId", [], "any", false, false, false, 12), "id", [], "any", false, false, false, 12), "html", null, true);
         echo "</h1>
                 
                     <p><span class=\"font-weight-bold\">Client : </span>";
-        // line 15
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["details"]) || array_key_exists("details", $context) ? $context["details"] : (function () { throw new RuntimeError('Variable "details" does not exist.', 15, $this->source); })()), 0, [], "array", false, false, false, 15), "orderId", [], "any", false, false, false, 15), "user", [], "any", false, false, false, 15), "nom", [], "any", false, false, false, 15), "html", null, true);
+        // line 14
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["details"]) || array_key_exists("details", $context) ? $context["details"] : (function () { throw new RuntimeError('Variable "details" does not exist.', 14, $this->source); })()), 0, [], "array", false, false, false, 14), "orderId", [], "any", false, false, false, 14), "user", [], "any", false, false, false, 14), "nom", [], "any", false, false, false, 14), "html", null, true);
         echo " ";
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["details"]) || array_key_exists("details", $context) ? $context["details"] : (function () { throw new RuntimeError('Variable "details" does not exist.', 15, $this->source); })()), 0, [], "array", false, false, false, 15), "orderId", [], "any", false, false, false, 15), "user", [], "any", false, false, false, 15), "prenom", [], "any", false, false, false, 15), "html", null, true);
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["details"]) || array_key_exists("details", $context) ? $context["details"] : (function () { throw new RuntimeError('Variable "details" does not exist.', 14, $this->source); })()), 0, [], "array", false, false, false, 14), "orderId", [], "any", false, false, false, 14), "user", [], "any", false, false, false, 14), "prenom", [], "any", false, false, false, 14), "html", null, true);
         echo "</p>
                     <p><span class=\"font-weight-bold\">Id client : </span>";
-        // line 16
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["details"]) || array_key_exists("details", $context) ? $context["details"] : (function () { throw new RuntimeError('Variable "details" does not exist.', 16, $this->source); })()), 0, [], "array", false, false, false, 16), "orderId", [], "any", false, false, false, 16), "user", [], "any", false, false, false, 16), "id", [], "any", false, false, false, 16), "html", null, true);
+        // line 15
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["details"]) || array_key_exists("details", $context) ? $context["details"] : (function () { throw new RuntimeError('Variable "details" does not exist.', 15, $this->source); })()), 0, [], "array", false, false, false, 15), "orderId", [], "any", false, false, false, 15), "user", [], "any", false, false, false, 15), "id", [], "any", false, false, false, 15), "html", null, true);
         echo "</p>
                 </div>
             </div>
             <div class=\"row\">
                 <div class=\"col-12 d-flex justify-content-start\">
                     <a class=\"text-decoration-none add-category\" href=\"";
-        // line 21
+        // line 20
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("liste_order");
         echo "\"><i class=\"fas fa-arrow-left mr-2\"></i>Retour au listing des commandes</a>
                 </div>
@@ -149,31 +148,31 @@ class __TwigTemplate_a42d55ec170dfa3797b084dbb948d7400db1736119c7ac05dda145b5f73
                             </tr>
                         </thead>
                         ";
-        // line 34
+        // line 33
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["details"]) || array_key_exists("details", $context) ? $context["details"] : (function () { throw new RuntimeError('Variable "details" does not exist.', 34, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["details"]) || array_key_exists("details", $context) ? $context["details"] : (function () { throw new RuntimeError('Variable "details" does not exist.', 33, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["detail"]) {
-            // line 35
+            // line 34
             echo "                            <tr>
                                 <td class=\"text-center font-weight-bold\">  <img src=\"";
-            // line 36
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("uploads/" . twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["detail"], "productId", [], "any", false, false, false, 36), "image", [], "any", false, false, false, 36))), "html", null, true);
+            // line 35
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("uploads/" . twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["detail"], "productId", [], "any", false, false, false, 35), "image", [], "any", false, false, false, 35))), "html", null, true);
             echo "\" alt=\"\" width=\"50\" height=\"50\"></td>
                                 <td class=\"text-center font-weight-bold\"> ";
-            // line 37
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["detail"], "productId", [], "any", false, false, false, 37), "nom", [], "any", false, false, false, 37), "html", null, true);
+            // line 36
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["detail"], "productId", [], "any", false, false, false, 36), "nom", [], "any", false, false, false, 36), "html", null, true);
             echo " </td>
                                 <td class=\"text-center font-weight-bold\">";
-            // line 38
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["detail"], "quantity", [], "any", false, false, false, 38), "html", null, true);
+            // line 37
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["detail"], "quantity", [], "any", false, false, false, 37), "html", null, true);
             echo "</td>
                                 <td class=\"text-center \">";
-            // line 39
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["detail"], "price", [], "any", false, false, false, 39), "html", null, true);
+            // line 38
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["detail"], "price", [], "any", false, false, false, 38), "html", null, true);
             echo "€  </td>
                                 <td class=\"text-center font-weight-bold\">";
-            // line 40
-            echo twig_escape_filter($this->env, (twig_get_attribute($this->env, $this->source, $context["detail"], "price", [], "any", false, false, false, 40) * twig_get_attribute($this->env, $this->source, $context["detail"], "quantity", [], "any", false, false, false, 40)), "html", null, true);
+            // line 39
+            echo twig_escape_filter($this->env, (twig_get_attribute($this->env, $this->source, $context["detail"], "price", [], "any", false, false, false, 39) * twig_get_attribute($this->env, $this->source, $context["detail"], "quantity", [], "any", false, false, false, 39)), "html", null, true);
             echo "€</td>
                             </tr>
                         ";
@@ -181,15 +180,15 @@ class __TwigTemplate_a42d55ec170dfa3797b084dbb948d7400db1736119c7ac05dda145b5f73
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['detail'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 43
+        // line 42
         echo "                        <tfoot>
                             <tr class=\"\">
                                 <td colspan=\"4\" class=\"font-weight-bold text-right\">Total :</td>
                                 <td class=\"font-weight-bold \">
                                 ";
-        // line 48
+        // line 47
         echo "                                ";
-        // line 49
+        // line 48
         echo "                                </td>
                             </tr>
                         </tfoot>
@@ -219,7 +218,7 @@ class __TwigTemplate_a42d55ec170dfa3797b084dbb948d7400db1736119c7ac05dda145b5f73
 
     public function getDebugInfo()
     {
-        return array (  193 => 49,  191 => 48,  185 => 43,  176 => 40,  172 => 39,  168 => 38,  164 => 37,  160 => 36,  157 => 35,  153 => 34,  137 => 21,  129 => 16,  123 => 15,  117 => 13,  111 => 8,  101 => 7,  90 => 5,  80 => 4,  60 => 3,  37 => 1,);
+        return array (  192 => 48,  190 => 47,  184 => 42,  175 => 39,  171 => 38,  167 => 37,  163 => 36,  159 => 35,  156 => 34,  152 => 33,  136 => 20,  128 => 15,  122 => 14,  117 => 12,  111 => 8,  101 => 7,  90 => 5,  80 => 4,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -235,7 +234,6 @@ class __TwigTemplate_a42d55ec170dfa3797b084dbb948d7400db1736119c7ac05dda145b5f73
         <div class=\"container\">
             <div class=\"row\">
                 <div class=\"col-12 mt-5 mb-3\">
-                    {# <h1>Détail de la commande </h1> #}
                     <h1>Détails commande N°{{details[0].orderId.id}}</h1>
                 
                     <p><span class=\"font-weight-bold\">Client : </span>{{details[0].orderId.user.nom}} {{details[0].orderId.user.prenom}}</p>

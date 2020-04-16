@@ -106,39 +106,38 @@ class __TwigTemplate_f54844248eac96aabbe0efd5598c123f4eb191c4c3a57ac76634cbf179d
                                 <table class=\"table table-hover  mt-3 text col-12\">
                                         <thead class=\"thead-dark text-uppercase\">
                                                 <tr>
-                                                <th colspan=\"2\" class=\"pl-5\">Produit</th>
-                                                <th class=\"text-center\">Quantité</th>
-                                                <th class=\"text-center\">Prix</th>
-                                                <th class=\"text-center\"> Total /produit</th>
-                                                
+                                                        <th colspan=\"2\" class=\"pl-5\">Produit</th>
+                                                        <th class=\"text-center\">Quantité</th>
+                                                        <th class=\"text-center\">Prix</th>
+                                                        <th class=\"text-center\"> Total /produit</th>
                                                 </tr>
                                         </thead>
                                         ";
-        // line 28
+        // line 27
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["details"]) || array_key_exists("details", $context) ? $context["details"] : (function () { throw new RuntimeError('Variable "details" does not exist.', 28, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["details"]) || array_key_exists("details", $context) ? $context["details"] : (function () { throw new RuntimeError('Variable "details" does not exist.', 27, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["detail"]) {
-            // line 29
+            // line 28
             echo "                                        <tr>
                                                 <td class=\"text-center font-weight-bold\">  <img src=\"";
-            // line 30
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("uploads/" . twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["detail"], "productId", [], "any", false, false, false, 30), "image", [], "any", false, false, false, 30))), "html", null, true);
+            // line 29
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("uploads/" . twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["detail"], "productId", [], "any", false, false, false, 29), "image", [], "any", false, false, false, 29))), "html", null, true);
             echo "\" alt=\"\" width=\"50\" height=\"50\"></td>
                                                 <td class=\"text-center font-weight-bold\"> ";
-            // line 31
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["detail"], "productId", [], "any", false, false, false, 31), "nom", [], "any", false, false, false, 31), "html", null, true);
+            // line 30
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["detail"], "productId", [], "any", false, false, false, 30), "nom", [], "any", false, false, false, 30), "html", null, true);
             echo " </td>
                                                 <td class=\"text-center\">";
-            // line 32
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["detail"], "quantity", [], "any", false, false, false, 32), "html", null, true);
+            // line 31
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["detail"], "quantity", [], "any", false, false, false, 31), "html", null, true);
             echo "</td>
                                                 <td class=\"text-center\">";
-            // line 33
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["detail"], "price", [], "any", false, false, false, 33), "html", null, true);
+            // line 32
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["detail"], "price", [], "any", false, false, false, 32), "html", null, true);
             echo "€  </td>
                                                 <td class=\"text-center font-weight-bold\">";
-            // line 34
-            echo twig_escape_filter($this->env, (twig_get_attribute($this->env, $this->source, $context["detail"], "price", [], "any", false, false, false, 34) * twig_get_attribute($this->env, $this->source, $context["detail"], "quantity", [], "any", false, false, false, 34)), "html", null, true);
+            // line 33
+            echo twig_escape_filter($this->env, (twig_get_attribute($this->env, $this->source, $context["detail"], "price", [], "any", false, false, false, 33) * twig_get_attribute($this->env, $this->source, $context["detail"], "quantity", [], "any", false, false, false, 33)), "html", null, true);
             echo "€</td>
                                         </tr>
                                         ";
@@ -146,17 +145,18 @@ class __TwigTemplate_f54844248eac96aabbe0efd5598c123f4eb191c4c3a57ac76634cbf179d
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['detail'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 37
+        // line 36
         echo "                                        <tfoot>
                                                 <tr class=\"\">
                                                         <td colspan=\"3\" class=\"font-weight-bold text-center\"></td>
-                                                        <td class=\"font-weight-bold text-center\">Total :</td>
-                                                        <td class=\"font-weight-bold \">
+                                                        <td class=\"font-weight-bold text-right\">Total :</td>
+                                                        <td class=\"font-weight-bold text-center\">
                                                         ";
-        // line 43
+        // line 42
         echo "                                                        ";
-        // line 44
-        echo "                                                        </td>
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["order"]) || array_key_exists("order", $context) ? $context["order"] : (function () { throw new RuntimeError('Variable "order" does not exist.', 42, $this->source); })()), "price", [], "any", false, false, false, 42), "html", null, true);
+        echo "€
+                                                        </td>
                                                 </tr>
                                         
                                         </tfoot>
@@ -186,7 +186,7 @@ class __TwigTemplate_f54844248eac96aabbe0efd5598c123f4eb191c4c3a57ac76634cbf179d
 
     public function getDebugInfo()
     {
-        return array (  159 => 44,  157 => 43,  150 => 37,  141 => 34,  137 => 33,  133 => 32,  129 => 31,  125 => 30,  122 => 29,  118 => 28,  103 => 16,  95 => 11,  89 => 7,  79 => 6,  59 => 4,  36 => 2,);
+        return array (  156 => 42,  149 => 36,  140 => 33,  136 => 32,  132 => 31,  128 => 30,  124 => 29,  121 => 28,  117 => 27,  103 => 16,  95 => 11,  89 => 7,  79 => 6,  59 => 4,  36 => 2,);
     }
 
     public function getSourceContext()
@@ -211,11 +211,10 @@ class __TwigTemplate_f54844248eac96aabbe0efd5598c123f4eb191c4c3a57ac76634cbf179d
                                 <table class=\"table table-hover  mt-3 text col-12\">
                                         <thead class=\"thead-dark text-uppercase\">
                                                 <tr>
-                                                <th colspan=\"2\" class=\"pl-5\">Produit</th>
-                                                <th class=\"text-center\">Quantité</th>
-                                                <th class=\"text-center\">Prix</th>
-                                                <th class=\"text-center\"> Total /produit</th>
-                                                
+                                                        <th colspan=\"2\" class=\"pl-5\">Produit</th>
+                                                        <th class=\"text-center\">Quantité</th>
+                                                        <th class=\"text-center\">Prix</th>
+                                                        <th class=\"text-center\"> Total /produit</th>
                                                 </tr>
                                         </thead>
                                         {% for detail in details %}
@@ -230,10 +229,10 @@ class __TwigTemplate_f54844248eac96aabbe0efd5598c123f4eb191c4c3a57ac76634cbf179d
                                         <tfoot>
                                                 <tr class=\"\">
                                                         <td colspan=\"3\" class=\"font-weight-bold text-center\"></td>
-                                                        <td class=\"font-weight-bold text-center\">Total :</td>
-                                                        <td class=\"font-weight-bold \">
+                                                        <td class=\"font-weight-bold text-right\">Total :</td>
+                                                        <td class=\"font-weight-bold text-center\">
                                                         {# résultat du total #}
-                                                        {# {{ total}} € #}
+                                                        {{ order.price}}€
                                                         </td>
                                                 </tr>
                                         

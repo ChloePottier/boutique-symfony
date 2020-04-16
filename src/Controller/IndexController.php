@@ -24,7 +24,7 @@ use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
 class IndexController extends AbstractController
 {
-      /**
+    /**
      * @Route("/", name="index")
      */
     public function listProduct(ProductRepository $productRepository)
@@ -38,7 +38,7 @@ class IndexController extends AbstractController
         ]);
     }
 
-     /**
+    /**
      * @Route("/inscription", name="inscription")
      */
     public function inscription(EntityManagerInterface $manager, HttpFoundationRequest $request, UserPasswordEncoderInterface $encoder)
@@ -49,7 +49,7 @@ class IndexController extends AbstractController
         $form = $this->createForm(InscriptionType::class, $user);
         $form->handleRequest($request);
 
-        if($form->isSubmitted() && $form->isValid()) {
+        if ($form->isSubmitted() && $form->isValid()) {
             $passwordCrypte = $encoder->encodePassword($user, $user->getPassword());
             $user->setPassword($passwordCrypte);
             $user->setRoles("ROLE_USER");
@@ -63,24 +63,24 @@ class IndexController extends AbstractController
         ]);
     }
 
-     /**
+    /**
      * @Route("/login ", name="login")
      */
-    public function login(AuthenticationUtils $util) {
+    public function login(AuthenticationUtils $util)
+    {
 
         return $this->render('index/login/login.html.twig', [
             "lastUserName" => $util->getLastUsername(),
             "error" => $util->getLastAuthenticationError()
         ]);
- 
-     }
+    }
 
-     /**
+    /**
      * @Route("/logout ", name="logout")
      */
-    public function logout() {
-
-     }
+    public function logout()
+    {
+    }
     /**
      * @Route("/index/details/{id}", name="details_product")
      */
@@ -88,9 +88,9 @@ class IndexController extends AbstractController
     {
         return $this->render('index/details/detailsProduct.html.twig', [
             "product" => $product
-            ]);
+        ]);
     }
- /**
+    /**
      * @Route("/panier/add/{id}", name="add_panier")
      */
     public function addPanier($id, SessionInterface $sessionInterface)
@@ -119,13 +119,13 @@ class IndexController extends AbstractController
 
         foreach ($panier as $id => $quantity) {
 
-            $panierData[] = [ 
+            $panierData[] = [
                 'product' => $productRepository->find($id),
                 'quantity' => $quantity
             ];
         }
         $total = 0;
-        foreach($panierData as $item){
+        foreach ($panierData as $item) {
             $totalItem = $item['product']->getPrix() * $item['quantity'];
             //rajouter le tout a $total
             $total += $totalItem;
@@ -137,14 +137,14 @@ class IndexController extends AbstractController
             'total' => $total
         ]);
     }
-        /**
+    /**
      * @Route("/panier/remove/{id}", name="panier_remove")
      */
-    public function remove($id, SessionInterface $sessionInterface) 
+    public function remove($id, SessionInterface $sessionInterface)
     {
         $panier = $sessionInterface->get('panier', []);
 
-        if(!empty($panier[$id])) {
+        if (!empty($panier[$id])) {
             unset($panier[$id]);
         }
 
@@ -152,23 +152,23 @@ class IndexController extends AbstractController
 
         return $this->redirectToRoute('panier');
     }
-    
-//Order
-/**
+
+    //Order
+    /**
      * @Route("/order", name="order")
      */
-    public function order(SessionInterface $sessionInterface, ProductRepository $productRepository) 
+    public function order(SessionInterface $sessionInterface, ProductRepository $productRepository)
     {
         $panier = $sessionInterface->get('panier', []);
         foreach ($panier as $id => $quantity) {
 
-            $panierData[] = [ 
+            $panierData[] = [
                 'product' => $productRepository->find($id),
                 'quantity' => $quantity
             ];
         }
         $total = 0;
-        foreach($panierData as $item){
+        foreach ($panierData as $item) {
             $totalItem = $item['product']->getPrix() * $item['quantity'];
             //rajouter le tout a $total
             $total += $totalItem;
@@ -179,27 +179,26 @@ class IndexController extends AbstractController
         if ($user == null) {
 
             return $this->redirectToRoute('login');
-            
         } else {
 
             return $this->render('order/order.html.twig', [
                 'items' => $panierData,
                 'user' => $user,
                 'total' => $total
-                ]);
-            }
+            ]);
+        }
     }
 
     /**
      * @Route("/order/confirm", name="order_confirm")
      */
-    public function orderConfirm(SessionInterface $sessionInterface, ProductRepository $productRepository, UserRepository $userRepository, EntityManagerInterface $manager, OrderDetailRepository $orderDetailRepository) 
+    public function orderConfirm(SessionInterface $sessionInterface, ProductRepository $productRepository, UserRepository $userRepository, EntityManagerInterface $manager, OrderDetailRepository $orderDetailRepository)
     {
         $panier = $sessionInterface->get('panier', []);
         $order = new Order();
         foreach ($panier as $id => $quantity) {
 
-            $panierData[] = [ 
+            $panierData[] = [
                 'product' => $productRepository->find($id),
                 'quantity' => $quantity
             ];
@@ -209,7 +208,7 @@ class IndexController extends AbstractController
         foreach ($panierData as $item) {
             $totalItem = $item['product']->getPrix() * $item['quantity'];
             $total += $totalItem;
-        } 
+        }
         $order->setPrice($total);
         $user = [$this->getUser()];
         $findId = [];
@@ -220,13 +219,13 @@ class IndexController extends AbstractController
             ];
         }
         $id_user = $findId['id_user'];
-        
+
         $order->setDate(new \DateTime());
         $order->setUser($this->getUser());
         $manager->persist($order);
         $manager->flush();
 
-        for ($i=0; $i < count($panierData); $i++) {
+        for ($i = 0; $i < count($panierData); $i++) {
 
             $order_detail = new OrderDetail();
 
@@ -243,11 +242,11 @@ class IndexController extends AbstractController
             'items' => $panierData
         ]);
     }
- 
 
 
 
-     // methods Mon Compte
+
+    // methods Mon Compte
 
     /**
      * @Route("/mon_compte", name="compte")
@@ -262,7 +261,7 @@ class IndexController extends AbstractController
         ]);
     }
 
-    
+
     /**
      * @Route("/mon_compte/infos", name="update_infos")
      */
@@ -273,7 +272,7 @@ class IndexController extends AbstractController
         $form = $this->createForm(InfosClientType::class, $user);
         $form->handleRequest($request);
 
-        if($form->isSubmitted() && $form->isValid()) {
+        if ($form->isSubmitted() && $form->isValid()) {
             $manager->persist($user);
             $manager->flush();
             return $this->redirectToRoute("compte");
@@ -295,7 +294,7 @@ class IndexController extends AbstractController
         $form = $this->createForm(UpdatePasswordType::class, $user);
         $form->handleRequest($request);
 
-        if($form->isSubmitted() && $form->isValid()) {
+        if ($form->isSubmitted() && $form->isValid()) {
             $passwordCrypte = $encoder->encodePassword($user, $this->getUser()->getPassword());
             $user->setPassword($passwordCrypte);
             $manager->persist($user);
@@ -309,7 +308,7 @@ class IndexController extends AbstractController
             "form" => $form->createView()
         ]);
     }
-        // methods listing commandes
+    // methods listing commandes
     /**
      * @Route("/client/order", name="client_order")
      */
@@ -322,21 +321,18 @@ class IndexController extends AbstractController
         return $this->render('index/client/listOrder.html.twig', [
             "orders" => $orders
         ]);
-
     }
-         /**
+    /**
      * @Route("/client/order/{id}", name="details_order")
      */
-    public function detailsOrder(OrderDetailRepository $orderDetailRepository, $id)
+    public function detailsOrder(OrderDetailRepository $orderDetailRepository, $id, OrderRepository $orderRepository)
     {
         $detailsOrder = $orderDetailRepository->findDetailsOrder($id);
+        $order = $orderRepository->find($id);
 
         return $this->render('index/client/detailsOrder.html.twig', [
-            "details" => $detailsOrder
+            "details" => $detailsOrder,
+            "order" => $order
         ]);
     }
-
-
-
-
 }

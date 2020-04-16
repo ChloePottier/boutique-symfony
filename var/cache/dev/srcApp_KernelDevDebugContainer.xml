@@ -5178,7 +5178,14 @@
         <argument key="orderRepository" type="service" id="App\Repository\OrderRepository"/>
       </argument>
     </service>
-    <service id=".service_locator.9S7dIKK" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.pjc4zyM" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="orderDetailRepository" type="service" id="App\Repository\OrderDetailRepository"/>
+        <argument key="orderRepository" type="service" id="App\Repository\OrderRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.IcjyoXX" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\AdminController::createUpdateCategory" type="service" id=".service_locator.ud9G3O0"/>
@@ -5192,7 +5199,7 @@
         <argument key="App\Controller\AdminController::listOrder" type="service" id=".service_locator.WOf61XH"/>
         <argument key="App\Controller\AdminController::listProduct" type="service" id=".service_locator.cFGoL72"/>
         <argument key="App\Controller\IndexController::addPanier" type="service" id=".service_locator.Uo87FkM"/>
-        <argument key="App\Controller\IndexController::detailsOrder" type="service" id=".service_locator.dUSCBoT"/>
+        <argument key="App\Controller\IndexController::detailsOrder" type="service" id=".service_locator.pjc4zyM"/>
         <argument key="App\Controller\IndexController::detailsProduct" type="service" id=".service_locator.JW5D6Lx"/>
         <argument key="App\Controller\IndexController::inscription" type="service" id=".service_locator.0ca1fUt"/>
         <argument key="App\Controller\IndexController::listOrder" type="service" id=".service_locator.5y3MckO"/>
@@ -5215,7 +5222,7 @@
         <argument key="App\Controller\AdminController:listOrder" type="service" id=".service_locator.WOf61XH"/>
         <argument key="App\Controller\AdminController:listProduct" type="service" id=".service_locator.cFGoL72"/>
         <argument key="App\Controller\IndexController:addPanier" type="service" id=".service_locator.Uo87FkM"/>
-        <argument key="App\Controller\IndexController:detailsOrder" type="service" id=".service_locator.dUSCBoT"/>
+        <argument key="App\Controller\IndexController:detailsOrder" type="service" id=".service_locator.pjc4zyM"/>
         <argument key="App\Controller\IndexController:detailsProduct" type="service" id=".service_locator.JW5D6Lx"/>
         <argument key="App\Controller\IndexController:inscription" type="service" id=".service_locator.0ca1fUt"/>
         <argument key="App\Controller\IndexController:listOrder" type="service" id=".service_locator.5y3MckO"/>
@@ -5662,12 +5669,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-      <argument type="service" id=".service_locator.9S7dIKK"/>
+      <argument type="service" id=".service_locator.IcjyoXX"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver" public="false">
-      <argument type="service" id=".service_locator.9S7dIKK"/>
+      <argument type="service" id=".service_locator.IcjyoXX"/>
     </service>
     <service id=".debug.http_client.inner" class="Symfony\Contracts\HttpClient\HttpClientInterface" public="false">
       <argument type="collection"/>
@@ -6057,7 +6064,7 @@
     <service id="Psr\Log\LoggerInterface" alias="monolog.logger" public="false"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.CmORmuK" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem" public="false"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.9S7dIKK"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.IcjyoXX"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
     <service id="Psr\Log\LoggerInterface $consoleLogger" alias="monolog.logger.console"/>

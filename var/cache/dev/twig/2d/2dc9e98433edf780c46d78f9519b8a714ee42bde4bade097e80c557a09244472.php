@@ -105,31 +105,36 @@ class __TwigTemplate_4ce4bc7f18bd47747c8097c1223fad01d88609bf4c8626756bf7119e66b
                             <tr>
                                 <th class=\"text-center\">Numéro de commande</th>
                                 <th class=\"text-center\">Date</th>
+                                <th class=\"text-center\">Montant</th>
                                 <th class=\"text-center\">Détails</th>
                                 
                             </tr>
                         </thead>
                             
                         ";
-        // line 27
+        // line 28
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["orders"]) || array_key_exists("orders", $context) ? $context["orders"] : (function () { throw new RuntimeError('Variable "orders" does not exist.', 27, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["orders"]) || array_key_exists("orders", $context) ? $context["orders"] : (function () { throw new RuntimeError('Variable "orders" does not exist.', 28, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["order"]) {
-            // line 28
+            // line 29
             echo "                        
                         <tr>
                             <td class=\"text-center font-weight-bold\"> N° ";
-            // line 30
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["order"], "id", [], "any", false, false, false, 30), "html", null, true);
+            // line 31
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["order"], "id", [], "any", false, false, false, 31), "html", null, true);
             echo " </td>
                             <td class=\"text-center font-weight-bold\">";
-            // line 31
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["order"], "date", [], "any", false, false, false, 31), "d/m/Y"), "html", null, true);
+            // line 32
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["order"], "date", [], "any", false, false, false, 32), "d/m/Y"), "html", null, true);
             echo "</td>
+                            <td class=\"text-center font-weight-bold\">";
+            // line 33
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["order"], "price", [], "any", false, false, false, 33), "html", null, true);
+            echo "€</td>
                             <td class=\"text-center font-weight-bold detail\">
                                 <a href=\"";
-            // line 33
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("details_order", ["id" => twig_get_attribute($this->env, $this->source, $context["order"], "id", [], "any", false, false, false, 33)]), "html", null, true);
+            // line 35
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("details_order", ["id" => twig_get_attribute($this->env, $this->source, $context["order"], "id", [], "any", false, false, false, 35)]), "html", null, true);
             echo "\"/><i class=\"fas fa-search-plus\"></i></a>
                             </td>
                         </tr>
@@ -138,7 +143,7 @@ class __TwigTemplate_4ce4bc7f18bd47747c8097c1223fad01d88609bf4c8626756bf7119e66b
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['order'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 37
+        // line 39
         echo "                    </table>        
             </div>
         </div>
@@ -164,7 +169,7 @@ class __TwigTemplate_4ce4bc7f18bd47747c8097c1223fad01d88609bf4c8626756bf7119e66b
 
     public function getDebugInfo()
     {
-        return array (  142 => 37,  132 => 33,  127 => 31,  123 => 30,  119 => 28,  115 => 27,  100 => 15,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
+        return array (  147 => 39,  137 => 35,  132 => 33,  128 => 32,  124 => 31,  120 => 29,  116 => 28,  100 => 15,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -190,6 +195,7 @@ class __TwigTemplate_4ce4bc7f18bd47747c8097c1223fad01d88609bf4c8626756bf7119e66b
                             <tr>
                                 <th class=\"text-center\">Numéro de commande</th>
                                 <th class=\"text-center\">Date</th>
+                                <th class=\"text-center\">Montant</th>
                                 <th class=\"text-center\">Détails</th>
                                 
                             </tr>
@@ -200,6 +206,7 @@ class __TwigTemplate_4ce4bc7f18bd47747c8097c1223fad01d88609bf4c8626756bf7119e66b
                         <tr>
                             <td class=\"text-center font-weight-bold\"> N° {{order.id}} </td>
                             <td class=\"text-center font-weight-bold\">{{ order.date|date(\"d/m/Y\") }}</td>
+                            <td class=\"text-center font-weight-bold\">{{order.price}}€</td>
                             <td class=\"text-center font-weight-bold detail\">
                                 <a href=\"{{path('details_order', {'id' : order.id})}}\"/><i class=\"fas fa-search-plus\"></i></a>
                             </td>

@@ -94,7 +94,7 @@ class __TwigTemplate_fb75eb35ba4a40f791e704204e2ae0ef428de196eb0ca9bb0ae04eaa39e
         </div>  
         <div class=\"row  mt-5 mb-5 text-center\">
             <div class=\"col-12\">
-                <p>Merci pour votre commande, ";
+                <p class=\"mb-3\">Merci pour votre commande, ";
         // line 15
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["order"]) || array_key_exists("order", $context) ? $context["order"] : (function () { throw new RuntimeError('Variable "order" does not exist.', 15, $this->source); })()), "user", [], "any", false, false, false, 15), "nom", [], "any", false, false, false, 15), "html", null, true);
         echo "</p>
@@ -157,7 +157,7 @@ class __TwigTemplate_fb75eb35ba4a40f791e704204e2ae0ef428de196eb0ca9bb0ae04eaa39e
         </div>  
         <div class=\"row  mt-5 mb-5 text-center\">
             <div class=\"col-12\">
-                <p>Merci pour votre commande, {{order.user.nom}}</p>
+                <p class=\"mb-3\">Merci pour votre commande, {{order.user.nom}}</p>
                  <div class=\"\">
                     <a class=\"text-decoration-none add-category mt-3 mr-5\" href=\"{{path('index')}}\"><i class=\"fas fa-arrow-left mr-2\"></i>Retour à la boutique</a>
                     <a href=\"{{ path('compte')}}\" class=\"btn btn-info ml-5\">Voir mes commandes</a>
