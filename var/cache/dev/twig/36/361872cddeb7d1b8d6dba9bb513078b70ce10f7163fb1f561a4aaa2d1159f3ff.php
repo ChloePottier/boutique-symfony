@@ -64,13 +64,13 @@ class __TwigTemplate_cd7715d02fe11c9bf330b021c3670eed5a05cd7d0b022ba3353b55b4c07
         ";
         // line 16
         $this->displayBlock('header', $context, $blocks);
-        // line 55
+        // line 54
         echo "        </header>
         <div class=\"content\">
         ";
-        // line 57
+        // line 56
         $this->displayBlock('content', $context, $blocks);
-        // line 59
+        // line 58
         echo "        </div>
         <footer class=\"container-fluid py-3 bg-light text-center\">
             <div class=\"container\">
@@ -82,9 +82,9 @@ class __TwigTemplate_cd7715d02fe11c9bf330b021c3670eed5a05cd7d0b022ba3353b55b4c07
             </div>
         </footer>
         ";
-        // line 69
+        // line 68
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 74
+        // line 73
         echo "        
     </body>
     
@@ -206,23 +206,22 @@ class __TwigTemplate_cd7715d02fe11c9bf330b021c3670eed5a05cd7d0b022ba3353b55b4c07
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("compte");
             echo "\"><i class=\"fas fa-user-cog\"></i> Mon compte</a>
                         </li>
-                        
                         ";
         }
-        // line 44
+        // line 43
         echo "                        <li class=\"nav-item \">
                             ";
-        // line 45
-        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 45, $this->source); })()), "user", [], "any", false, false, false, 45)) {
-            // line 46
+        // line 44
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 44, $this->source); })()), "user", [], "any", false, false, false, 44)) {
+            // line 45
             echo "                            <a class=\"nav-link\" href=\"/logout\"><i class=\"fas fa-sign-out-alt\"></i> Se déconnecter</a>
                             ";
         } else {
-            // line 48
+            // line 47
             echo "                            <a class=\"nav-link\" href=\"/login\"><i class=\"fas fa-sign-in-alt\"></i> Se connecter</a>
                             ";
         }
-        // line 50
+        // line 49
         echo "                        </li>
                     </ul>
                 </div>
@@ -236,7 +235,7 @@ class __TwigTemplate_cd7715d02fe11c9bf330b021c3670eed5a05cd7d0b022ba3353b55b4c07
 
     }
 
-    // line 57
+    // line 56
     public function block_content($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -246,7 +245,7 @@ class __TwigTemplate_cd7715d02fe11c9bf330b021c3670eed5a05cd7d0b022ba3353b55b4c07
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "content"));
 
-        // line 58
+        // line 57
         echo "        ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -256,7 +255,7 @@ class __TwigTemplate_cd7715d02fe11c9bf330b021c3670eed5a05cd7d0b022ba3353b55b4c07
 
     }
 
-    // line 69
+    // line 68
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -266,7 +265,7 @@ class __TwigTemplate_cd7715d02fe11c9bf330b021c3670eed5a05cd7d0b022ba3353b55b4c07
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 70
+        // line 69
         echo "            <script src=\"https://code.jquery.com/jquery-3.4.1.slim.min.js\" integrity=\"sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n\" crossorigin=\"anonymous\"></script>
             <script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js\" integrity=\"sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo\" crossorigin=\"anonymous\"></script>
             <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js\" integrity=\"sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6\" crossorigin=\"anonymous\"></script>
@@ -286,7 +285,7 @@ class __TwigTemplate_cd7715d02fe11c9bf330b021c3670eed5a05cd7d0b022ba3353b55b4c07
 
     public function getDebugInfo()
     {
-        return array (  270 => 70,  260 => 69,  250 => 58,  240 => 57,  226 => 50,  222 => 48,  218 => 46,  216 => 45,  213 => 44,  206 => 40,  203 => 39,  200 => 38,  194 => 35,  188 => 32,  185 => 31,  183 => 30,  178 => 28,  172 => 25,  162 => 18,  159 => 17,  149 => 16,  137 => 12,  131 => 8,  121 => 7,  102 => 6,  88 => 74,  86 => 69,  74 => 59,  72 => 57,  68 => 55,  66 => 16,  61 => 13,  59 => 7,  55 => 6,  48 => 1,);
+        return array (  269 => 69,  259 => 68,  249 => 57,  239 => 56,  225 => 49,  221 => 47,  217 => 45,  215 => 44,  212 => 43,  206 => 40,  203 => 39,  200 => 38,  194 => 35,  188 => 32,  185 => 31,  183 => 30,  178 => 28,  172 => 25,  162 => 18,  159 => 17,  149 => 16,  137 => 12,  131 => 8,  121 => 7,  102 => 6,  88 => 73,  86 => 68,  74 => 58,  72 => 56,  68 => 54,  66 => 16,  61 => 13,  59 => 7,  55 => 6,  48 => 1,);
     }
 
     public function getSourceContext()
@@ -332,7 +331,6 @@ class __TwigTemplate_cd7715d02fe11c9bf330b021c3670eed5a05cd7d0b022ba3353b55b4c07
                         <li class=\"nav-item\">
                             <a class=\"nav-link\" href=\" {{path('compte')}}\"><i class=\"fas fa-user-cog\"></i> Mon compte</a>
                         </li>
-                        
                         {% endif %}
                         <li class=\"nav-item \">
                             {% if app.user %}

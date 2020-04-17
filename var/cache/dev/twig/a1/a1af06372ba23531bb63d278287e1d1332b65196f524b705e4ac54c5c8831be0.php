@@ -165,14 +165,13 @@ class __TwigTemplate_3b0ed15b31ac91b9c7fc251e04570e06553df7c83ee03a67dda14981cb6
             // line 40
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("details_order_user", ["id" => twig_get_attribute($this->env, $this->source, $context["order"], "id", [], "any", false, false, false, 40)]), "html", null, true);
             echo "\"> <i class=\"fas fa-search-plus\"></i></a></td>                         
-
                         </tr>
                         ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['order'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 44
+        // line 43
         echo "                    </table>
             </div>
             
@@ -201,7 +200,7 @@ class __TwigTemplate_3b0ed15b31ac91b9c7fc251e04570e06553df7c83ee03a67dda14981cb6
 
     public function getDebugInfo()
     {
-        return array (  176 => 44,  166 => 40,  162 => 39,  158 => 38,  152 => 37,  148 => 36,  144 => 34,  140 => 33,  123 => 19,  111 => 9,  101 => 8,  90 => 6,  80 => 5,  60 => 4,  37 => 2,);
+        return array (  175 => 43,  166 => 40,  162 => 39,  158 => 38,  152 => 37,  148 => 36,  144 => 34,  140 => 33,  123 => 19,  111 => 9,  101 => 8,  90 => 6,  80 => 5,  60 => 4,  37 => 2,);
     }
 
     public function getSourceContext()
@@ -246,7 +245,6 @@ class __TwigTemplate_3b0ed15b31ac91b9c7fc251e04570e06553df7c83ee03a67dda14981cb6
                             <td class=\"text-center font-weight-bold\">{{ order.date |date(\"d/m/Y\") }}</td> 
                             <td class=\"text-center font-weight-bold\"> {{order.price}}€ </td>
                             <td class=\"text-center font-weight-bold detail\"><a href=\"{{path('details_order_user', {'id' : order.id})}}\"> <i class=\"fas fa-search-plus\"></i></a></td>                         
-
                         </tr>
                         {% endfor %}
                     </table>
